@@ -211,6 +211,63 @@ footer {
 .section-title > a {
   font-size: 14px;
 }
+.frontier {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 35px;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 34px 0 42px;
+  background: #edf0ff;
+}
+.frontier-stamp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  color: var(--blue);
+  font: 11px var(--mono);
+  letter-spacing: 0.08em;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.frontier-stamp strong {
+  font-size: 36px;
+  letter-spacing: -0.08em;
+  writing-mode: horizontal-tb;
+}
+.frontier h2 {
+  font: 54px/1 var(--serif);
+  letter-spacing: -0.04em;
+  margin: 17px 0 12px;
+}
+.frontier-dek {
+  max-width: 650px;
+  font-size: 17px;
+}
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin-top: 30px;
+}
+.signal {
+  border-top: 1px solid #aeb8e8;
+  padding: 17px 25px 6px 0;
+}
+.signal + .signal {
+  border-left: 1px solid #aeb8e8;
+  padding-left: 25px;
+}
+.signal h3 {
+  font: 31px/1.07 var(--serif);
+  max-width: 360px;
+  margin: 17px 0 25px;
+}
+.signal-arrow {
+  font-size: 14px;
+  font-weight: 600;
+}
 .recent-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -279,6 +336,82 @@ footer {
 .index-row span:last-child {
   font: 12px var(--mono);
   align-self: center;
+}
+.review-meta {
+  font: 11px/1.45 var(--mono);
+  color: #64685f;
+  margin-top: 16px;
+  text-transform: uppercase;
+}
+.oddware-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  border-top: 1px solid var(--ink);
+  gap: 0;
+}
+.oddware {
+  padding: 34px 60px 45px 0;
+  min-height: 365px;
+  position: relative;
+  overflow: hidden;
+}
+.oddware-mark {
+  position: absolute;
+  right: 24px;
+  top: 35px;
+  display: flex;
+  flex-direction: column;
+  color: var(--blue);
+  font: 76px/0.65 var(--serif);
+  transform: rotate(12deg);
+}
+.oddware-mark span:last-child {
+  margin-left: 31px;
+  color: var(--ink);
+}
+.oddware h2 {
+  font: 51px/1 var(--serif);
+  letter-spacing: -0.04em;
+  max-width: 580px;
+  margin: 28px 0 20px;
+}
+.oddware p:not(.eyebrow) {
+  max-width: 500px;
+}
+.house-ad {
+  margin: 0;
+  border-left: 1px solid var(--ink);
+  padding: 34px 0 38px 34px;
+  min-height: 365px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ebe9e1;
+}
+.ad-label,
+.ad-kicker,
+.ad-foot {
+  font: 11px var(--mono);
+  letter-spacing: 0.06em;
+}
+.ad-label {
+  color: #666b62;
+}
+.ad-kicker {
+  margin-top: 38px;
+}
+.house-ad h3 {
+  font: 40px/1.04 var(--serif);
+  letter-spacing: -0.03em;
+  max-width: 380px;
+  margin: 13px 0 14px;
+}
+.house-ad p:not(.ad-label) {
+  max-width: 390px;
+}
+.ad-foot {
+  color: #666b62;
+  margin-top: 28px;
 }
 .lab {
   background: #191d1b;
@@ -456,6 +589,12 @@ footer > a:not(.footer-brand) {
   .discovery {
     gap: 30px;
   }
+  .frontier {
+    gap: 25px;
+  }
+  .oddware {
+    padding-right: 35px;
+  }
   .under {
     padding-left: 30px;
   }
@@ -557,6 +696,50 @@ footer > a:not(.footer-brand) {
   .discovery {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .frontier {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+  .frontier-stamp {
+    writing-mode: horizontal-tb;
+    transform: none;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .frontier-stamp strong {
+    font-size: 28px;
+  }
+  .frontier h2 {
+    font-size: 46px;
+  }
+  .signal-grid {
+    grid-template-columns: 1fr;
+  }
+  .signal,
+  .signal + .signal {
+    padding: 17px 0 18px;
+    border-left: 0;
+  }
+  .signal + .signal {
+    border-top: 1px solid #aeb8e8;
+  }
+  .oddware-grid {
+    grid-template-columns: 1fr;
+  }
+  .oddware {
+    padding: 30px 0 38px;
+    min-height: 0;
+  }
+  .oddware h2 {
+    font-size: 45px;
+    max-width: 330px;
+  }
+  .house-ad {
+    border-left: 0;
+    border-top: 1px solid var(--ink);
+    padding: 30px 0 35px;
+    min-height: 320px;
   }
   .under {
     border-left: 0;

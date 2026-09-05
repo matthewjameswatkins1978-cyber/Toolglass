@@ -36,6 +36,8 @@ export default async function ReviewPage({
         <article className="prose">
           <h2>What is it?</h2>
           <p>{r.what}</p>
+          <h2>What problem does it solve?</h2>
+          <p>{r.summary}</p>
           <div className="evidence-note">
             <strong>SCOUTED — not yet tested.</strong>
             <br />
@@ -55,6 +57,11 @@ export default async function ReviewPage({
           ))}
           <h2>Known catches & open questions</h2>
           <p>{r.catch}</p>
+          <h2>Current judgement</h2>
+          <p>
+            This is a promising lead, not a recommendation. We will only make
+            a hands-on judgement after the stated test has been run.
+          </p>
           <h2>Next on the bench</h2>
           <p>{r.nextTest}</p>
           <h2>Sources & evidence</h2>

@@ -85,6 +85,33 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <section className="frontier">
+        <div className="frontier-stamp" aria-hidden="true">
+          <span>FRESH SIGNALS</span>
+          <strong>02</strong>
+        </div>
+        <div>
+          <p className="eyebrow">FRESH SIGNALS / FRONTIER SOFTWARE</p>
+          <h2>Software is changing shape.</h2>
+          <p className="frontier-dek">
+            Agent traces, protocol clients and local canvases are becoming
+            ordinary tools. We are interested while the categories are still
+            being invented.
+          </p>
+          <div className="signal-grid">
+            <Link className="signal" href="/reviews/tracelet">
+              <span className="eyebrow">TRACELET / AI OBSERVABILITY</span>
+              <h3>See what happened between the prompt and the pause.</h3>
+              <span className="signal-arrow">Read the field note ↗</span>
+            </Link>
+            <Link className="signal" href="/reviews/mcp">
+              <span className="eyebrow">MCP / COMMAND LINE</span>
+              <h3>A protocol becomes useful when it can join a pipe.</h3>
+              <span className="signal-arrow">Read the field note ↗</span>
+            </Link>
+          </div>
+        </div>
+      </section>
       <section className="discovery">
         <div>
           <p className="eyebrow">THE OVERLOOKED</p>
@@ -118,6 +145,35 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </section>
+      <section className="oddware-grid">
+        <div className="oddware">
+          <p className="eyebrow">ODDWARE / FIELD NOTE 001</p>
+          <div className="oddware-mark" aria-hidden="true">
+            <span>∞</span>
+            <span>⌁</span>
+          </div>
+          <h2>A desk that refuses to be a window.</h2>
+          <p>
+            pad.local turns the desktop into an infinite canvas for editors,
+            terminals and browsers. It may be a brilliant working surface, or
+            one more map to maintain. That is exactly the sort of experiment we
+            like finding.
+          </p>
+          <Link className="read-link" href="/reviews/pad-local">
+            Inspect the oddball ↗
+          </Link>
+        </div>
+        <aside className="house-ad">
+          <p className="ad-label">ADVERTISEMENT / EXAMPLE SPACE</p>
+          <div className="ad-kicker">A NOTE FROM THE EDITORIAL DESK</div>
+          <h3>Make room for the tools you actually use.</h3>
+          <p>
+            A reserved page in a technical magazine for software, hardware and
+            books that a Toolglass reader might plausibly want.
+          </p>
+          <span className="ad-foot">RELEVANT. RESTRAINED. CLEARLY LABELLED.</span>
+        </aside>
       </section>
       <section className="lab">
         <p className="eyebrow">TOOLGLASS LAB / NOTEBOOK 001</p>

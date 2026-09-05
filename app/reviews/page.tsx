@@ -31,6 +31,9 @@ export default function Reviews() {
             <div>
               <h2>{r.headline}</h2>
               <p>{r.summary}</p>
+              <p className="review-meta">
+                {r.platforms.split(';')[0]} · {r.licence} · {r.version}
+              </p>
             </div>
             <span className="badge">{r.status} ↗</span>
           </Link>
