@@ -1,0 +1,41 @@
+import Link from 'next/link';
+import { reviews } from '@/content/reviews';
+export const metadata = { title: 'Reviews & scouting notes' };
+export default function Reviews() {
+  return (
+    <>
+      <div className="page-intro">
+        <p className="eyebrow">THE INDEX / 008 ENTRIES</p>
+        <h1>
+          Small projects.
+          <br />
+          Proper attention.
+        </h1>
+        <p className="dek">
+          Software that caught our eye, and the questions we want to answer.
+          These opening entries are scouting notes, not hands-on reviews.
+        </p>
+      </div>
+      <div className="review-list">
+        {reviews.map((r, i) => (
+          <Link
+            className="review-item"
+            href={'/reviews/' + r.slug}
+            key={r.slug}
+          >
+            <div className="eyebrow">
+              {String(i + 1).padStart(2, '0')} / {r.name}
+              <br />
+              {r.category}
+            </div>
+            <div>
+              <h2>{r.headline}</h2>
+              <p>{r.summary}</p>
+            </div>
+            <span className="badge">{r.status} ↗</span>
+          </Link>
+        ))}
+      </div>
+    </>
+  );
+}
