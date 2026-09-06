@@ -2,9 +2,9 @@
 
 | Article | Slug | Type | Evidence | Draft | Editor | Status | Website | Published |
 |---|---|---|---|---|---|---|---|---|
-| Spaghetti | spaghetti | Full Review | TESTED | yes | Lucy | NEEDS EDIT | not integrated | no |
-| Atlas | atlas | Fresh Signal | INSPECTED + FOCUSED TESTS | yes | Lucy | NEEDS EDIT | not integrated | no |
-| TermAI | termai | Scout Note | INSPECTED / BUILD BLOCKED | yes | Lucy | NEEDS EDIT | not integrated | no |
+| Spaghetti | spaghetti | Full Review | TESTED | yes | Lucy | APPROVED | ready to integrate | no |
+| Atlas | atlas | Fresh Signal | INSPECTED + FOCUSED TESTS | yes | Lucy | APPROVED | ready to integrate | no |
+| TermAI | termai | Scout Note | INSPECTED / BUILD BLOCKED | yes | Lucy | APPROVED | ready to integrate | no |
 
 Statuses are deliberately small: `DRAFT`, `NEEDS EDIT`, `EDITING`, `APPROVED`, `INTEGRATED`, `PUBLISHED`, and `PARKED`.
 
