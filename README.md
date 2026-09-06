@@ -8,6 +8,14 @@ A compact, content-driven software publication. Eight starter scouting notes; no
 
 `app/page.tsx` holds the curated front page. `app/about/page.tsx` explains methodology. Shared typography, responsive layouts and navigation live in `app/globals.css` and `app/layout.tsx`.
 
+## Editorial workflow
+
+The public canonical repository is [matthewjameswatkins1978-cyber/Toolglass](https://github.com/matthewjameswatkins1978-cyber/Toolglass). Editorial production stays deliberately file-based:
+
+`editorial/inbox/` contains Work drafts; Chat Lucy edits them and marks approved copy in `editorial/approved/`; Work integrates approved prose into `content/reviews.ts`, builds, visually checks, and publishes. `editorial/EDITORIAL-QUEUE.md` is the small shared status board. Reusable structures live in `editorial/templates/`, while voice and evidence rules live in `editorial/house-style/`.
+
+The editorial files and website content are separate on purpose. Do not migrate the whole site to Markdown or build a CMS just to connect them. Evidence labels remain claims about work actually done: AI may expand evidence, but it may not invent it.
+
 ## Local development
 
 Install with `npm ci`, run `npm run dev`, validate with `npm run lint`, `npx tsc --noEmit` and `npm run build`. The Sites starter uses Vinext and React; content has no database or external service dependency. Fonts are loaded from Google Fonts with system fallbacks.
