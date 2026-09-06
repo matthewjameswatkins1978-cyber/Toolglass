@@ -1,55 +1,59 @@
 import Link from 'next/link';
+import { reviews } from '@/content/reviews';
+
+const spaghetti = reviews.find((review) => review.slug === 'spaghetti')!;
+const atlas = reviews.find((review) => review.slug === 'atlas')!;
+const termai = reviews.find((review) => review.slug === 'termai')!;
+
 export default function Home() {
   return (
     <>
       <div className="issue-line">
         <span>ISSUE 001 / SEPTEMBER 2026</span>
-        <span>Independent eyes. Interesting software.</span>
+        <span>Independent eyes. Evidence in view.</span>
       </div>
       <section className="lead">
         <div>
           <p className="eyebrow">
-            THE LEAD / DATABASE TOOLS <span className="badge">SCOUTED</span>
+            THE LEAD / HISTORY &amp; RETRIEVAL{' '}
+            <span className="badge">TESTED</span>
           </p>
           <h1>
-            A whole database
+            Your coding agents
             <br />
-            workbench.
+            remember everything.
             <br />
-            <em>One terminal.</em>
+            <em>Good luck finding any of it.</em>
           </h1>
-          <p className="dek">
-            narwhal brings an unusually ambitious toolkit to a very small
-            window. The interesting question is how much of your working day it
-            could replace.
-          </p>
-          <Link className="read-link" href="/reviews/narwhal">
-            Read the scouting note ↗
+          <p className="dek">{spaghetti.summary}</p>
+          <Link className="read-link" href="/reviews/spaghetti">
+            Read the full hands-on review ↗
           </Link>
           <p className="small">
-            No hands-on verdict yet. Here’s what deserves a closer look.
+            We actually used it against a controlled fixture and a bounded copy
+            of real Codex history. The private contents stay private.
           </p>
         </div>
         <div className="lead-art">
-          <div className="eyebrow">FIG. 01 / THE WORKBENCH</div>
-          <div className="diagram-title">narwhal_</div>
-          <div className="diagram-core">DATABASES → ONE INTERFACE</div>
+          <div className="eyebrow">FIG. 01 / THE MEMORY PROBLEM</div>
+          <div className="diagram-title">find_it_</div>
+          <div className="diagram-core">AGENT HISTORY → LOCAL INDEX</div>
           <div className="engines">
-            PostgreSQL <span>MySQL</span>
+            3 PROJECTS <span>3 SESSIONS</span>
             <br />
-            SQLite <span>DuckDB</span>
+            1,007 SEGMENTS <span>988 INDEXED</span>
             <br />
-            ClickHouse <span>SQL Server</span>
+            STARTUP <span>94 ms</span>
           </div>
           <div className="eyebrow">
-            SQL / SCHEMA / MCP <span>01—06</span>
+            CODEX SLICE / SQLITE / SEARCH <span>01—03</span>
           </div>
         </div>
       </section>
       <section className="section">
         <div className="section-title">
           <h2>
-            Recent reviews <i>& scouting notes</i>
+            Recent reviews <i>&amp; scouting notes</i>
           </h2>
           <Link href="/reviews">The full index ↗</Link>
         </div>
@@ -88,28 +92,47 @@ export default function Home() {
       <section className="frontier">
         <div className="frontier-stamp" aria-hidden="true">
           <span>FRESH SIGNALS</span>
-          <strong>02</strong>
+          <strong>01</strong>
         </div>
         <div>
           <p className="eyebrow">FRESH SIGNALS / FRONTIER SOFTWARE</p>
-          <h2>Software is changing shape.</h2>
-          <p className="frontier-dek">
-            Agent traces, protocol clients and local canvases are becoming
-            ordinary tools. We are interested while the categories are still
-            being invented.
-          </p>
+          <h2>What if “done” had to be proved?</h2>
+          <p className="frontier-dek">{atlas.summary}</p>
           <div className="signal-grid">
-            <Link className="signal" href="/reviews/tracelet">
-              <span className="eyebrow">TRACELET / AI OBSERVABILITY</span>
-              <h3>See what happened between the prompt and the pause.</h3>
-              <span className="signal-arrow">Read the field note ↗</span>
+            <Link className="signal" href="/reviews/atlas">
+              <span className="eyebrow">
+                ATLAS / AGENT RELIABILITY{' '}
+                <span className="badge">INSPECTED</span>
+              </span>
+              <h3>Task completion becomes a state that software can check.</h3>
+              <span className="signal-arrow">Read the Fresh Signal ↗</span>
             </Link>
-            <Link className="signal" href="/reviews/mcp">
-              <span className="eyebrow">MCP / COMMAND LINE</span>
-              <h3>A protocol becomes useful when it can join a pipe.</h3>
-              <span className="signal-arrow">Read the field note ↗</span>
-            </Link>
+            <div className="signal signal-note">
+              <span className="eyebrow">THE DISTINCTION</span>
+              <h3>
+                29 focused tests passed. The live agent loop remains unfinished.
+              </h3>
+              <span className="signal-arrow">
+                Present gates ≠ complete product
+              </span>
+            </div>
           </div>
+        </div>
+      </section>
+      <section className="notebook-feature">
+        <div>
+          <p className="eyebrow">NOTEBOOK / SCOUT NOTE READY</p>
+          <h2>{termai.headline}</h2>
+          <p>{termai.summary}</p>
+          <Link className="read-link" href="/reviews/termai">
+            Read the build-blocked note ↗
+          </Link>
+        </div>
+        <div className="notebook-receipt" aria-label="TermAI evidence summary">
+          <span>TERMAI / WINDOWS BENCH</span>
+          <strong>BUILD BLOCKED</strong>
+          <span>BEFORE FIRST LAUNCH</span>
+          <span>NO CREDENTIALS · NO RUNTIME</span>
         </div>
       </section>
       <section className="discovery">
@@ -172,7 +195,9 @@ export default function Home() {
             A reserved page in a technical magazine for software, hardware and
             books that a Toolglass reader might plausibly want.
           </p>
-          <span className="ad-foot">RELEVANT. RESTRAINED. CLEARLY LABELLED.</span>
+          <span className="ad-foot">
+            RELEVANT. RESTRAINED. CLEARLY LABELLED.
+          </span>
         </aside>
       </section>
       <section className="lab">
@@ -184,8 +209,9 @@ export default function Home() {
         </h2>
         <div>
           <p>
-            Eight projects on the bench list. No completed hands-on tests. Every
-            entry tells you exactly how far we’ve got.
+            Three pieces now carry distinct evidence: one tested, one inspected
+            with focused harness results, and one blocked before launch. Eight
+            seeded projects remain clearly labelled scouting notes.
           </p>
           <Link className="read-link" href="/about#evidence">
             How we review software ↗

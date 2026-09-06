@@ -61,6 +61,15 @@ export default function About() {
                 article records results, failures and the limits of that test.
               </p>
             </div>
+            <div>
+              <span className="badge">BUILD BLOCKED</span>
+              <h2>A result, too</h2>
+              <p>
+                A documented build failure is still evidence. We report the
+                version, environment and boundary rather than turning a blocked
+                launch into a runtime verdict.
+              </p>
+            </div>
           </div>
           <h2>What a review should tell you</h2>
           <p>
@@ -97,25 +106,26 @@ export default function About() {
           <p className="eyebrow">LAB STATUS / SEPTEMBER 2026</p>
           <dl className="facts">
             <div>
-              <dt>Projects scouted</dt>
-              <dd>8</dd>
+              <dt>Projects in the issue</dt>
+              <dd>11</dd>
             </div>
             <div>
               <dt>Hands-on tests completed</dt>
-              <dd>0</dd>
+              <dd>1</dd>
             </div>
             <div>
-              <dt>First proposed test</dt>
+              <dt>Evidence-backed pieces</dt>
               <dd>
-                narwhal: routine queries, failure behaviour and read-only
-                boundaries.
+                Spaghetti tested; Atlas inspected with focused harness tests;
+                TermAI blocked before launch.
               </dd>
             </div>
             <div>
               <dt>Evidence available today</dt>
               <dd>
-                Linked public project material and dated metadata. No lab
-                receipts yet.
+                Dated Toolglass receipts, bounded test results and linked public
+                project material. Private history contents stay out of the
+                publication.
               </dd>
             </div>
           </dl>

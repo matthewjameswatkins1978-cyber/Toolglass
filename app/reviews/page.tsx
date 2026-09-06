@@ -5,7 +5,7 @@ export default function Reviews() {
   return (
     <>
       <div className="page-intro">
-        <p className="eyebrow">THE INDEX / 008 ENTRIES</p>
+        <p className="eyebrow">THE INDEX / {reviews.length} ENTRIES</p>
         <h1>
           Small projects.
           <br />
@@ -13,7 +13,8 @@ export default function Reviews() {
         </h1>
         <p className="dek">
           Software that caught our eye, and the questions we want to answer.
-          These opening entries are scouting notes, not hands-on reviews.
+          Three entries now carry Toolglass evidence; the rest remain clearly
+          labelled scouting notes.
         </p>
       </div>
       <div className="review-list">
@@ -35,7 +36,7 @@ export default function Reviews() {
                 {r.platforms.split(';')[0]} · {r.licence} · {r.version}
               </p>
             </div>
-            <span className="badge">{r.status} ↗</span>
+            <span className="badge">{r.evidenceStatus ?? r.status} ↗</span>
           </Link>
         ))}
       </div>
