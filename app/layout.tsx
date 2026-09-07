@@ -33,6 +33,7 @@ export default function RootLayout({
               <Link href={sitePath('/')}>Front page</Link>
               <Link href={sitePath('/reviews')}>Reviews</Link>
               <Link href={sitePath('/about')}>About / Methodology</Link>
+              <Link href={sitePath('/submit')}>Submit software</Link>
             </nav>
           </div>
         </header>
@@ -47,6 +48,8 @@ export default function RootLayout({
             Judgement worth explaining.
           </p>
           <Link href={sitePath('/about')}>Our editorial approach ↗</Link>
+          <Link href={sitePath('/submit')}>Submit software ↗</Link>
+          <a href="https://ko-fi.com/matmusmeows">Support Toolglass ↗</a>
           <span className="small">© 2026 TOOLGLASS</span>
         </footer>
       </body>

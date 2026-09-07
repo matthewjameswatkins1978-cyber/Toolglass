@@ -706,6 +706,43 @@ footer > a:not(.footer-brand) {
   margin-top: 40px;
   font-size: 15px;
 }
+.support-prompt {
+  border-top: 1px solid var(--line);
+  margin-top: 48px;
+  padding-top: 22px;
+}
+.support-prompt p:not(.eyebrow) {
+  max-width: 650px;
+}
+.priority-card {
+  border: 1px solid var(--ink);
+  background: #c4ef66;
+  padding: 24px;
+  margin: 28px 0 32px;
+}
+.priority-card .eyebrow {
+  margin-bottom: 20px;
+}
+.priority-card p + p {
+  margin-top: 1em;
+}
+.independence-callout {
+  background: #191d1b;
+  color: var(--paper);
+  padding: 25px;
+  margin: 32px 0;
+}
+.independence-callout strong {
+  display: block;
+  color: #c4ef66;
+  font: 31px/1.1 var(--serif);
+  letter-spacing: -0.03em;
+  max-width: 560px;
+}
+.independence-callout p {
+  color: #c7cec3;
+  margin-top: 16px;
+}
 .method-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

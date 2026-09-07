@@ -196,6 +196,17 @@ export default async function ReviewPage({
           <div className="article-nav">
             <Link href={sitePath('/reviews')}>← Back to the index</Link>
           </div>
+          <div className="support-prompt">
+            <p className="eyebrow">KEEPING THE DESK OPEN</p>
+            <p>
+              Toolglass is a small independent publication. If you would like
+              to help keep the testing bench running, see the current support
+              options.
+            </p>
+            <a className="read-link" href="https://ko-fi.com/matmusmeows">
+              Support Toolglass ↗
+            </a>
+          </div>
         </article>
         <aside aria-label="Software facts">
           <p className="eyebrow">AT A GLANCE / {r.name}</p>

@@ -93,6 +93,23 @@ export default function About() {
             relevant article. Paying for attention must never buy the
             conclusion.
           </p>
+          <h2 id="support">Support Toolglass</h2>
+          <div className="support-prompt">
+            <p>
+              Toolglass is free to read. If you would like to help keep the
+              testing bench running, you can support the publication on{' '}
+              <a href="https://ko-fi.com/matmusmeows">Ko-fi ↗</a>.
+            </p>
+            <p className="small">
+              Support is optional and does not affect our evidence, verdicts or
+              editorial decisions.
+            </p>
+          </div>
+          <p>
+            If we ever use an affiliate link, it may earn Toolglass a commission.
+            It will not affect a test, verdict, score, wording or publication
+            decision.
+          </p>
           <h2>Corrections belong in the record.</h2>
           <p>
             When a material claim changes or proves wrong, we will update the
