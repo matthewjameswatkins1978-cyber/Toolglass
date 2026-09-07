@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { reviews, checkedDate } from '@/content/reviews';
 import ToolglassReceipt from '@/components/ToolglassReceipt';
@@ -194,7 +193,7 @@ export default async function ReviewPage({
             acceptance tests.
           </p>
           <div className="article-nav">
-            <Link href={sitePath('/reviews')}>← Back to the index</Link>
+            <a href={sitePath('/reviews')}>← Back to the index</a>
           </div>
           <div className="support-prompt">
             <p className="eyebrow">KEEPING THE DESK OPEN</p>
@@ -233,9 +232,9 @@ export default async function ReviewPage({
             Visit the project ↗
           </a>
           <br />
-          <Link className="read-link" href={sitePath('/about#evidence')}>
+          <a className="read-link" href={sitePath('/about#evidence')}>
             What our labels mean ↗
-          </Link>
+          </a>
         </aside>
       </div>
     </>

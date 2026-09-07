@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { sitePath } from '@/lib/utils';
 import './globals.css';
 export const metadata: Metadata = {
@@ -24,31 +23,31 @@ export default function RootLayout({
             <span>AN INDEPENDENT SOFTWARE PUBLICATION</span>
             <span>VOL. 01 — THE FIRST FINDS</span>
           </div>
-          <Link className="masthead" href={sitePath('/')} aria-label="Toolglass home">
+          <a className="masthead" href={sitePath('/')} aria-label="Toolglass home">
             TOOLGLASS<span className="brand-dot">↗</span>
-          </Link>
+          </a>
           <div className="navline">
             <p>Software worth finding.</p>
             <nav aria-label="Main navigation">
-              <Link href={sitePath('/')}>Front page</Link>
-              <Link href={sitePath('/reviews')}>Reviews</Link>
-              <Link href={sitePath('/about')}>About / Methodology</Link>
-              <Link href={sitePath('/submit')}>Submit software</Link>
+              <a href={sitePath('/')}>Front page</a>
+              <a href={sitePath('/reviews')}>Reviews</a>
+              <a href={sitePath('/about')}>About / Methodology</a>
+              <a href={sitePath('/submit')}>Submit software</a>
             </nav>
           </div>
         </header>
         <main id="main">{children}</main>
         <footer>
-          <Link className="footer-brand" href={sitePath('/')}>
+          <a className="footer-brand" href={sitePath('/')}>
             TOOLGLASS
-          </Link>
+          </a>
           <p>
             Software worth finding.
             <br />
             Judgement worth explaining.
           </p>
-          <Link href={sitePath('/about')}>Our editorial approach ↗</Link>
-          <Link href={sitePath('/submit')}>Submit software ↗</Link>
+          <a href={sitePath('/about')}>Our editorial approach ↗</a>
+          <a href={sitePath('/submit')}>Submit software ↗</a>
           <a href="https://ko-fi.com/matmusmeows">Support Toolglass ↗</a>
           <span className="small">© 2026 TOOLGLASS</span>
         </footer>

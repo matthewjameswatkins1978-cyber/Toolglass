@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { sitePath } from '@/lib/utils';
 
 export const metadata = {
@@ -69,9 +68,9 @@ export default function SubmitSoftware() {
             Toolglass a commission. That relationship will not affect the
             test, verdict, score, wording or publication decision.
           </p>
-          <Link className="read-link" href={sitePath('/about#evidence')}>
+          <a className="read-link" href={sitePath('/about#evidence')}>
             Read our evidence standard ↗
-          </Link>
+          </a>
         </div>
         <aside>
           <p className="eyebrow">SUBMISSION RECEIPT / KEEP IT USEFUL</p>
@@ -97,9 +96,9 @@ export default function SubmitSoftware() {
               <dd>Credentials, private repositories or confidential material</dd>
             </div>
           </dl>
-          <Link className="read-link" href={sitePath('/reviews')}>
+          <a className="read-link" href={sitePath('/reviews')}>
             See the current issue ↗
-          </Link>
+          </a>
         </aside>
       </section>
     </>

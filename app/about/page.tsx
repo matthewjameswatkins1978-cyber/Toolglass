@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { sitePath } from '@/lib/utils';
 export const metadata = { title: 'About & methodology' };
 export default function About() {
@@ -116,9 +115,9 @@ export default function About() {
             article with a dated explanation. We distinguish an upstream change
             from an error in our own reporting.
           </p>
-          <Link className="read-link" href={sitePath('/reviews')}>
+          <a className="read-link" href={sitePath('/reviews')}>
             Explore the first finds ↗
-          </Link>
+          </a>
         </div>
         <aside>
           <p className="eyebrow">LAB STATUS / SEPTEMBER 2026</p>

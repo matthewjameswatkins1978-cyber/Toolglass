@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { reviews } from '@/content/reviews';
 import { sitePath } from '@/lib/utils';
 export const metadata = { title: 'Reviews & scouting notes' };
@@ -20,7 +19,7 @@ export default function Reviews() {
       </div>
       <div className="review-list">
         {reviews.map((r, i) => (
-          <Link
+          <a
             className="review-item"
             href={sitePath('/reviews/' + r.slug)}
             key={r.slug}
@@ -38,7 +37,7 @@ export default function Reviews() {
               </p>
             </div>
             <span className="badge">{r.evidenceStatus ?? r.status} ↗</span>
-          </Link>
+          </a>
         ))}
       </div>
     </>

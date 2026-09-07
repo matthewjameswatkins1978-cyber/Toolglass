@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { reviews } from '@/content/reviews';
 import { sitePath } from '@/lib/utils';
 
@@ -27,9 +26,9 @@ export default function Home() {
             <em>Good luck finding any of it.</em>
           </h1>
           <p className="dek">{spaghetti.summary}</p>
-          <Link className="read-link" href={sitePath('/reviews/spaghetti')}>
+          <a className="read-link" href={sitePath('/reviews/spaghetti')}>
             Read the full hands-on review ↗
-          </Link>
+          </a>
           <p className="small">
             We actually used it against a controlled fixture and a bounded copy
             of real Codex history. The private contents stay private.
@@ -56,7 +55,7 @@ export default function Home() {
           <h2>
             Recent reviews <i>&amp; scouting notes</i>
           </h2>
-          <Link href={sitePath('/reviews')}>The full index ↗</Link>
+          <a href={sitePath('/reviews')}>The full index ↗</a>
         </div>
         <div className="recent-grid">
           {[
@@ -79,14 +78,14 @@ export default function Home() {
               'Git-style history is a compelling idea. Compatibility is the harder question.',
             ],
           ].map(([slug, n, title, desc]) => (
-            <Link className="story" href={sitePath('/reviews/' + slug)} key={slug}>
+            <a className="story" href={sitePath('/reviews/' + slug)} key={slug}>
               <p className="eyebrow">
                 {n} / {slug} <span className="badge">SCOUTED</span>
               </p>
               <h3>{title}</h3>
               <p>{desc}</p>
               <span className="story-arrow">↗</span>
-            </Link>
+            </a>
           ))}
         </div>
       </section>
@@ -100,14 +99,14 @@ export default function Home() {
           <h2>What if “done” had to be proved?</h2>
           <p className="frontier-dek">{atlas.summary}</p>
           <div className="signal-grid">
-            <Link className="signal" href={sitePath('/reviews/atlas')}>
+            <a className="signal" href={sitePath('/reviews/atlas')}>
               <span className="eyebrow">
                 ATLAS / AGENT RELIABILITY{' '}
                 <span className="badge">INSPECTED</span>
               </span>
               <h3>Task completion becomes a state that software can check.</h3>
               <span className="signal-arrow">Read the Fresh Signal ↗</span>
-            </Link>
+            </a>
             <div className="signal signal-note">
               <span className="eyebrow">THE DISTINCTION</span>
               <h3>
@@ -125,9 +124,9 @@ export default function Home() {
           <p className="eyebrow">NOTEBOOK / SCOUT NOTE READY</p>
           <h2>{termai.headline}</h2>
           <p>{termai.summary}</p>
-          <Link className="read-link" href={sitePath('/reviews/termai')}>
+          <a className="read-link" href={sitePath('/reviews/termai')}>
             Read the build-blocked note ↗
-          </Link>
+          </a>
         </div>
         <div className="notebook-receipt" aria-label="TermAI evidence summary">
           <span>TERMAI / WINDOWS BENCH</span>
@@ -145,9 +144,9 @@ export default function Home() {
             this <em>famous?</em>
           </h2>
           <p>Good software doesn’t always have a marketing department.</p>
-          <Link className="read-link" href={sitePath('/reviews/mcp')}>
+          <a className="read-link" href={sitePath('/reviews/mcp')}>
             mcp: a protocol meets the command line ↗
-          </Link>
+          </a>
         </div>
         <div className="under">
           <p className="eyebrow">SMALL FOLLOWING. OPEN QUESTIONS.</p>
@@ -163,10 +162,10 @@ export default function Home() {
             ['gitdesktop', 'GitDesktop', '175'],
             ['jbundle', 'jbundle', '179'],
           ].map(([slug, name, stars]) => (
-            <Link className="index-row" key={slug} href={sitePath('/reviews/' + slug)}>
+            <a className="index-row" key={slug} href={sitePath('/reviews/' + slug)}>
               <span>{name}</span>
               <span>{stars}★ at discovery ↗</span>
-            </Link>
+            </a>
           ))}
         </div>
       </section>
@@ -184,9 +183,9 @@ export default function Home() {
             one more map to maintain. That is exactly the sort of experiment we
             like finding.
           </p>
-          <Link className="read-link" href={sitePath('/reviews/pad-local')}>
+          <a className="read-link" href={sitePath('/reviews/pad-local')}>
             Inspect the oddball ↗
-          </Link>
+          </a>
         </div>
         <aside className="house-ad">
           <p className="ad-label">ADVERTISEMENT / EXAMPLE SPACE</p>
@@ -214,9 +213,9 @@ export default function Home() {
             with focused harness results, and one blocked before launch. Eight
             seeded projects remain clearly labelled scouting notes.
           </p>
-          <Link className="read-link" href={sitePath('/about#evidence')}>
+          <a className="read-link" href={sitePath('/about#evidence')}>
             How we review software ↗
-          </Link>
+          </a>
         </div>
       </section>
     </>
