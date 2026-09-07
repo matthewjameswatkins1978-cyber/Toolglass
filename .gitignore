@@ -37,3 +37,8 @@ next-env.d.ts
 /outputs/
 /work/
 *.tsbuildinfo
+
+# Broadcast run products (receipts are intentionally trackable)
+/distribution/outbox/*.json
+/distribution/outbox/*.md
+/public/indexnow-key.txt

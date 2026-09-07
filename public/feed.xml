@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Toolglass</title>
+    <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/</link>
+    <description>Software worth finding. Independent reviews with visible evidence.</description>
+    <language>en-gb</language>
+    <managingEditor>Matthew Watkins (https://github.com/matthewjameswatkins1978-cyber)</managingEditor>
+    <item>
+      <title>Your coding agents remember everything. Good luck finding any of it.</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/spaghetti/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/spaghetti/</guid>
+      <pubDate>Sun, 06 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Spaghetti builds a local search index from coding-agent history. We fed it three bounded real Codex sessions and discovered both a much better way to browse the past and a good reason not to uninstall `rg` just yet. Evidence: TESTED.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>History &amp; retrieval</category>
+    </item>
+    <item>
+      <title>What if “done” were something an AI agent had to prove?</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/atlas/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/atlas/</guid>
+      <pubDate>Sun, 06 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Atlas is trying to turn “please don&apos;t quietly move the goalposts” from an instruction into software. Its Goal Contracts and evidence gates are only partly wired today, but the idea is interesting enough to deserve attention before the product is finished. Evidence: INSPECTED + FOCUSED TESTS.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>Agent reliability</category>
+    </item>
+    <item>
+      <title>TermAI looked interesting. Windows disagreed.</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/termai/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/termai/</guid>
+      <pubDate>Sun, 06 Sep 2026 12:00:00 GMT</pubDate>
+      <description>TermAI promises a terminal-native assistant with local sessions, branching, Git helpers and several provider paths. We never reached any of that. On our Windows bench, the current source build stopped at the compiler. Evidence: INSPECTED / BUILD BLOCKED.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>Terminal assistants</category>
+    </item>
+  </channel>
+</rss>

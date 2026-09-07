@@ -37,6 +37,8 @@ jobs:
         run: npm run build
         env:
           GITHUB_PAGES: 'true'
+          BUTTONDOWN_PUBLIC_USERNAME: ${{ vars.BUTTONDOWN_PUBLIC_USERNAME }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
 
       - name: Prepare pretty static routes
         run: npm run prepare:pages

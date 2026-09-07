@@ -765,6 +765,61 @@ footer > a:not(.footer-brand) {
 .support-prompt p:not(.eyebrow) {
   max-width: 650px;
 }
+.newsletter-signup {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 26px 0;
+  margin: 0 0 40px;
+  display: grid;
+  grid-template-columns: 1fr minmax(320px, 0.8fr);
+  gap: 40px;
+  align-items: end;
+}
+.newsletter-signup h2 {
+  font: 34px/1.05 var(--serif);
+  margin: 11px 0;
+}
+.newsletter-signup p:not(.eyebrow) {
+  max-width: 520px;
+}
+.newsletter-signup form {
+  border-left: 1px solid var(--line);
+  padding-left: 25px;
+}
+.newsletter-signup label {
+  display: block;
+  font: 12px var(--mono);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.newsletter-fields {
+  display: flex;
+  gap: 8px;
+}
+.newsletter-fields input {
+  min-width: 0;
+  flex: 1;
+  border: 1px solid var(--ink);
+  background: transparent;
+  padding: 12px;
+  font: 15px var(--sans);
+}
+.newsletter-fields button {
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0 15px;
+  font: 12px var(--mono);
+  cursor: pointer;
+}
+.newsletter-fields button:hover {
+  background: var(--blue);
+}
+.newsletter-pending {
+  border-left: 3px solid var(--blue);
+  padding: 14px 18px;
+  background: #e9edfa;
+}
 .priority-card {
   border: 1px solid var(--ink);
   background: #c4ef66;
@@ -1058,6 +1113,22 @@ footer > a:not(.footer-brand) {
   }
   .method-grid {
     grid-template-columns: 1fr;
+  }
+  .newsletter-signup {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .newsletter-signup form {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding: 20px 0 0;
+  }
+  .newsletter-fields {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .newsletter-fields button {
+    min-height: 44px;
   }
   .page-intro {
     padding: 32px 0;

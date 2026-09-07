@@ -1,0 +1,88 @@
+name: Toolglass Broadcast
+
+on:
+  workflow_dispatch:
+    inputs:
+      campaign:
+        description: Campaign manifest to broadcast
+        required: true
+        default: issue-001-launch
+        type: string
+      mode:
+        description: Dry run prepares everything without external publishing
+        required: true
+        default: dry-run
+        type: choice
+        options:
+          - dry-run
+          - publish
+      article:
+        description: Optional article slug, otherwise the whole campaign
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: toolglass-broadcast-${{ inputs.campaign }}
+  cancel-in-progress: false
+
+jobs:
+  broadcast:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22.13.0
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build campaign manifest
+        run: |
+          if [ -n "$CAMPAIGN_ARTICLE" ]; then
+            npm run broadcast:build -- --campaign "${{ inputs.campaign }}" --mode "${{ inputs.mode }}" --article "$CAMPAIGN_ARTICLE"
+          else
+            npm run broadcast:build -- --campaign "${{ inputs.campaign }}" --mode "${{ inputs.mode }}"
+          fi
+        env:
+          CAMPAIGN_ARTICLE: ${{ inputs.article }}
+
+      - name: Verify campaign
+        run: npm run broadcast:verify -- --campaign "${{ inputs.campaign }}"
+
+      - name: Run broadcast
+        run: npm run broadcast:run -- --campaign "${{ inputs.campaign }}" --mode "${{ inputs.mode }}"
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          DEVTO_API_KEY: ${{ secrets.DEVTO_API_KEY }}
+          DEVTO_ALLOW_PUBLISH: 'false'
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_BLUESKY_CHANNEL_ID: ${{ vars.BUFFER_BLUESKY_CHANNEL_ID }}
+          BUFFER_MASTODON_CHANNEL_ID: ${{ vars.BUFFER_MASTODON_CHANNEL_ID }}
+          BUFFER_X_CHANNEL_ID: ${{ vars.BUFFER_X_CHANNEL_ID }}
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+
+      - name: Upload campaign manifest and receipts
+        uses: actions/upload-artifact@v4
+        with:
+          name: toolglass-broadcast-${{ inputs.campaign }}
+          path: |
+            distribution/outbox/${{ inputs.campaign }}.*
+            distribution/outbox/
+            distribution/receipts/
+
+      - name: Commit successful receipts
+        if: inputs.mode == 'publish'
+        run: |
+          git config user.name "toolglass-broadcast[bot]"
+          git config user.email "toolglass-broadcast[bot]@users.noreply.github.com"
+          git add distribution/receipts
+          git diff --cached --quiet || git commit -m "Record Toolglass Broadcast receipts"
+          git push

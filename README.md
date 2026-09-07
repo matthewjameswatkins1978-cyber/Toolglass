@@ -14,6 +14,8 @@ The public canonical repository is [matthewjameswatkins1978-cyber/Toolglass](htt
 
 `editorial/inbox/` contains Work drafts; Chat Lucy edits them and marks approved copy in `editorial/approved/`; Work integrates approved prose into `content/reviews.ts`, builds, visually checks, and publishes. `editorial/EDITORIAL-QUEUE.md` is the small shared status board. Reusable structures live in `editorial/templates/`, while voice and evidence rules live in `editorial/house-style/`.
 
+`distribution/` contains the lightweight Toolglass Broadcast layer. The site build generates `sitemap.xml`, `robots.txt`, `feed.xml` and article-specific share cards from the typed review records. `npm run broadcast:build` prepares a campaign manifest and manual outreach drafts; `npm run broadcast:verify` checks evidence labels, canonical URLs and channel-length limits; `npm run broadcast:run -- --mode dry-run` prints the campaign without contacting an external service. The GitHub Actions workflow is manual-dispatch only and defaults to dry-run. Publishing lanes are gated by named repository secrets and write non-secret receipts for idempotency.
+
 The editorial files and website content are separate on purpose. Do not migrate the whole site to Markdown or build a CMS just to connect them. Evidence labels remain claims about work actually done: AI may expand evidence, but it may not invent it.
 
 ## Local development

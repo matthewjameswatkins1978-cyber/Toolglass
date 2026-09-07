@@ -3,6 +3,7 @@ import { reviews, checkedDate } from '@/content/reviews';
 import ToolglassReceipt from '@/components/ToolglassReceipt';
 import EditorialArt from '@/components/EditorialArt';
 import { sitePath } from '@/lib/utils';
+import { publicSiteUrl } from '@/lib/site';
 
 function ReviewVisual({ kind }: { kind: 'spaghetti' | 'atlas' | 'termai' }) {
   if (kind === 'spaghetti') {
@@ -95,7 +96,28 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const r = reviews.find((r) => r.slug === slug);
-  return { title: r?.headline ?? 'Not found', description: r?.summary };
+  if (!r) return { title: 'Not found' };
+  const canonical = `${publicSiteUrl}/reviews/${r.slug}/`;
+  return {
+    title: r.headline,
+    description: r.summary,
+    alternates: { canonical },
+    openGraph: {
+      title: r.headline,
+      description: r.summary,
+      type: 'article',
+      url: canonical,
+      publishedTime: r.reviewedDate ? new Date(`${r.reviewedDate} 12:00:00 GMT`).toISOString() : undefined,
+      authors: ['Matthew Watkins'],
+      images: [{ url: `${publicSiteUrl}/og/${r.slug}.svg`, width: 1200, height: 630, alt: `${r.name} — Toolglass` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: r.headline,
+      description: r.summary,
+      images: [`${publicSiteUrl}/og/${r.slug}.svg`],
+    },
+  };
 }
 export default async function ReviewPage({
   params,
@@ -105,8 +127,21 @@ export default async function ReviewPage({
   const { slug } = await params;
   const r = reviews.find((r) => r.slug === slug);
   if (!r) notFound();
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: r.headline,
+    description: r.summary,
+    image: [`${publicSiteUrl}/og/${r.slug}.svg`],
+    datePublished: r.reviewedDate ? new Date(`${r.reviewedDate} 12:00:00 GMT`).toISOString() : undefined,
+    dateModified: r.reviewedDate ? new Date(`${r.reviewedDate} 12:00:00 GMT`).toISOString() : undefined,
+    mainEntityOfPage: `${publicSiteUrl}/reviews/${r.slug}/`,
+    author: { '@type': 'Person', name: 'Matthew Watkins', url: 'https://github.com/matthewjameswatkins1978-cyber' },
+    publisher: { '@type': 'Organization', name: 'Toolglass', url: `${publicSiteUrl}/` },
+  };
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <div className="page-intro">
         <p className="eyebrow">
           {r.category.toUpperCase()} / {r.name}{' '}

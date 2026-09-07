@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://matthewjameswatkins1978-cyber.github.io/Toolglass/sitemap.xml

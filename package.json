@@ -7,8 +7,12 @@
   },
   "scripts": {
     "dev": "vinext dev",
+    "prebuild": "node scripts/broadcast/generate-discovery.mjs",
     "build": "vinext build",
     "prepare:pages": "node scripts/prepare-pages.mjs",
+    "broadcast:build": "node scripts/broadcast/build-campaign.mjs",
+    "broadcast:verify": "node scripts/broadcast/verify-campaign.mjs",
+    "broadcast:run": "node scripts/broadcast/broadcast.mjs",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt"
