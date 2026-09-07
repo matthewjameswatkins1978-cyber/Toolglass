@@ -1,9 +1,10 @@
 {
-  "runAt": "2026-09-07T19:46:52.682Z",
+  "runAt": "2026-09-07T19:52:13.274Z",
   "mode": "dry-run",
-  "candidateCount": 3,
-  "shortlistCount": 3,
-  "result": "PUBLISHED_FIXTURES_ONLY",
+  "specificUrl": "https://github.com/example/project",
+  "candidateCount": 1,
+  "shortlistCount": 1,
+  "result": "SPECIFIC_URL_ACCEPTED_FOR_REVIEW",
   "note": "Offline fixture dry-run. No network, AI, commit or deploy performed.",
-  "nextDueAt": "2026-09-09T19:46:52.683Z"
+  "nextDueAt": "2026-09-09T19:52:13.275Z"
 }

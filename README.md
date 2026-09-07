@@ -8,6 +8,8 @@ A compact, content-driven software publication. Issue 001 contains three evidenc
 
 Run `npm run radar:validate` to check entries and `npm run radar:dry-run` for an offline fixture report. The scheduled workflow runs at 09:17 Europe/London each day, but the first implementation only validates and records a dry run. Set the repository variable `RADAR_ENABLED=false` to stop it immediately. Live AI discovery and unattended publication remain disabled until a provider credential and repeated acceptable dry runs exist.
 
+The workflow also accepts an HTTPS `specific_url` for a one-project dry-run report. It is currently a safe intake path; it does not fetch, install, or publish remote software.
+
 ## Editing
 
 `content/reviews.ts` owns the typed editorial records. `app/reviews/[slug]/page.tsx` is the shared article template. Each record includes replacement boundaries, facts, sources and a proposed test. Change evidence status only with matching recorded evidence; inspected and tested records include their bounded evidence notes and receipts.

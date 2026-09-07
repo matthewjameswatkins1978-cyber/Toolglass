@@ -37,4 +37,4 @@ jobs:
       - name: Validate Radar content
         run: npm run radar:validate
       - name: Offline dry run
-        run: npm run radar:dry-run
+        run: npm run radar:dry-run -- ${{ inputs.specific_url && format('--specific-url {0}', inputs.specific_url) || '' }}
