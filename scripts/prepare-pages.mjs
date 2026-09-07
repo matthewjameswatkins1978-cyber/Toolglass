@@ -23,7 +23,7 @@ for (const discoveryFile of ['sitemap.xml', 'robots.txt', 'feed.xml', 'indexnow-
 if (fs.existsSync(path.join(source, 'og'))) {
   fs.cpSync(path.join(source, 'og'), path.join(target, 'og'), { recursive: true });
 }
-for (const publicDirectory of ['art']) {
+for (const publicDirectory of ['art', 'radar']) {
   if (fs.existsSync(path.join(source, publicDirectory))) {
     fs.cpSync(path.join(source, publicDirectory), path.join(target, publicDirectory), { recursive: true });
   }
