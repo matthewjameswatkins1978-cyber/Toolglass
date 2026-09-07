@@ -45,6 +45,7 @@ export default function RootLayout({
             <nav aria-label="Main navigation">
               <a href={sitePath('/')}>Front page</a>
               <a href={sitePath('/reviews')}>Reviews</a>
+              <a href={sitePath('/radar')}>Radar</a>
               <a href={sitePath('/about')}>About / Methodology</a>
               <a href={sitePath('/submit')}>Submit software</a>
             </nav>

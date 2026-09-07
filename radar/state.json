@@ -1,0 +1,9 @@
+{
+  "runAt": "2026-09-07T19:46:52.682Z",
+  "mode": "dry-run",
+  "candidateCount": 3,
+  "shortlistCount": 3,
+  "result": "PUBLISHED_FIXTURES_ONLY",
+  "note": "Offline fixture dry-run. No network, AI, commit or deploy performed.",
+  "nextDueAt": "2026-09-09T19:46:52.683Z"
+}

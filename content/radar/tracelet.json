@@ -1,0 +1,29 @@
+{
+  "slug": "tracelet",
+  "name": "tracelet",
+  "headline": "A small window into what an agent actually did.",
+  "standfirst": "Tracelet turns an OpenTelemetry stream into a local view of prompts, tools, pauses and errors.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-07T09:00:00Z",
+  "discoveredAt": "2026-09-06T14:20:00Z",
+  "category": "Developer tools",
+  "tags": ["observability", "agents", "local-first"],
+  "homepage": "https://github.com/jnMetaCode/tracelet",
+  "repo": "https://github.com/jnMetaCode/tracelet",
+  "version": "v0.2.1 (project claim)",
+  "licence": "MIT (project claim)",
+  "platforms": ["Node.js", "Browser"],
+  "tested": false,
+  "evidence": "Repository, README and public project material. Toolglass has not installed or run tracelet.",
+  "body": [
+    {"heading": "What is it?", "paragraphs": ["Tracelet is a local collector and viewer for traces emitted by AI-agent work. A trace is the record of the steps a program took: a model call, a tool invocation, a delay, or an error."]},
+    {"heading": "Why did Radar notice it?", "paragraphs": ["A spinner cannot tell you whether an agent is thinking, waiting on a tool or quietly failing. Tracelet's interesting proposition is modest: make that sequence visible on the developer's own desk before it becomes a production observability project.", "The local shape matters. It suggests a quick way to inspect one known run, compare the expected steps with the emitted ones, and then throw the evidence away when the question is answered."]},
+    {"heading": "What's the catch?", "paragraphs": ["A viewer can only show what the application emits. The default buffer is described as in memory, and persistence is a separate decision. We have not tested retention, malformed traces, or whether the useful detail survives a restart."]},
+    {"heading": "Who might want it?", "paragraphs": ["People building agents who are tired of explaining a mysterious delay from a log line. It is probably too small a tool for a mature production monitoring programme, which is part of its appeal."]}
+  ],
+  "verdict": "A useful-looking instrument for the moment when an agent run needs explaining, with enough open questions to keep this at desk-review status.",
+  "nextStep": "Send a synthetic trace, restart the collector, and compare default retention with explicit persistence.",
+  "sourceUrls": ["https://github.com/jnMetaCode/tracelet"],
+  "image": {"src": "/radar/tracelet/card.svg", "alt": "A plotted agent trace passes through a compact instrument panel labelled prompts, tools and errors.", "caption": "Radar fallback plate / public project evidence not pictured", "kind": "RADAR PLATE"},
+  "automation": {"generated": false}
+}

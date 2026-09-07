@@ -33,5 +33,8 @@
       <dc:creator>Matthew Watkins</dc:creator>
       <category>Terminal assistants</category>
     </item>
+    <item><title>A database that starts with the question: what was true then?</title><link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/chrondb/</link><guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/chrondb/</guid><pubDate>Sat, 05 Sep 2026 09:00:00 GMT</pubDate><description>ChronDB puts Git-style history at the centre of a key/value store. Compatibility is the harder half of the idea. Radar status: SPOTTED.</description><category>Radar</category></item>
+    <item><title>A desk that refuses to be a window.</title><link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/pad-local/</link><guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/pad-local/</guid><pubDate>Thu, 03 Sep 2026 09:00:00 GMT</pubDate><description>Editors, terminals and browser panels share an infinite local canvas. The map may be the point, or the problem. Radar status: SPOTTED.</description><category>Radar</category></item>
+    <item><title>A small window into what an agent actually did.</title><link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tracelet/</link><guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tracelet/</guid><pubDate>Mon, 07 Sep 2026 09:00:00 GMT</pubDate><description>Tracelet turns an OpenTelemetry stream into a local view of prompts, tools, pauses and errors. Radar status: DESK REVIEW.</description><category>Radar</category></item>
   </channel>
 </rss>

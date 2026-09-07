@@ -1,0 +1,28 @@
+{
+  "slug": "pad-local",
+  "name": "pad.local",
+  "headline": "A desk that refuses to be a window.",
+  "standfirst": "Editors, terminals and browser panels share an infinite local canvas. The map may be the point, or the problem.",
+  "status": "SPOTTED",
+  "publishedAt": "2026-09-03T09:00:00Z",
+  "discoveredAt": "2026-09-03T16:40:00Z",
+  "category": "Workspaces",
+  "tags": ["desktop", "canvas", "workflow"],
+  "homepage": "https://github.com/ymerej-noyorb/pad.local",
+  "repo": "https://github.com/ymerej-noyorb/pad.local",
+  "version": "v2.7.4 (project claim)",
+  "licence": "MIT (project claim)",
+  "platforms": ["Windows", "macOS", "Linux"],
+  "tested": false,
+  "evidence": "Public repository and README only. Toolglass has not opened a binary or tested state recovery.",
+  "body": [
+    {"heading": "What is it?", "paragraphs": ["pad.local arranges an editor, terminal, browser and related panels on an infinite local canvas. It is a spatial answer to the familiar problem of losing the reference material while moving between windows."]},
+    {"heading": "Why did Radar notice it?", "paragraphs": ["Position can carry meaning. A terminal beside the file it changes is a small form of working memory. The risk is equally clear: a canvas can become one more thing to maintain."]},
+    {"heading": "What's the catch?", "paragraphs": ["The project documents limits around supported editors and WSL, and describes unsigned binaries. The important test is not an empty canvas screenshot but whether a real working arrangement survives a restart."]}
+  ],
+  "verdict": "An appealing desktop experiment with a very practical question waiting behind the nice spatial metaphor: does it save attention over a normal window manager?",
+  "nextStep": "Build a modest workspace, restart it, and measure recovery and memory use.",
+  "sourceUrls": ["https://github.com/ymerej-noyorb/pad.local"],
+  "image": {"src": "/radar/pad-local/card.svg", "alt": "A terminal, editor and browser are arranged as labelled panes on a measured grid with a cursor crossing between them.", "caption": "Radar fallback plate / a spatial working memory", "kind": "RADAR PLATE"},
+  "automation": {"generated": false}
+}

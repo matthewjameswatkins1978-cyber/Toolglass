@@ -1,0 +1,28 @@
+{
+  "slug": "chrondb",
+  "name": "ChronDB",
+  "headline": "A database that starts with the question: what was true then?",
+  "standfirst": "ChronDB puts Git-style history at the centre of a key/value store. Compatibility is the harder half of the idea.",
+  "status": "SPOTTED",
+  "publishedAt": "2026-09-05T09:00:00Z",
+  "discoveredAt": "2026-09-05T11:10:00Z",
+  "category": "Databases",
+  "tags": ["history", "key-value", "experimental"],
+  "homepage": "https://github.com/avelino/chrondb",
+  "repo": "https://github.com/avelino/chrondb",
+  "version": "Unknown",
+  "licence": "AGPL-3.0 (project claim)",
+  "platforms": ["Server / container"],
+  "tested": false,
+  "evidence": "Public repository and README only. No ChronDB process or client workload was run by Toolglass.",
+  "body": [
+    {"heading": "What is it?", "paragraphs": ["ChronDB is a key/value database organised around chronological history and branching. The pitch is simple to state and difficult to make useful: ask not only what a value is, but what it used to be."]},
+    {"heading": "Why did Radar notice it?", "paragraphs": ["Most teams bolt an audit trail onto a database after the fact. ChronDB treats history as the starting point. That makes it an unusually clear experiment in whether familiar database access can coexist with a versioned model underneath."]},
+    {"heading": "What's the catch?", "paragraphs": ["A protocol name is not feature parity. Transactions, restart recovery, query coverage and operational cost still need to be measured against the application you actually have."]}
+  ],
+  "verdict": "A genuinely odd database idea that deserves a careful client-compatibility test before anyone calls it a replacement.",
+  "nextStep": "Define a tiny workload, then test historical reads, branching and restart recovery.",
+  "sourceUrls": ["https://github.com/avelino/chrondb"],
+  "image": {"src": "/radar/chrondb/card.svg", "alt": "A database cylinder is drawn as a stack of dated layers with a rewind arrow and a branch line.", "caption": "Radar fallback plate / chronology as a database primitive", "kind": "RADAR PLATE"},
+  "automation": {"generated": false}
+}

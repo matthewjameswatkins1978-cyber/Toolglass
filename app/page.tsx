@@ -2,6 +2,7 @@ import { reviews } from '@/content/reviews';
 import { sitePath } from '@/lib/utils';
 import EditorialArt from '@/components/EditorialArt';
 import MachineGlyph from '@/components/MachineGlyph';
+import { radarEntries } from '@/content/radar';
 
 const spaghetti = reviews.find((review) => review.slug === 'spaghetti')!;
 const atlas = reviews.find((review) => review.slug === 'atlas')!;
@@ -108,6 +109,10 @@ export default function Home() {
             </a>
           ))}
         </div>
+      </section>
+      <section className="radar-pulse" aria-labelledby="radar-pulse-heading">
+        <div className="section-title"><h2 id="radar-pulse-heading">Latest from Radar <i>/ fresh signals</i></h2><a href={sitePath('/radar')}>Open the observatory ↗</a></div>
+        <div className="radar-pulse-grid">{radarEntries.slice(0, 3).map((entry) => <a href={sitePath(`/radar/${entry.slug}`)} key={entry.slug}><span className="eyebrow">{entry.status} / {entry.category}</span><h3>{entry.headline}</h3><p>{entry.standfirst}</p><span className="story-arrow">↗</span></a>)}</div>
       </section>
       <section className="frontier">
         <div className="frontier-stamp" aria-hidden="true">

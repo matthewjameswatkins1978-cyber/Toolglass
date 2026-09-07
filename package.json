@@ -13,6 +13,8 @@
     "broadcast:build": "node scripts/broadcast/build-campaign.mjs",
     "broadcast:verify": "node scripts/broadcast/verify-campaign.mjs",
     "broadcast:run": "node scripts/broadcast/broadcast.mjs",
+    "radar:validate": "node scripts/radar/validate.mjs",
+    "radar:dry-run": "node scripts/radar/dry-run.mjs",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt"

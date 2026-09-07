@@ -12,6 +12,8 @@ import {
 } from './content.mjs';
 
 const reviews = readReviews();
+const radarDirectory = path.join(ROOT, 'content', 'radar');
+const radarEntries = fs.readdirSync(radarDirectory).filter((file) => file.endsWith('.json')).map((file) => JSON.parse(fs.readFileSync(path.join(radarDirectory, file), 'utf8')));
 const publicDir = path.join(ROOT, 'public');
 const cardsDir = path.join(publicDir, 'og');
 fs.mkdirSync(cardsDir, { recursive: true });
@@ -21,10 +23,12 @@ const pages = [
   { url: `${SITE_URL}/reviews/`, lastmod: '2026-09-06' },
   { url: `${SITE_URL}/about/`, lastmod: '2026-09-06' },
   { url: `${SITE_URL}/submit/`, lastmod: '2026-09-06' },
+  { url: `${SITE_URL}/radar/`, lastmod: radarEntries[0]?.publishedAt.slice(0, 10) ?? '2026-09-07' },
   ...reviews.map((review) => ({
     url: canonicalUrl(review.slug),
     lastmod: review.publishedAt.slice(0, 10),
   })),
+  ...radarEntries.map((entry) => ({ url: `${SITE_URL}/radar/${entry.slug}/`, lastmod: entry.publishedAt.slice(0, 10) })),
 ];
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -59,6 +63,7 @@ const feedItems = reviews
     </item>`,
   )
   .join('\n');
+const radarFeedItems = radarEntries.map((entry) => `    <item><title>${escapeXml(entry.headline)}</title><link>${SITE_URL}/radar/${entry.slug}/</link><guid isPermaLink="true">${SITE_URL}/radar/${entry.slug}/</guid><pubDate>${new Date(entry.publishedAt).toUTCString()}</pubDate><description>${escapeXml(`${entry.standfirst} Radar status: ${entry.status}.`)}</description><category>Radar</category></item>`).join('\n');
 fs.writeFileSync(
   path.join(publicDir, 'feed.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>
@@ -70,6 +75,7 @@ fs.writeFileSync(
     <language>en-gb</language>
     <managingEditor>${escapeXml(AUTHOR_NAME)} (${escapeXml(AUTHOR_URL)})</managingEditor>
 ${feedItems}
+${radarFeedItems}
   </channel>
 </rss>
 `,

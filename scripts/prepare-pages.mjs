@@ -35,7 +35,7 @@ for (const entry of fs.readdirSync(source)) {
   }
   if (entry.endsWith('.html') || entry.endsWith('.rsc')) {
     const route = entry.replace(/\.(html|rsc)$/, '');
-    if (route === 'about' || route === 'reviews' || route === 'submit') {
+    if (route === 'about' || route === 'reviews' || route === 'submit' || route === 'radar') {
       copyFile(entry, `${route}/index.${entry.endsWith('.html') ? 'html' : 'rsc'}`);
     }
   }
@@ -48,6 +48,14 @@ if (fs.existsSync(reviews)) {
     if (match) {
       copyFile(`reviews/${entry}`, `reviews/${match[1]}/index.${match[2]}`);
     }
+  }
+}
+
+const radar = path.join(source, 'radar');
+if (fs.existsSync(radar)) {
+  for (const entry of fs.readdirSync(radar)) {
+    const match = entry.match(/^(.*)\.(html|rsc)$/);
+    if (match) copyFile(`radar/${entry}`, `radar/${match[1]}/index.${match[2]}`);
   }
 }
 
