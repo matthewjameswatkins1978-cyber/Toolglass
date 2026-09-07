@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { reviews, checkedDate } from '@/content/reviews';
 import ToolglassReceipt from '@/components/ToolglassReceipt';
+import { sitePath } from '@/lib/utils';
 
 function ReviewVisual({ kind }: { kind: 'spaghetti' | 'atlas' | 'termai' }) {
   if (kind === 'spaghetti') {
@@ -127,6 +128,7 @@ export default async function ReviewPage({
                 <br />
                 {r.evidenceNote}
               </div>
+              {r.intro?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               {r.sections.map((section) => (
                 <section key={section.heading}>
                   <h2>{section.heading}</h2>
@@ -192,7 +194,7 @@ export default async function ReviewPage({
             acceptance tests.
           </p>
           <div className="article-nav">
-            <Link href="/reviews">← Back to the index</Link>
+            <Link href={sitePath('/reviews')}>← Back to the index</Link>
           </div>
         </article>
         <aside aria-label="Software facts">
@@ -220,7 +222,7 @@ export default async function ReviewPage({
             Visit the project ↗
           </a>
           <br />
-          <Link className="read-link" href="/about#evidence">
+          <Link className="read-link" href={sitePath('/about#evidence')}>
             What our labels mean ↗
           </Link>
         </aside>

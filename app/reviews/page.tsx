@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { reviews } from '@/content/reviews';
+import { sitePath } from '@/lib/utils';
 export const metadata = { title: 'Reviews & scouting notes' };
 export default function Reviews() {
   return (
@@ -21,7 +22,7 @@ export default function Reviews() {
         {reviews.map((r, i) => (
           <Link
             className="review-item"
-            href={'/reviews/' + r.slug}
+            href={sitePath('/reviews/' + r.slug)}
             key={r.slug}
           >
             <div className="eyebrow">

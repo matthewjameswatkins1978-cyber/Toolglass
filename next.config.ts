@@ -1,5 +1,12 @@
 import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = { output: 'export' };
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+
+const nextConfig: NextConfig = {
+  output: 'export',
+  ...(isGitHubPages
+    ? { assetPrefix: '/Toolglass/' }
+    : {}),
+};
 
 export default nextConfig;

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { reviews } from '@/content/reviews';
+import { sitePath } from '@/lib/utils';
 
 const spaghetti = reviews.find((review) => review.slug === 'spaghetti')!;
 const atlas = reviews.find((review) => review.slug === 'atlas')!;
@@ -26,7 +27,7 @@ export default function Home() {
             <em>Good luck finding any of it.</em>
           </h1>
           <p className="dek">{spaghetti.summary}</p>
-          <Link className="read-link" href="/reviews/spaghetti">
+          <Link className="read-link" href={sitePath('/reviews/spaghetti')}>
             Read the full hands-on review ↗
           </Link>
           <p className="small">
@@ -55,7 +56,7 @@ export default function Home() {
           <h2>
             Recent reviews <i>&amp; scouting notes</i>
           </h2>
-          <Link href="/reviews">The full index ↗</Link>
+          <Link href={sitePath('/reviews')}>The full index ↗</Link>
         </div>
         <div className="recent-grid">
           {[
@@ -78,7 +79,7 @@ export default function Home() {
               'Git-style history is a compelling idea. Compatibility is the harder question.',
             ],
           ].map(([slug, n, title, desc]) => (
-            <Link className="story" href={'/reviews/' + slug} key={slug}>
+            <Link className="story" href={sitePath('/reviews/' + slug)} key={slug}>
               <p className="eyebrow">
                 {n} / {slug} <span className="badge">SCOUTED</span>
               </p>
@@ -99,7 +100,7 @@ export default function Home() {
           <h2>What if “done” had to be proved?</h2>
           <p className="frontier-dek">{atlas.summary}</p>
           <div className="signal-grid">
-            <Link className="signal" href="/reviews/atlas">
+            <Link className="signal" href={sitePath('/reviews/atlas')}>
               <span className="eyebrow">
                 ATLAS / AGENT RELIABILITY{' '}
                 <span className="badge">INSPECTED</span>
@@ -124,7 +125,7 @@ export default function Home() {
           <p className="eyebrow">NOTEBOOK / SCOUT NOTE READY</p>
           <h2>{termai.headline}</h2>
           <p>{termai.summary}</p>
-          <Link className="read-link" href="/reviews/termai">
+          <Link className="read-link" href={sitePath('/reviews/termai')}>
             Read the build-blocked note ↗
           </Link>
         </div>
@@ -144,7 +145,7 @@ export default function Home() {
             this <em>famous?</em>
           </h2>
           <p>Good software doesn’t always have a marketing department.</p>
-          <Link className="read-link" href="/reviews/mcp">
+          <Link className="read-link" href={sitePath('/reviews/mcp')}>
             mcp: a protocol meets the command line ↗
           </Link>
         </div>
@@ -162,7 +163,7 @@ export default function Home() {
             ['gitdesktop', 'GitDesktop', '175'],
             ['jbundle', 'jbundle', '179'],
           ].map(([slug, name, stars]) => (
-            <Link className="index-row" key={slug} href={'/reviews/' + slug}>
+            <Link className="index-row" key={slug} href={sitePath('/reviews/' + slug)}>
               <span>{name}</span>
               <span>{stars}★ at discovery ↗</span>
             </Link>
@@ -183,7 +184,7 @@ export default function Home() {
             one more map to maintain. That is exactly the sort of experiment we
             like finding.
           </p>
-          <Link className="read-link" href="/reviews/pad-local">
+          <Link className="read-link" href={sitePath('/reviews/pad-local')}>
             Inspect the oddball ↗
           </Link>
         </div>
@@ -213,7 +214,7 @@ export default function Home() {
             with focused harness results, and one blocked before launch. Eight
             seeded projects remain clearly labelled scouting notes.
           </p>
-          <Link className="read-link" href="/about#evidence">
+          <Link className="read-link" href={sitePath('/about#evidence')}>
             How we review software ↗
           </Link>
         </div>

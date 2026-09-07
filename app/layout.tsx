@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { sitePath } from '@/lib/utils';
 import './globals.css';
 export const metadata: Metadata = {
   title: {
@@ -23,21 +24,21 @@ export default function RootLayout({
             <span>AN INDEPENDENT SOFTWARE PUBLICATION</span>
             <span>VOL. 01 — THE FIRST FINDS</span>
           </div>
-          <Link className="masthead" href="/" aria-label="Toolglass home">
+          <Link className="masthead" href={sitePath('/')} aria-label="Toolglass home">
             TOOLGLASS<span className="brand-dot">↗</span>
           </Link>
           <div className="navline">
             <p>Software worth finding.</p>
             <nav aria-label="Main navigation">
-              <Link href="/">Front page</Link>
-              <Link href="/reviews">Reviews</Link>
-              <Link href="/about">About / Methodology</Link>
+              <Link href={sitePath('/')}>Front page</Link>
+              <Link href={sitePath('/reviews')}>Reviews</Link>
+              <Link href={sitePath('/about')}>About / Methodology</Link>
             </nav>
           </div>
         </header>
         <main id="main">{children}</main>
         <footer>
-          <Link className="footer-brand" href="/">
+          <Link className="footer-brand" href={sitePath('/')}>
             TOOLGLASS
           </Link>
           <p>
@@ -45,7 +46,7 @@ export default function RootLayout({
             <br />
             Judgement worth explaining.
           </p>
-          <Link href="/about">Our editorial approach ↗</Link>
+          <Link href={sitePath('/about')}>Our editorial approach ↗</Link>
           <span className="small">© 2026 TOOLGLASS</span>
         </footer>
       </body>

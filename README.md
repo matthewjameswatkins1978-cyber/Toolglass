@@ -1,10 +1,10 @@
 # TOOLGLASS
 
-A compact, content-driven software publication. Eight starter scouting notes; no software has been runtime-tested for these articles.
+A compact, content-driven software publication. Issue 001 contains three evidence-backed pieces: Spaghetti was tested, Atlas was inspected with focused harness tests, and TermAI was build-blocked before launch. Eight further entries remain clearly labelled scouting notes.
 
 ## Editing
 
-`content/reviews.ts` owns the typed editorial records. `app/reviews/[slug]/page.tsx` is the shared article template. Each record includes replacement boundaries, facts, sources and a proposed test. Change evidence status only with matching recorded evidence; the current template is explicitly for scouting notes and should be extended alongside any future inspected/tested record.
+`content/reviews.ts` owns the typed editorial records. `app/reviews/[slug]/page.tsx` is the shared article template. Each record includes replacement boundaries, facts, sources and a proposed test. Change evidence status only with matching recorded evidence; inspected and tested records include their bounded evidence notes and receipts.
 
 `app/page.tsx` holds the curated front page. `app/about/page.tsx` explains methodology. Shared typography, responsive layouts and navigation live in `app/globals.css` and `app/layout.tsx`.
 
@@ -28,6 +28,6 @@ Metadata checked 5 September 2026 against the linked upstream repositories and G
 
 ## Validation notes
 
-Production static export succeeds for the homepage, index, methodology, all eight articles and a 404 page. Local HTTP checks returned 200 for all eleven content routes and 404 for an unknown article. Authored `app` and `content` files pass Oxlint; TypeScript passes. Responsive CSS is implemented; no browser visual or interaction testing was performed.
+Production static export succeeds for the homepage, index, methodology, all eleven articles and a 404 page. The first issue contains three evidence-backed articles and eight scouting notes. Authored `app` and `content` files pass TypeScript; the unmodified starter component catalogue still has repository-wide Oxlint errors. Responsive CSS is implemented; browser visual and interaction checks are part of the release verification workflow.
 
-The unmodified starter component catalogue has repository-wide lint warnings/errors. The starter dependency audit also reports vulnerabilities (including server/build dependencies). No component from that catalogue is used in this publication. Deployment packages only `dist/client` static output, excluding the Worker and build tools. Review/update dependency warnings before introducing a server runtime or exposing a development server.
+The unmodified starter component catalogue has repository-wide lint warnings/errors. The starter dependency audit also reports vulnerabilities (including server/build dependencies). No component from that catalogue is used in this publication. GitHub Pages packages only the prepared `dist/pages` static artifact, excluding the Worker and build tools. Review/update dependency warnings before introducing a server runtime or exposing a development server.
