@@ -24,6 +24,12 @@ export type Review = {
   sections?: { heading: string; paragraphs: string[] }[];
   receipt?: { label: string; value: string }[];
   visual?: 'spaghetti' | 'atlas' | 'termai';
+  art?: {
+    src: string;
+    alt: string;
+    caption: string;
+    kind?: string;
+  };
 };
 export const reviews: Review[] = [
   {
@@ -54,6 +60,12 @@ export const reviews: Review[] = [
     "evidenceBoundary": "The full private history tree was not indexed, raw transcript contents are not published, and this pass did not test mixed Claude/Codex/Grok data or network behaviour.",
     "reviewedDate": "6 September 2026",
     "visual": "spaghetti",
+    "art": {
+      "src": "/art/spaghetti-memory-plate.webp",
+      "alt": "A dense web of blue and black plotter lines enters a funnel and resolves into orderly drawers of indexed cards.",
+      "caption": "A tangle of computational history resolving into a local index.",
+      "kind": "CONCEPT PLATE / SPAGHETTI"
+    },
     "receipt": [
       {
         "label": "Status",
@@ -201,6 +213,12 @@ export const reviews: Review[] = [
     "evidenceBoundary": "No model task, Tauri frontend launch, packaged reviewer flow or live agent loop was exercised. The harness proves mechanics in scope, not the whole product.",
     "reviewedDate": "6 September 2026",
     "visual": "atlas",
+    "art": {
+      "src": "/art/atlas-gates-plate.webp",
+      "alt": "A small blue parcel passes through a sequence of mechanical gates, relay arms and inspection gauges toward an open checking window.",
+      "caption": "Completion imagined as a physical inspection apparatus.",
+      "kind": "CONCEPT PLATE / ATLAS"
+    },
     "receipt": [
       {
         "label": "Status",
@@ -322,6 +340,12 @@ export const reviews: Review[] = [
     "evidenceBoundary": "No credentials were created, read or used. No provider login, model session, persistence, branching, Git command or web tool was tested.",
     "reviewedDate": "6 September 2026",
     "visual": "termai",
+    "art": {
+      "src": "/art/termai-first-launch-plate.webp",
+      "alt": "A vintage terminal sits complete on a technical bench while one final cable hangs just short of its socket and loose lines unravel below.",
+      "caption": "Nearly a program, stopped before first launch.",
+      "kind": "CONCEPT PLATE / TERMAI"
+    },
     "receipt": [
       {
         "label": "Status",

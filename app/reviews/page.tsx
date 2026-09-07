@@ -1,5 +1,6 @@
 import { reviews } from '@/content/reviews';
 import { sitePath } from '@/lib/utils';
+import MachineGlyph from '@/components/MachineGlyph';
 export const metadata = { title: 'Reviews & scouting notes' };
 export default function Reviews() {
   return (
@@ -30,6 +31,11 @@ export default function Reviews() {
               {r.category}
             </div>
             <div>
+              <MachineGlyph
+                name={r.slug === 'spaghetti' ? 'tape' : r.slug === 'atlas' ? 'packet' : r.slug === 'termai' ? 'plug' : r.slug === 'narwhal' ? 'database' : r.slug === 'tracelet' ? 'prompt' : r.slug === 'outl' ? 'folder' : r.slug === 'chrondb' ? 'branch' : r.slug === 'mcp' ? 'magnifier' : r.slug === 'gitdesktop' ? 'branch' : r.slug === 'pad-local' ? 'cursor' : 'floppy'}
+                size={30}
+                className="review-glyph"
+              />
               <h2>{r.headline}</h2>
               <p>{r.summary}</p>
               <p className="review-meta">

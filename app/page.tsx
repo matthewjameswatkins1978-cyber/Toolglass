@@ -1,5 +1,7 @@
 import { reviews } from '@/content/reviews';
 import { sitePath } from '@/lib/utils';
+import EditorialArt from '@/components/EditorialArt';
+import MachineGlyph from '@/components/MachineGlyph';
 
 const spaghetti = reviews.find((review) => review.slug === 'spaghetti')!;
 const atlas = reviews.find((review) => review.slug === 'atlas')!;
@@ -50,6 +52,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="home-folklore" aria-labelledby="folklore-heading">
+        <div className="section-title">
+          <h2 id="folklore-heading">
+            Machine Folklore <i>/ issue 001</i>
+          </h2>
+          <span className="small">EDITORIAL ART / NOT EVIDENCE</span>
+        </div>
+        <EditorialArt
+          src="/art/toolglass-folklore-001.webp"
+          alt="A punched card, tape reel, CRT terminal, database cylinder and floppy disk interact in one strange technical museum apparatus linked by cables and plotted lines."
+          caption="A short history of computers, drawn as one machine with too much memory."
+          kind="CONCEPT PLATE / TOOLGLASS"
+          priority
+          width={2172}
+          height={724}
+        />
+      </section>
       <section className="section">
         <div className="section-title">
           <h2>
@@ -77,8 +96,9 @@ export default function Home() {
               'What if your database could rewind?',
               'Git-style history is a compelling idea. Compatibility is the harder question.',
             ],
-          ].map(([slug, n, title, desc]) => (
+            ].map(([slug, n, title, desc]) => (
             <a className="story" href={sitePath('/reviews/' + slug)} key={slug}>
+              <MachineGlyph name={slug === 'tracelet' ? 'prompt' : slug === 'outl' ? 'folder' : 'branch'} size={30} className="story-glyph" />
               <p className="eyebrow">
                 {n} / {slug} <span className="badge">SCOUTED</span>
               </p>

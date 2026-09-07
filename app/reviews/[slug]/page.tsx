@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { reviews, checkedDate } from '@/content/reviews';
 import ToolglassReceipt from '@/components/ToolglassReceipt';
+import EditorialArt from '@/components/EditorialArt';
 import { sitePath } from '@/lib/utils';
 
 function ReviewVisual({ kind }: { kind: 'spaghetti' | 'atlas' | 'termai' }) {
@@ -119,6 +120,7 @@ export default async function ReviewPage({
       </div>
       <div className="article-grid">
         <article className="prose">
+          {r.art && <EditorialArt {...r.art} />}
           {r.visual && <ReviewVisual kind={r.visual} />}
           {r.sections ? (
             <>

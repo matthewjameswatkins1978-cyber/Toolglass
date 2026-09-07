@@ -192,6 +192,57 @@ footer {
   border-top: 3px solid var(--ink);
   padding: 22px 0 45px;
 }
+.home-folklore {
+  border-top: 1px solid var(--ink);
+  padding: 24px 0 46px;
+}
+.home-folklore .section-title {
+  margin-bottom: 18px;
+}
+.home-folklore .section-title h2 i {
+  font-size: 20px;
+}
+.editorial-art {
+  margin: 0 0 38px;
+  border: 1px solid var(--ink);
+  background: #ebe9e1;
+  color: var(--ink);
+  overflow: hidden;
+}
+.editorial-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.home-folklore .editorial-art img {
+  aspect-ratio: 3 / 1;
+}
+.editorial-art figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 11px 14px 12px;
+  border-top: 1px solid var(--ink);
+  font: 11px/1.35 var(--mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.editorial-art figcaption span:last-child {
+  color: #5d625b;
+  text-align: right;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.story-glyph,
+.review-glyph {
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+.review-glyph {
+  margin-bottom: 14px;
+}
 .section-title {
   display: flex;
   justify-content: space-between;
@@ -851,6 +902,19 @@ footer > a:not(.footer-brand) {
   }
   .lead-art {
     min-height: 340px;
+  }
+  .editorial-art figcaption {
+    display: block;
+  }
+  .editorial-art figcaption span:last-child {
+    display: block;
+    margin-top: 6px;
+    text-align: left;
+  }
+  .home-folklore .editorial-art img {
+    aspect-ratio: 1.45 / 1;
+    object-fit: cover;
+    object-position: center;
   }
   .diagram-title {
     font-size: 64px;
