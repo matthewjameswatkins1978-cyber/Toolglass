@@ -1,0 +1,28 @@
+{
+  "slug": "rift",
+  "name": "Rift",
+  "headline": "A coding agent that treats local models as first-class citizens.",
+  "standfirst": "Rift is a Rust terminal coding agent built around small binaries, local inference, explicit context control and failure recovery.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-09T21:05:00Z",
+  "discoveredAt": "2026-09-09T21:05:00Z",
+  "category": "Developer tools",
+  "tags": ["coding-agents", "local-models", "rust"],
+  "homepage": "https://github.com/exYze/rift",
+  "repo": "https://github.com/exYze/rift",
+  "licence": "MIT (repository claim)",
+  "platforms": ["macOS", "Linux", "Windows"],
+  "tested": false,
+  "evidence": "Repository, README, benchmark notes and public project material. Toolglass has not installed or run Rift.",
+  "body": [
+    {"heading": "What is it?", "paragraphs": ["Rift is a terminal coding agent written in Rust with Ollama and OpenAI-compatible local servers treated as primary targets rather than compatibility afterthoughts. The project also exposes headless JSON output, a VS Code bridge, a desktop shell and a worktree-based parallel mode called WarpDrive."]},
+    {"heading": "Why did Radar notice it?", "paragraphs": ["Most coding agents assume a large hosted model and abundant context. Rift is interesting because it designs around the opposite constraints: local models, finite context, unreliable tool calling and the need to see when truncation or repetition is happening.", "Its benchmark claims are unusually concrete for a tiny project: same-model task suites, prompt-token accounting and recorded traces rather than a vague 'fast' badge. Those numbers remain project claims until independently reproduced."]},
+    {"heading": "What's the catch?", "paragraphs": ["The project is very small and moving quickly. Its strongest performance claims come from its own benchmark harness, and local-model reliability is highly sensitive to model choice, prompt format and server behaviour. Toolglass has not reproduced the comparisons or tested its recovery paths."]},
+    {"heading": "Who might want it?", "paragraphs": ["Developers running Ollama, vLLM, LM Studio or llama.cpp who want an agent that assumes local inference is normal, plus people who care about prompt-token budgets and transparent failure handling more than ecosystem polish."]}
+  ],
+  "verdict": "One of the more technically specific local-first coding-agent projects Radar has seen; promising precisely because it attacks the boring failure modes instead of pretending they do not exist.",
+  "nextStep": "Re-run its published task suite against the same local model and compare token counts, completion rate and wall time with one established agent.",
+  "sourceUrls": ["https://github.com/exYze/rift"],
+  "image": {"src": "/radar/rift/card.svg", "alt": "A Toolglass Radar plate showing a local model feeding a compact coding-agent pipeline.", "caption": "Radar fallback plate / public project evidence not pictured", "kind": "RADAR PLATE"},
+  "automation": {"generated": true}
+}
