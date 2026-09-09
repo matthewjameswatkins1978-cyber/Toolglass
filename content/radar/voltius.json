@@ -1,0 +1,28 @@
+{
+  "slug": "voltius",
+  "name": "Voltius",
+  "headline": "An SSH client that has quietly grown into a local infrastructure cockpit.",
+  "standfirst": "Voltius combines SSH, SFTP, serial, encrypted sync, containers, plugins and a local MCP server in a Rust/Tauri desktop app.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-09T21:05:00Z",
+  "discoveredAt": "2026-09-09T21:05:00Z",
+  "category": "Infrastructure",
+  "tags": ["ssh", "local-first", "mcp"],
+  "homepage": "https://voltius.app",
+  "repo": "https://github.com/VoltiusApp/voltius",
+  "licence": "AGPL-3.0 core / MIT plugins (project claim)",
+  "platforms": ["Windows", "macOS", "Linux", "Android"],
+  "tested": false,
+  "evidence": "Repository, README and public project material. Toolglass has not installed or run Voltius.",
+  "body": [
+    {"heading": "What is it?", "paragraphs": ["Voltius starts as a modern SSH/SFTP client but extends into serial connections, persistent workspaces, encrypted device sync, container management, process monitoring, plugins and a local MCP server that can expose host and session operations to compatible AI tools."]},
+    {"heading": "Why did Radar notice it?", "paragraphs": ["The interesting part is not another pretty SSH tab. Voltius is trying to make remote-machine administration programmable without forcing credentials and host metadata into somebody else's cloud. Its Gist-based sync option encrypts locally, while the MCP integration is off by default and runs on the user's machine.", "That combination makes it a useful example of where agent tooling may be heading: not agents replacing infrastructure software, but established tools growing carefully bounded machine interfaces."]},
+    {"heading": "What's the catch?", "paragraphs": ["The feature list is expanding quickly and the project still describes itself as early beta. macOS builds are not yet notarized and Windows builds are not yet code-signed, so first-run security warnings are expected. The MCP surface is powerful enough that its permission and audit behaviour deserves hands-on scrutiny before anyone lets an agent near production hosts."]},
+    {"heading": "Who might want it?", "paragraphs": ["Homelab users, developers and small infrastructure teams who want a Termius-style interface without making a hosted account the centre of gravity, especially if they are experimenting with agent-controlled operations."]}
+  ],
+  "verdict": "An unusually ambitious open SSH client whose most interesting feature may be the boundary it is drawing between local credentials and agent-accessible infrastructure controls.",
+  "nextStep": "Install it with a disposable VM, inspect the MCP permissions and audit trail, then test whether an agent can perform useful bounded tasks without gaining a dangerously broad shell shortcut.",
+  "sourceUrls": ["https://github.com/VoltiusApp/voltius", "https://voltius.app"],
+  "image": {"src": "/radar/voltius/card.svg", "alt": "A Toolglass Radar plate showing encrypted local credentials connected to SSH, SFTP and MCP interfaces.", "caption": "Radar fallback plate / public project evidence not pictured", "kind": "RADAR PLATE"},
+  "automation": {"generated": true}
+}
