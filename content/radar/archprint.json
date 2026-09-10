@@ -1,0 +1,28 @@
+{
+  "slug": "archprint",
+  "name": "Archprint",
+  "headline": "Your codebase already has architecture rules. Archprint tries to catch them in the act.",
+  "standfirst": "Archprint mines a TypeScript repository's import graph, keeps only patterns with statistical support, then emits enforceable rules for tools such as ESLint and dependency-cruiser.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-10T18:25:00Z",
+  "discoveredAt": "2026-09-10T18:05:00Z",
+  "category": "Developer tools",
+  "tags": ["typescript", "architecture", "static-analysis", "linting"],
+  "homepage": "https://tommkruix.github.io/archprint/",
+  "repo": "https://github.com/Tommkruix/archprint",
+  "licence": "MIT",
+  "platforms": ["Node.js / TypeScript projects"],
+  "tested": false,
+  "evidence": "Repository metadata, public project description and independent launch coverage. Toolglass has not installed or run Archprint.",
+  "body": [
+    {"heading": "What is it?", "paragraphs": ["Archprint is a small TypeScript architecture-mining tool with an unusually sensible premise: instead of asking a team to write down every boundary it thinks the codebase follows, inspect the imports and find the boundaries the code actually follows. It builds an import graph, looks for statistically consistent relationships, and turns sufficiently strong patterns into rules that existing tools can enforce.", "The project says it can emit rules for ESLint, dependency-cruiser and ts-arch. That matters because the output is not another architecture diagram destined to become archaeological evidence. The point is to convert an observed convention into something CI can reject when a later change breaks it."]},
+    {"heading": "Why did Radar notice it?", "paragraphs": ["Architecture rules are often weakest at exactly the moment they matter most: when they exist as tribal knowledge. 'Services do not import UI', 'features only reach the database through this layer', or 'packages point inward, never sideways' can be obvious to the people who built a system and invisible to the next developer or coding agent.", "Archprint flips that problem around. It treats the existing repository as evidence, and it attaches counts and confidence to an inferred rule rather than presenting a guess as doctrine. That is more interesting than another AI-written ARCHITECTURE.md because the inference is only useful if the code itself repeatedly supports it."]},
+    {"heading": "What's the catch?", "paragraphs": ["Inference from the present can fossilise accidental structure. A repository may be consistently organised for historical reasons rather than good ones, and statistical confidence is not the same thing as architectural wisdom. The current scope is also deliberately narrow: TypeScript import relationships are much easier to mine than runtime coupling, data flow or architectural intent.", "The repository is tiny by popularity standards, with only a handful of stars when Radar checked it, so there is little independent operational evidence yet. Treat the generated rules as proposals with receipts, not tablets from the mountain."]},
+    {"heading": "Who might want it?", "paragraphs": ["TypeScript teams with an established codebase, especially ones introducing more automated coding, where preserving already-working boundaries is more valuable than asking an agent to invent a new architecture policy from scratch."]}
+  ],
+  "verdict": "A clever inversion of architecture linting: discover the rules the repository already demonstrates, then decide which ones deserve teeth. Very early, but the evidence-first shape is right.",
+  "nextStep": "Run it against a mature TypeScript monorepo, inspect every inferred rule, then deliberately violate one accepted boundary and confirm the emitted linter catches it cleanly.",
+  "sourceUrls": ["https://github.com/Tommkruix/archprint", "https://tommkruix.github.io/archprint/", "https://buzz0.com/daily/2026-09-08"],
+  "image": {"src": "/radar/archprint/card.svg", "alt": "A Toolglass Radar plate showing a code import graph condensing into a small set of enforceable architecture rules.", "caption": "Toolglass Radar fallback plate based on public project evidence; not a product screenshot.", "kind": "RADAR PLATE"},
+  "automation": {"generated": true}
+}
