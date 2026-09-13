@@ -45,6 +45,7 @@ export default function RootLayout({
             <nav aria-label="Main navigation">
               <a href={sitePath('/')}>Front page</a>
               <a href={sitePath('/reviews')}>Reviews</a>
+              <a href={sitePath('/articles')}>Articles</a>
               <a href={sitePath('/radar')}>Radar</a>
               <a href={sitePath('/about')}>About / Methodology</a>
               <a href={sitePath('/submit')}>Submit software</a>
@@ -62,6 +63,7 @@ export default function RootLayout({
             <br />
             Judgement worth explaining.
           </p>
+          <a href={sitePath('/articles')}>Articles & essays ↗</a>
           <a href={sitePath('/about')}>Our editorial approach ↗</a>
           <a href={sitePath('/submit')}>Submit software ↗</a>
           <a href={sitePath('/feed.xml')}>RSS feed ↗</a>
