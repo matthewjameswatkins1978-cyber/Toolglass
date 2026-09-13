@@ -1,0 +1,29 @@
+{
+  "slug": "gpty",
+  "name": "gPTY",
+  "headline": "Someone built an agent-aware terminal multiplexer with Godot. The odd choice is starting to look deliberate.",
+  "standfirst": "gPTY combines a Rust PTY engine with a Godot interface, then exposes panes through JSON-RPC, a CLI and MCP so automation can read and drive terminals without scraping their rendered TUI.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-13T18:18:00Z",
+  "discoveredAt": "2026-09-13T17:58:00Z",
+  "category": "Terminal tools",
+  "tags": ["terminal", "godot", "rust", "agents"],
+  "homepage": "https://godot-pty.github.io/gpty/",
+  "repo": "https://github.com/godot-pty/gpty",
+  "version": "0.5.4",
+  "licence": "GPL-3.0-or-later",
+  "platforms": ["Linux", "macOS", "Windows"],
+  "tested": false,
+  "evidence": "Project repository and documentation, v0.5 release notes, current GitHub metadata and independent command documentation. Toolglass has not downloaded or run gPTY.",
+  "body": [
+    {"heading": "What is it?", "paragraphs": ["gPTY is a graphical multi-terminal workspace whose plumbing is more interesting than its tiling grid. Rust handles the PTY engine and terminal state, Godot renders the desktop interface, and the running workspace exposes a documented JSON-RPC socket, CLI and MCP server. Agents and scripts can spawn panes, inject input, inspect recent output, wait for regex matches and query process state without pretending coloured terminal cells are an API.", "It also has a 'concept' engine that watches parsed terminal output for regex-defined events and routes captured material into neighbouring panes such as code or inspector views. The project deliberately says those concepts are display-only rather than command injection. Scrollback and workspaces persist, and release bundles currently target Linux, macOS and Windows."]},
+    {"heading": "Why did Radar notice it?", "paragraphs": ["Because terminal automation is full of awkward impersonation. Humans receive a visual stream; agents often receive either a shell tool that bypasses the visible terminal entirely or brittle screen scraping that tries to infer when a command finished. gPTY's more useful idea is to make the terminal workspace itself addressable: panes get stable identities and expose status, reads, waits and events as protocol operations.", "The Godot choice also stops looking merely eccentric once the product wants mixed panes, graph-like UI, persistent layouts and richer instrumentation. A game engine is not the conventional foundation for a terminal, but it is very good at composable interactive surfaces. The project is unusually candid that most of the codebase was LLM-generated, which turns gPTY into a second experiment as well: how far can generated code carry a systems-heavy desktop application before maintenance debt bites?"]},
+    {"heading": "What's the catch?", "paragraphs": ["This is not tmux with a prettier coat. The documented caveats say there is no attach-from-an-existing-TTY session model, panes execute with the user's privileges, persisted scrollback is plaintext, and same-user processes are inside the trust boundary. Anyone expecting terminal multiplexing to double as a security sandbox is standing in the wrong building.", "The LLM-generated-code disclosure deserves to be taken literally rather than charmingly. A terminal emulator, IPC server and agent control surface contain exactly the sort of edge cases where unidiomatic code can graduate from untidy to dangerous. The project has a threat model and hardening work, but 62 GitHub stars and a July 2026 birth date are not years of hostile field testing."]},
+    {"heading": "Who might want it?", "paragraphs": ["Developers running several coding agents or long-lived shell tasks who want one human-visible workspace that automation can also inspect through structured protocols, plus terminal-tool builders interested in treating panes as controllable objects rather than character grids."]}
+  ],
+  "verdict": "A wonderfully odd stack wrapped around a serious idea: stop making agents scrape terminals and give the terminal a protocol surface of its own. Early, over-ambitious in interesting ways, and absolutely one to watch.",
+  "nextStep": "Run the 0.5.4 release with two ordinary shells and one coding agent, exercise pane-read, pane-wait and MCP control, then deliberately probe process exit, huge scrollback, hostile escape sequences and workspace trust boundaries.",
+  "sourceUrls": ["https://github.com/godot-pty/gpty", "https://godot-pty.github.io/gpty/", "https://godot-pty.github.io/gpty/blog/v0.5.0/", "https://linuxcommandlibrary.com/man/gpty"],
+  "image": {"src": "/radar/gpty/card.svg", "alt": "A Toolglass Radar diagram of four tiled terminal panes connected to JSON-RPC, CLI and MCP control paths.", "caption": "Toolglass Radar explanatory plate based on the documented gPTY control surface; not a hands-on screenshot.", "kind": "RADAR PLATE"},
+  "automation": {"generated": true}
+}

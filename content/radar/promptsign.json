@@ -1,0 +1,28 @@
+{
+  "slug": "promptsign",
+  "name": "PromptSign",
+  "headline": "AI instruction files are executable trust. PromptSign wants them signed before your agent reads them.",
+  "standfirst": "PromptSign applies Sigstore-style signing and offline verification to CLAUDE.md, AGENTS.md, skills, agent definitions and their script payloads, treating prompt supply chains rather more like software supply chains.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-13T18:18:00Z",
+  "discoveredAt": "2026-09-13T17:52:00Z",
+  "category": "AI security",
+  "tags": ["sigstore", "agents", "supply-chain", "security"],
+  "homepage": "https://promptsign.ai",
+  "repo": "https://github.com/PromptSign/promptsign-cli",
+  "licence": "Apache-2.0",
+  "platforms": ["Linux", "macOS", "Windows"],
+  "tested": false,
+  "evidence": "PromptSign public repositories, CLI architecture notes, plugin directory metadata and Show HN coverage. Toolglass has not installed PromptSign or verified a signed instruction bundle.",
+  "body": [
+    {"heading": "What is it?", "paragraphs": ["PromptSign is a signing and verification system for the files that increasingly tell coding agents what they are allowed to do. Its CLI explicitly covers skills, agent definitions, CLAUDE.md, AGENTS.md and associated script payloads. The basic claim is simple: if an instruction file can change an agent's behaviour, then silently replacing that file is closer to replacing executable policy than editing harmless documentation.", "The implementation is interesting because verification is designed to be offline by construction. Network-facing Sigstore work lives in the CLI, while the core verification library deliberately carries no HTTP client or TLS stack. Release binaries are static and the default signing path is keyless, binding signatures to an identity rather than leaving a long-lived signing key on every developer laptop."]},
+    {"heading": "Why did Radar notice it?", "paragraphs": ["Agent ecosystems are rapidly accumulating skills, rules, hooks and marketplace bundles, but the trust model is often still 'download this Markdown and hope the repository you meant is the repository you got'. That is a peculiar regression: the industry spent years building provenance for packages and binaries, then recreated a new executable-adjacent layer whose most common format is unsigned text.", "PromptSign is interesting because it attacks that exact seam rather than trying to secure the whole model. The project also talks about first-install bootstrapping, transparency logs, pinned trust roots and fail-closed verification instead of treating a checksum beside the download as magic dust. That is the right class of paranoia for a tool whose own binary becomes part of the trust root."]},
+    {"heading": "What's the catch?", "paragraphs": ["A valid signature proves provenance and integrity, not wisdom. A perfectly authentic malicious skill remains malicious, and a trusted publisher can still make a catastrophic mistake. PromptSign therefore solves one important question, 'who produced this exact bundle?', while leaving code review, permission boundaries and publisher judgement firmly alive.", "The ecosystem is also extremely young. The public CLI, core, plugin and specification repositories exist, but independent operational evidence is thin and the user experience of signing, trust-on-first-use, revocation and publisher policy will matter enormously. Security machinery that is theoretically immaculate but irritating enough to bypass has a habit of becoming decorative."]},
+    {"heading": "Who might want it?", "paragraphs": ["Teams installing third-party agent skills, maintainers distributing reusable coding-agent instructions, and anyone building a plugin marketplace where 'this Markdown came from the publisher you intended' needs to become a machine-checkable statement rather than a social convention."]}
+  ],
+  "verdict": "A small project aimed at a real emerging supply-chain hole. Signing prompts will not make agents safe, but treating behavioural instruction bundles as provenance-sensitive artifacts is considerably saner than pretending they are just text files.",
+  "nextStep": "Install the CLI in an isolated test repo, sign a tiny skill bundle, verify it offline, then tamper with both the instruction file and an attached script to confirm the verifier fails closed and the agent hook actually blocks use.",
+  "sourceUrls": ["https://github.com/PromptSign/promptsign-cli", "https://github.com/PromptSign/promptsign-core", "https://promptsign.ai", "https://pluginsmp.com/plugins/promptsign"],
+  "image": {"src": "/radar/promptsign/card.svg", "alt": "A Toolglass Radar diagram showing an AI instruction file passing through an identity signature and transparency check before reaching an agent context.", "caption": "Toolglass Radar explanatory plate based on public PromptSign architecture; not a product screenshot.", "kind": "RADAR PLATE"},
+  "automation": {"generated": true}
+}

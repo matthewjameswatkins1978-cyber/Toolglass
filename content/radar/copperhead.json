@@ -1,0 +1,28 @@
+{
+  "slug": "copperhead",
+  "name": "Copperhead",
+  "headline": "Coding agents have escaped the codebase. Copperhead is editing real circuit boards and asking KiCad to mark the homework.",
+  "standfirst": "Copperhead is an open-source hardware agent for existing KiCad repositories, making surgical schematic and PCB changes, carrying decisions through design documents and using KiCad's ERC/DRC as deterministic gates.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-13T18:18:00Z",
+  "discoveredAt": "2026-09-13T18:04:00Z",
+  "category": "Hardware tools",
+  "tags": ["kicad", "pcb", "hardware", "agents"],
+  "homepage": "https://copperhead.sh/",
+  "repo": "https://github.com/copperheadhq/copperhead",
+  "licence": "Apache-2.0",
+  "platforms": ["Node.js 20+", "KiCad repositories"],
+  "tested": false,
+  "evidence": "Copperhead public repository, technical specification, project site and public proof-board documentation. Toolglass has not used Copperhead on a KiCad design or manufactured any output it produced.",
+  "body": [
+    {"heading": "What is it?", "paragraphs": ["Copperhead describes itself as 'Cursor for circuit boards', which is marketing shorthand but unusually accurate. Point it at a KiCad repository and its agent can inspect and modify the real .kicad_sch and .kicad_pcb source files, update the surrounding design documentation, record decisions and run KiCad's electrical and design-rule checks. A separate create pipeline aims to move from a written brief through architecture, parts, schematic, layout, manufacturing outputs, firmware scaffolding and a bring-up plan.", "The more convincing part is the emphasis on narrow edits and external gates. Copperhead says untouched regions stay byte-identical, changes require a validated proposal before design files unlock, and verification calls kicad-cli rather than asking the model whether its own board looks plausible. The project is early, but there is a public proof board and the repository exposes the specification, prompts, tools and verification machinery."]},
+    {"heading": "Why did Radar notice it?", "paragraphs": ["Software agents have a forgiving medium: a broken build can be fixed and rerun for pennies. Hardware agents eventually produce copper, postage and a respin bill. That makes Copperhead a useful test of where agentic development either grows up or falls apart, because 'the model felt confident' is spectacularly inadequate once a design leaves the screen.", "The project therefore leans into a pattern Toolglass likes: AI proposes and manipulates, deterministic machinery judges what it can. ERC and DRC cannot prove a board is good, but they can reject classes of electrical and physical mistakes without sharing the model's imagination. Keeping design decisions in plain Markdown and JSON also makes the agent's memory inspectable instead of hiding hardware intent inside a chat transcript."]},
+    {"heading": "What's the catch?", "paragraphs": ["Passing ERC and DRC is nowhere near proof that a board will work. Component availability, datasheet interpretation, analogue behaviour, signal integrity, thermal margins, mechanical fit, firmware assumptions and plain old bad engineering can all survive formal design-rule checks. Copperhead's site makes larger claims about a complete design pipeline than Toolglass can independently validate from desk research.", "There is also an uncomfortable trust edge in model-backed hardware editing. The repository documentation notes that some provider integrations can technically read more of the local filesystem than Copperhead itself intends them to use. More broadly, the system is early enough that every generated manufacturing artifact should still be treated as an engineer-reviewed draft, not a vending machine for Gerbers."]},
+    {"heading": "Who might want it?", "paragraphs": ["KiCad users already comfortable reviewing schematics and layouts, open-hardware developers who want agent assistance without proprietary file formats, and teams exploring whether coding-agent workflows can cross into electronics while retaining deterministic checks and ordinary Git diffs."]}
+  ],
+  "verdict": "One of the more consequential agent experiments on Radar because errors cost more than a failed unit test. The architecture has the right instinct: let the model work, but make ordinary engineering tools veto what they actually know how to veto.",
+  "nextStep": "Use it on a small existing KiCad board with a deliberately bounded change, review the exact s-expression diff, run ERC/DRC independently, then have a human electronics engineer inspect the result before even considering fabrication.",
+  "sourceUrls": ["https://github.com/copperheadhq/copperhead", "https://github.com/copperheadhq/copperhead/blob/main/openspec/specs/SPEC.md", "https://copperhead.sh/", "https://chouhan.ai/antler-crackathon"],
+  "image": {"src": "/radar/copperhead/card.svg", "alt": "A Toolglass Radar diagram showing a PCB outline, traces and components passing through ERC and DRC verification gates.", "caption": "Toolglass Radar explanatory plate based on Copperhead's public workflow; not a Toolglass-tested board render.", "kind": "RADAR PLATE"},
+  "automation": {"generated": true}
+}
