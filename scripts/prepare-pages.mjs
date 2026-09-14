@@ -35,27 +35,21 @@ for (const entry of fs.readdirSync(source)) {
   }
   if (entry.endsWith('.html') || entry.endsWith('.rsc')) {
     const route = entry.replace(/\.(html|rsc)$/, '');
-    if (route === 'about' || route === 'reviews' || route === 'submit' || route === 'radar') {
+    if (route === 'about' || route === 'reviews' || route === 'submit' || route === 'radar' || route === 'articles') {
       copyFile(entry, `${route}/index.${entry.endsWith('.html') ? 'html' : 'rsc'}`);
     }
   }
 }
 
-const reviews = path.join(source, 'reviews');
-if (fs.existsSync(reviews)) {
-  for (const entry of fs.readdirSync(reviews)) {
+for (const route of ['reviews', 'radar', 'articles']) {
+  const routeDirectory = path.join(source, route);
+  if (!fs.existsSync(routeDirectory)) continue;
+
+  for (const entry of fs.readdirSync(routeDirectory)) {
     const match = entry.match(/^(.*)\.(html|rsc)$/);
     if (match) {
-      copyFile(`reviews/${entry}`, `reviews/${match[1]}/index.${match[2]}`);
+      copyFile(`${route}/${entry}`, `${route}/${match[1]}/index.${match[2]}`);
     }
-  }
-}
-
-const radar = path.join(source, 'radar');
-if (fs.existsSync(radar)) {
-  for (const entry of fs.readdirSync(radar)) {
-    const match = entry.match(/^(.*)\.(html|rsc)$/);
-    if (match) copyFile(`radar/${entry}`, `radar/${match[1]}/index.${match[2]}`);
   }
 }
 

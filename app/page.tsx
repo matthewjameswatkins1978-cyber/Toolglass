@@ -1,4 +1,5 @@
 import { reviews } from '@/content/reviews';
+import { articles } from '@/content/articles';
 import { sitePath } from '@/lib/utils';
 import EditorialArt from '@/components/EditorialArt';
 import MachineGlyph from '@/components/MachineGlyph';
@@ -7,6 +8,9 @@ import { radarEntries } from '@/content/radar';
 const spaghetti = reviews.find((review) => review.slug === 'spaghetti')!;
 const atlas = reviews.find((review) => review.slug === 'atlas')!;
 const termai = reviews.find((review) => review.slug === 'termai')!;
+const thinkingSurface = articles.find(
+  (article) => article.slug === 'the-thinking-surface',
+)!;
 
 export default function Home() {
   return (
@@ -69,6 +73,28 @@ export default function Home() {
           width={2172}
           height={724}
         />
+      </section>
+      <section className="notebook-feature">
+        <div>
+          <p className="eyebrow">ESSAY / HUMAN–AI COLLABORATION</p>
+          <h2>{thinkingSurface.title}</h2>
+          <p>{thinkingSurface.summary}</p>
+          <a
+            className="read-link"
+            href={sitePath('/articles/the-thinking-surface')}
+          >
+            Read the manifesto ↗
+          </a>
+        </div>
+        <div
+          className="notebook-receipt"
+          aria-label="The Thinking Surface essay summary"
+        >
+          <span>THE THINKING SURFACE</span>
+          <strong>INTENT &gt; BLACK BOX</strong>
+          <span>HUMAN JUDGEMENT STAYS VISIBLE</span>
+          <span>AI INSIDE THE HUMAN&apos;S LOOP</span>
+        </div>
       </section>
       <section className="section">
         <div className="section-title">

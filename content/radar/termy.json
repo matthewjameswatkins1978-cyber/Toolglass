@@ -1,0 +1,27 @@
+{
+  "slug": "termy",
+  "name": "TERMy / NPC-Forge",
+  "headline": "Natural-language shell commands, zero neural networks, and a refreshing refusal to summon a trillion parameters.",
+  "standfirst": "TERMy maps ordinary-language terminal requests to commands using a compact dataset format and deterministic matching rather than embeddings, machine learning or an LLM.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-10T18:25:00Z",
+  "discoveredAt": "2026-09-10T18:08:00Z",
+  "category": "Terminal tools",
+  "tags": ["terminal", "nlu", "deterministic", "local-first"],
+  "repo": "https://github.com/gioblu/NPC-Forge",
+  "licence": "AGPL-3.0",
+  "platforms": ["Linux / CPU-local workflow"],
+  "tested": false,
+  "evidence": "NPC-Forge repository and development notes, plus the public Show HN discussion. Toolglass has not installed or run TERMy.",
+  "body": [
+    {"heading": "What is it?", "paragraphs": ["TERMy is the bundled terminal assistant for NPC-Forge, a framework for conversational agents that deliberately avoids machine learning. You ask for something such as activating a virtual environment or listing files; a lightweight parser tries exact, template and probabilistic text matching against a structured dataset, extracts variables, and maps the result to a known response or tool call.", "The underlying NDF dataset format can describe intents, example phrases, variable patterns, permission gates, tool calls and even canned reasoning traces. The public development notes describe a parser built around ordinary techniques including bag-of-words, inverse-document-frequency weighting and typo-tolerant matching. It is a reminder that 'understands a sentence' and 'requires a generative model' are not synonyms."]},
+    {"heading": "Why did Radar notice it?", "paragraphs": ["The origin story is better than the usual feature list. Its author first experimented with home-trained transformers and then local open models on modest hardware, found the result too slow or unreliable for trivial terminal chores, and walked backwards into a deterministic solution. TERMy is therefore not anti-AI theatre; it is an attempt to identify the small part of the job that never needed generation.", "That boundary is interesting. For recurring commands, predictable latency, explicit permission keys and an editable knowledge set may be preferable to asking a model to rediscover the same shell incantation every time. The Show HN discussion also raised the obvious hybrid possibility: let an LLM handle novel work, then turn repeated successful operations into deterministic recipes."]},
+    {"heading": "What's the catch?", "paragraphs": ["The same constraint that makes TERMy appealing limits it. A curated intent system cannot gracefully improvise across the endless long tail of shell work unless somebody teaches it those intents. Matching the wrong known intent can also be dangerous when commands are executable, so permission gates and review still matter.", "The project is experimental and the public documentation warns that matched intents may emit long command chains. This is not a reason to type '-y' with your eyes closed. Deterministic does not mean infallible; it means the failure surface is inspectable in a different way."]},
+    {"heading": "Who might want it?", "paragraphs": ["Linux users who repeatedly ask assistants for mundane shell operations, people working on small or offline machines, and tool builders interested in pushing routine actions out of expensive probabilistic inference."]}
+  ],
+  "verdict": "The interesting idea is not that TERMy can beat an LLM at conversation. It cannot. It is that a surprising amount of terminal 'AI' may be better treated as a tiny deterministic language once the useful intents are known.",
+  "nextStep": "Test a mixed set of familiar, typo-heavy and deliberately ambiguous shell requests, paying particular attention to false-positive intent matches and destructive-command permission gates.",
+  "sourceUrls": ["https://github.com/gioblu/NPC-Forge", "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md", "https://news.ycombinator.com/item?id=49562219"],
+  "image": {"src": "/radar/termy/card.svg", "alt": "A Toolglass Radar plate showing natural-language terminal text passing through a compact deterministic rule engine into a shell command.", "caption": "Toolglass Radar fallback plate based on public project evidence; not a product screenshot.", "kind": "RADAR PLATE"},
+  "automation": {"generated": true}
+}

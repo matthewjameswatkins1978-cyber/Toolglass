@@ -1,0 +1,28 @@
+{
+  "slug": "mmux",
+  "name": "mmux",
+  "headline": "A terminal multiplexer built around AI agents instead of pretending they are ordinary shells.",
+  "standfirst": "mmux wraps persistent tmux sessions in a project-aware TUI for agents, terminals, dev servers, worktrees and Git.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-09T21:05:00Z",
+  "discoveredAt": "2026-09-09T21:05:00Z",
+  "category": "Developer tools",
+  "tags": ["terminal", "agents", "tmux"],
+  "homepage": "https://mmux.org",
+  "repo": "https://github.com/marvinvr/mmux",
+  "licence": "GPL-3.0-or-later (repository claim)",
+  "platforms": ["macOS", "Linux"],
+  "tested": false,
+  "evidence": "Repository, README and public project material. Toolglass has not installed or run mmux.",
+  "body": [
+    {"heading": "What is it?", "paragraphs": ["mmux is a Rust terminal workspace that keeps AI coding agents, ordinary terminals and long-running project processes inside a persistent per-directory tmux session. Reopen the project and the agent conversations, shells and dev servers can still be there."]},
+    {"heading": "Why did Radar notice it?", "paragraphs": ["Agentic coding has quietly turned terminals into miniature operating rooms: several agents, a dev server, a test watcher, a Git worktree and a shell all competing for attention. mmux tackles that coordination problem directly instead of adding yet another agent.", "The worktree handling is particularly sensible. A worktree becomes another project box, processes can follow the active checkout, and finished branches can be cleaned up after merge or push. That is mundane machinery with a real chance of reducing operator mistakes."]},
+    {"heading": "What's the catch?", "paragraphs": ["It depends on tmux and inherits some of tmux's conceptual weight even while hiding much of the interface. The project is young, prebuilt support is narrower than the big terminal tools, and Toolglass has not tested session recovery after crashes, updates or SSH disconnects."]},
+    {"heading": "Who might want it?", "paragraphs": ["People who already run Claude Code, Codex or similar agents in terminals and are tired of manually reconstructing which pane, branch and server belonged to which task."]}
+  ],
+  "verdict": "Less glamorous than a new model, more likely to save an afternoon: mmux is interesting because it treats agent orchestration as a terminal ergonomics problem.",
+  "nextStep": "Run two agents in separate worktrees, kill the terminal, reconnect, and check whether sessions, processes and branch identity recover cleanly.",
+  "sourceUrls": ["https://github.com/marvinvr/mmux", "https://mmux.org"],
+  "image": {"src": "/radar/mmux/card.svg", "alt": "A Toolglass Radar plate showing persistent agent, terminal and process panes feeding one project workspace.", "caption": "Radar fallback plate / public project evidence not pictured", "kind": "RADAR PLATE"},
+  "automation": {"generated": true}
+}

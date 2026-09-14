@@ -1,0 +1,28 @@
+{
+  "slug": "opentrailpaper",
+  "name": "OpenTrailPaper",
+  "headline": "A bike computer that looks more like a field instrument than a subscription with handlebars.",
+  "standfirst": "OpenTrailPaper turns an off-the-shelf ESP32-S3 e-paper board into a standalone cycling head unit with offline maps, GPX navigation, FIT recording and Bluetooth sensors.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-10T18:25:00Z",
+  "discoveredAt": "2026-09-10T18:12:00Z",
+  "category": "Open hardware",
+  "tags": ["e-paper", "esp32", "cycling", "open-hardware"],
+  "homepage": "https://opentrailpaper.com",
+  "repo": "https://github.com/RaemondBW/OpenTrailPaper",
+  "licence": "Apache-2.0",
+  "platforms": ["LilyGO T5S3 4.7-inch E-Paper PRO", "iOS companion app", "Android companion app"],
+  "tested": false,
+  "evidence": "Repository, project documentation/site and public Show HN coverage. Toolglass has not built, flashed or ridden with OpenTrailPaper.",
+  "body": [
+    {"heading": "What is it?", "paragraphs": ["OpenTrailPaper is open-source firmware for the LilyGO T5S3 4.7-inch E-Paper PRO, an ESP32-S3 board with a 960×540 e-paper display, GPS, touch, SD storage and Bluetooth. Flash the firmware and the development board becomes a DIY cycling head unit rather than another desk-bound microcontroller demo.", "The software handles offline maps, GPX routes, ride recording to FIT files and Bluetooth cycling sensors. Companion apps prepare routes, maps and settings, but the head unit is designed to navigate and record on its own once the necessary data has been transferred. The repository includes firmware plus SwiftUI and Jetpack Compose companion code."]},
+    {"heading": "Why did Radar notice it?", "paragraphs": ["Because this is the sort of project where open software changes the identity of commodity hardware. The interesting object is not a custom PCB hidden behind a sealed product; it is a purchasable development board whose spare capabilities have been assembled into a coherent field device.", "E-paper is also a pleasingly specific engineering choice. It is highly legible in daylight and frugal when an image remains static, but cycling navigation forces frequent enough updates to expose all the awkward bits: refresh behaviour, partial redraws, map rendering, touch interaction and battery trade-offs. OpenTrailPaper is therefore both a useful gadget and an unusually visible embedded-systems experiment."]},
+    {"heading": "What's the catch?", "paragraphs": ["The project is candid about the reference hardware. It is a development board, not a weatherproof Garmin replacement. Public documentation notes the absence of a barometric altimeter and magnetometer, basic GPS limitations, roughly working-day rather than multi-day battery life, weak physical buttons and the need for a case if rain is part of your climate.", "Those caveats are exactly why it belongs in Radar rather than a full review. The feature list is substantial, but we have not flashed the board, measured navigation reliability, checked sensor interoperability or discovered how pleasant an e-paper map is when the road starts pointing uphill."]},
+    {"heading": "Who might want it?", "paragraphs": ["Cyclists who enjoy building their own kit, embedded developers looking for a real ESP32-S3/e-paper application, and people who prefer an inspectable offline device to another account-bound fitness appliance."]}
+  ],
+  "verdict": "Not a polished consumer bike computer, and more interesting because it does not pretend to be one. OpenTrailPaper turns a general development board into a credible, inspectable outdoor instrument.",
+  "nextStep": "Flash a reference board, load an offline route, pair heart-rate and cadence sensors, then compare GPS acquisition, map refresh, battery drain and ride-file integrity on a real two-hour ride.",
+  "sourceUrls": ["https://github.com/RaemondBW/OpenTrailPaper", "https://opentrailpaper.com", "https://news.ycombinator.com/item?id=49567437"],
+  "image": {"src": "/radar/opentrailpaper/card.svg", "alt": "A Toolglass Radar plate depicting an e-paper cycling head unit with a route line, GPS fix and sensor readouts.", "caption": "Toolglass Radar fallback plate based on public project evidence; not a product screenshot.", "kind": "RADAR PLATE"},
+  "automation": {"generated": true}
+}
