@@ -42,3 +42,7 @@ next-env.d.ts
 /distribution/outbox/*.json
 /distribution/outbox/*.md
 /public/indexnow-key.txt
+
+# Local Python verification artefacts for the Scout build.
+scout/**/__pycache__/
+scout/*.egg-info/

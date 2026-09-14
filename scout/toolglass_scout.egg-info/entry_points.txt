@@ -1,2 +1,0 @@
-[console_scripts]
-toolglass-scout = toolglass_scout.cli:main
