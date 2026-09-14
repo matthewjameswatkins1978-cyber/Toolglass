@@ -36,6 +36,38 @@ No comments, user accounts, scouting jobs, automated lab or GARY integration. Fu
 
 Metadata checked 5 September 2026 against the linked upstream repositories and GitHub release API. Unknown latest versions are labelled explicitly. Discovery star snapshots are historical, not live counters.
 
+## Toolglass Scout — Agents for Humans build
+
+The `scout/` directory is the separate hackathon build behind the public
+`Toolglass Scout` project. It does not change the magazine or Radar runtime.
+
+Toolglass Scout is a bounded Professional Agent for small technical publications:
+discovery input goes through Strands Agents stages for verification/evidence,
+deduplication/history, editorial-fit judgement and draft preparation. Only
+survivors reach a human decision surface (`APPROVE`, `REJECT`, `INVESTIGATE`, or
+`HOLD`); the agent never auto-publishes.
+
+Run the credential-free, deterministic end-to-end demo from the repository root:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install -e scout
+python -m toolglass_scout --demo
+python -m pytest -q scout/tests
+```
+
+The demo uses a real Strands Agents loop with a deterministic offline provider so
+judges can reproduce it without credentials. `SCOUT_MODEL=bedrock` is the optional
+Amazon Bedrock path when AWS credentials and model access are available. This
+checkout does not claim a deployed AgentCore worker: `scout/docs/architecture.png`
+labels that as the target deployment boundary, while the checked-in demo uses local
+JSON for provenance and history.
+
+The architecture diagram and short demo deck are in `scout/docs/` and `scout/demo/`.
+The Scout build is covered by the MIT license in the repository root; the existing
+magazine/site remains a separate content-driven surface.
+
 ## Validation notes
 
 Production static export succeeds for the homepage, index, methodology, all eleven articles and a 404 page. The first issue contains three evidence-backed articles and eight scouting notes. Authored `app` and `content` files pass TypeScript; the unmodified starter component catalogue still has repository-wide Oxlint errors. Responsive CSS is implemented; browser visual and interaction checks are part of the release verification workflow.

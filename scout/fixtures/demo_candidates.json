@@ -1,0 +1,34 @@
+[
+  {
+    "id": "tinybook",
+    "title": "TinyBook",
+    "summary": "A small local-first documentation browser that turns a repository into a searchable field guide.",
+    "source_url": "https://github.com/example/tinybook",
+    "evidence": [
+      {"source_type": "repository", "url": "https://github.com/example/tinybook", "claim": "README and release history describe the local-first workflow."},
+      {"source_type": "documentation", "url": "https://example.com/tinybook/docs", "claim": "Official docs show the searchable field-guide workflow."}
+    ],
+    "fit_scores": {"novelty": 0.9, "usefulness": 0.9, "technical_interest": 0.8, "evidence_quality": 0.9, "reader_interest": 0.85},
+    "tags": ["documentation", "local-first"]
+  },
+  {
+    "id": "same-old-feed-reader",
+    "title": "Same Old Feed Reader",
+    "summary": "A familiar feed reader with no meaningful change from the item already covered.",
+    "source_url": "https://github.com/example/already-covered",
+    "evidence": [
+      {"source_type": "repository", "url": "https://github.com/example/already-covered", "claim": "Repository exists."}
+    ],
+    "fit_scores": {"novelty": 0.8, "usefulness": 0.8, "technical_interest": 0.7, "evidence_quality": 0.8, "reader_interest": 0.7},
+    "tags": ["feeds"]
+  },
+  {
+    "id": "marketing-only",
+    "title": "Marketing Only",
+    "summary": "A launch page claiming an agentic breakthrough without inspectable primary evidence.",
+    "source_url": "https://example.com/marketing-only",
+    "evidence": [],
+    "fit_scores": {"novelty": 0.8, "usefulness": 0.6, "technical_interest": 0.7, "evidence_quality": 0.1, "reader_interest": 0.6},
+    "tags": ["unverified"]
+  }
+]

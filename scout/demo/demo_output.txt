@@ -1,0 +1,15 @@
+TOOLGLASS SCOUT - bounded Strands Agents pipeline
+Model path: offline (offline is deterministic and credential-free)
+
+Decisions:
+- TinyBook: HUMAN_REVIEW
+  reason: survived all autonomous gates
+- Same Old Feed Reader: REJECT
+  reason: source already exists in candidate history
+- Marketing Only: REJECT
+  reason: no primary-source evidence packet
+
+Human decision surface:
+- TinyBook -> APPROVE, REJECT, INVESTIGATE, HOLD
+
+Trace stages: discovery -> verification -> dedupe/history -> editorial-fit -> drafting -> discovery -> verification -> dedupe/history -> discovery -> verification -> human-decision
