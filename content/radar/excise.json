@@ -1,0 +1,30 @@
+{
+  "slug":"excise",
+  "name":"Excise",
+  "headline":"A disk-space map that checks the floorboards again before cutting them out.",
+  "standfirst":"Excise is a young Diskonaut successor built around honest storage accounting, bounded scans and unusually explicit safeguards around permanent deletion.",
+  "status":"DESK REVIEW",
+  "publishedAt":"2026-09-16T18:13:00Z",
+  "discoveredAt":"2026-09-16T18:11:00Z",
+  "category":"System tools",
+  "tags":["terminal","filesystem","Rust","safety"],
+  "homepage":"https://github.com/findyourexit/excise",
+  "repo":"https://github.com/findyourexit/excise",
+  "version":"early-testing releases (project description)",
+  "licence":"MIT (repository/project documentation)",
+  "platforms":["Cross-platform claims; platform behaviour not verified by Toolglass"],
+  "tested":false,
+  "evidence":"Repository/project documentation plus independent LinuxLinks and Terminal Trove descriptions. Toolglass has not installed Excise or allowed it to delete anything.",
+  "body":[
+    {"heading":"What is it?","paragraphs":["Excise is an interactive terminal disk-usage explorer and independent successor to Diskonaut. It draws a treemap of storage while distinguishing apparent size from allocated space and avoiding double-counting hard-linked file identities."]},
+    {"heading":"Why did Radar notice it?","paragraphs":["Disk cleaners are exactly where cheerful convenience becomes dangerous. Excise's interesting idea is to treat deletion as a state-change problem rather than merely a confirmation dialog. Its documented deletion plan binds targets to filesystem identities, refuses to follow links and revalidates entries before mutation so a file changed after inspection is not silently swept away.","That is unusually serious thinking for a small terminal utility, and the same boundedness appears in scanner queues, memory, worker counts and report formats."]},
+    {"heading":"What looks good?","paragraphs":["The project exposes deterministic table and versioned JSON output as well as the TUI, and explicitly distinguishes unknown measurements from exact ones. Accessibility details such as monochrome, ASCII and reduced-motion modes are also present rather than bolted on as an afterthought."]},
+    {"heading":"What's the catch?","paragraphs":["The catch is printed in enormous conceptual letters: deletion is permanent and there is no trash or undo. The project itself calls current releases early-testing software and recommends disposable directories. Toolglass has not verified race handling, hard-link accounting, platform differences or recovery from interruption."]},
+    {"heading":"Who might want it?","paragraphs":["Developers and administrators who like visual disk explorers but want the destructive part to behave more like a carefully checked transaction than a red button."]}
+  ],
+  "verdict":"Interesting less for the treemap than for the unusually explicit contract around what a destructive filesystem tool is allowed to believe.",
+  "nextStep":"Build a disposable fixture with hard links, symlinks and files changed between scan and delete, then verify every documented refusal path before trusting it with real data.",
+  "sourceUrls":["https://github.com/findyourexit/excise","https://www.linuxlinks.com/excise-interactive-terminal-storage-navigator/","https://terminaltrove.com/excise/"],
+  "image":{"src":"/radar/excise/card.svg","alt":"A terminal storage treemap sits behind a guarded deletion checkpoint.","caption":"Radar fallback plate / destructive behaviour not tested by Toolglass","kind":"RADAR PLATE"},
+  "automation":{"generated":true}
+}

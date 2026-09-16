@@ -1,0 +1,29 @@
+{
+  "slug": "emeraldian",
+  "name": "Emeraldian",
+  "headline": "Obsidian escaped into the terminal, graph and all.",
+  "standfirst": "A Rust TUI reads an ordinary Obsidian vault directly, renders live Markdown, backlinks, images and graphs, then lets an optional agent work through the same visible commands as the user.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-16T18:11:00Z",
+  "discoveredAt": "2026-09-16T18:11:00Z",
+  "category": "Knowledge tools",
+  "tags": ["terminal", "markdown", "local-first", "agents"],
+  "homepage": "https://github.com/iamrohithrnair/emeraldian",
+  "repo": "https://github.com/iamrohithrnair/emeraldian",
+  "licence": "GPL-3.0 (repository)",
+  "platforms": ["macOS", "Linux"],
+  "tested": false,
+  "evidence": "Repository README and public project material. Toolglass has not installed or run Emeraldian.",
+  "body": [
+    {"heading":"What is it?","paragraphs":["Emeraldian is a terminal interface for an existing Obsidian vault. It reads the same Markdown folder directly, with no import database, and supplies a three-pane editor, wikilinks, backlinks, tags, a force-directed graph, image rendering and even an Excalidraw viewer."]},
+    {"heading":"Why did Radar notice it?","paragraphs":["The interesting part is not merely 'Obsidian in a TUI'. The optional assistant acts on notes through the same commands the human uses, and its tool calls remain visible in the transcript. That is a much healthier agent boundary than a mysterious second system quietly rewriting a private knowledge base.","The project also keeps the underlying object boring: a folder of Markdown. Close Emeraldian and nothing needs exporting back out of Emeraldian."]},
+    {"heading":"What looks good?","paragraphs":["The README describes real terminal-image protocols with a half-block fallback, a Barnes-Hut graph, Vim mode, multiple model providers and an offline setting. The project says the non-agent parts make no network connections, and the assistant can be pointed at local models."]},
+    {"heading":"What's the catch?","paragraphs":["This is young software with a surprisingly broad surface area. A terminal Markdown editor, graph renderer, image layer and writable AI assistant each provide their own opportunities for sharp edges. Toolglass has not verified editing fidelity, large-vault performance, agent write safety or compatibility with complicated Obsidian vaults."]},
+    {"heading":"Who might want it?","paragraphs":["Keyboard-heavy Obsidian users, people working over SSH, and anyone interested in local-first knowledge tools where the AI is an inspectable guest rather than the landlord."]}
+  ],
+  "verdict": "One of the more interesting attempts to make an existing plain-file knowledge base agent-friendly without first turning it into somebody else's database.",
+  "nextStep": "Open a copy of a real vault, test wikilink fidelity and graph performance, then let the assistant perform a bounded edit with writes visible.",
+  "sourceUrls": ["https://github.com/iamrohithrnair/emeraldian"],
+  "image": {"src":"/radar/emeraldian/card.svg","alt":"A terminal-style three-pane notebook with linked graph nodes beside it.","caption":"Radar fallback plate / Toolglass has not run the application","kind":"RADAR PLATE"},
+  "automation": {"generated": true}
+}

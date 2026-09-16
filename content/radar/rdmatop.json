@@ -1,0 +1,29 @@
+{
+  "slug":"rdmatop",
+  "name":"rdmatop",
+  "headline":"htop, but for the network fabric between expensive GPUs.",
+  "standfirst":"rdmatop is a small Rust TUI that turns Linux RDMA counters, queue pairs and process information into live throughput views and Perfetto traces.",
+  "status":"DESK REVIEW",
+  "publishedAt":"2026-09-16T18:12:00Z",
+  "discoveredAt":"2026-09-16T18:11:00Z",
+  "category":"Infrastructure",
+  "tags":["terminal","RDMA","GPU","observability","Linux"],
+  "homepage":"https://github.com/uccl-project/rdmatop",
+  "repo":"https://github.com/uccl-project/rdmatop",
+  "licence":"Apache-2.0 (repository)",
+  "platforms":["Linux with RDMA-capable NICs"],
+  "tested":false,
+  "evidence":"Repository README and public project material. Toolglass has not run rdmatop on RDMA hardware.",
+  "body":[
+    {"heading":"What is it?","paragraphs":["rdmatop is an htop-like monitor for Remote Direct Memory Access networking. It uses Linux netlink to enumerate RDMA devices, read hardware counters and map queue pairs back to processes, then calculates live throughput from successive samples."]},
+    {"heading":"Why did Radar notice it?","paragraphs":["AI infrastructure has made formerly specialist interconnect plumbing suddenly consequential. A GPU can be perfectly healthy while distributed training or inference crawls because the fabric between machines is not. rdmatop makes that layer legible without beginning with a full observability stack.","The particularly useful trick is recording the live counters as Chrome JSON for Perfetto. A quick terminal diagnosis can therefore become a time-aligned trace rather than a screenshot and a vague memory."]},
+    {"heading":"What looks good?","paragraphs":["The project documents support for ordinary RDMA devices and AWS EFA, and explicitly names workloads including NCCL, UCX, NVSHMEM and MoE communication. Ubuntu packages, Cargo installation and a Kubernetes DaemonSet make the little tool less toy-like than its size suggests."]},
+    {"heading":"What's the catch?","paragraphs":["Its niche is also its boundary: Linux only, RDMA hardware required, and usefulness depends on the counters exposed by that hardware and driver. Toolglass has not checked sampling overhead, process attribution under containers, EFA behaviour or trace accuracy."]},
+    {"heading":"Who might want it?","paragraphs":["People debugging multi-GPU and multi-node systems who would rather see the fabric misbehave before opening a much larger monitoring toolbox."]}
+  ],
+  "verdict":"A pleasingly narrow instrument for a layer of computing that is becoming much less niche as GPU clusters spread.",
+  "nextStep":"Run NCCL or UCX traffic across two RDMA hosts and compare rdmatop throughput and process attribution against native counters and its exported Perfetto trace.",
+  "sourceUrls":["https://github.com/uccl-project/rdmatop"],
+  "image":{"src":"/radar/rdmatop/card.svg","alt":"A terminal instrument shows two network throughput traces linking GPU nodes.","caption":"Radar fallback plate / no Toolglass RDMA bench test yet","kind":"RADAR PLATE"},
+  "automation":{"generated":true}
+}
