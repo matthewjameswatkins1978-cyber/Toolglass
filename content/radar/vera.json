@@ -1,0 +1,29 @@
+{
+  "slug": "vera",
+  "name": "Vera",
+  "headline": "What if the programming language were designed for the machine writing it?",
+  "standfirst": "Vera reverses a familiar assumption: instead of teaching coding agents to cope with languages made for humans, it is experimenting with a language whose contracts, effects and verification model are meant to make machine-written code easier to check.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-19T18:35:00Z",
+  "discoveredAt": "2026-09-19T18:35:00Z",
+  "category": "Programming languages",
+  "tags": ["languages", "agents", "verification", "experimental"],
+  "homepage": "https://github.com/aallan/vera",
+  "repo": "https://github.com/aallan/vera",
+  "licence": "MIT",
+  "platforms": ["Experimental toolchain"],
+  "tested": false,
+  "evidence": "Repository README, design documentation and public source tree. Toolglass has not installed or run Vera.",
+  "body": [
+    {"heading":"What is it?","paragraphs":["Vera is an experimental programming language and toolchain explicitly designed around code being written by LLMs. Its public design work draws on contract-heavy and verification-oriented languages including Eiffel, Dafny, F*, Koka, Liquid Haskell, Idris and SPARK/Ada. The toolchain uses Z3 for contract verification and Wasmtime for WebAssembly execution."]},
+    {"heading":"Why did Radar notice it?","paragraphs":["Most AI coding tooling preserves the human language and changes the editor around it. Vera asks the more disruptive question: if a machine is increasingly the author, should the language itself optimise for machine reasoning, explicit contracts and mechanically checkable consequences? That makes it interesting even if Vera never becomes a mainstream language."]},
+    {"heading":"What looks good?","paragraphs":["The project is unusually explicit about design choices and prior art rather than presenting 'for LLMs' as a magic adjective. Verification is part of the language/toolchain story, not merely another model pass judging model output. The repository also documents dependency licences and CI enforcement rather than hiding the machinery behind a demo."]},
+    {"heading":"What's the catch?","paragraphs":["This is research-flavoured experimental software, not evidence that machine-oriented languages have won. A new language pays enormous ecosystem, tooling and interoperability costs, while today's models already have vast training exposure to established languages. Toolglass has not measured whether Vera actually improves agent reliability, token efficiency or defect rates."]},
+    {"heading":"Who might want it?","paragraphs":["Language designers, formal-methods people and anyone interested in what software construction looks like when human readability is no longer the only design centre."]}
+  ],
+  "verdict": "The compelling part is the question, not yet the answer: agent-native programming may eventually require changing the substrate, not decorating the IDE.",
+  "nextStep": "Run equivalent bounded agent tasks in Vera and a conventional typed language, then compare correction loops, verification failures and human review cost.",
+  "sourceUrls": ["https://github.com/aallan/vera"],
+  "image": {"src":"/radar/vera/card.svg","alt":"Toolglass Radar plate showing a program contract flowing through a verification gate toward WebAssembly.","caption":"Radar fallback plate / Toolglass has not run Vera","kind":"RADAR PLATE"},
+  "automation": {"generated": true}
+}
