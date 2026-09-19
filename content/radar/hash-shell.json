@@ -1,0 +1,29 @@
+{
+  "slug": "hash-shell",
+  "name": "Hash",
+  "headline": "The AI command is becoming punctuation.",
+  "standfirst": "Hash is a POSIX shell that puts agent invocation into the grammar itself: type ?? and hand work to Claude Code, Cursor CLI, Gemini CLI or Ollama over ACP, without changing terminal emulators.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-19T18:36:00Z",
+  "discoveredAt": "2026-09-19T18:36:00Z",
+  "category": "Terminal & shells",
+  "tags": ["terminal", "shell", "agents", "ACP", "local-first"],
+  "homepage": "https://github.com/tfcace/hash",
+  "repo": "https://github.com/tfcace/hash",
+  "licence": "MIT",
+  "platforms": ["Local terminal environments"],
+  "tested": false,
+  "evidence": "Repository README and public project documentation. Toolglass has not installed or run Hash.",
+  "body": [
+    {"heading":"What is it?","paragraphs":["Hash is a POSIX-oriented shell with an AI escape built into its grammar. The project describes ?? as the route from ordinary shell work into external coding agents, using the Agent Client Protocol rather than tying the shell to one model vendor. It is local-first, advertises no login or telemetry, and can talk to several existing agent CLIs or Ollama."]},
+    {"heading":"Why did Radar notice it?","paragraphs":["AI terminals usually add a side panel, block UI or chat surface. Hash instead treats agent delegation as a language feature. That is a small syntactic move with a larger implication: agents may become another shell primitive alongside pipes, redirection and job control rather than a separate application you visit."]},
+    {"heading":"What looks good?","paragraphs":["Using an open agent protocol makes the idea more interesting than a shell hardwired to one subscription. It also leaves the terminal emulator alone, so the experiment is about command semantics rather than replacing the whole display stack. The project's own comparison section is refreshingly specific about where Warp and Butterfish differ."]},
+    {"heading":"What's the catch?","paragraphs":["Replacing a shell is a much bigger behavioural commitment than installing a helper command, and the project explicitly says SSH is not supported. ACP itself is still part of a fast-moving agent-tool ecosystem. Toolglass has not tested POSIX compatibility, failure recovery or whether the ?? interaction remains pleasant after the novelty wears off."]},
+    {"heading":"Who might want it?","paragraphs":["Terminal-heavy developers who already use several coding agents and are more interested in composable local tooling than another all-in-one AI IDE."]}
+  ],
+  "verdict": "A tiny piece of syntax carrying a serious idea: the shell may absorb agents rather than be replaced by them.",
+  "nextStep": "Use it for a week of mixed shell and coding-agent work, paying particular attention to quoting, interruption, pipelines and recovery when an agent fails.",
+  "sourceUrls": ["https://github.com/tfcace/hash"],
+  "image": {"src":"/radar/hash-shell/card.svg","alt":"Toolglass Radar plate showing a shell prompt and double-question-mark agent operator feeding several agent endpoints.","caption":"Radar fallback plate / Toolglass has not run Hash","kind":"RADAR PLATE"},
+  "automation": {"generated": true}
+}
