@@ -1,0 +1,29 @@
+{
+  "slug": "tuffy",
+  "name": "Tuffy",
+  "headline": "An LLM wrote an optimizing compiler. Then its author stopped the experiment.",
+  "standfirst": "Tuffy paired an AI-written compiler with declarative optimisations and Lean-checked proofs, reached the point of compiling Rust standard-library tests, then paused when model behaviour, design compromise and cost became part of the result.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-19T18:37:00Z",
+  "discoveredAt": "2026-09-19T18:37:00Z",
+  "category": "Compilers",
+  "tags": ["compiler", "LLM", "formal verification", "Rust", "Lean"],
+  "homepage": "https://github.com/dtcxzyw/tuffy",
+  "repo": "https://github.com/dtcxzyw/tuffy",
+  "licence": "Apache-2.0",
+  "platforms": ["Experimental Rust compiler backend"],
+  "tested": false,
+  "evidence": "Repository README, stated milestones and maintainer status note. Toolglass has not built or benchmarked Tuffy; performance and development observations are the maintainer's account unless independently demonstrated in the repository.",
+  "body": [
+    {"heading":"What is it?","paragraphs":["Tuffy is an experimental optimizing compiler project developed with LLM assistance. Its more interesting architectural choices are independent of that headline: optimisations are expressed as declarative rewrite rules, correctness is intended to be checked in Lean 4 against formal IR semantics, and generated Rust implements verified rules. The project also explores cache-friendly IR and separation between optimisation policy and compiler mechanism."]},
+    {"heading":"Why did Radar notice it?","paragraphs":["Because the negative result is unusually informative. The maintainer says development was paused in May 2026 after models repeatedly chose simple solutions or pulled the design toward familiar LLVM concepts, forcing compromises in Tuffy's own IR. That is a sharper observation than another 'AI built X' demo: model priors can become architectural gravity."]},
+    {"heading":"What looks good?","paragraphs":["The repository records concrete milestones, including compiling a Rust hello-world through a rustc codegen backend and later passing the core, alloc and libtest standard-library test suites according to the project. Formal verification and policy/mechanism separation are serious compiler ideas rather than AI garnish."]},
+    {"heading":"What's the catch?","paragraphs":["The striking development story is primarily the maintainer's own account, and Toolglass has not reproduced the builds, proofs or performance. The project is paused. More fundamentally, an LLM generating a large fraction of a compiler does not by itself show that this is cheaper, more maintainable or more innovative than expert-led development."]},
+    {"heading":"Who might want it?","paragraphs":["Compiler engineers, formal-methods researchers and people studying where coding agents help or quietly narrow design space."]}
+  ],
+  "verdict": "More valuable as an experiment with a documented failure mode than as an AI triumph: the machine could produce a lot of compiler, but its learned familiarity may also have bent the compiler toward what it already knew.",
+  "nextStep": "Audit a sample of verified rewrites and compare design decisions against contemporaneous human-led compiler work before drawing broader conclusions.",
+  "sourceUrls": ["https://github.com/dtcxzyw/tuffy"],
+  "image": {"src":"/radar/tuffy/card.svg","alt":"Toolglass Radar plate showing an unfamiliar compiler IR being pulled toward a large LLVM-shaped attractor.","caption":"Radar fallback plate / Toolglass has not built Tuffy","kind":"RADAR PLATE"},
+  "automation": {"generated": true}
+}
