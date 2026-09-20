@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { articles } from '@/content/articles';
 import { sitePath } from '@/lib/utils';
 import { publicSiteUrl } from '@/lib/site';
+import EditorialArt from '@/components/EditorialArt';
 
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
@@ -31,6 +32,7 @@ export async function generateMetadata({
         `${article.publishedDate} 12:00:00 GMT`,
       ).toISOString(),
       authors: [article.byline],
+      ...(article.heroImage ? { images: [sitePath(article.heroImage.src)] } : {}),
     },
     twitter: {
       card: 'summary',
@@ -94,6 +96,20 @@ export default async function ArticlePage({
         </p>
       </div>
 
+      {article.heroImage ? (
+        <section className="home-folklore" aria-label="Article illustration">
+          <EditorialArt
+            src={article.heroImage.src}
+            alt={article.heroImage.alt}
+            caption={article.heroImage.caption}
+            kind={article.heroImage.kind}
+            priority
+            width={article.heroImage.width}
+            height={article.heroImage.height}
+          />
+        </section>
+      ) : null}
+
       <div className="article-grid">
         <article className="prose">
           <div className="evidence-note">
@@ -117,9 +133,9 @@ export default async function ArticlePage({
 
           <h2>Research & sources</h2>
           <p>
-            This essay is an argument, not a literature review. The research
-            below informed the claims about current AI use, critical thinking,
-            motivation and human–AI collaboration.
+            This is an argument grounded in cited primary rules and research.
+            Sources below support the factual claims; where the piece moves
+            from evidence to inference, it says so.
           </p>
           <ul>
             {article.sources.map((source) => (
@@ -146,22 +162,16 @@ export default async function ArticlePage({
         </article>
 
         <aside aria-label="Article notes">
-          <p className="eyebrow">ARTICLE / 001</p>
+          <p className="eyebrow">
+            ARTICLE / {String(articles.findIndex((item) => item.slug === article.slug) + 1).padStart(3, '0')}
+          </p>
           <dl className="facts">
-            {[
-              ['Type', 'Essay / manifesto'],
+            {(article.notes ?? [
+              ['Type', article.kicker],
               ['Published', article.publishedDate],
               ['Byline', article.byline],
               ['Reading time', article.readingTime],
-              [
-                'Central question',
-                'How should AI remove human friction without removing meaningful human thought?',
-              ],
-              [
-                'Project threads',
-                'Threadmoth · Lantern Keeper · Bunny Deluxe · Pochade',
-              ],
-            ].map(([key, value]) => (
+            ]).map(([key, value]) => (
               <div key={key}>
                 <dt>{key}</dt>
                 <dd>{value}</dd>
