@@ -42,11 +42,11 @@ export const articles: Article[] = [
     thesis:
       'A hackathon prize rewards a few winners. The sponsor may still learn from everybody else. AI has made that long tail more valuable, so rights around research, training and commercial reuse should be explicit and unbundled.',
     heroImage: {
-      src: '/art/hackathon-rights-map.svg',
-      alt: 'Toolglass editorial diagram showing hackathon submissions splitting into a visible prize lane and a larger field that can be analysed for patterns, product ideas and research.',
+      src: '/art/hackathon-field-machine-plate.webp',
+      alt: 'A small cobalt prize block sits on a visible tray attached to a much larger filing and sorting machine full of cards, drawers and punched tape.',
       caption:
-        'The visible contest ends at the prize table. The informational value of the field may not.',
-      kind: 'CONCEPT MAP / TOOLGLASS',
+        'The prize tray is visible. The filing cabinet is the point.',
+      kind: 'CONCEPT PLATE / MACHINE FOLKLORE',
       width: 1600,
       height: 900,
     },
