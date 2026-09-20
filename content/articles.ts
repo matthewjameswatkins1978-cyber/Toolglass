@@ -15,10 +15,174 @@ export type Article = {
   thesis: string;
   intro: string[];
   sections: ArticleSection[];
+  heroImage?: {
+    src: string;
+    alt: string;
+    caption: string;
+    kind?: string;
+    width?: number;
+    height?: number;
+  };
+  notes?: [string, string][];
   sources: { label: string; href: string }[];
 };
 
 export const articles: Article[] = [
+  {
+    slug: 'the-prize-is-the-cheapest-part-of-a-hackathon',
+    kicker: 'FEATURE / AI & OPEN INNOVATION',
+    title: 'The Prize Is the Cheapest Part of a Hackathon',
+    subtitle:
+      'AI has made the losing pile easier to read. The bargain should become easier to read too.',
+    summary:
+      'Hackathons do more than produce winners. They produce a field of experiments, ideas, pain points and prototypes. AI makes that field cheaper to analyse, while some competition rules explicitly permit internal research, AI training or commercial reuse. That does not prove theft. It does mean entrants should know exactly what they are giving away.',
+    byline: 'Matthew Watkins, with Lucy (ChatGPT)',
+    publishedDate: '21 September 2026',
+    readingTime: '11 min read',
+    thesis:
+      'A hackathon prize rewards a few winners. The sponsor may still learn from everybody else. AI has made that long tail more valuable, so rights around research, training and commercial reuse should be explicit and unbundled.',
+    heroImage: {
+      src: '/art/hackathon-rights-map.svg',
+      alt: 'Toolglass editorial diagram showing hackathon submissions splitting into a visible prize lane and a larger field that can be analysed for patterns, product ideas and research.',
+      caption:
+        'The visible contest ends at the prize table. The informational value of the field may not.',
+      kind: 'CONCEPT MAP / TOOLGLASS',
+      width: 1600,
+      height: 900,
+    },
+    notes: [
+      ['Type', 'Reported argument'],
+      ['Published', '21 September 2026'],
+      ['Byline', 'Matthew Watkins, with Lucy (ChatGPT)'],
+      ['Reading time', '11 min read'],
+      ['Core distinction', 'Ownership is not the same thing as a narrow licence'],
+      ['Proposal', 'A standard Hackathon Rights Card'],
+    ],
+    intro: [
+      'The public story of a hackathon is simple. A company presents a challenge. Developers build things. Judges choose the best. Somebody gets a large novelty cheque. Everyone learns something. Stickers are distributed.',
+      'That story is true. It is also incomplete.',
+      'A hackathon also gives an organiser a field full of external experimentation: new uses for its technology, repeated complaints, strange combinations, unfinished prototypes, market signals and ideas its own team may never have tried. A few people receive prizes. The organiser gets to see the field.',
+      'That has always been useful. AI changes the economics of it.'
+    ],
+    sections: [
+      {
+        heading: 'This is not a theft story',
+        paragraphs: [
+          'There is no good evidence that technology companies generally run hackathons as covert operations for stealing entrants’ inventions. That claim would be dramatic and, on the evidence available, unjustified.',
+          'The more defensible point is already well established. Hackathons are a form of open innovation: organisations deliberately invite knowledge, experimentation and ideas from outside their own boundaries. A 2026 Wharton working paper treats hackathons, crowdsourcing and innovation labs as mechanisms for sourcing external knowledge. A peer-reviewed 2023 study of hackathon value capture goes further, warning that organisers can end up “capturing the lion’s share of the generated value.”',
+          'Devpost’s own material for corporate customers makes the commercial purpose unusually clear. It promotes public hackathons as a way to surface new use cases and integrations, drive adoption and learn what developers build. That is not scandalous. It is what open innovation is for.',
+          'The interesting question is therefore not whether organisers learn from hackathons. Of course they do. It is how much continuing value can be extracted from the submissions, and whether participants understand the bargain.'
+        ]
+      },
+      {
+        heading: 'Read past “you retain your IP”',
+        paragraphs: [
+          'Bria’s FIBO Hackathon provides a striking example. Its rules say entrants retain ownership, but also grant Bria a non-exclusive, worldwide, perpetual, royalty-free licence covering several uses of a submission. One of the listed purposes is “AI training or internal research.” The rules also waive further compensation for those permitted uses.',
+          'That does not prove Bria actually fed every losing entry into a model. Permission is not evidence of practice. But the permission itself matters: continuing research value from submissions is contemplated explicitly by the contract.',
+          'The 2026 GitLab AI Hackathon uses different language. Entrants retain ownership, while GitLab receives a broad licence over entrant-created submission material, suggestions, ideas, enhancement requests, feedback and recommendations. The rules say the sponsor may use the submission to “develop, market, and commercialize products and services.”',
+          'Microsoft’s 2025 Fabric FabCon Global Hackathon used another broad formulation, granting a worldwide, perpetual, irrevocable, royalty-free licence for commercial or non-commercial uses, including marketing, sale or promotion of Microsoft products and services, with no additional compensation or credit beyond the contest terms.',
+          'Not every hackathon does this. DigitalOcean’s Gradient AI Hackathon uses a much narrower structure centred on judging and specified promotional rights. That variation is exactly the point. “You retain your intellectual property” can be true while the sponsor also receives substantial rights. Ownership and licence are not the same question.'
+        ]
+      },
+      {
+        heading: 'AI makes the losing pile cheaper to understand',
+        paragraphs: [
+          'Before modern code models, the long tail of hackathon submissions had a natural defence: human attention. Somebody had to open the repositories, read the READMEs, inspect the code, understand the demos and separate the interesting failures from the merely broken ones.',
+          'That does not scale pleasantly across hundreds of projects.',
+          'Modern repository-aware AI can perform much of the first pass. It can summarise unfamiliar codebases, locate important components, explain architectures, identify recurring mechanisms and compare patterns across projects. Research on language models for mining software repositories describes exactly this broader shift toward machine-assisted analysis of large, heterogeneous code corpora.',
+          'That means a sponsor could, in principle, ask a much larger field of questions: Which problems keep recurring? Which API limitations appear repeatedly? Which obscure project contains an elegant mechanism? Which workflows are developers independently inventing because the platform itself does not provide them?',
+          'To be clear, I found no evidence that Bria, GitLab, Microsoft or any other named sponsor runs this exact pipeline over losing entries. The capability is real. The incentives are obvious. The specific practice is not established here.',
+          'But that distinction does not weaken the argument. It sharpens it. AI has reduced the cost of turning a pile of external experiments into a map.'
+        ]
+      },
+      {
+        heading: 'The eighty-third best project may contain the best observation',
+        paragraphs: [
+          'Judging and innovation are not the same process. A project can lose because its demo crashes, its interface is ugly, its creator presents badly, it does not maximise the rubric, or it is simply unfinished.',
+          'None of that tells you whether one idea inside it is commercially useful.',
+          'The sponsor does not necessarily need to copy the project. It may only need to notice the observation. UK Intellectual Property Office guidance makes the underlying legal distinction important: copyright generally protects the expression of a work, not the bare idea behind it. Code, graphics and text can be protected. A general concept or workflow is not automatically fenced off merely because somebody demonstrated it first.',
+          'That creates a wide territory between blatant copying and complete irrelevance. A losing project can teach a company what customers want without anybody lifting a line of source code.'
+        ]
+      },
+      {
+        heading: 'The real asymmetry is synthesis',
+        paragraphs: [
+          'The strongest commercial insight may not exist in any single submission.',
+          'One participant discovers a good permissions mechanism. Another invents better onboarding. A third exposes a painful platform limitation. A fourth finds an unexpected market. A fifth solves the limitation with a clever architecture.',
+          'Each entrant sees a small part of the field. The organiser can potentially see all of it. AI makes it progressively easier to connect those fragments.',
+          'So the future argument may be less “did Company X steal Project Y?” and more: who captures the value when thousands of individually modest contributions can be combined into commercially useful knowledge?',
+          'That problem does not require a villain. It can emerge naturally from the structure.'
+        ]
+      },
+      {
+        heading: 'A fairer hackathon does not need weaker innovation',
+        paragraphs: [
+          'The answer is not to stop sponsors learning. That would be both impossible and absurd. Public repositories are public. People remember ideas. Companies notice recurring needs. Sponsors also pay for infrastructure, APIs, staff, compute, prizes and administration, and participants receive genuine benefits: experience, access, deadlines, contacts, visibility and sometimes jobs or investment.',
+          'The problem is bundling several different transactions into one button marked Submit.',
+          'Judging rights can be automatic and narrow. Promotional rights can be clear and time-limited. If a sponsor also wants AI-training rights, internal-research rights or a broad commercial licence, those should be separate and conspicuous choices rather than luggage hidden inside the judging ticket.',
+          'And if a non-winning submission later becomes valuable enough for a sponsor to adopt protected material from it commercially, there is an easy mechanism available: contact the entrant and make another deal. A licence, a grant, consulting work, an acquisition, or even a pre-declared adoption bounty would all be cleaner than assuming the later commercial value must be priced at zero.'
+        ]
+      },
+      {
+        heading: 'The Hackathon Rights Card',
+        paragraphs: [
+          'A useful standard could fit on one screen before submission: Ownership — who owns the work? Judging — what may judges inspect and for how long? Promotion — what may the organiser publish? Public repository — is one required, and under which licence? Internal research — yes, no or opt-in? AI training — yes, no or opt-in? Commercial reuse — automatic or separate agreement? Retention — how long is non-public material kept? Later adoption — will the entrant be notified or compensated?',
+          'Call it the Hackathon Rights Card.',
+          'It would not prevent broad licences. Some entrants may willingly accept them. It would simply make the exchange legible before somebody has spent a weekend building the thing.',
+          'That transparency could even improve the events. Developers who trust the rules have less reason to keep their most interesting ideas away from the competition. A cleaner bargain may produce better submissions.'
+        ]
+      },
+      {
+        heading: 'Read the rules as if you are going to lose',
+        paragraphs: [
+          'Ignore the grand prize for a moment. Assume you finish ninety-fourth.',
+          'Would you still publish the repository? Would you still reveal the mechanism? Would you be comfortable with internal research? AI training? A perpetual commercial-use licence? Would you be happy if the organiser learned something genuinely valuable from your work and you never heard about it again?',
+          'If the answer is yes, enter. Hackathons can be tremendous fun and spectacularly productive.',
+          'But enter with your eyes open.',
+          'Because the most valuable thing a technology company receives from a hackathon may not be the winning project. It may be the map produced by everybody who tried.',
+          'AI has made that map easier to read. The least we can do now is make the bargain just as readable.'
+        ]
+      }
+    ],
+    sources: [
+      {
+        label: 'Bria FIBO Hackathon — official rules',
+        href: 'https://bria-ai.devpost.com/rules'
+      },
+      {
+        label: 'GitLab AI Hackathon 2026 — official rules',
+        href: 'https://gitlab.devpost.com/rules'
+      },
+      {
+        label: 'Microsoft Fabric FabCon Global Hackathon 2025 — contest rules',
+        href: 'https://github.com/microsoft/fabcon-global-hack-25/blob/main/CONTEST_RULES.md'
+      },
+      {
+        label: 'DigitalOcean Gradient AI Hackathon — official rules',
+        href: 'https://digitalocean.devpost.com/rules'
+      },
+      {
+        label: 'Devpost — Public hackathons for organisations',
+        href: 'https://info.devpost.com/product/public-hackathons'
+      },
+      {
+        label: 'Wharton — Open Innovation Initiatives and Firm Outcomes',
+        href: 'https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5150413'
+      },
+      {
+        label: 'Creativity and Innovation Management — Value creation and capture in hackathons',
+        href: 'https://onlinelibrary.wiley.com/doi/10.1111/caim.12552'
+      },
+      {
+        label: 'GitHub Docs — Exploring a codebase with Copilot',
+        href: 'https://docs.github.com/en/copilot/tutorials/explore-a-codebase'
+      },
+      {
+        label: 'UK Intellectual Property Office — IP basics',
+        href: 'https://www.gov.uk/government/publications/ip-basics/ip-basics'
+      }
+    ]
+  },
   {
     slug: 'the-thinking-surface',
     kicker: 'ESSAY / HUMAN–AI COLLABORATION',
