@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">The prize is only the visible part</title>
+  <desc id="desc">Editorial diagram showing hackathon submissions splitting into winners and a larger field that can be analysed for patterns, research and product ideas, followed by a proposed rights card.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071017"/><stop offset="1" stop-color="#0d1820"/></linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#7ee8ef"/><stop offset="1" stop-color="#3fb8d6"/></linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ffd37c"/><stop offset="1" stop-color="#f29b45"/></linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
+    <style>
+      .t{font-family:Arial,Helvetica,sans-serif;fill:#f3f6f7}
+      .muted{fill:#95a8b1}
+      .cyan{fill:#79dce8}
+      .amber{fill:#f6b25e}
+      .small{font-size:20px;letter-spacing:2px;font-weight:700}
+      .body{font-size:24px}
+      .label{font-size:22px;font-weight:700;letter-spacing:1px}
+      .big{font-size:56px;font-weight:800}
+      .huge{font-size:76px;font-weight:800}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1280" cy="130" r="220" fill="#0f3240" opacity=".35" filter="url(#soft)"/>
+  <circle cx="360" cy="690" r="240" fill="#2b2114" opacity=".28" filter="url(#soft)"/>
+
+  <text x="64" y="70" class="t small cyan">TOOLGLASS / FEATURE MAP</text>
+  <text x="64" y="140" class="t huge">THE PRIZE IS ONLY</text>
+  <text x="64" y="215" class="t huge" fill="url(#cyan)">THE VISIBLE PART</text>
+  <text x="66" y="258" class="t body muted">A hackathon ends at the prize table. Its informational value may not.</text>
+
+  <rect x="60" y="325" width="350" height="355" rx="28" fill="#0d1b23" stroke="#29414c" stroke-width="2"/>
+  <text x="90" y="370" class="t small cyan">01 / THE FIELD</text>
+  <text x="90" y="420" class="t big">SUBMISSIONS</text>
+  <g fill="#152c38" stroke="#4b7788" stroke-width="2">
+    <rect x="92" y="465" width="120" height="74" rx="8"/><rect x="130" y="486" width="120" height="74" rx="8"/>
+    <rect x="168" y="507" width="120" height="74" rx="8"/><rect x="206" y="528" width="120" height="74" rx="8"/>
+  </g>
+  <text x="90" y="625" class="t body">Code · demos · docs · ideas</text>
+  <text x="90" y="658" class="t body muted">Different quality. Different outcomes.</text>
+
+  <path d="M425 500 C505 500 520 415 600 415" stroke="#f6b25e" stroke-width="5" fill="none"/>
+  <path d="M425 560 C505 560 520 610 600 610" stroke="#79dce8" stroke-width="5" fill="none"/>
+  <polygon points="597,405 620,415 597,425" fill="#f6b25e"/>
+  <polygon points="597,600 620,610 597,620" fill="#79dce8"/>
+
+  <rect x="620" y="335" width="330" height="190" rx="26" fill="#1b1610" stroke="#8a5b27" stroke-width="2"/>
+  <text x="650" y="378" class="t small amber">02 / PRIZE LANE</text>
+  <text x="650" y="440" class="t big">A FEW WIN</text>
+  <text x="650" y="483" class="t body muted">Cash · credits · attention</text>
+  <circle cx="882" cy="430" r="34" fill="none" stroke="#f6b25e" stroke-width="8"/>
+  <path d="M858 466 L906 466 L894 504 L870 504 Z" fill="#f6b25e"/>
+
+  <rect x="620" y="555" width="480" height="205" rx="26" fill="#0a1d26" stroke="#2e7180" stroke-width="2"/>
+  <text x="650" y="598" class="t small cyan">03 / THE REST</text>
+  <text x="650" y="650" class="t big">STILL CONTAINS SIGNAL</text>
+  <text x="650" y="696" class="t body muted">Failures · patterns · pain points · odd mechanisms</text>
+  <text x="650" y="732" class="t body muted">The 83rd-best project can contain one excellent observation.</text>
+
+  <path d="M1115 655 C1180 655 1178 520 1245 520" stroke="#79dce8" stroke-width="5" fill="none"/>
+  <polygon points="1242,510 1265,520 1242,530" fill="#79dce8"/>
+
+  <rect x="1265" y="340" width="275" height="405" rx="30" fill="#10232c" stroke="#3b7180" stroke-width="2"/>
+  <text x="1295" y="385" class="t small cyan">04 / AI FIRST PASS</text>
+  <circle cx="1402" cy="470" r="72" fill="#0b151b" stroke="#79dce8" stroke-width="4"/>
+  <circle cx="1385" cy="450" r="28" fill="none" stroke="#79dce8" stroke-width="7"/>
+  <line x1="1407" y1="472" x2="1445" y2="510" stroke="#79dce8" stroke-width="9" stroke-linecap="round"/>
+  <text x="1295" y="575" class="t label">PATTERNS</text>
+  <text x="1295" y="610" class="t label">PRODUCT IDEAS</text>
+  <text x="1295" y="645" class="t label">INTERNAL RESEARCH</text>
+  <text x="1295" y="680" class="t label">AI TRAINING*</text>
+  <text x="1295" y="715" class="t body muted">*where rules permit it</text>
+
+  <rect x="60" y="792" width="1480" height="66" rx="18" fill="#eef7f5"/>
+  <text x="88" y="833" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800" fill="#09141a">THE FAIRER BARGAIN:</text>
+  <text x="345" y="833" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#15313a">JUDGING ✓</text>
+  <text x="500" y="833" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#15313a">PROMOTION ✓</text>
+  <text x="690" y="833" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="800" fill="#a54c35">AI TRAINING = OPT-IN</text>
+  <text x="980" y="833" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="800" fill="#a54c35">RESEARCH = OPT-IN</text>
+  <text x="1230" y="833" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="800" fill="#a54c35">COMMERCIAL USE = NEW DEAL</text>
+</svg>
