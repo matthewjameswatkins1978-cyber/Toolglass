@@ -11,6 +11,9 @@ const termai = reviews.find((review) => review.slug === 'termai')!;
 const thinkingSurface = articles.find(
   (article) => article.slug === 'the-thinking-surface',
 )!;
+const hackathonPrize = articles.find(
+  (article) => article.slug === 'the-prize-is-the-cheapest-part-of-a-hackathon',
+)!;
 
 export default function Home() {
   return (
@@ -73,6 +76,28 @@ export default function Home() {
           width={2172}
           height={724}
         />
+      </section>
+      <section className="notebook-feature">
+        <div>
+          <p className="eyebrow">FEATURE / AI &amp; OPEN INNOVATION</p>
+          <h2>{hackathonPrize.title}</h2>
+          <p>{hackathonPrize.summary}</p>
+          <a
+            className="read-link"
+            href={sitePath('/articles/the-prize-is-the-cheapest-part-of-a-hackathon')}
+          >
+            Read the investigation ↗
+          </a>
+        </div>
+        <div
+          className="notebook-receipt"
+          aria-label="Hackathon rights feature summary"
+        >
+          <span>THE LOSING PILE</span>
+          <strong>AI MAKES IT SEARCHABLE</strong>
+          <span>OWNERSHIP ≠ NARROW LICENCE</span>
+          <span>THE FIX: UNBUNDLE THE RIGHTS</span>
+        </div>
       </section>
       <section className="notebook-feature">
         <div>
