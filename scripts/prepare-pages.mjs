@@ -17,7 +17,7 @@ copyFile('index.html');
 copyFile('index.rsc');
 copyFile('favicon.svg');
 copyFile('404.html');
-for (const discoveryFile of ['sitemap.xml', 'robots.txt', 'feed.xml', 'indexnow-key.txt']) {
+for (const discoveryFile of ['sitemap.xml', 'robots.txt', 'feed.xml', 'atom.xml', 'indexnow-key.txt']) {
   if (fs.existsSync(path.join(source, discoveryFile))) copyFile(discoveryFile);
 }
 if (fs.existsSync(path.join(source, 'og'))) {

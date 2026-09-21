@@ -13,7 +13,10 @@ export const metadata: Metadata = {
     'An independent publication about new, overlooked and interesting software. Careful questions. Visible evidence.',
   alternates: {
     canonical: `${publicSiteUrl}/`,
-    types: { 'application/rss+xml': `${publicSiteUrl}/feed.xml` },
+    types: {
+      'application/rss+xml': `${publicSiteUrl}/feed.xml`,
+      'application/atom+xml': `${publicSiteUrl}/atom.xml`,
+    },
   },
   openGraph: {
     title: 'TOOLGLASS — Software worth finding.',
@@ -67,6 +70,7 @@ export default function RootLayout({
           <a href={sitePath('/about')}>Our editorial approach ↗</a>
           <a href={sitePath('/submit')}>Submit software ↗</a>
           <a href={sitePath('/feed.xml')}>RSS feed ↗</a>
+          <a href={sitePath('/atom.xml')}>Atom feed ↗</a>
           <a href="https://ko-fi.com/matmusmeows">Support Toolglass ↗</a>
           <span className="small">© 2026 TOOLGLASS</span>
         </footer>

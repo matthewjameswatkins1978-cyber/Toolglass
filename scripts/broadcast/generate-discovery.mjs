@@ -49,35 +49,76 @@ if (process.env.INDEXNOW_KEY) {
   fs.rmSync(indexNowKeyFile);
 }
 
-const feedItems = reviews
-  .filter((review) => review.evidenceStatus !== 'SCOUTED')
-  .map(
-    (review) => `    <item>
-      <title>${escapeXml(review.headline)}</title>
-      <link>${escapeXml(canonicalUrl(review.slug))}</link>
-      <guid isPermaLink="true">${escapeXml(canonicalUrl(review.slug))}</guid>
-      <pubDate>${new Date(review.publishedAt).toUTCString()}</pubDate>
-      <description>${escapeXml(`${review.summary} Evidence: ${review.evidenceStatus}.`)}</description>
+const feedEntries = [
+  ...reviews
+    .filter((review) => review.evidenceStatus !== 'SCOUTED')
+    .map((review) => ({
+      title: review.headline,
+      url: canonicalUrl(review.slug),
+      publishedAt: review.publishedAt,
+      summary: `${review.summary} Evidence: ${review.evidenceStatus}.`,
+      category: review.category,
+    })),
+  ...radarEntries.map((entry) => ({
+    title: entry.headline,
+    url: `${SITE_URL}/radar/${entry.slug}/`,
+    publishedAt: entry.publishedAt,
+    summary: `${entry.standfirst} Radar status: ${entry.status}.`,
+    category: 'Radar',
+  })),
+];
+const feedItems = feedEntries.map((entry) => `    <item>
+      <title>${escapeXml(entry.title)}</title>
+      <link>${escapeXml(entry.url)}</link>
+      <guid isPermaLink="true">${escapeXml(entry.url)}</guid>
+      <pubDate>${new Date(entry.publishedAt).toUTCString()}</pubDate>
+      <description>${escapeXml(entry.summary)}</description>
       <dc:creator>${escapeXml(AUTHOR_NAME)}</dc:creator>
-      <category>${escapeXml(review.category)}</category>
-    </item>`,
-  )
-  .join('\n');
-const radarFeedItems = radarEntries.map((entry) => `    <item><title>${escapeXml(entry.headline)}</title><link>${SITE_URL}/radar/${entry.slug}/</link><guid isPermaLink="true">${SITE_URL}/radar/${entry.slug}/</guid><pubDate>${new Date(entry.publishedAt).toUTCString()}</pubDate><description>${escapeXml(`${entry.standfirst} Radar status: ${entry.status}.`)}</description><category>Radar</category></item>`).join('\n');
+      <category>${escapeXml(entry.category)}</category>
+    </item>`).join('\n');
 fs.writeFileSync(
   path.join(publicDir, 'feed.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${SITE_NAME}</title>
     <link>${SITE_URL}/</link>
     <description>Software worth finding. Independent reviews with visible evidence.</description>
     <language>en-gb</language>
+    <lastBuildDate>${new Date(Math.max(...feedEntries.map((entry) => new Date(entry.publishedAt).getTime()))).toUTCString()}</lastBuildDate>
+    <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="${SITE_URL}/atom.xml" rel="alternate" type="application/atom+xml" />
     <managingEditor>${escapeXml(AUTHOR_NAME)} (${escapeXml(AUTHOR_URL)})</managingEditor>
 ${feedItems}
-${radarFeedItems}
   </channel>
 </rss>
+`,
+);
+const atomUpdated = new Date(Math.max(...feedEntries.map((entry) => new Date(entry.publishedAt).getTime()))).toISOString();
+const atomEntries = feedEntries.map((entry) => `  <entry>
+    <id>${escapeXml(entry.url)}</id>
+    <title>${escapeXml(entry.title)}</title>
+    <link href="${escapeXml(entry.url)}" />
+    <published>${new Date(entry.publishedAt).toISOString()}</published>
+    <updated>${new Date(entry.publishedAt).toISOString()}</updated>
+    <author><name>${escapeXml(AUTHOR_NAME)}</name><uri>${escapeXml(AUTHOR_URL)}</uri></author>
+    <category term="${escapeXml(entry.category)}" />
+    <summary>${escapeXml(entry.summary)}</summary>
+  </entry>`).join('\n');
+fs.writeFileSync(
+  path.join(publicDir, 'atom.xml'),
+  `<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>${escapeXml(SITE_NAME)}</title>
+  <id>${SITE_URL}/</id>
+  <link href="${SITE_URL}/" />
+  <link href="${SITE_URL}/atom.xml" rel="self" type="application/atom+xml" />
+  <link href="${SITE_URL}/feed.xml" rel="alternate" type="application/rss+xml" />
+  <updated>${atomUpdated}</updated>
+  <subtitle>Software worth finding. Independent reviews with visible evidence.</subtitle>
+  <author><name>${escapeXml(AUTHOR_NAME)}</name><uri>${escapeXml(AUTHOR_URL)}</uri></author>
+${atomEntries}
+</feed>
 `,
 );
 
