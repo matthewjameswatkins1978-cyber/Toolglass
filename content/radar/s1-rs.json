@@ -1,0 +1,29 @@
+{
+  "slug": "s1-rs",
+  "name": "s1-rs",
+  "headline": "What if an AI answer had to fit through Rust's type system first?",
+  "standfirst": "s1-rs is a tiny, very new experiment in turning model decisions into typed Rust values with confidence gates. It is barely born, but the design points toward a useful boundary between probabilistic judgement and deterministic software.",
+  "status": "SPOTTED",
+  "publishedAt": "2026-09-22T18:11:00Z",
+  "discoveredAt": "2026-09-22T18:11:00Z",
+  "category": "AI infrastructure",
+  "tags": ["rust", "typed-ai", "llm", "experimental"],
+  "homepage": "https://github.com/AbdelStark/s1-rs",
+  "repo": "https://github.com/AbdelStark/s1-rs",
+  "licence": "MIT",
+  "platforms": ["Rust"],
+  "tested": false,
+  "evidence": "Repository metadata and project PRD inspected. The repository was created 16 September 2026 and describes itself as draft/experimental work. Toolglass has not built or run it.",
+  "body": [
+    {"heading":"What is it?","paragraphs":["s1-rs proposes a typed decision layer for Rust. Rather than asking a model for prose and then hoping application code parses the answer correctly, the design turns Rust enums and structs into constrained questions and returns compile-time-shaped Choice, Score and nullable-style results with confidence gating. Transport is delegated to a separate SDK so the crate can concentrate on types and policy."]},
+    {"heading":"Why did Radar notice it?","paragraphs":["The project is only days old and has essentially no audience yet, but the boundary is interesting. A great deal of AI integration still treats natural language as an internal API. s1-rs is part of the opposite tendency: let the model make the fuzzy judgement, then force that judgement through a small deterministic interface before ordinary software is allowed to depend on it."]},
+    {"heading":"What looks good?","paragraphs":["The design separates transport concerns from semantic types, which keeps retries, HTTP and provider details out of the decision layer. Confidence gates are also explicit rather than hidden in prompt prose. The PRD names test helpers and typed derive macros as first-class parts of the intended API, suggesting the author is thinking about failure and reproducibility rather than only the happy-path demo."]},
+    {"heading":"What's the catch?","paragraphs":["Almost everything. This is a draft-stage repository created on 16 September with one GitHub star when Toolglass inspected it. The PRD describes intended behaviour and a roadmap, not production evidence. Typed envelopes can constrain shape, but they do not magically make the model's underlying judgement true. Confidence scores can also become decorative numbers unless they are calibrated against real tasks."]},
+    {"heading":"Who might want it?","paragraphs":["Rust developers experimenting with model-assisted classification or decisions who want the probabilistic component to terminate at an explicit typed boundary instead of leaking free-form text through the application."]}
+  ],
+  "verdict": "Far too early to recommend, but exactly the kind of one-star repository Radar exists to notice: a small design idea that could matter more than the package itself.",
+  "nextStep": "Wait for the first working release, then test whether confidence gates and derived types produce measurably safer failure behaviour than ordinary structured-output calls.",
+  "sourceUrls": ["https://github.com/AbdelStark/s1-rs", "https://github.com/AbdelStark/s1-rs/blob/main/PRD.md"],
+  "image": {"src":"/radar/s1-rs/card.svg","alt":"Toolglass Radar plate showing a probabilistic answer passing through a typed Rust gate.","caption":"Radar fallback plate / s1-rs is too early for a hands-on Toolglass assessment","kind":"RADAR PLATE"},
+  "automation": {"generated": true}
+}
