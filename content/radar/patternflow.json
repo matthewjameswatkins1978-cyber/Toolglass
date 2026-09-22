@@ -1,0 +1,29 @@
+{
+  "slug": "patternflow",
+  "name": "Patternflow",
+  "headline": "A screen that behaves more like an instrument than a television",
+  "standfirst": "Patternflow is an open-source 8,192-pixel LED synthesizer whose four knobs alter code-generated images in real time. The clever bit is not the LEDs; it is treating visual algorithms as playable, shareable patches.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-22T18:11:00Z",
+  "discoveredAt": "2026-09-22T18:11:00Z",
+  "category": "Creative hardware",
+  "tags": ["open-hardware", "creative-coding", "esp32", "visual-instruments"],
+  "homepage": "https://patternflow.work",
+  "repo": "https://github.com/engmung/Patternflow",
+  "licence": "MIT for firmware/web code; CC-BY-SA 4.0 for hardware/designs/docs and bundled patterns",
+  "platforms": ["ESP32-S3", "128x64 HUB75E LED matrix"],
+  "tested": false,
+  "evidence": "Repository, Crowd Supply campaign/update pages and independent coverage inspected. Toolglass has not handled or played a Patternflow unit.",
+  "body": [
+    {"heading":"What is it?","paragraphs":["Patternflow is a physical visual synthesizer built around an ESP32-S3 and a 128 by 64 LED matrix. Its 8,192 pixels are generated live rather than playing rendered video. Four physical knobs feed parameters into the running pattern, so the image changes as you perform it. Patterns are small shareable programs, with a browser editor and community library rather than a catalogue of video clips."]},
+    {"heading":"Why did Radar notice it?","paragraphs":["Most screens are endpoints: somebody renders media, then the panel plays it back. Patternflow instead borrows the grammar of a synthesizer. The display is an instrument, the algorithm is the patch, and the knobs are performance controls. That is an old creative-computing instinct returning in unusually approachable hardware. OSC support also lets it sit beside Max, Ableton via Max for Live and TouchDesigner rather than remaining a sealed art object."]},
+    {"heading":"What looks good?","paragraphs":["The hardware, firmware and design material are published under open licences, and the community layer already matters: the creator reported more than 100 shared patterns and multiple documented DIY builds before the first commercial batch. The project reached its crowdfunding goal on 15 September. More importantly, the web editor means the creative unit is a pattern rather than ownership of the box itself."]},
+    {"heading":"What's the catch?","paragraphs":["Toolglass has not tested latency, build quality, the editor or the community workflow. Crowdfunding success is not evidence of manufacturing execution. The creator also says the first batch is closer to a limited edition than the beginning of mass production, so this may remain an art practice and open-hardware ecosystem rather than a conventional product line. Rapidly changing light also carries a photosensitivity warning."]},
+    {"heading":"Who might want it?","paragraphs":["Creative coders, VJs, installation artists, electronic musicians and hardware people who like the idea of sharing visual behaviours instead of finished videos."]}
+  ],
+  "verdict": "A lovely inversion: not a better screen for consuming images, but a small open instrument for performing them.",
+  "nextStep": "Try the browser editor, build a pattern from scratch and measure how naturally the same patch travels from simulation to physical hardware and OSC-controlled performance.",
+  "sourceUrls": ["https://github.com/engmung/Patternflow", "https://www.crowdsupply.com/engmung/patternflow", "https://www.crowdsupply.com/engmung/patternflow/updates/our-campaign-hit-its-funding-goal", "https://mixmag.asia/read/patternflow-open-source-led-synthesizer-seunghun-lee-community-made-tech"],
+  "image": {"src":"/radar/patternflow/card.svg","alt":"Toolglass Radar plate showing four controls feeding a grid of live generated pixels.","caption":"Radar fallback plate / Toolglass has not handled Patternflow","kind":"RADAR PLATE"},
+  "automation": {"generated": true}
+}
