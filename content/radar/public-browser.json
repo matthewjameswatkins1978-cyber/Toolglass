@@ -1,0 +1,29 @@
+{
+  "slug": "public-browser",
+  "name": "Public Browser",
+  "headline": "Browser agents may be paying a round-trip tax nobody bothered to count",
+  "standfirst": "Public Browser drives a real Chrome profile directly over CDP, but its more interesting claim is architectural: fewer agent-tool round trips can matter more than shaving bytes from each browser snapshot.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-09-22T18:11:00Z",
+  "discoveredAt": "2026-09-22T18:11:00Z",
+  "category": "Agent infrastructure",
+  "tags": ["agents", "browser-automation", "mcp", "cdp"],
+  "homepage": "https://github.com/Silbercue/public-browser",
+  "repo": "https://github.com/Silbercue/public-browser",
+  "licence": "MIT",
+  "platforms": ["Chrome", "MCP-compatible clients"],
+  "tested": false,
+  "evidence": "Repository, published benchmark artefacts and project documentation inspected. Toolglass has not installed or benchmarked Public Browser; performance figures remain the project's reproducible measurements, not independent Toolglass results.",
+  "body": [
+    {"heading":"What is it?","paragraphs":["Public Browser is an MCP browser-control server that talks directly to Chrome through the DevTools Protocol. It exposes accessibility-tree references, multi-tab control and a server-side multi-step plan executor, and can drive an existing logged-in Chrome profile rather than launching a separate browser world."]},
+    {"heading":"Why did Radar notice it?","paragraphs":["The interesting part is not another browser agent. It is the project's September benchmark result and the explanation behind it. Against Playwright MCP on its own 30-test suite, Public Browser reports the same 30/30 pass rate while using 84-86 tool calls rather than 137-151. Its individual responses are actually larger on average. The claimed token saving comes from making fewer round trips, because every extra call makes the model revisit an ever-growing conversation. That is a useful systems observation even if the exact benchmark advantage changes with models and competitors."]},
+    {"heading":"What looks good?","paragraphs":["The repository publishes raw benchmark runs and, unusually, documents where the newer comparison got worse: Playwright's snapshots became smaller, so an earlier compact-response claim was withdrawn. That willingness to preserve losing measurements makes the performance argument more credible than a single heroic bar chart. Direct CDP also removes an extension bridge and gives the tool access to multiple tabs and browser internals without another automation layer."]},
+    {"heading":"What's the catch?","paragraphs":["The benchmark is designed, run and interpreted by the project itself. Toolglass has not reproduced it, and a 30-task synthetic suite is not the web. Driving a real logged-in profile also raises the stakes: convenience and authority arrive in the same browser session. The project's 11 GitHub stars as of 22 September make this genuinely obscure, but also mean the ecosystem and field experience are tiny."]},
+    {"heading":"Who might want it?","paragraphs":["People building browser-using coding or research agents who care about context cost, tool-call count and operating inside an existing Chrome profile rather than a sterile automation browser."]}
+  ],
+  "verdict": "Worth watching less for the MCP server itself than for the measurement it foregrounds: in agent systems, the expensive unit may be the conversational round trip rather than the tool payload.",
+  "nextStep": "Re-run the published suite with a second model and add a realistic multi-site workflow where login state, navigation and long histories matter.",
+  "sourceUrls": ["https://github.com/Silbercue/public-browser"],
+  "image": {"src":"/radar/public-browser/card.svg","alt":"Toolglass Radar plate showing many browser tool round trips collapsing into a shorter direct CDP path.","caption":"Radar fallback plate / Toolglass has not benchmarked Public Browser","kind":"RADAR PLATE"},
+  "automation": {"generated": true}
+}
