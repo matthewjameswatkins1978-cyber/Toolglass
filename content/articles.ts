@@ -156,6 +156,24 @@ export const articles: Article[] = [
         ]
       },
       {
+        heading: "A final service to the industry",
+        paragraphs: [
+          "It would be unfair to spend an entire article criticising AI names without contributing some fresh damage of our own.",
+          "So, free of charge, here are several names the industry is welcome to steal immediately:",
+          "ThoughtOps™ — DevOps for thinking. Horribly believable.",
+          "VibeOps™ — deploying vibes to production.",
+          "Human Amplification Layer™ — congratulations, you are middleware.",
+          "Synthetic Colleague™ — bleak enough to be real.",
+          "Intelligence Fabric™ — enterprise-grade polyester for the mind.",
+          "Digital Workforce Swarm™ — HR has discovered bees.",
+          "Cognitive Control Plane™ — your chatbot now has NATO insignia.",
+          "Collaborative Reasoning Assistant Platform™ (CRAP™) — almost too perfect.",
+          "Autonomous Reasoning Support Environment™ (ARSE™) — the British edition.",
+          "Large Autonomous Decision System™ (LADS™) — deploy the LADS.",
+          "If any of these appear in a keynote within twelve months, Toolglass accepts no responsibility."
+        ]
+      },
+      {
         heading: "A modest proposal: say what the thing does",
         paragraphs: [
           "We do need new language. New technology creates genuinely new behaviours, and forcing every new thing into an old category can be just as misleading as inventing jargon.",
