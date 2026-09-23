@@ -177,6 +177,10 @@ export const articles: Article[] = [
         href: "https://www.reuters.com/legal/government/trump-says-us-will-henceforth-call-ai-super-intelligence-2026-09-22/"
       },
       {
+        label: "Oxford University Press — Superintelligence: Paths, Dangers, Strategies",
+        href: "https://www.oup.com.au/books/general-interest/art-technology/9780198739838"
+      },
+      {
         label: "IBM — What is vibe coding?",
         href: "https://www.ibm.com/think/topics/vibe-coding"
       },
