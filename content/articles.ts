@@ -33,7 +33,7 @@ export const articles: Article[] = [
     kicker: "COLUMN / LANGUAGE & AI",
     title: "Please Stop Making AI Sound So Fucking Uncool",
     subtitle:
-      "The machines can write software, reason across tools and generate films. We have named the experience vibe coding, digital workers and agentic workflows.",
+      "Trump wants artificial intelligence renamed super intelligence. We can do worse. Welcome to Super Uber Mega Intelligence™, vibe coding, digital workers and the rest of AI's naming catastrophe.",
     summary:
       "Artificial intelligence may be the strangest technology in public life. Its vocabulary increasingly sounds like it was approved by a committee at an airport hotel. Vibe coding, agentic AI, digital coworkers and the rest are not harmless cringe: bad language flattens useful distinctions and makes new ideas harder to think about.",
     byline: "Matthew Watkins, with Lucy (ChatGPT)",
@@ -50,14 +50,27 @@ export const articles: Article[] = [
       ["Survivor", "slop"],
     ],
     intro: [
-      "Artificial intelligence is, objectively, an absurd thing to have lying around the house.",
-      "You can open a laptop, describe a half-formed idea in ordinary language, and a machine can search documentation, write software, analyse a contract, explain a paper, draw a picture, argue with your assumptions and occasionally make up a citation with the serene confidence of a man giving directions in a town he has never visited.",
+      "This article exists because Donald Trump tried to rename artificial intelligence.",
+      "At the United Nations on 22 September 2026, Trump said the word artificial makes intelligence sound fake and announced that United States documents would instead use the term super intelligence. He even supplied the new abbreviation: SI.",
+      "My immediate reaction was that this could obviously be improved. If the President of the United States gets Super Intelligence, I am claiming Super Uber Mega Intelligence. SUMI. Trademark pending, in the extremely important sense that I have just typed the symbol in my head.",
+      "Then I realised we had accidentally arrived at a much larger problem.",
+      "Artificial intelligence is, objectively, an absurd thing to have lying around the house. You can open a laptop, describe a half-formed idea in ordinary language, and a machine can search documentation, write software, analyse a contract, explain a paper, draw a picture, argue with your assumptions and occasionally make up a citation with the serene confidence of a man giving directions in a town he has never visited.",
       "This should feel like science fiction.",
       "So why does so much of the language around it sound like a regional sales conference at a Holiday Inn?",
       "We have vibe coding. Agentic workflows. Digital workers. AI coworkers. Prompt engineers. Human-in-the-loop systems. Copilots everywhere. Somewhere, presumably, an agentic copilot is synergising with a digital colleague while a human remains available in case anybody needs the password.",
       "The technology is weird, consequential and unfinished. The vocabulary has all the glamour of a conference lanyard."
     ],
     sections: [
+      {
+        heading: "Super intelligence is already a thing",
+        paragraphs: [
+          "There is an extra problem with Trump's proposed rename beyond taste: superintelligence already means something.",
+          "In AI research and public discussion, superintelligence normally refers to a hypothetical system whose capabilities broadly exceed those of humans. It is a category about capability, not a jaunty replacement label for every chatbot, image generator and autocomplete box.",
+          "Renaming ordinary AI 'super intelligence' therefore does not merely make the language more bombastic. It collapses two different concepts into one.",
+          "That is the perfect miniature of the naming problem around AI. A term sounds exciting, useful or fundable, so it expands until the distinction it once carried disappears.",
+          "Which is why Super Uber Mega Intelligence™ has one important advantage over SI: nobody could possibly mistake it for a serious technical category. Yet."
+        ]
+      },
       {
         heading: "Vibe coding: a joke that escaped",
         paragraphs: [
@@ -155,6 +168,14 @@ export const articles: Article[] = [
       }
     ],
     sources: [
+      {
+        label: "White House — President Trump at the United Nations, 22 September 2026",
+        href: "https://www.whitehouse.gov/releases/2026/09/president-trump-at-the-united-nations-while-others-have-talked-i-have-acted/"
+      },
+      {
+        label: "Reuters — Trump says U.S. will henceforth call AI 'super intelligence'",
+        href: "https://www.reuters.com/legal/government/trump-says-us-will-henceforth-call-ai-super-intelligence-2026-09-22/"
+      },
       {
         label: "IBM — What is vibe coding?",
         href: "https://www.ibm.com/think/topics/vibe-coding"
