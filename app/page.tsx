@@ -14,6 +14,9 @@ const thinkingSurface = articles.find(
 const hackathonPrize = articles.find(
   (article) => article.slug === 'the-prize-is-the-cheapest-part-of-a-hackathon',
 )!;
+const aiVocabulary = articles.find(
+  (article) => article.slug === 'please-stop-making-ai-sound-so-uncool',
+)!;
 
 export default function Home() {
   return (
@@ -76,6 +79,28 @@ export default function Home() {
           width={2172}
           height={724}
         />
+      </section>
+      <section className="notebook-feature">
+        <div>
+          <p className="eyebrow">COLUMN / LANGUAGE &amp; AI</p>
+          <h2>{aiVocabulary.title}</h2>
+          <p>{aiVocabulary.summary}</p>
+          <a
+            className="read-link"
+            href={sitePath('/articles/please-stop-making-ai-sound-so-uncool')}
+          >
+            Read the linguistic autopsy ↗
+          </a>
+        </div>
+        <div
+          className="notebook-receipt"
+          aria-label="AI vocabulary column summary"
+        >
+          <span>VIBE CODING</span>
+          <strong>AGENTIC WORKFORCE</strong>
+          <span>DIGITAL COLLEAGUE</span>
+          <span>SLOP SURVIVES</span>
+        </div>
       </section>
       <section className="notebook-feature">
         <div>
