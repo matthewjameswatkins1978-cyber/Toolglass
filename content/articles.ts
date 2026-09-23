@@ -29,6 +29,167 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: "please-stop-making-ai-sound-so-uncool",
+    kicker: "COLUMN / LANGUAGE & AI",
+    title: "Please Stop Making AI Sound So Fucking Uncool",
+    subtitle:
+      "The machines can write software, reason across tools and generate films. We have named the experience vibe coding, digital workers and agentic workflows.",
+    summary:
+      "Artificial intelligence may be the strangest technology in public life. Its vocabulary increasingly sounds like it was approved by a committee at an airport hotel. Vibe coding, agentic AI, digital coworkers and the rest are not harmless cringe: bad language flattens useful distinctions and makes new ideas harder to think about.",
+    byline: "Matthew Watkins, with Lucy (ChatGPT)",
+    publishedDate: "23 September 2026",
+    readingTime: "9 min read",
+    thesis:
+      "AI has genuine new concepts that need names. Too often we turn them into status jargon, stretch them until they mean everything, then wonder why nobody can tell what the technology actually does.",
+    notes: [
+      ["Type", "Opinion column"],
+      ["Published", "23 September 2026"],
+      ["Byline", "Matthew Watkins, with Lucy (ChatGPT)"],
+      ["Reading time", "9 min read"],
+      ["Victims", "vibe coding, agentic AI, digital workers, copilots"],
+      ["Survivor", "slop"],
+    ],
+    intro: [
+      "Artificial intelligence is, objectively, an absurd thing to have lying around the house.",
+      "You can open a laptop, describe a half-formed idea in ordinary language, and a machine can search documentation, write software, analyse a contract, explain a paper, draw a picture, argue with your assumptions and occasionally make up a citation with the serene confidence of a man giving directions in a town he has never visited.",
+      "This should feel like science fiction.",
+      "So why does so much of the language around it sound like a regional sales conference at a Holiday Inn?",
+      "We have vibe coding. Agentic workflows. Digital workers. AI coworkers. Prompt engineers. Human-in-the-loop systems. Copilots everywhere. Somewhere, presumably, an agentic copilot is synergising with a digital colleague while a human remains available in case anybody needs the password.",
+      "The technology is weird, consequential and unfinished. The vocabulary has all the glamour of a conference lanyard."
+    ],
+    sections: [
+      {
+        heading: "Vibe coding: a joke that escaped",
+        paragraphs: [
+          "Start with vibe coding, because somebody has to.",
+          "Andrej Karpathy coined the phrase in February 2025 for a deliberately loose way of building little projects with an LLM. The important part was not simply that AI wrote the code. It was that the human could largely stop caring about the code as code, accept changes, run the thing, report what broke and keep going. IBM's current explanation still traces the term to Karpathy and describes the shift toward natural-language, AI-generated implementation.",
+          "That is a perfectly legitimate thing to name. It is also obviously a joke. The phrase works when it means: I am throwing this together, I am following the result more than the implementation, and for this job I am comfortable with that bargain.",
+          "Then the phrase escaped.",
+          "Now people use vibe coding for almost any development involving AI, including work where the human is designing architecture, defining constraints, reviewing behaviour, writing tests, measuring performance and deciding what gets shipped. At that point the name stops describing a method and starts describing the presence of an AI.",
+          "This matters. If one phrase covers both 'I barely read the diff' and 'I delegated implementation inside a tested engineering process', the phrase has become informationally useless.",
+          "It has also achieved the remarkable feat of making programming with a machine that understands natural language sound less futuristic than arranging cushions."
+        ]
+      },
+      {
+        heading: "Agentic: useful adjective, terminal disease",
+        paragraphs: [
+          "Agentic AI at least began with a useful distinction. A chatbot answers. An agent can pursue a goal across multiple steps, use tools, observe results and decide what to do next. There is real architecture hiding under the adjective.",
+          "Unfortunately, the adjective has been discovered by marketing.",
+          "Gartner wrote in May 2026 that the terms 'AI agents' and 'agentic AI' were already overused. That was not a prediction. It was a diagnosis.",
+          "Once a word becomes desirable, everything wants it. We get agentic workflows, agentic organisations, agentic commerce, agentic infrastructure and agentic workforces. The word gradually stops telling you how the system works and starts telling you that somebody would like you to perceive it as advanced.",
+          "This is how technical vocabulary dies. First it distinguishes something. Then it sells something. Then it decorates everything."
+        ]
+      },
+      {
+        heading: "Meet your new digital colleague, apparently",
+        paragraphs: [
+          "Enterprise AI has produced an especially damp family of euphemisms: digital worker, digital employee, digital colleague, AI teammate.",
+          "These are not parody terms. Salesforce currently defines a digital worker as an AI software application that can act like a colleague or virtual employee, and its broader language talks about digital labour and digital workforces.",
+          "There can be practical reasons to model a system around a job role. If software handles invoices, triages support tickets and escalates exceptions, describing the responsibilities in human terms can make workflow design easier.",
+          "But 'AI employee' does something more than describe capability. It quietly changes the comparison. Software stops being compared with other software and starts being compared with a salary.",
+          "That is branding doing economics in a false moustache.",
+          "Call it an agent. Call it automation. Call it a service. Call it Derek if you absolutely must. But if Derek has no employment contract, cannot resign and can be duplicated 4,000 times before lunch, perhaps Derek is software."
+        ]
+      },
+      {
+        heading: "Prompt engineer: a real skill wearing a novelty hat",
+        paragraphs: [
+          "Prompt engineering has the opposite problem. The underlying activity is real.",
+          "OpenAI defines prompt engineering as designing and optimising instructions so a model produces the required result consistently. In production systems that can involve schemas, examples, tool policies, context management, evaluations and repeated testing. That is engineering work when it is treated as engineering work.",
+          "But the title also enjoyed a period where ordinary competence at talking to a model was inflated into a mysterious priesthood. Write a clear instruction, add 'act as an expert', sprinkle three hashes over it and apparently you had entered a new profession.",
+          "The joke is that the genuinely difficult part of working with AI increasingly lies beyond the clever sentence. It is deciding what the model should know, what it may do, where deterministic constraints belong, how failure is detected and which decisions remain human.",
+          "The magic prompt was always going to have a short half-life."
+        ]
+      },
+      {
+        heading: "Human in the loop, like a fuse",
+        paragraphs: [
+          "Human-in-the-loop is technically clear and often useful. It describes systems where people provide feedback, corrections, approval or final judgement.",
+          "It is also a magnificent piece of accidental dystopian comedy.",
+          "The human is no longer the person operating the system. The human is a component in the diagram.",
+          "Stanford HAI noticed the problem years ago. At its 2022 conference on the subject, researchers explicitly argued for reversing the frame: humans are in charge, AI is in the loop.",
+          "That tiny grammatical change is more important than it looks. Language has architecture. If you repeatedly describe the person as the intermittent intervention mechanism, eventually somebody will design the system that way."
+        ]
+      },
+      {
+        heading: "Copilot is where metaphors go to die",
+        paragraphs: [
+          "Copilot was once a good metaphor. The human is flying. The machine assists. Everybody understands the relationship.",
+          "Then AI discovered aviation.",
+          "Microsoft turned Copilot into a major product identity and the wider industry adopted the same basic metaphor everywhere: coding copilots, sales copilots, security copilots, research copilots. The word is now so familiar that it barely paints the cockpit anymore.",
+          "This is the natural life cycle of a successful technology metaphor. It begins by making the unfamiliar legible. It ends as a grey rectangle containing a sparkle icon.",
+          "At some point there are six copilots and nobody appears to be flying the fucking plane."
+        ]
+      },
+      {
+        heading: "Why slop survived",
+        paragraphs: [
+          "Which brings us to slop, one of the few pieces of recent AI vocabulary worth protecting.",
+          "Cambridge now defines AI slop as low-quality digital content created by artificial intelligence. More broadly, slop has returned as a wonderfully efficient word for cheap, excessive, semi-liquid cultural output: material produced because producing it is easy, not because anybody had much reason to make it.",
+          "It works because it does not flatter the technology or the speaker.",
+          "Slop is physical. You can hear the bucket. You can smell the canteen. It tells you about quality, abundance and appetite in one syllable.",
+          "More importantly, it names the result rather than pretending to explain the mechanism. A human can make slop. An AI can make slop. A corporation can commission slop at industrial scale. The criticism survives changes in tooling.",
+          "That is good language. Short, concrete, mean when it needs to be, and difficult to turn into a consultancy."
+        ]
+      },
+      {
+        heading: "No, the nerds are not getting all the blame",
+        paragraphs: [
+          "It is tempting to blame nerds for this. That would be unfair.",
+          "Nerds also gave us names like Unix, Python, Smalltalk, Git, Doom and Raspberry Pi. Technical culture is perfectly capable of producing names with wit, texture and a pulse.",
+          "The really lethal mixture is technical shorthand plus status anxiety plus enterprise marketing. Engineers coin an internal term. Founders realise investors recognise it. Consultants discover there is a workshop in it. LinkedIn performs the final embalming.",
+          "Soon the term no longer helps people think. It helps people signal that they are standing near the future.",
+          "That is the part worth being vicious about, because AI is difficult enough without a layer of ceremonial fog poured over it."
+        ]
+      },
+      {
+        heading: "A modest proposal: say what the thing does",
+        paragraphs: [
+          "We do need new language. New technology creates genuinely new behaviours, and forcing every new thing into an old category can be just as misleading as inventing jargon.",
+          "But a useful term should buy us precision.",
+          "If an AI answers questions, call it an assistant. If it can choose actions and use tools, call it an agent and say what authority it has. If code was generated without meaningful review, say that. If a human must approve a decision, say where. If software performs a business process, describe the process before pretending it has joined payroll.",
+          "And if the output is slop, for God's sake call it slop.",
+          "The future does not need to sound futuristic. It needs to be legible.",
+          "These machines are already strange enough. We can stop helping them become uncool."
+        ]
+      }
+    ],
+    sources: [
+      {
+        label: "IBM — What is vibe coding?",
+        href: "https://www.ibm.com/think/topics/vibe-coding"
+      },
+      {
+        label: "Gartner — What Are AI Agents and Agentic AI for Service and Support?",
+        href: "https://www.gartner.com/en/documents/7833117"
+      },
+      {
+        label: "OpenAI — Prompt engineering best practices for ChatGPT",
+        href: "https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt"
+      },
+      {
+        label: "Salesforce — What Is a Digital Worker?",
+        href: "https://www.salesforce.com/agentforce/digital-worker/"
+      },
+      {
+        label: "Salesforce — What Is Digital Labor?",
+        href: "https://www.salesforce.com/agentforce/digital-labor/"
+      },
+      {
+        label: "Stanford HAI — AI in the Loop: Humans Must Remain in Charge",
+        href: "https://hai.stanford.edu/news/ai-loop-humans-must-remain-charge"
+      },
+      {
+        label: "Microsoft — Get started with the Microsoft Copilot app",
+        href: "https://support.microsoft.com/en-us/microsoft-365-copilot/what-is-microsoft-copilot-app"
+      },
+      {
+        label: "Cambridge Dictionary — AI slop",
+        href: "https://dictionary.cambridge.org/dictionary/english/ai-slop"
+      }
+    ]
+  },
+  {
     slug: 'the-prize-is-the-cheapest-part-of-a-hackathon',
     kicker: 'FEATURE / AI & OPEN INNOVATION',
     title: 'The Prize Is the Cheapest Part of a Hackathon',
