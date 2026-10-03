@@ -15,7 +15,7 @@ export type Review = {
   catch: string;
   paragraphs: string[];
   nextTest: string;
-  status: 'SCOUTED' | 'INSPECTED' | 'TESTED';
+  status: 'DISCOVERED' | 'SCOUTED' | 'INSPECTED' | 'TESTED';
   evidenceStatus?: string;
   evidenceNote?: string;
   evidenceBoundary?: string;
@@ -569,29 +569,62 @@ export const reviews: Review[] = [
     slug: 'gitdesktop',
     name: 'GitDesktop',
     category: 'Development workflow',
-    headline: 'Less browser hopping. More repository.',
+    headline: 'GitDesktop wants the repository to be the whole workbench.',
     summary:
-      'A keyboard-first Git client with ambitions beyond the commit window.',
-    what: 'A desktop Git client bringing repository work and hosting-service features into one application.',
+      'A broad Git client brings forge activity and optional agent tools into one desktop. The claims are interesting; Toolglass has not tested them.',
+    what: 'An open-source desktop Git client whose README describes local repository work alongside pull requests, issues, CI, optional AI, coding-agent sessions, and MCP.',
     replaces:
-      'Potentially part of a Git GUI plus the browser trips needed for pull requests, issues and build activity.',
+      'Potentially some of the work split between a Git GUI and browser tabs for code review, issues, and CI.',
     notReplaces:
-      'Understanding a merge, your hosting service, or every advanced command-line Git operation.',
+      'Git itself, careful review of a change, forge accounts, or independent checks that an operation did what it should.',
     audience:
-      'Developers who want a visual Git workflow without constantly reaching for the mouse.',
-    platforms: 'Windows / macOS / Linux (published targets; not tested).',
+      'Developers who want a keyboard-first visual Git workflow across hosting services, with optional AI or coding-agent integration.',
+    platforms: 'Windows / macOS / Linux (upstream-listed platforms; not tested by Toolglass).',
     licence: 'Apache-2.0',
-    version: 'v0.11.1',
+    version: 'v0.13.2 (latest stable release reported 2026-10-03)',
     repo: 'theBGuy/GitDesktop',
     catch:
-      'The breadth of integrations creates many paths to verify. Account authentication and platform behaviour need their own checks.',
+      'System git is required. Forge and AI features depend on their corresponding CLIs, accounts, credentials, or providers. Toolglass has not verified the advertised behavior, installer signatures, or platform compatibility.',
     paragraphs: [
-      'The interesting unit here is a working session, not a feature count. Can you inspect a change, understand its context and follow it through review without repeatedly losing your place? That would be a meaningful improvement.',
-      'We would begin with an ordinary repository and a deliberately awkward conflict. A client earns trust when it makes the state understandable, especially when an operation cannot proceed. Extra AI features do not answer that basic question.',
+      'The attraction is not another place to click Commit. GitDesktop describes a larger workbench: local Git state beside forge activity, with optional access for coding agents.',
+      'That is a substantial promise. The useful question is whether the combined view keeps repository state legible when the work gets awkward: conflicts, authentication failures, interrupted operations, and agents proposing changes.',
     ],
     nextTest:
-      'Clone a disposable repository, create divergent edits, resolve a conflict and verify the resulting history with Git itself.',
-    status: 'SCOUTED',
+      'On Windows, verify the release digest and installer signature; open a disposable repository; check ordinary Git operations and conflict recovery; then separately test MCP read-only defaults and each write gate without real remote writes.',
+    status: 'DISCOVERED',
+    evidenceStatus: 'DISCOVERED',
+    reviewedDate: '3 October 2026',
+    evidenceNote:
+      'Official repository, README, release metadata, and release assets checked on 3 October 2026. No candidate package was downloaded, installed, or run.',
+    evidenceBoundary:
+      'Feature, privacy, signature, and platform statements are attributed to upstream documentation. Release asset SHA-256 values came from GitHub API metadata and were not independently recomputed. Toolglass has no runtime, performance, reliability, or security evidence for this candidate.',
+    intro: [
+      'A Git client can be a window onto one repository, or a place to follow work across the repository, its host, and the tools acting on it. GitDesktop is pitching the second shape.',
+      'The public README describes a Windows, macOS, and Linux application for local Git, pull requests, issues, CI, coding agents, optional AI, and MCP. A v0.13.2 release appeared on 2 October. Those are verified publication facts and upstream product claims; they are not Toolglass test results.',
+    ],
+    sections: [
+      {
+        heading: 'The repository is only the beginning',
+        paragraphs: [
+          'The README describes an integrated workflow across GitHub, GitLab, and Bitbucket, with Jira in one path. It also lists local pull requests, GitHub Actions, issue work, project boards, branch and history tools, and recovery features. The list is ambitious enough that a feature count would tell us very little.',
+          'What matters is whether the state remains understandable as work moves from a local change to a review, a failed check, or a merge conflict. Toolglass has not exercised any of those paths.',
+        ],
+      },
+      {
+        heading: 'The agent boundary is the interesting claim',
+        paragraphs: [
+          'GitDesktop says its MCP server is read-only by default and describes separate opt-in flags for local writes, remote forge writes, Git mutations, and destructive operations. It also says coding agents can work in isolated worktrees or containers, with their edits visible to the user.',
+          'That is a clear design promise, not proof of enforcement. It gives the next pass a useful target: try the read-only path, then check that each write remains unavailable until its specific switch is enabled.',
+        ],
+      },
+      {
+        heading: 'The Windows entry point exists',
+        paragraphs: [
+          'The latest stable GitHub release we found, v0.13.2, includes a Windows x64 setup executable and MSI. The README says system git is required; GitHub CLI is needed for GitHub pull-request and Actions features, while the other forge and AI integrations have their own optional requirements.',
+          'GitHub lists SHA-256 digests for the installers, but Toolglass has not downloaded either file to compare those digests. The README describes signed updater packages; that does not establish the Windows installer’s Authenticode status.',
+        ],
+      },
+    ],
   },
   {
     slug: 'pad-local',

@@ -5,7 +5,7 @@
   <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/" />
   <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/feed.xml" rel="alternate" type="application/rss+xml" />
-  <updated>2026-09-19T18:37:00.000Z</updated>
+  <updated>2026-10-03T12:00:00.000Z</updated>
   <subtitle>Software worth finding. Independent reviews with visible evidence.</subtitle>
   <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
   <entry>
@@ -37,6 +37,16 @@
     <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
     <category term="Terminal assistants" />
     <summary>TermAI promises a terminal-native assistant with local sessions, branching, Git helpers and several provider paths. We never reached any of that. On our Windows bench, the current source build stopped at the compiler. Evidence: INSPECTED / BUILD BLOCKED.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/gitdesktop/</id>
+    <title>GitDesktop wants the repository to be the whole workbench.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/gitdesktop/" />
+    <published>2026-10-03T12:00:00.000Z</published>
+    <updated>2026-10-03T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Development workflow" />
+    <summary>A broad Git client brings forge activity and optional agent tools into one desktop. The claims are interesting; Toolglass has not tested them. Evidence: DISCOVERED.</summary>
   </entry>
   <entry>
     <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/archprint/</id>
@@ -139,6 +149,16 @@
     <summary>Editors, terminals and browser panels share an infinite local canvas. The map may be the point, or the problem. Radar status: SPOTTED.</summary>
   </entry>
   <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/patternflow/</id>
+    <title>A screen that behaves more like an instrument than a television</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/patternflow/" />
+    <published>2026-09-22T18:11:00.000Z</published>
+    <updated>2026-09-22T18:11:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Patternflow is an open-source 8,192-pixel LED synthesizer whose four knobs alter code-generated images in real time. The clever bit is not the LEDs; it is treating visual algorithms as playable, shareable patches. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
     <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/promptsign/</id>
     <title>AI instruction files are executable trust. PromptSign wants them signed before your agent reads them.</title>
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/promptsign/" />
@@ -147,6 +167,16 @@
     <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
     <category term="Radar" />
     <summary>PromptSign applies Sigstore-style signing and offline verification to CLAUDE.md, AGENTS.md, skills, agent definitions and their script payloads, treating prompt supply chains rather more like software supply chains. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/public-browser/</id>
+    <title>Browser agents may be paying a round-trip tax nobody bothered to count</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/public-browser/" />
+    <published>2026-09-22T18:11:00.000Z</published>
+    <updated>2026-09-22T18:11:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Public Browser drives a real Chrome profile directly over CDP, but its more interesting claim is architectural: fewer agent-tool round trips can matter more than shaving bytes from each browser snapshot. Radar status: DESK REVIEW.</summary>
   </entry>
   <entry>
     <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/rdmatop/</id>
@@ -167,6 +197,16 @@
     <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
     <category term="Radar" />
     <summary>Rift is a Rust terminal coding agent built around small binaries, local inference, explicit context control and failure recovery. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/s1-rs/</id>
+    <title>What if an AI answer had to fit through Rust&apos;s type system first?</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/s1-rs/" />
+    <published>2026-09-22T18:11:00.000Z</published>
+    <updated>2026-09-22T18:11:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>s1-rs is a tiny, very new experiment in turning model decisions into typed Rust values with confidence gates. It is barely born, but the design points toward a useful boundary between probabilistic judgement and deterministic software. Radar status: SPOTTED.</summary>
   </entry>
   <entry>
     <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/termy/</id>
