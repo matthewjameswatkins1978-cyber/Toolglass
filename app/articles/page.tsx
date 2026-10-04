@@ -1,4 +1,4 @@
-import { articles } from '@/content/articles';
+import { articles } from '@/content/articles-all';
 import { sitePath } from '@/lib/utils';
 
 export const metadata = {
