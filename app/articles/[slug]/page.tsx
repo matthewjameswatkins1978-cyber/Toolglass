@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { articles } from '@/content/articles';
+import { articles } from '@/content/articles-all';
 import { sitePath } from '@/lib/utils';
 import { publicSiteUrl } from '@/lib/site';
 import EditorialArt from '@/components/EditorialArt';
@@ -125,6 +125,20 @@ export default async function ArticlePage({
           {article.sections.map((section) => (
             <section key={section.heading}>
               <h2>{section.heading}</h2>
+              {section.pullQuote ? (
+                <blockquote
+                  style={{
+                    borderTop: '3px solid var(--ink)',
+                    borderBottom: '1px solid var(--ink)',
+                    margin: '30px 0 28px',
+                    padding: '24px 0',
+                    font: 'clamp(30px, 4vw, 46px)/1.06 var(--serif)',
+                    letterSpacing: '-0.035em',
+                  }}
+                >
+                  {section.pullQuote}
+                </blockquote>
+              ) : null}
               {section.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
