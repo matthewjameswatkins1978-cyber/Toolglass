@@ -1,5 +1,5 @@
 import { reviews } from '@/content/reviews';
-import { articles } from '@/content/articles';
+import { articles } from '@/content/articles-all';
 import { sitePath } from '@/lib/utils';
 import EditorialArt from '@/components/EditorialArt';
 import MachineGlyph from '@/components/MachineGlyph';
@@ -16,6 +16,9 @@ const hackathonPrize = articles.find(
 )!;
 const aiVocabulary = articles.find(
   (article) => article.slug === 'please-stop-making-ai-sound-so-uncool',
+)!;
+const anvil = articles.find(
+  (article) => article.slug === 'the-anvil-ai-native-computer',
 )!;
 
 export default function Home() {
@@ -79,6 +82,28 @@ export default function Home() {
           width={2172}
           height={724}
         />
+      </section>
+      <section className="notebook-feature">
+        <div>
+          <p className="eyebrow">FEATURE / AI-NATIVE COMPUTING</p>
+          <h2>{anvil.title}</h2>
+          <p>{anvil.summary}</p>
+          <a
+            className="read-link"
+            href={sitePath('/articles/the-anvil-ai-native-computer')}
+          >
+            Enter the one-kilobyte universe ↗
+          </a>
+        </div>
+        <div
+          className="notebook-receipt"
+          aria-label="The Anvil feature summary"
+        >
+          <span>1,024 BYTES</span>
+          <strong>NO SHELL · NO FOLKLORE</strong>
+          <span>PROPOSE → VERIFY → COMMIT</span>
+          <span>BRING BATS</span>
+        </div>
       </section>
       <section className="notebook-feature">
         <div>
