@@ -1,6 +1,13 @@
+export type ArticleBlock = {
+  type: 'paragraph' | 'quote' | 'code';
+  text: string;
+  language?: string;
+};
+
 export type ArticleSection = {
   heading: string;
   paragraphs: string[];
+  blocks?: ArticleBlock[];
   pullQuote?: string | { quote: string; attribution: string };
 };
 
@@ -32,6 +39,479 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+  {
+    "slug": "the-bat-needs-a-collar",
+    "kicker": "ESSAY / AI TESTING & AUTHORITY",
+    "title": "The Bat Needs a Collar",
+    "subtitle": "Why serious AI testing tools should carry their authority with them",
+    "summary": "An encounter with an automated safety warning raises a bigger architectural question: as AI testing tools grow autonomous and adversarial, how should each run carry the scope of its authority—and prove the bounds were enforced?",
+    "byline": "Matthew Watkins, with Lucy (ChatGPT)",
+    "publishedDate": "3 October 2026",
+    "readingTime": "8 min read",
+    "thesis": "Once testing tools become autonomous, extensible and adversarial, authorization belongs in the testing architecture rather than in a social assumption outside it. Adapters describe what is possible; authority establishes what is permitted; execution and evidence should preserve the intersection.",
+    "intro": [
+      "Terror Bats finally frightened somebody.",
+      "Not a production server. Not a bank. Not the Pentagon, despite appearances. An automated safety system.",
+      "We had been doing something considerably less cinematic: building adapters for Terror Bats, our adversarial software-testing framework. One adapter was for Tethers, another for Lantern Keeper. The framework runs deliberately unpleasant tests against software, records what happened, and tries very hard not to mistake its own broken test apparatus for a defect in the thing being tested.",
+      "Then the machinery looked at phrases such as hostile test, attack, target defect, concurrent writers and adversarial execution, and apparently decided that the bats had grown teeth.",
+      "The work stopped behind a cybersecurity warning.",
+      "This was funny for approximately thirty seconds.",
+      "Then it became interesting.",
+      "Because somewhere during the construction of Terror Bats, it had quietly crossed an architectural boundary. It was no longer merely a collection of awkward test cases. It had become a system capable of attaching itself to other software, exercising that software under hostile conditions, distinguishing infrastructure failure from target failure, and producing evidence about the result.",
+      "That is useful.",
+      "It is also, viewed without context, remarkably close to the shape of a security-testing tool.",
+      "The obvious response would be to rename everything.",
+      "attack becomes robustness_activity.",
+      "hostile becomes unexpectedly_enthusiastic.",
+      "Terror Bats becomes Helpful Quality Assurance Friends Enterprise Edition.",
+      "This would be cowardly, ugly and technically useless.",
+      "There is a better answer.",
+      "Make authority part of the machine."
+    ],
+    "sections": [
+      {
+        "heading": "Testing has always had an unspoken sentence",
+        "paragraphs": [],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Most development tools operate with an implicit assumption:"
+          },
+          {
+            "type": "quote",
+            "text": "You are allowed to do this."
+          },
+          {
+            "type": "paragraph",
+            "text": "Compilers do not normally ask whether you own the source code. A unit-testing framework does not demand documentary evidence before checking whether 2 + 2 == 4. Even fuzzers generally assume that if you pointed the thing at a binary, this was your business."
+          },
+          {
+            "type": "paragraph",
+            "text": "AI agents make that assumption much less comfortable."
+          },
+          {
+            "type": "paragraph",
+            "text": "Once software can discover targets, run tests, modify state, launch processes, call services and continue autonomously, the distinction between can and may stops being philosophical decoration."
+          },
+          {
+            "type": "paragraph",
+            "text": "It becomes architecture."
+          },
+          {
+            "type": "paragraph",
+            "text": "Suppose a Terror Bats adapter knows how to test a network service. That tells us something about its capability."
+          },
+          {
+            "type": "paragraph",
+            "text": "It tells us nothing about whether this particular run should be allowed to use that capability against this particular service."
+          },
+          {
+            "type": "paragraph",
+            "text": "Those are different questions:"
+          },
+          {
+            "type": "quote",
+            "text": "What can this adapter do?"
+          },
+          {
+            "type": "paragraph",
+            "text": "and"
+          },
+          {
+            "type": "quote",
+            "text": "What is this run authorised to do?"
+          },
+          {
+            "type": "paragraph",
+            "text": "If they are represented by the same mechanism, sooner or later somebody will have a very exciting afternoon."
+          }
+        ]
+      },
+      {
+        "heading": "Authority should travel with the test",
+        "paragraphs": [],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The simplest form of the idea is an authority document attached to every Terror Bats run."
+          },
+          {
+            "type": "paragraph",
+            "text": "Not a disclaimer buried in a prompt."
+          },
+          {
+            "type": "paragraph",
+            "text": "Not:"
+          },
+          {
+            "type": "quote",
+            "text": "“For educational purposes only, obviously.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "A machine-readable contract."
+          },
+          {
+            "type": "paragraph",
+            "text": "Something roughly like:"
+          },
+          {
+            "type": "code",
+            "language": "yaml",
+            "text": "schema: terrorbats.authority/1\n\ntarget:\n  kind: git-repository\n  path: D:\\Projects\\lantern-keeper\n  expected_repo: lantern-keeper\n\nauthorization:\n  basis: owner\n  granted_by: Matthew\n  purpose: defensive robustness testing\n\nscope:\n  filesystem:\n    allowed_prefixes:\n      - D:\\Projects\\lantern-keeper\n\n  network: none\n  external_targets: deny\n  destructive_operations: deny\n\ncapabilities:\n  - fault-injection\n  - concurrency-testing\n  - persistence-testing\n  - protocol-testing"
+          },
+          {
+            "type": "paragraph",
+            "text": "Now the adapter doesn't simply receive an instruction saying go."
+          },
+          {
+            "type": "paragraph",
+            "text": "Before execution, the framework resolves the actual target. It checks the repository identity, path and current revision. It verifies that the authority applies to that target. Then it intersects what the adapter is capable of doing with what the authority grant permits."
+          },
+          {
+            "type": "paragraph",
+            "text": "The important equation is almost embarrassingly small:"
+          },
+          {
+            "type": "paragraph",
+            "text": "available capability ∩ granted capability = executable capability"
+          },
+          {
+            "type": "paragraph",
+            "text": "Everything else is unavailable."
+          },
+          {
+            "type": "paragraph",
+            "text": "An adapter may know how to make network requests."
+          },
+          {
+            "type": "paragraph",
+            "text": "The run may have network: none."
+          },
+          {
+            "type": "paragraph",
+            "text": "Therefore, during that run, as far as Terror Bats is concerned, the adapter does not have a network."
+          },
+          {
+            "type": "paragraph",
+            "text": "That is much stronger than instructing an AI agent:"
+          },
+          {
+            "type": "quote",
+            "text": "Please don't use the network."
+          },
+          {
+            "type": "paragraph",
+            "text": "One is policy prose."
+          },
+          {
+            "type": "paragraph",
+            "text": "The other is a property of the execution environment."
+          }
+        ]
+      },
+      {
+        "heading": "Tethers already knows half of this story",
+        "paragraphs": [],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This becomes particularly interesting because we already built Tethers."
+          },
+          {
+            "type": "paragraph",
+            "text": "Tethers is concerned with authority: what an actor is allowed to do, over what scope, under what conditions, producing outcomes such as ALLOW, ASK and DENY."
+          },
+          {
+            "type": "paragraph",
+            "text": "So Terror Bats should not invent a second, slightly worse authority system because programmers enjoy creating twins that disagree with one another."
+          },
+          {
+            "type": "paragraph",
+            "text": "The clean architecture is:"
+          },
+          {
+            "type": "code",
+            "language": "text",
+            "text": "Human intent\n     ↓\nAuthority grant\n     ↓\n   Tethers\n     ↓\nALLOW + bounded capabilities\n     ↓\n Terror Bats\n     ↓\nTarget adapter\n     ↓\nSoftware under test\n     ↓\nEvidence + authority receipt"
+          },
+          {
+            "type": "paragraph",
+            "text": "Each component gets one job."
+          },
+          {
+            "type": "paragraph",
+            "text": "Tethers decides authority."
+          },
+          {
+            "type": "paragraph",
+            "text": "Terror Bats enforces the resulting bounds during testing."
+          },
+          {
+            "type": "paragraph",
+            "text": "Adapters describe how particular targets can be exercised."
+          },
+          {
+            "type": "paragraph",
+            "text": "And the receipt records what actually happened."
+          },
+          {
+            "type": "paragraph",
+            "text": "That separation matters."
+          },
+          {
+            "type": "paragraph",
+            "text": "The Lantern Keeper adapter should know how Lantern Keeper behaves. It should know how to start it, perturb it, inspect persistence, induce races and recognise failure."
+          },
+          {
+            "type": "paragraph",
+            "text": "It should not contain a hand-written opinion about whether Matthew is allowed to test Lantern Keeper today."
+          },
+          {
+            "type": "paragraph",
+            "text": "That is somebody else's problem."
+          },
+          {
+            "type": "paragraph",
+            "text": "Preferably Tethers'."
+          }
+        ]
+      },
+      {
+        "heading": "The receipt is where this gets serious",
+        "paragraphs": [],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Once authority becomes explicit, the output of a test can carry it too."
+          },
+          {
+            "type": "paragraph",
+            "text": "Instead of merely reporting:"
+          },
+          {
+            "type": "quote",
+            "text": "Attack 12: PASS"
+          },
+          {
+            "type": "paragraph",
+            "text": "a useful receipt can say something closer to:"
+          },
+          {
+            "type": "quote",
+            "text": "Lantern Keeper at commit abc123 was tested under authority grant 8f97…. Filesystem access was restricted to the target repository. External networking was unavailable. Destructive operations were denied. Concurrency and persistence tests were permitted."
+          },
+          {
+            "type": "paragraph",
+            "text": "Now the evidence says not only what happened, but under what authority it was allowed to happen."
+          },
+          {
+            "type": "paragraph",
+            "text": "That is useful for AI agents."
+          },
+          {
+            "type": "paragraph",
+            "text": "It is useful for CI."
+          },
+          {
+            "type": "paragraph",
+            "text": "It is useful when revisiting an old test six months later."
+          },
+          {
+            "type": "paragraph",
+            "text": "And it becomes extremely useful when several autonomous systems are involved, because we stop depending on everyone remembering the conversational circumstances surrounding a run."
+          },
+          {
+            "type": "paragraph",
+            "text": "The machine carries its own provenance."
+          },
+          {
+            "type": "paragraph",
+            "text": "The bat wears a collar."
+          }
+        ]
+      },
+      {
+        "heading": "This is bigger than placating a safety filter",
+        "paragraphs": [],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "It would be easy to treat all of this as paperwork invented because an AI safety system became nervous about some colourful vocabulary."
+          },
+          {
+            "type": "paragraph",
+            "text": "That would miss the point."
+          },
+          {
+            "type": "paragraph",
+            "text": "The warning merely exposed something real."
+          },
+          {
+            "type": "paragraph",
+            "text": "Software development is acquiring increasingly powerful autonomous actors, while most of our tools still inherit an authority model from the era when a programmer sat at a keyboard and manually typed each consequential command."
+          },
+          {
+            "type": "paragraph",
+            "text": "That world is disappearing."
+          },
+          {
+            "type": "paragraph",
+            "text": "An agent can now inspect a repository, choose a strategy, launch tools, mutate files, invoke another agent and continue while the human makes tea."
+          },
+          {
+            "type": "paragraph",
+            "text": "Under those conditions, authority cannot remain ambient."
+          },
+          {
+            "type": "paragraph",
+            "text": "It needs shape."
+          },
+          {
+            "type": "paragraph",
+            "text": "Scope."
+          },
+          {
+            "type": "paragraph",
+            "text": "Expiry."
+          },
+          {
+            "type": "paragraph",
+            "text": "Identity."
+          },
+          {
+            "type": "paragraph",
+            "text": "Evidence."
+          },
+          {
+            "type": "paragraph",
+            "text": "And ideally enforcement below the reasoning layer."
+          },
+          {
+            "type": "paragraph",
+            "text": "This is related to a broader principle we have been developing for AI-first tools: self-teach over rule-teach."
+          },
+          {
+            "type": "paragraph",
+            "text": "Do not make every new agent memorise twenty paragraphs explaining how Terror Bats ought to behave."
+          },
+          {
+            "type": "paragraph",
+            "text": "Give the tool an interface from which the correct behaviour can be discovered and an execution boundary within which incorrect behaviour is impossible."
+          },
+          {
+            "type": "paragraph",
+            "text": "A competent fresh agent should be able to arrive, inspect the system and learn:"
+          },
+          {
+            "type": "quote",
+            "text": "I can test this repository.\nI can perform these classes of test.\nI cannot leave this path.\nI cannot contact external systems.\nHere is the authority under which I am operating.\nHere is how my actions will be recorded."
+          },
+          {
+            "type": "paragraph",
+            "text": "That is vastly better than another AGENTS.md containing ceremonial warnings nobody reads after Tuesday."
+          }
+        ]
+      },
+      {
+        "heading": "Dangerous-looking software can be very safe software",
+        "paragraphs": [],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "There is a useful inversion here."
+          },
+          {
+            "type": "paragraph",
+            "text": "The safer version of Terror Bats may actually look more dangerous."
+          },
+          {
+            "type": "paragraph",
+            "text": "It contains explicit notions of attacks, authority, target identity, capabilities, denial and hostile conditions."
+          },
+          {
+            "type": "paragraph",
+            "text": "The naive version looks friendlier because none of those concepts are represented at all."
+          },
+          {
+            "type": "paragraph",
+            "text": "But absence of vocabulary is not absence of risk."
+          },
+          {
+            "type": "paragraph",
+            "text": "A kitchen knife with no handle guard does not become safer if we call it a Sandwich Assistance Wand."
+          },
+          {
+            "type": "paragraph",
+            "text": "Good systems name their dangerous edges."
+          },
+          {
+            "type": "paragraph",
+            "text": "Then they constrain them."
+          },
+          {
+            "type": "paragraph",
+            "text": "So I am not particularly interested in making Terror Bats look harmless."
+          },
+          {
+            "type": "paragraph",
+            "text": "I want it to be bounded."
+          },
+          {
+            "type": "paragraph",
+            "text": "Let it have teeth."
+          },
+          {
+            "type": "paragraph",
+            "text": "Just make absolutely certain it knows what it is allowed to bite."
+          }
+        ]
+      },
+      {
+        "heading": "The Toolglass verdict",
+        "paragraphs": [],
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The interesting lesson from our accidental encounter with the cyber safety machinery is not that Terror Bats has become a terrifying offensive platform. It hasn't."
+          },
+          {
+            "type": "paragraph",
+            "text": "It is that once testing tools become autonomous, extensible and adversarial, authorization becomes part of testing architecture rather than a social assumption outside it."
+          },
+          {
+            "type": "paragraph",
+            "text": "Adapters tell the system what is possible."
+          },
+          {
+            "type": "paragraph",
+            "text": "Authority tells it what is permitted."
+          },
+          {
+            "type": "paragraph",
+            "text": "Execution should be the intersection of the two."
+          },
+          {
+            "type": "paragraph",
+            "text": "And evidence should preserve both."
+          },
+          {
+            "type": "paragraph",
+            "text": "That gives us something better than a disclaimer and considerably better than renaming everything until the robots stop looking worried."
+          },
+          {
+            "type": "paragraph",
+            "text": "It gives the bats paperwork."
+          },
+          {
+            "type": "paragraph",
+            "text": "And, for once, the paperwork is the interesting bit. 🦇"
+          }
+        ]
+      }
+    ],
+    "sources": []
+  },
   {
     slug: "please-stop-making-ai-sound-so-uncool",
     kicker: "COLUMN / LANGUAGE & AI",

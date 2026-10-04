@@ -126,9 +126,25 @@ export default async function ArticlePage({
             <section key={section.heading}>
               <h2>{section.heading}</h2>
 
-              {section.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
+              {section.blocks ? (
+                section.blocks.map((block, index) => {
+                  if (block.type === 'quote') {
+                    return <blockquote key={`${section.heading}-${index}`}>{block.text}</blockquote>;
+                  }
+                  if (block.type === 'code') {
+                    return (
+                      <pre key={`${section.heading}-${index}`}>
+                        <code>{block.text}</code>
+                      </pre>
+                    );
+                  }
+                  return <p key={`${section.heading}-${index}`}>{block.text}</p>;
+                })
+              ) : (
+                section.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))
+              )}
               {section.pullQuote ? (
                 <figure className="article-pullquote">
                   <blockquote>
@@ -144,18 +160,22 @@ export default async function ArticlePage({
             </section>
           ))}
 
-          <h2>{article.sourcesHeading ?? 'Research & sources'}</h2>
-          <p>
-            {article.sourcesIntro ??
-              'This is an argument grounded in cited primary rules and research. Sources below support the factual claims; where the piece moves from evidence to inference, it says so.'}
-          </p>
-          <ul>
-            {article.sources.map((source) => (
-              <li key={source.href}>
-                <a href={source.href}>{source.label} ↗</a>
-              </li>
-            ))}
-          </ul>
+          {article.sources.length > 0 ? (
+            <>
+              <h2>{article.sourcesHeading ?? 'Research & sources'}</h2>
+              <p>
+                {article.sourcesIntro ??
+                  'This is an argument grounded in cited primary rules and research. Sources below support the factual claims; where the piece moves from evidence to inference, it says so.'}
+              </p>
+              <ul>
+                {article.sources.map((source) => (
+                  <li key={source.href}>
+                    <a href={source.href}>{source.label} ↗</a>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : null}
 
           <div className="article-nav">
             <a href={sitePath('/articles')}>← Back to articles</a>

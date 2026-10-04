@@ -23,6 +23,9 @@ const resolve01 = articles.find(
 const anvil = articles.find(
   (article) => article.slug === 'the-anvil-ai-native-computer',
 )!;
+const batNeedsCollar = articles.find(
+  (article) => article.slug === 'the-bat-needs-a-collar',
+)!;
 
 export default function Home() {
   return (
@@ -194,6 +197,28 @@ export default function Home() {
           <strong>INTENT &gt; BLACK BOX</strong>
           <span>HUMAN JUDGEMENT STAYS VISIBLE</span>
           <span>AI INSIDE THE HUMAN&apos;S LOOP</span>
+        </div>
+      </section>
+      <section className="notebook-feature">
+        <div>
+          <p className="eyebrow">ESSAY / AI TESTING &amp; AUTHORITY</p>
+          <h2>{batNeedsCollar.title}</h2>
+          <p>{batNeedsCollar.summary}</p>
+          <a
+            className="read-link"
+            href={sitePath('/articles/the-bat-needs-a-collar')}
+          >
+            Read the essay ↗
+          </a>
+        </div>
+        <div
+          className="notebook-receipt"
+          aria-label="AI testing authority essay summary"
+        >
+          <span>CAPABILITY ≠ PERMISSION</span>
+          <strong>AUTHORITY RIDES WITH THE RUN</strong>
+          <span>TETHERS DECIDES</span>
+          <span>EVIDENCE PRESERVES THE BOUNDS</span>
         </div>
       </section>
       <section className="section">
