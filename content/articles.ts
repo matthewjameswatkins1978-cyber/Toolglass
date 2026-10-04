@@ -1,6 +1,7 @@
 export type ArticleSection = {
   heading: string;
   paragraphs: string[];
+  pullQuote?: string | { quote: string; attribution: string };
 };
 
 export type Article = {
@@ -24,6 +25,9 @@ export type Article = {
     height?: number;
   };
   notes?: [string, string][];
+  toolbox?: { term: string; description: string }[];
+  sourcesHeading?: string;
+  sourcesIntro?: string;
   sources: { label: string; href: string }[];
 };
 
@@ -534,6 +538,255 @@ export const articles: Article[] = [
       {
         label: 'Pew Research Center — Americans and AI 2026',
         href: 'https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/'
+      }
+    ]
+  },
+  {
+    "slug": "joe-armstrong-the-man-who-put-failure-to-work",
+    "kicker": "ESSAY / COMPUTING HISTORY",
+    "title": "Joe Armstrong: The Man Who Put Failure to Work",
+    "subtitle": "Physicist, satellite programmer, Erlang co-creator, teacher, musician, professional asker of awkward questions. In his final years Joe Armstrong was still looking forward, while warning that computing had forgotten some of its best ideas.",
+    "summary": "Joe Armstrong helped create Erlang, but his curiosity kept moving: from physics and satellite software to fault tolerance, live music, hypertext and forgotten ideas in computer science. This essay follows the questions he carried between them.",
+    "byline": "Matthew Watkins, with Lucy (ChatGPT)",
+    "publishedDate": "4 October 2026",
+    "readingTime": "10 min read",
+    "thesis": "Armstrong designed systems around failure, then kept carrying the same questions into music, hypertext and computing’s forgotten ideas. His life matters as much as the language he helped create.",
+    "intro": [
+      "There is an easy way to remember Joe Armstrong, and it is probably the wrong one.",
+      "You can reduce him to a line in computing history: Joe Armstrong, 1950–2019, co-creator of Erlang. Add distributed systems, fault tolerance, WhatsApp, Ericsson, perhaps the phrase let it crash, and the museum label is complete.",
+      "Except Armstrong was never particularly museum-shaped.",
+      "Late in his life, when he could reasonably have spent his time giving victory-lap talks about Erlang, he was connecting programming languages to synthesisers, thinking about how musicians might jam across distributed systems, experimenting with TiddlyWiki, interviewing Alan Kay, collecting forgotten ideas from computer science, complaining about bloated websites, reading about languages invented decades after his own, and asking why programmers kept making things unnecessarily enormous.",
+      "In 2018, one of his complaints was beautifully simple:",
+      "“We’ve forgotten that things should be small.”",
+      "That may be as good an epitaph for his computing philosophy as anything written in Erlang."
+    ],
+    "sections": [
+      {
+        "heading": "Before Erlang, there was physics, AI and the northern lights",
+        "paragraphs": [
+          "Armstrong's route into computing was wonderfully indirect.",
+          "Born in Bournemouth in 1950, he failed the 11-plus, attended a secondary modern school and later transferred to Bournemouth Grammar School for sixth form. He studied theoretical physics at University College London, graduating in 1972. From there he worked in artificial-intelligence research at Edinburgh University, became a founding member of the British Robotics Association and worked on robotic vision.",
+          "Then he went to Sweden.",
+          "Not to build a programming language.",
+          "To study the aurora borealis.",
+          "After research in Kiruna, above the Arctic Circle, he moved to the Swedish Space Corporation, where he wrote ground-station software for Viking, Sweden's first satellite.",
+          "It is worth lingering on this because Armstrong's later ideas make more sense when you remember that he did not grow up inside software as a self-contained intellectual universe. Physics came first. Machines existed in a world of distance, time, independent things and things that broke.",
+          "This became central to the way he thought about programs."
+        ],
+        "pullQuote": {
+          "quote": "“The world is parallel – we are parallel.”",
+          "attribution": "Joe Armstrong"
+        }
+      },
+      {
+        "heading": "What happens when it breaks?",
+        "paragraphs": [
+          "Armstrong joined Ericsson's computer science laboratory in 1984. The problem was not abstract language design. Ericsson built telephone exchanges serving enormous numbers of people, and those exchanges were expected to keep working.",
+          "Armstrong later described the intellectual starting point plainly: he was not especially interested in concurrency for its own sake. He wanted to know how to build a fault-tolerant system.",
+          "Telephone systems already contained the answer to part of the question. Thousands of independent activities were happening simultaneously. Modelling them as one giant sequential program was unnatural.",
+          "So Armstrong, Robert Virding and Mike Williams gradually developed what became Erlang between roughly 1985 and 1989. It treated systems as large numbers of isolated processes communicating by messages. Processes could fail. Other processes could notice. Supervisors could restart damaged parts.",
+          "The startling bit was philosophical rather than syntactic.",
+          "Failure was not an exceptional state outside the model. Failure belonged inside the model.",
+          "Armstrong's 2003 doctoral dissertation begins with an assumption that still sounds bracingly adult compared with a great deal of software engineering:",
+          "large programs will probably contain errors when they enter service, despite careful testing. Therefore the interesting problem is how to construct reliable systems from software that contains errors.",
+          "That is a profound reversal.",
+          "Instead of asking how to prove that every component will behave correctly forever, ask what architecture remains useful when some components inevitably do not.",
+          "By 1990 Armstrong and his colleagues were attending distributed-systems conferences where, as he remembered it, they repeatedly asked speakers the embarrassing question:",
+          "“What happens if one of the nodes fail?”",
+          "Too often the effective answer was that the design assumed they would not.",
+          "Armstrong thought that was absurd.",
+          "The outside world is made from independent things with private state exchanging information. Humans do it. Machines do it. Networks do it. The internet does it.",
+          "Yet inside a computer, programmers kept pretending everything inhabited one perfectly shared universe.",
+          "To Armstrong, concurrency was less a clever programming technique than an attempt to make software resemble reality."
+        ]
+      },
+      {
+        "heading": "Erlang escapes",
+        "paragraphs": [
+          "Erlang was not Joe Armstrong's solo invention, and remembering him properly means resisting the lone-genius version of the story.",
+          "Robert Virding and Mike Williams were fundamental collaborators. Bjarne Däcker ran the laboratory that gave the group room to experiment. Francesco Cesarini later described their differing strengths: Armstrong the restless inventor, Virding concerned with elegance, Williams bringing the finishing instinct and industrial perspective.",
+          "Armstrong did, however, understand that an idea needed a life outside a laboratory.",
+          "He pushed for a real book rather than merely an Ericsson internal manual. Concurrent Programming in Erlang, written with Williams and Virding, appeared in 1992. Erlang was subsequently released as open source in 1998.",
+          "Days after the open-source release, Armstrong and colleagues left Ericsson and founded Bluetail. Acquisitions followed. Then, in one of those managerial jokes the technology industry writes without noticing, several of the world's most experienced Erlang programmers lost their jobs during the collapse of Nortel, only for Nortel later to advertise for programmers with a decade of Erlang experience.",
+          "Armstrong used the interruption to complete his doctorate.",
+          "Its title was almost comically Joe Armstrong:",
+          "Making reliable distributed systems in the presence of software errors.",
+          "Not without errors.",
+          "In the presence of them."
+        ],
+        "pullQuote": {
+          "quote": "“We cannot assume when we’re building a big system that the individual nodes will not fail.”",
+          "attribution": "Joe Armstrong"
+        }
+      },
+      {
+        "heading": "He did not want Erlang to win",
+        "paragraphs": [
+          "One of the most attractive things about Armstrong is that he did not appear particularly interested in winning the language wars.",
+          "He was capable of strong opinions. C++, Java and JavaScript came in for criticism. But he also sought out the people behind technologies he disliked because he wanted to understand why they had built them that way.",
+          "He became interested in Clojure, Haskell, F#, Pony and other languages. He discussed Erlang's failure semantics with Ken Thompson and wanted to meet Brendan Eich and Bjarne Stroustrup.",
+          "And he reportedly told Cesarini years earlier:",
+          "“Erlang will not be around forever. Something better will come along.”",
+          "That is the remark of someone more interested in the idea than the brand.",
+          "What mattered was not that future programmers typed Erlang syntax. What mattered was that they inherited the lessons: isolation, message passing, supervision, fault containment and systems designed under the assumption that individual pieces will eventually misbehave.",
+          "In that respect Armstrong won far more completely than if Erlang had simply become the world's most popular language.",
+          "The ideas escaped."
+        ]
+      },
+      {
+        "heading": "The retired programmer who refused to retire",
+        "paragraphs": [
+          "Armstrong left Ericsson in 2015 and was semi-retired, while continuing as an adjunct professor at KTH in Stockholm.",
+          "“Retirement” seems to have meant acquiring more interesting problems.",
+          "One of them was music.",
+          "Armstrong connected Erlang with Sonic Pi, Sam Aaron's live-coding musical environment. He worked with OSC messages, MIDI, SuperCollider and GarageBand, exploring the idea of music itself as communicating concurrent processes. By 2017 Sonic Pi 3.0 actually shipped with an Erlang distribution tucked inside it.",
+          "This was not a random elderly-programmer hobby.",
+          "It fitted Armstrong's worldview almost suspiciously well. Musicians are independent actors. They listen, respond, drift, recover, lead, follow and exchange signals through time. A band is not shared memory. It is a distributed system that happens to have a drummer.",
+          "Armstrong also became interested in TiddlyWiki and Ted Nelson's ideas about hypertext. With Jeremy Ruston he explored whether the self-contained, non-hierarchical knowledge of a TiddlyWiki could be extended into a larger distributed system using Erlang.",
+          "Again the same underlying question appears:",
+          "How should independent things communicate without surrendering their independence?",
+          "It seems Armstrong kept finding the same problem in telephones, computers, knowledge and music."
+        ]
+      },
+      {
+        "heading": "The archaeological phase",
+        "paragraphs": [
+          "His 2018 talk The Forgotten Ideas in Computer Science may be the clearest glimpse of where his mind was heading near the end.",
+          "Armstrong began asking people for good ideas computing had abandoned and bad ideas it had somehow retained.",
+          "Linda tuple spaces. Bidirectional hypertext. Lean software. Old algorithms. Simpler tooling. Older models that had been discarded not necessarily because they were wrong, but because fashion and history went somewhere else.",
+          "He was increasingly suspicious of technological amnesia.",
+          "Software, in Armstrong's telling, often behaved less like a steadily advancing science and more like a goldfish with venture funding.",
+          "An idea appears. We build it. We add features. We add abstractions to manage the features. We add frameworks to manage the abstractions. Eventually the result becomes so complicated that somebody replaces it with something simple.",
+          "Then the cycle begins again.",
+          "Talking about software evolution, Armstrong joked:",
+          "“Software is a form of Buddhism,”",
+          "caught in repeated cycles of suffering, death and rebirth.",
+          "Funny, but there was a serious accusation underneath it.",
+          "Computing was getting vastly more powerful without necessarily becoming proportionately better at making understandable things.",
+          "Armstrong had already attacked this problem in his famous The Mess We're In talk. Faster hardware had not delivered universally elegant software. Much of the new capacity had simply been absorbed by more layers, more machinery and larger programs.",
+          "By 2018 he was still asking whether progress might occasionally require looking backwards.",
+          "That feels particularly contemporary."
+        ]
+      },
+      {
+        "heading": "Small things, connected",
+        "paragraphs": [
+          "Armstrong's late thinking also sharpened an idea running through his whole career: make things small enough to reason about, isolate them, and define how they communicate.",
+          "During his final concurrency discussions he complained about web pages downloading hundreds of kilobytes of compressed JavaScript to perform jobs that ought to be tiny.",
+          "The precise numbers matter less than the irritation.",
+          "He thought computing had developed a cultural assumption that serious systems must be large.",
+          "Erlang suggested nearly the opposite.",
+          "Build systems from vast numbers of tiny processes.",
+          "Let them have private state.",
+          "Give them a narrow means of communication.",
+          "Assume some will fail.",
+          "Make the damage local.",
+          "Recover.",
+          "The result can be enormous precisely because the constituent parts do not have to be.",
+          "That is not merely a programming-language trick. It is an architectural philosophy."
+        ]
+      },
+      {
+        "heading": "The final panel",
+        "paragraphs": [
+          "In November 2018, Armstrong travelled to Cambridge for a conversation about concurrency with Tony Hoare and Carl Hewitt, three people whose work had helped shape different ways of thinking about communicating computations.",
+          "Armstrong had originally been expected to interview the others. The organisers correctly decided that putting him on the panel was more interesting.",
+          "He was already ill.",
+          "Armstrong was already seriously ill with pulmonary fibrosis. Even so, he travelled to Cambridge for the discussion.",
+          "The resulting Armstrong interview is striking because he sounds less interested in commemorating the past than in restating the problem.",
+          "The physical world is concurrent.",
+          "The internet is concurrent.",
+          "Independent machines communicate by messages.",
+          "Failures happen.",
+          "Why, then, should programming languages make that world difficult to express?",
+          "After more than thirty years, he was still arguing from first principles.",
+          "Joe Armstrong died on 20 April 2019, aged 68, from complications related to pulmonary fibrosis.",
+          "He left his wife Helen and their children, Thomas and Claire.",
+          "These ordinary human details belong alongside the extraordinary work.",
+          "A history consisting only of languages, papers and companies would leave out too much of the man."
+        ]
+      },
+      {
+        "heading": "Joe Armstrong should be remembered",
+        "paragraphs": [
+          "Armstrong deserves to be remembered for Erlang.",
+          "But not frozen inside it.",
+          "He was the physicist who drifted through artificial intelligence and the aurora borealis into satellite software. The telecom engineer who decided software errors were a permanent feature of reality rather than a temporary embarrassment. The language designer who did not particularly care whether his own language lasted forever. The senior computer scientist who kept learning other people's languages. The distributed-systems pioneer who ended up making music with message passing.",
+          "Most of all, he retained something computing tends to beat out of people after a few decades: the willingness to look at an accepted practice and ask whether everybody had somehow agreed to something stupid.",
+          "Colleagues remembered his good mood and boundless enthusiasm; many programmers credited him with helping shape their careers.",
+          "What mattered was his willingness to keep asking what could be simpler, even after a solution already worked.",
+          "A working program was not enough.",
+          "Being right yesterday was not enough.",
+          "Having invented Erlang was not enough.",
+          "There was always another question.",
+          "And somewhere, quite possibly, a smaller way to answer it."
+        ]
+      }
+    ],
+    "toolbox": [
+      {
+        "term": "Sonic Pi",
+        "description": "Sam Aaron’s live coding environment lets musicians write code and hear the result immediately. Armstrong used it to explore music as a network of independent performers responding in time."
+      },
+      {
+        "term": "OSC",
+        "description": "Open Sound Control is a message format for sending real time instructions between software and instruments. Armstrong used it as a simple bridge from Erlang to music tools."
+      },
+      {
+        "term": "SuperCollider",
+        "description": "A programming language and audio engine for sound synthesis. Its server can receive OSC messages, so Erlang could control it directly."
+      },
+      {
+        "term": "Pure Data",
+        "description": "A visual environment for real time audio and multimedia. Patches connect small objects into data flow networks; Armstrong experimented with controlling Pd from Erlang."
+      },
+      {
+        "term": "TiddlyWiki",
+        "description": "A non linear personal wiki that can live in one HTML file. It stores ideas as small linked units called tiddlers; Armstrong and its creator Jeremy Ruston explored connecting wikis through Erlang."
+      },
+      {
+        "term": "Linda and tuple spaces",
+        "description": "A coordination model where processes add and retrieve structured values from a shared space without addressing one another directly. Armstrong revisited it as an older idea worth reconsidering."
+      },
+      {
+        "term": "UBF",
+        "description": "Universal Binary Format is Armstrong’s language neutral protocol description and data format. It aimed to make the rules of communication between independent programs explicit."
+      }
+    ],
+    "sourcesHeading": "Read More",
+    "sourcesIntro": "Start with Joe’s own writing, then follow the thesis and conversations that show how his ideas travelled.",
+    "sources": [
+      {
+        "label": "Joe Armstrong — Erlang and other stuff (his blog archive)",
+        "href": "https://joearms.github.io/oldindex.html"
+      },
+      {
+        "label": "Ten Questions with Joe Armstrong about Parallel Programming and Erlang",
+        "href": "https://www.thinkingparallel.com/2007/03/20/ten-questions-with-joe-armstrong-about-parallel-programming-and-erlang/"
+      },
+      {
+        "label": "Making Reliable Distributed Systems in the Presence of Software Errors — doctoral thesis",
+        "href": "https://erlang.org/download/armstrong_thesis_2003.pdf"
+      },
+      {
+        "label": "Sonic Pi 3.0 released — Joe Armstrong on Erlang and OSC",
+        "href": "https://erlang.org/pipermail/erlang-questions/2017-July/092894.html"
+      },
+      {
+        "label": "Controlling Sound with OSC Messages — Joe Armstrong",
+        "href": "https://joearms.github.io/published/2016-01-29-Controlling-Sound-with-OSC-Messages.html"
+      },
+      {
+        "label": "Concurrency in Computing — interview with Joe Armstrong",
+        "href": "https://www.erlang-solutions.com/blog/lets-talkconcurrency-with-joe-armstrong/"
+      },
+      {
+        "label": "Joe Armstrong and Jeremy Ruston — Intertwingling the TiddlyWiki with Erlang (video)",
+        "href": "https://www.youtube.com/watch?v=Uv1UfLPK7_Q"
+      },
+      {
+        "label": "Joe Armstrong obituary — The Guardian",
+        "href": "https://www.theguardian.com/education/2019/may/08/joe-armstrong-obituary"
       }
     ]
   }

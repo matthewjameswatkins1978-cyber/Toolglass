@@ -125,31 +125,29 @@ export default async function ArticlePage({
           {article.sections.map((section) => (
             <section key={section.heading}>
               <h2>{section.heading}</h2>
-              {section.pullQuote ? (
-                <blockquote
-                  style={{
-                    borderTop: '3px solid var(--ink)',
-                    borderBottom: '1px solid var(--ink)',
-                    margin: '30px 0 28px',
-                    padding: '24px 0',
-                    font: 'clamp(30px, 4vw, 46px)/1.06 var(--serif)',
-                    letterSpacing: '-0.035em',
-                  }}
-                >
-                  {section.pullQuote}
-                </blockquote>
-              ) : null}
+
               {section.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
+              {section.pullQuote ? (
+                <figure className="article-pullquote">
+                  <blockquote>
+                    {typeof section.pullQuote === 'string'
+                      ? section.pullQuote
+                      : section.pullQuote.quote}
+                  </blockquote>
+                  {typeof section.pullQuote === 'string' ? null : (
+                    <figcaption>{section.pullQuote.attribution}</figcaption>
+                  )}
+                </figure>
+              ) : null}
             </section>
           ))}
 
-          <h2>Research & sources</h2>
+          <h2>{article.sourcesHeading ?? 'Research & sources'}</h2>
           <p>
-            This is an argument grounded in cited primary rules and research.
-            Sources below support the factual claims; where the piece moves
-            from evidence to inference, it says so.
+            {article.sourcesIntro ??
+              'This is an argument grounded in cited primary rules and research. Sources below support the factual claims; where the piece moves from evidence to inference, it says so.'}
           </p>
           <ul>
             {article.sources.map((source) => (
@@ -192,6 +190,19 @@ export default async function ArticlePage({
               </div>
             ))}
           </dl>
+          {article.toolbox ? (
+            <section className="toolbox-notes" aria-label="Joe's toolbox, translated">
+              <h2>Joe&apos;s toolbox, translated</h2>
+              <dl>
+                {article.toolbox.map((item) => (
+                  <div key={item.term}>
+                    <dt>{item.term}</dt>
+                    <dd>{item.description}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+          ) : null}
         </aside>
       </div>
     </>

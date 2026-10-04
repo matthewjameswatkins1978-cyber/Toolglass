@@ -1,8 +1,8 @@
 import { articles as legacyArticles } from './articles';
 import type { Article, ArticleSection } from './articles';
 
-export type MagazineArticleSection = ArticleSection & {
-  pullQuote?: string;
+export type MagazineArticleSection = Omit<ArticleSection, 'pullQuote'> & {
+  pullQuote?: string | { quote: string; attribution: string };
 };
 
 export type MagazineArticle = Omit<Article, 'sections'> & {
