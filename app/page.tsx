@@ -17,6 +17,9 @@ const hackathonPrize = articles.find(
 const aiVocabulary = articles.find(
   (article) => article.slug === 'please-stop-making-ai-sound-so-uncool',
 )!;
+const resolve01 = articles.find(
+  (article) => article.slug === 'when-ai-work-needs-a-place-to-live',
+)!;
 const anvil = articles.find(
   (article) => article.slug === 'the-anvil-ai-native-computer',
 )!;
@@ -103,6 +106,28 @@ export default function Home() {
           <strong>NO SHELL · NO FOLKLORE</strong>
           <span>PROPOSE → VERIFY → COMMIT</span>
           <span>BRING BATS</span>
+        </div>
+      </section>
+      <section className="notebook-feature">
+        <div>
+          <p className="eyebrow">FEATURE / COORDINATION &amp; AI SYSTEMS</p>
+          <h2>{resolve01.title}</h2>
+          <p>{resolve01.summary}</p>
+          <a
+            className="read-link"
+            href={sitePath('/articles/when-ai-work-needs-a-place-to-live')}
+          >
+            Read how Resolve keeps commitments ↗
+          </a>
+        </div>
+        <div
+          className="notebook-receipt"
+          aria-label="Resolve01 coordination summary"
+        >
+          <span>HUMAN / AI INTENT</span>
+          <strong>RESOLVE / COMMITMENT</strong>
+          <span>TETHERS / AUTHORITY</span>
+          <span>LANTERN / EVIDENCE</span>
         </div>
       </section>
       <section className="notebook-feature">

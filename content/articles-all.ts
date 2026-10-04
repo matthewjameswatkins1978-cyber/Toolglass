@@ -1,3 +1,4 @@
+import { resolve01Article } from './resolve01';
 import { articles as legacyArticles } from './articles';
 import type { Article, ArticleSection } from './articles';
 
@@ -198,6 +199,7 @@ export const anvilArticle: MagazineArticle = {
 };
 
 export const articles: MagazineArticle[] = [
+  resolve01Article,
   anvilArticle,
   ...(legacyArticles as MagazineArticle[]),
 ];
