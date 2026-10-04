@@ -9,6 +9,7 @@ export type ArticleSection = {
   paragraphs: string[];
   blocks?: ArticleBlock[];
   pullQuote?: string | { quote: string; attribution: string };
+  diagram?: 'closed-loop' | 'transaction-journal';
 };
 
 export type Article = {
@@ -36,6 +37,7 @@ export type Article = {
   sourcesHeading?: string;
   sourcesIntro?: string;
   sources: { label: string; href: string }[];
+  relatedReading?: { title: string; href: string; description: string }[];
 };
 
 export const articles: Article[] = [

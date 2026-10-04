@@ -3,6 +3,7 @@ import { articles } from '@/content/articles-all';
 import { sitePath } from '@/lib/utils';
 import { publicSiteUrl } from '@/lib/site';
 import EditorialArt from '@/components/EditorialArt';
+import AnvilDiagram from '@/components/AnvilDiagram';
 
 function MagazinePullQuote({
   quote,
@@ -166,6 +167,7 @@ export default async function ArticlePage({
                   <p key={paragraph}>{paragraph}</p>
                 ))
               )}
+              {section.diagram ? <AnvilDiagram diagram={section.diagram} /> : null}
               {section.pullQuote ? (
                 <MagazinePullQuote
                   quote={
@@ -200,6 +202,20 @@ export default async function ArticlePage({
             </>
           ) : null}
 
+          {article.relatedReading?.length ? (
+            <section className="related-reading" aria-labelledby="related-reading-title">
+              <p className="eyebrow">AFTER THE ANVIL</p>
+              <h2 id="related-reading-title">Read more</h2>
+              <ul>
+                {article.relatedReading.map((item) => (
+                  <li key={item.href}>
+                    <a href={sitePath(item.href)}>{item.title} <span aria-hidden="true">↗</span></a>
+                    <p>{item.description}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
           <div className="article-nav">
             <a href={sitePath('/articles')}>← Back to articles</a>
           </div>

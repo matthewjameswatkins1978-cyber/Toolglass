@@ -82,7 +82,8 @@ export const anvilArticle: MagazineArticle = {
         'So writes stopped being immediate writes. They became proposals recorded in a temporary journal. The running expression can see those proposed values, but the real arena stays untouched until the entire operation succeeds.',
         'If everything completes, the journal is committed. If anything traps, the journal is thrown away and the original arena must remain bit-for-bit identical.',
         'That changes the relationship between the AI and the machine. The AI is allowed to speculate. The deterministic system owns the consequential state transition.'
-      ]
+      ],
+      diagram: 'transaction-journal'
     },
     {
       heading: 'When Python tried to become God',
@@ -147,7 +148,8 @@ export const anvilArticle: MagazineArticle = {
         'The interesting moment is the first closed loop: the AI proposes an operation; the machine checks it; execution happens transactionally; measured evidence comes back; the AI changes its next proposal; nobody has to read a compiler log in the middle.',
         'The intelligence proposes. The deterministic system establishes truth. The intelligence adapts.',
         'If that loop works repeatedly, then we have something worth expanding.'
-      ]
+      ],
+      diagram: 'closed-loop'
     },
     {
       heading: 'If it survives',
@@ -194,6 +196,23 @@ export const anvilArticle: MagazineArticle = {
     {
       label: 'Terror Bats — project repository',
       href: 'https://github.com/matthewjameswatkins1978-cyber/The-Terror-Bats',
+    },
+  ],
+  relatedReading: [
+    {
+      title: 'The Bat Needs a Collar',
+      href: '/articles/the-bat-needs-a-collar/',
+      description: 'What should an adversarial testing tool be allowed to do, and how can each run prove its limits?',
+    },
+    {
+      title: 'When AI Work Needs a Place to Live',
+      href: '/articles/when-ai-work-needs-a-place-to-live/',
+      description: 'The coordination layer that keeps an agent’s active commitments legible over time.',
+    },
+    {
+      title: 'The Thinking Surface',
+      href: '/articles/the-thinking-surface/',
+      description: 'A postmortem on first-generation AI and a manifesto for what comes next.',
     },
   ],
 };
