@@ -1244,5 +1244,103 @@ footer > a:not(.footer-brand) {
   }
   .page-intro h1 {
     font-size: 50px;
+}
+  }
+/* Long-form features */
+.article-page-intro {
+  max-width: 1020px;
+}
+.magazine-article-grid {
+  grid-template-columns: minmax(0, 740px) minmax(210px, 250px);
+  justify-content: space-between;
+  gap: clamp(30px, 5vw, 64px);
+}
+.magazine-article {
+  max-width: none;
+  font-size: 18px;
+  line-height: 1.78;
+}
+.magazine-intro p:first-child {
+  font-size: 21px;
+  line-height: 1.55;
+}
+.magazine-intro p:first-child::first-letter {
+  float: left;
+  padding: 8px 9px 0 0;
+  font: 82px/0.72 var(--serif);
+}
+.article-thesis {
+  margin: 36px 0 56px;
+  padding: 19px 0 21px;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.article-thesis .eyebrow {
+  margin-bottom: 9px;
+  color: #62685f;
+}
+.article-thesis p:last-child {
+  max-width: 690px;
+  font: 24px/1.4 var(--serif);
+  letter-spacing: -0.01em;
+}
+.magazine-article > section {
+  margin-top: 56px;
+}
+.magazine-article > section > h2 {
+  margin: 0 0 19px;
+  font: clamp(34px, 3.8vw, 42px)/1.12 var(--serif);
+  letter-spacing: -0.025em;
+}
+.magazine-article > .magazine-act {
+  margin-top: 78px;
+  padding-top: 23px;
+  border-top: 3px solid var(--ink);
+}
+.magazine-article .magazine-pullquote {
+  max-width: 690px;
+  margin: 44px auto 48px;
+  padding: 23px 0 26px;
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  font: clamp(30px, 3.5vw, 40px)/1.14 var(--serif);
+  letter-spacing: -0.03em;
+}
+@media (max-width: 1000px) {
+  .magazine-article-grid {
+    grid-template-columns: minmax(0, 1.7fr) minmax(210px, 0.8fr);
+    gap: 32px;
+  }
+}
+@media (max-width: 680px) {
+  .magazine-article-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .magazine-article-grid aside {
+    grid-row: 2;
+  }
+  .magazine-article {
+    font-size: 17px;
+    line-height: 1.72;
+  }
+  .magazine-intro p:first-child {
+    font-size: 19px;
+  }
+  .magazine-intro p:first-child::first-letter {
+    font-size: 68px;
+  }
+  .article-thesis p:last-child {
+    font-size: 22px;
+  }
+  .magazine-article > section {
+    margin-top: 42px;
+  }
+  .magazine-article > .magazine-act {
+    margin-top: 58px;
+  }
+  .magazine-article .magazine-pullquote {
+    margin: 34px 0 38px;
+    font-size: clamp(29px, 9vw, 36px);
   }
 }

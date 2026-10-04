@@ -4,6 +4,21 @@ import { sitePath } from '@/lib/utils';
 import { publicSiteUrl } from '@/lib/site';
 import EditorialArt from '@/components/EditorialArt';
 
+function MagazinePullQuote({
+  quote,
+  attribution,
+}: {
+  quote: string;
+  attribution?: string;
+}) {
+  return (
+    <figure className="article-pullquote magazine-pullquote">
+      <blockquote>{quote}</blockquote>
+      {attribution ? <figcaption>{attribution}</figcaption> : null}
+    </figure>
+  );
+}
+
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
 }
@@ -87,7 +102,7 @@ export default async function ArticlePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      <div className="page-intro">
+      <div className="page-intro article-page-intro">
         <p className="eyebrow">{article.kicker}</p>
         <h1>{article.title}</h1>
         <p className="dek">{article.subtitle}</p>
@@ -110,20 +125,26 @@ export default async function ArticlePage({
         </section>
       ) : null}
 
-      <div className="article-grid">
-        <article className="prose">
-          <div className="evidence-note">
-            <strong>THE THESIS</strong>
-            <br />
-            {article.thesis}
+      <div className="article-grid magazine-article-grid">
+        <article className="prose magazine-article">
+          <div className="magazine-intro">
+            {article.intro.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
-
-          {article.intro.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-
+          {article.thesis ? (
+            <aside className="article-thesis" aria-label="Article thesis">
+              <p className="eyebrow">THE THESIS</p>
+              <p>{article.thesis}</p>
+            </aside>
+          ) : null}
           {article.sections.map((section) => (
-            <section key={section.heading}>
+            <section
+              key={section.heading}
+              className={
+                section.heading.startsWith('Act ') ? 'magazine-act' : undefined
+              }
+            >
               <h2>{section.heading}</h2>
 
               {section.blocks ? (
@@ -146,16 +167,18 @@ export default async function ArticlePage({
                 ))
               )}
               {section.pullQuote ? (
-                <figure className="article-pullquote">
-                  <blockquote>
-                    {typeof section.pullQuote === 'string'
+                <MagazinePullQuote
+                  quote={
+                    typeof section.pullQuote === 'string'
                       ? section.pullQuote
-                      : section.pullQuote.quote}
-                  </blockquote>
-                  {typeof section.pullQuote === 'string' ? null : (
-                    <figcaption>{section.pullQuote.attribution}</figcaption>
-                  )}
-                </figure>
+                      : section.pullQuote.quote
+                  }
+                  attribution={
+                    typeof section.pullQuote === 'string'
+                      ? undefined
+                      : section.pullQuote.attribution
+                  }
+                />
               ) : null}
             </section>
           ))}
