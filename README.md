@@ -6,10 +6,15 @@ A compact, content-driven software publication. Issue 001 contains three evidenc
 
 `/radar/` is the faster discovery stream beside the main magazine. Entries live independently in `content/radar/*.json`, retain their source links, and show one of four evidence labels: `SPOTTED`, `DESK REVIEW`, `HANDS-ON`, or `PROMOTED`. Radar never appears as an ordinary review. The homepage carries only a restrained pulse module.
 
-Run `npm run radar:validate` to check entries and `npm run radar:dry-run` for an offline fixture report. The scheduled workflow runs at 09:17 Europe/London each day, but the first implementation only validates and records a dry run. Set the repository variable `RADAR_ENABLED=false` to stop it immediately. Live AI discovery and unattended publication remain disabled until a provider credential and repeated acceptable dry runs exist.
+Run `npm run radar:validate` to check entries and `npm run radar:dry-run` for an offline fixture report. Radar is now manual-dispatch only; its former daily schedule has been retired so the weekly workflow is the sole scheduled editorial pulse. The manual Radar workflow does not fetch, install, or publish remote software.
 
-The workflow also accepts an HTTPS `specific_url` for a one-project dry-run report. It is currently a safe intake path; it does not fetch, install, or publish remote software.
+## Toolglass Weekly
 
+`.github/workflows/toolglass-weekly.yml` runs Mondays at 10:17 Europe/London. The repository variable `TOOLGLASS_WEEKLY_ENABLED=false` disables scheduled runs; manual dry runs remain available. `workflow_dispatch` defaults to a complete local dry run, with an optional HTTPS candidate URL. Dry runs do not create issues, publish, merge, deploy, or broadcast.
+
+The current authentication lane uses the workflow `GITHUB_TOKEN` with `issues:read` for intake history and `issues:write` only in the separate nudge job. No OpenAI API key or OpenAI workload identity settings are configured in this repository. OpenAI now supports GitHub Actions OIDC federation; that requires an OpenAI provider/service-account mapping plus the repository variables `OPENAI_WIF_AUDIENCE`, `OPENAI_IDENTITY_PROVIDER_ID`, and `OPENAI_SERVICE_ACCOUNT_ID`. Until that lane is configured and separately validated, the active path is fallback D: a bounded weekly nudge that deduplicates against published article, Radar, and previous receipt sources, considers at most 20 candidates, and presents at most three for triage. Scheduled runs create or update one issue for the London calendar week; the issue contains the compact receipt. No article is drafted or published by this fallback. Receipts also appear as workflow artifacts. Run locally with `npm run weekly:dry-run`; deterministic checks run with `npm run weekly:test`.
+
+The fallback never merges or publishes. Any future model-backed publication path must add separate inspection, deterministic validation, content-only change enforcement, and staged rollout evidence before it can receive publication authority.
 ## Editing
 
 `content/reviews.ts` owns the typed editorial records. `app/reviews/[slug]/page.tsx` is the shared article template. Each record includes replacement boundaries, facts, sources and a proposed test. Change evidence status only with matching recorded evidence; inspected and tested records include their bounded evidence notes and receipts.
