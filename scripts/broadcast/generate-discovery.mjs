@@ -24,6 +24,7 @@ const pages = [
   { url: `${SITE_URL}/about/`, lastmod: '2026-09-06' },
   { url: `${SITE_URL}/submit/`, lastmod: '2026-09-06' },
   { url: `${SITE_URL}/radar/`, lastmod: radarEntries[0]?.publishedAt.slice(0, 10) ?? '2026-09-07' },
+  { url: `${SITE_URL}/glassary/`, lastmod: '2026-10-05' },
   ...reviews.map((review) => ({
     url: canonicalUrl(review.slug),
     lastmod: review.publishedAt.slice(0, 10),
