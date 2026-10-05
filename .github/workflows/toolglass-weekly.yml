@@ -50,7 +50,7 @@ jobs:
           week_start="$(TZ=Europe/London date -d "$uk_date - $((uk_day - 1)) days" +%F)"
           while IFS= read -r number; do
             gh issue view "$number" --json body --jq '.body' | node -e 'let body=""; process.stdin.on("data", (chunk) => body += chunk); process.stdin.on("end", () => { const match = body.match(/## Durable receipt\s*```json\s*([\s\S]*?)```/); if (!match) return; try { const receipt = JSON.parse(match[1]); for (const item of receipt.selected_items || []) if (item.source_url) console.log(item.source_url); } catch { /* ignore malformed historical receipt */ } });'
-          done < <(gh issue list --state all --search 'in:title "Toolglass Weekly week of"' --limit 1000 --json author,number,title --jq ".[] | select(.author.login == \"github-actions[bot]\") | select(.title != \"Toolglass Weekly week of $week_start\") | .number") | sort -u > "$RUNNER_TEMP/weekly-previous-urls.txt"
+          done < <(WEEK_START="$week_start" gh issue list --state all --search 'in:title "Toolglass Weekly week of"' --limit 1000 --json author,number,title --jq '.[] | select(.author.login == "github-actions[bot]") | select(.title != ("Toolglass Weekly week of " + env.WEEK_START)) | .number') | sort -u > "$RUNNER_TEMP/weekly-previous-urls.txt"
           delimiter="weekly_$(openssl rand -hex 12)"
           { echo "WEEKLY_PREVIOUS_URLS<<$delimiter"; cat "$RUNNER_TEMP/weekly-previous-urls.txt"; echo "$delimiter"; } >> "$GITHUB_ENV"
       - name: Run bounded weekly intake
@@ -84,7 +84,7 @@ jobs:
         run: |
           receipt="$(find editorial/runs -maxdepth 1 -name 'toolglass-weekly-*.json' -type f -print -quit)"
           issue_title="Toolglass Weekly week of $(node -e "const r=require('./' + process.argv[1]); process.stdout.write(r.run_id.slice('toolglass-weekly-'.length))" "$receipt")"
-          existing="$(gh issue list --state all --search 'Toolglass Weekly week of' --json number,title --jq ".[] | select(.title == \"$issue_title\") | .number" | head -n 1)"
+          existing="$(ISSUE_TITLE="$issue_title" gh issue list --state all --search 'Toolglass Weekly week of' --json author,number,title --jq '.[] | select(.author.login == "github-actions[bot]") | select(.title == env.ISSUE_TITLE) | .number' | head -n 1)"
           body_file="${receipt%.json}.md"
           if [ -n "$existing" ]; then
             gh issue edit "$existing" --title "$issue_title" --body-file "$body_file"
