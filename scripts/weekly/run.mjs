@@ -156,6 +156,7 @@ export function withModelAssessment(report, assessment) {
       enabled: assessment.enabled,
       status: assessment.status,
       model: assessment.model,
+      api_requests: assessment.api_requests,
       candidates_assessed: assessment.candidates_assessed,
       fallback_used: assessment.fallback_used,
       error_category: assessment.error_category,

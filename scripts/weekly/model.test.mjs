@@ -51,6 +51,7 @@ test('valid structured model decision records bounded metadata and usage', async
   assert.equal(body.reasoning.effort, 'low');
   assert.equal(body.text.format.strict, true);
   assert.equal(result.status, 'completed');
+  assert.equal(result.api_requests, 1);
   assert.equal(result.candidates_assessed, 1);
   assert.equal(result.decisions[0].decision, 'investigate');
   assert.deepEqual(result.usage, { input_tokens: 123, output_tokens: 44, total_tokens: 167 });
@@ -111,6 +112,7 @@ test('transient failure retries once and then succeeds', async () => {
   });
   assert.equal(calls, 2);
   assert.deepEqual(delays, [250]);
+  assert.equal(result.api_requests, 2);
   assert.equal(result.status, 'completed');
 });
 
@@ -122,6 +124,7 @@ test('retry remains bounded after repeated transient failures', async () => {
   });
   assert.equal(calls, 2);
   assert.equal(result.status, 'failed');
+  assert.equal(result.api_requests, 2);
   assert.equal(result.error_category, 'transient');
   assert.equal(result.fallback_used, true);
 });

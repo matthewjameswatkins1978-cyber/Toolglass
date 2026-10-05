@@ -100,15 +100,15 @@ export async function assessCandidates(candidates, {
   enabled: requested = process.env.WEEKLY_MODEL_ENABLED !== 'false',
   fetchImpl = fetch, sleepImpl = sleep,
 } = {}) {
-  if (!Array.isArray(candidates)) return { enabled: false, model, candidates_assessed: 0, usage: null, decisions: [], fallback_used: true, error_category: 'invalid_input', status: 'invalid_input' };
+  if (!Array.isArray(candidates)) return { enabled: false, model, api_requests: 0, candidates_assessed: 0, usage: null, decisions: [], fallback_used: true, error_category: 'invalid_input', status: 'invalid_input' };
   const uniqueCandidates = [];
   const seenUrls = new Set();
   for (const candidate of candidates) {
-    if (!candidate?.source_url) return { enabled: Boolean(apiKey) && requested, model, candidates_assessed: 0, usage: null, decisions: [], fallback_used: true, error_category: 'invalid_input', status: 'invalid_input' };
+    if (!candidate?.source_url) return { enabled: Boolean(apiKey) && requested, model, api_requests: 0, candidates_assessed: 0, usage: null, decisions: [], fallback_used: true, error_category: 'invalid_input', status: 'invalid_input' };
     if (!seenUrls.has(candidate.source_url)) { seenUrls.add(candidate.source_url); uniqueCandidates.push(candidate); }
   }
   const enabled = Boolean(apiKey) && requested;
-  const base = { enabled, model, candidates_assessed: 0, usage: null, decisions: [], fallback_used: true, error_category: null };
+  const base = { enabled, model, api_requests: 0, candidates_assessed: 0, usage: null, decisions: [], fallback_used: true, error_category: null };
   if (!uniqueCandidates.length) return { ...base, status: 'skipped_no_candidates', fallback_used: false };
   if (!requested) return { ...base, status: 'disabled' };
   if (!apiKey) return { ...base, status: 'missing_key' };
@@ -129,6 +129,7 @@ export async function assessCandidates(candidates, {
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
     let response;
     try {
+      base.api_requests += 1;
       response = await fetchImpl('https://api.openai.com/v1/responses', {
         method: 'POST',
         headers: { authorization: `Bearer ${apiKey}`, 'content-type': 'application/json' },
