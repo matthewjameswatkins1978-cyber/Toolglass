@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { assessCandidates } from './model.mjs';
 
 const root = process.cwd();
 const MAX_CANDIDATES = 20;
@@ -143,21 +144,51 @@ export function buildWeeklyReport(repository = root, { now = new Date(), supplie
   return { receipt, selected, rejected };
 }
 
-function main(args) {
+export function withModelAssessment(report, assessment) {
+  const receipt = {
+    ...report.receipt,
+    completed_at: new Date().toISOString(),
+    schema_version: 2,
+    publication_state: 'NO_PUBLICATION',
+    editorial_verdicts: assessment.decisions,
+    model_assessment: {
+      provider: 'openai',
+      enabled: assessment.enabled,
+      status: assessment.status,
+      model: assessment.model,
+      candidates_assessed: assessment.candidates_assessed,
+      fallback_used: assessment.fallback_used,
+      error_category: assessment.error_category,
+      usage: assessment.usage,
+    },
+    model_provider: assessment.status === 'completed' ? `openai/${assessment.model}` : 'none; configured fallback D',
+    warnings: assessment.status === 'completed'
+      ? ['Model output is editorial judgement, not evidence or publication authority.', 'No claims were researched, drafted, tested, approved, or published.']
+      : [`Model assessment unavailable (${assessment.status}${assessment.error_category ? `: ${assessment.error_category}` : ''}); deterministic fallback retained.`, 'No claims were researched, drafted, tested, approved, or published.'],
+  };
+  return { ...report, receipt, assessment };
+}
+
+async function main(args) {
   const modeIndex = args.indexOf('--mode');
   const mode = modeIndex >= 0 ? args[modeIndex + 1] : 'dry-run';
   const suppliedUrls = [process.env.WEEKLY_CANDIDATE_URL, ...args.flatMap((arg, index) => arg === '--candidate-url' ? [args[index + 1]] : [])].filter(Boolean);
   const previousUrls = (process.env.WEEKLY_PREVIOUS_URLS || '').split(String.fromCharCode(10)).map((value) => value.trim()).filter(Boolean);
-  const report = buildWeeklyReport(root, { mode, suppliedUrls, previousUrls });
+  const intake = buildWeeklyReport(root, { mode, suppliedUrls, previousUrls });
+  const assessment = await assessCandidates(intake.selected);
+  const report = withModelAssessment(intake, assessment);
   const runs = path.join(root, 'editorial/runs');
   fs.mkdirSync(runs, { recursive: true });
   const receiptPath = path.join(runs, `${report.receipt.run_id}.json`);
   fs.writeFileSync(receiptPath, `${JSON.stringify(report.receipt, null, 2)}\n`);
   const title = `Toolglass Weekly week of ${report.receipt.run_id.slice('toolglass-weekly-'.length)}`;
+  const modelSummary = assessment.status === 'completed'
+    ? `OpenAI ${assessment.model} assessed ${assessment.candidates_assessed} candidates. Model judgement is not evidence or publication authority.`
+    : `Model assessment status: ${assessment.status}; deterministic fallback used: ${assessment.fallback_used}.`;
   const lines = [
     `# ${title}`, '',
-    `Run mode: ${mode}. Result: ${report.receipt.result}.`,
-    '', 'This is the no-model fallback. It proposes candidates for an authenticated editorial agent; it does not research, draft, validate, merge, publish, or broadcast.', '',
+    `Run mode: ${mode}. Result: ${report.receipt.result}. Publication state: NO_PUBLICATION.`,
+    '', modelSummary, '',
     `Candidates considered: ${report.receipt.candidates_considered}. Selected for triage: ${report.selected.length}.`,
   ];
   if (report.selected.length) {
@@ -165,10 +196,27 @@ function main(args) {
   } else {
     lines.push('', 'No un-covered candidate cleared deterministic intake. Publishing nothing is a successful result.');
   }
+  if (assessment.decisions.length) {
+    lines.push('', '## Model editorial triage', '');
+    for (const decision of assessment.decisions) {
+      lines.push(
+        `- **${markdownEscape(decision.decision)}** (${decision.confidence.toFixed(2)}) — ${markdownEscape(decision.candidate_url)}`,
+        `  - Reason: ${markdownEscape(decision.reason)}`,
+        `  - Angle: ${markdownEscape(decision.interesting_angle)}`,
+        `  - Verify: ${markdownEscape(decision.verification_needed.join('; ') || 'nothing specified')}`,
+        `  - Next source: ${markdownEscape(decision.suggested_next_source || 'not suggested')}`,
+      );
+    }
+  }
   if (report.rejected.length) lines.push('', '## Intake rejections', '', ...report.rejected.map((item) => `- ${item.id}: ${item.reason}`));
   lines.push('', '## Durable receipt', '', '```json', JSON.stringify(report.receipt, null, 2), '```', '');
   fs.writeFileSync(path.join(runs, `${report.receipt.run_id}.md`), `${lines.join('\n')}\n`);
   console.log(JSON.stringify({ ...report, receipt_path: receiptPath, issue_title: title }, null, 2));
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main(process.argv.slice(2));
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main(process.argv.slice(2)).catch(() => {
+    console.error(JSON.stringify({ error: 'weekly_run_failed', publication_state: 'NO_PUBLICATION' }));
+    process.exitCode = 1;
+  });
+}

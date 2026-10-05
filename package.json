@@ -19,7 +19,7 @@
     "lint": "oxlint",
     "format": "oxfmt",
     "weekly:dry-run": "node scripts/weekly/run.mjs --mode dry-run",
-    "weekly:test": "node --test scripts/weekly/run.test.mjs"
+    "weekly:test": "node --test scripts/weekly/run.test.mjs scripts/weekly/model.test.mjs"
   },
   "dependencies": {
     "react": "19.2.6",
