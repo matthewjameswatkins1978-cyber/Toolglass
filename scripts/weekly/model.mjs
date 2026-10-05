@@ -1,4 +1,4 @@
-export const DEFAULT_MODEL = 'gpt-5.4-mini';
+export const DEFAULT_MODEL = 'gpt-6-luna';
 export const MAX_MODEL_CANDIDATES = 3;
 const MAX_ATTEMPTS = 2;
 const RETRY_DELAY_MS = 250;

@@ -56,7 +56,7 @@ jobs:
       - name: Run bounded weekly intake
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          WEEKLY_MODEL: ${{ vars.TOOLGLASS_WEEKLY_MODEL || 'gpt-5.4-mini' }}
+          WEEKLY_MODEL: ${{ vars.TOOLGLASS_WEEKLY_MODEL || 'gpt-6-luna' }}
           WEEKLY_MODEL_ENABLED: ${{ github.event_name != 'pull_request' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'codex/toolglass-weekly') }}
           WEEKLY_MODE: ${{ github.event_name == 'schedule' && 'nudge' || inputs.mode || 'dry-run' }}
         run: node scripts/weekly/run.mjs --mode "$WEEKLY_MODE"
