@@ -1455,3 +1455,456 @@ footer > a:not(.footer-brand) {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* The Glassary */
+.glassary-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: clamp(42px, 7vw, 100px);
+  padding: clamp(48px, 8vw, 100px) 0 54px;
+  border-bottom: 4px solid var(--ink);
+}
+.glassary-hero h1 {
+  margin: 12px 0 14px;
+  font: clamp(74px, 10.5vw, 150px)/0.83 var(--serif);
+  letter-spacing: -0.065em;
+}
+.glassary-hero h1 span {
+  color: var(--blue);
+}
+.glassary-subhead {
+  font: 16px/1.4 var(--mono);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.glassary-hero-copy {
+  align-self: end;
+  max-width: 610px;
+  padding-bottom: 5px;
+  font: 18px/1.62 var(--sans);
+}
+.glassary-hero-copy p:first-child {
+  font: 25px/1.34 var(--serif);
+}
+.glassary-frontispiece {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  gap: 50px;
+  padding: 30px 0 44px;
+  border-bottom: 1px solid var(--ink);
+}
+.glassary-rule {
+  border-left: 5px solid var(--blue);
+  padding: 7px 0 8px 22px;
+}
+.glassary-rule > p:nth-child(2) {
+  max-width: 760px;
+  margin: 5px 0 7px;
+  font: clamp(26px, 3.2vw, 39px)/1.12 var(--serif);
+  letter-spacing: -0.025em;
+}
+.glassary-rule > span {
+  font: 12px var(--mono);
+}
+.glassary-statline {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.glassary-statline > div {
+  min-height: 86px;
+  padding: 12px 14px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.glassary-statline dt {
+  font: 10px/1.35 var(--mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.glassary-statline dd {
+  margin: 5px 0 0;
+  font: 31px/1 var(--serif);
+}
+.glassary-body {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: clamp(36px, 6vw, 90px);
+  padding: 46px 0 72px;
+  border-bottom: 4px solid var(--ink);
+}
+.glassary-directory {
+  align-self: start;
+  position: sticky;
+  top: 18px;
+}
+.glassary-search {
+  display: block;
+}
+.glassary-search > span {
+  display: block;
+  margin-bottom: 8px;
+  font: 10px var(--mono);
+  letter-spacing: 0.06em;
+}
+.glassary-search input {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  padding: 9px 10px;
+  font: 13px var(--mono);
+  outline: none;
+}
+.glassary-search input:focus {
+  border-color: var(--blue);
+  box-shadow: inset 0 0 0 1px var(--blue);
+}
+.glassary-search input::placeholder {
+  color: #73786f;
+}
+.glassary-alpha {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 21px 0 0;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+.glassary-alpha a {
+  display: grid;
+  min-height: 39px;
+  place-items: center;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  font: 13px var(--mono);
+}
+.glassary-alpha a:hover {
+  background: var(--blue);
+  color: white;
+}
+.glassary-result-count {
+  margin-top: 13px;
+  color: #656b62;
+  font: 11px/1.45 var(--mono);
+}
+.glassary-directory-note {
+  margin-top: 32px;
+  padding-top: 14px;
+  border-top: 3px solid var(--ink);
+}
+.glassary-directory-note > .eyebrow {
+  display: block;
+  margin-bottom: 11px;
+}
+.glassary-directory-note p {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 4px;
+  margin: 0;
+  padding: 7px 0;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+}
+.glassary-directory-note b {
+  color: var(--blue);
+  font: 17px/1 var(--serif);
+}
+.glassary-letter {
+  scroll-margin-top: 20px;
+}
+.glassary-letter + .glassary-letter {
+  margin-top: 54px;
+}
+.glassary-letterhead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 4px solid var(--ink);
+}
+.glassary-letterhead > span {
+  font: clamp(70px, 8vw, 112px)/0.78 var(--serif);
+  letter-spacing: -0.07em;
+}
+.glassary-letterhead > a {
+  font: 10px var(--mono);
+}
+.glassary-entry {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.78fr) minmax(0, 1.22fr);
+  column-gap: clamp(30px, 5vw, 70px);
+  padding: 27px 0 30px;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 20px;
+}
+.glassary-entry > header {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+}
+.glassary-headword {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.glassary-headword h2 {
+  max-width: 420px;
+  font: clamp(30px, 3.4vw, 44px)/1.03 var(--serif);
+  letter-spacing: -0.035em;
+}
+.glassary-mark {
+  flex: 0 0 auto;
+  color: var(--blue);
+  font: 22px/1 var(--serif);
+  cursor: help;
+}
+.glassary-entry--common .glassary-mark {
+  color: var(--ink);
+}
+.glassary-entry--research .glassary-mark {
+  color: #6d726a;
+}
+.glassary-definition {
+  max-width: 440px;
+  margin-top: 13px;
+  font-size: 16px;
+  line-height: 1.58;
+}
+.glassary-detail {
+  grid-column: 2;
+  font-size: 16px;
+  line-height: 1.64;
+}
+.glassary-detail p + p {
+  margin-top: 0.72em;
+}
+.glassary-entry blockquote {
+  grid-column: 2;
+  margin: 20px 0 3px;
+  padding: 15px 0 15px 18px;
+  border-left: 4px solid var(--blue);
+  font: 23px/1.32 var(--serif);
+  letter-spacing: -0.015em;
+}
+.glassary-see {
+  grid-column: 2;
+  margin-top: 18px;
+  color: #4f554d;
+  font: 11px/1.7 var(--mono);
+}
+.glassary-see > span:first-child {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--ink);
+  font-size: 9px;
+  letter-spacing: 0.07em;
+}
+.glassary-see a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.glassary-empty {
+  padding: 45px 0 80px;
+  border-top: 4px solid var(--ink);
+}
+.glassary-empty h2 {
+  max-width: 650px;
+  margin: 8px 0 13px;
+  font: 45px/1.08 var(--serif);
+}
+.glassary-families {
+  padding: 60px 0 74px;
+  border-bottom: 4px solid var(--ink);
+}
+.glassary-section-kicker {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr) minmax(280px, 0.65fr);
+  gap: 32px;
+  align-items: end;
+  margin-bottom: 35px;
+}
+.glassary-section-kicker h2 {
+  max-width: 720px;
+  font: clamp(39px, 5vw, 62px)/0.98 var(--serif);
+  letter-spacing: -0.04em;
+}
+.glassary-section-kicker > p:last-child {
+  max-width: 440px;
+  font-size: 15px;
+}
+.glassary-family-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+.glassary-family {
+  position: relative;
+  min-height: 315px;
+  padding: 24px 27px 28px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.glassary-family-number {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  color: #a2a79e;
+  font: 46px/1 var(--serif);
+}
+.glassary-family > .eyebrow {
+  padding-right: 60px;
+}
+.glassary-family-chain {
+  max-width: 570px;
+  margin: 42px 0 27px;
+  font: clamp(22px, 2.6vw, 33px)/1.23 var(--serif);
+  letter-spacing: -0.025em;
+}
+.glassary-family-chain span {
+  display: inline;
+}
+.glassary-family-chain b {
+  display: inline-block;
+  margin: 0 8px;
+  color: var(--blue);
+  font: 16px var(--mono);
+  transform: translateY(-2px);
+}
+.glassary-family > p:last-child {
+  max-width: 610px;
+  color: #555b52;
+  font-size: 14px;
+}
+.glassary-editorial-rule {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 780px);
+  gap: clamp(38px, 7vw, 110px);
+  padding: 64px 0 84px;
+}
+.glassary-editorial-rule h2 {
+  margin-bottom: 21px;
+  font: clamp(43px, 5.5vw, 68px)/0.98 var(--serif);
+  letter-spacing: -0.045em;
+}
+.glassary-editorial-rule > div > p {
+  max-width: 690px;
+  font-size: 17px;
+}
+.glassary-last-word {
+  margin-top: 30px !important;
+  padding-top: 19px;
+  border-top: 3px solid var(--ink);
+  font: 25px/1.34 var(--serif) !important;
+}
+@media (max-width: 1000px) {
+  .glassary-hero,
+  .glassary-frontispiece {
+    grid-template-columns: 1fr 1fr;
+    gap: 34px;
+  }
+  .glassary-body {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 36px;
+  }
+  .glassary-entry {
+    grid-template-columns: minmax(215px, 0.8fr) minmax(0, 1.2fr);
+    gap: 30px;
+  }
+  .glassary-section-kicker {
+    grid-template-columns: 140px 1fr;
+  }
+  .glassary-section-kicker > p:last-child {
+    grid-column: 2;
+  }
+}
+@media (max-width: 680px) {
+  .glassary-hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 38px 0 36px;
+  }
+  .glassary-hero h1 {
+    font-size: clamp(68px, 22vw, 105px);
+  }
+  .glassary-hero-copy {
+    font-size: 16px;
+  }
+  .glassary-hero-copy p:first-child {
+    font-size: 22px;
+  }
+  .glassary-frontispiece {
+    grid-template-columns: 1fr;
+    padding: 25px 0 32px;
+  }
+  .glassary-statline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .glassary-body {
+    display: block;
+    padding-top: 28px;
+  }
+  .glassary-directory {
+    position: static;
+    margin-bottom: 48px;
+  }
+  .glassary-alpha {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+  .glassary-directory-note {
+    display: none;
+  }
+  .glassary-letter + .glassary-letter {
+    margin-top: 42px;
+  }
+  .glassary-letterhead > span {
+    font-size: 78px;
+  }
+  .glassary-entry {
+    display: block;
+    padding: 24px 0 27px;
+  }
+  .glassary-entry > header,
+  .glassary-detail,
+  .glassary-entry blockquote,
+  .glassary-see {
+    grid-column: auto;
+  }
+  .glassary-definition {
+    font-size: 16px;
+  }
+  .glassary-detail {
+    margin-top: 16px;
+    font-size: 15px;
+  }
+  .glassary-entry blockquote {
+    margin-top: 20px;
+    font-size: 21px;
+  }
+  .glassary-section-kicker {
+    display: block;
+  }
+  .glassary-section-kicker h2 {
+    margin: 9px 0 16px;
+    font-size: 43px;
+  }
+  .glassary-family-grid {
+    grid-template-columns: 1fr;
+  }
+  .glassary-family {
+    min-height: 0;
+  }
+  .glassary-family-chain {
+    font-size: 27px;
+  }
+  .glassary-editorial-rule {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 50px 0 65px;
+  }
+}

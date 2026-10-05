@@ -49,6 +49,7 @@ export default function RootLayout({
               <a href={sitePath('/')}>Front page</a>
               <a href={sitePath('/reviews')}>Reviews</a>
               <a href={sitePath('/articles')}>Articles</a>
+              <a href={sitePath('/glassary')}>Glassary</a>
               <a href={sitePath('/radar')}>Radar</a>
               <a href={sitePath('/about')}>About / Methodology</a>
               <a href={sitePath('/submit')}>Submit software</a>
@@ -67,6 +68,7 @@ export default function RootLayout({
             Judgement worth explaining.
           </p>
           <a href={sitePath('/articles')}>Articles & essays ↗</a>
+          <a href={sitePath('/glassary')}>The Glassary ↗</a>
           <a href={sitePath('/about')}>Our editorial approach ↗</a>
           <a href={sitePath('/submit')}>Submit software ↗</a>
           <a href={sitePath('/feed.xml')}>RSS feed ↗</a>
