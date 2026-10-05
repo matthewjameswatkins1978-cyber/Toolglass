@@ -35,7 +35,7 @@ for (const entry of fs.readdirSync(source)) {
   }
   if (entry.endsWith('.html') || entry.endsWith('.rsc')) {
     const route = entry.replace(/\.(html|rsc)$/, '');
-    if (route === 'about' || route === 'reviews' || route === 'submit' || route === 'radar' || route === 'articles') {
+    if (route === 'about' || route === 'reviews' || route === 'submit' || route === 'radar' || route === 'articles' || route === 'glassary') {
       copyFile(entry, `${route}/index.${entry.endsWith('.html') ? 'html' : 'rsc'}`);
     }
   }
