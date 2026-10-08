@@ -5,9 +5,279 @@
   <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/" />
   <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/feed.xml" rel="alternate" type="application/rss+xml" />
-  <updated>2026-10-03T12:00:00.000Z</updated>
+  <updated>2026-10-04T12:00:00.000Z</updated>
   <subtitle>Software worth finding. Independent reviews with visible evidence.</subtitle>
   <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-ai-work-needs-a-place-to-live/</id>
+    <title>When AI Work Needs a Place to Live</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-ai-work-needs-a-place-to-live/" />
+    <published>2026-10-04T12:00:00.000Z</published>
+    <updated>2026-10-04T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="ESSAY" />
+    <summary>An agent can make a plan in seconds. The harder question is what happens to that promise when a worker stalls, a lease expires, or the outside world gives an uncertain answer. Resolve01 is building the durable coordination layer for that middle ground.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-anvil-ai-native-computer/</id>
+    <title>The Anvil: What If AI Didn&apos;t Have to Use Computers the Way We Do?</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-anvil-ai-native-computer/" />
+    <published>2026-10-04T12:00:00.000Z</published>
+    <updated>2026-10-04T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="FEATURE" />
+    <summary>Anvil is a one-kilobyte experimental machine with no shell, files or escape hatch. The aim is to discover whether an AI can work more reliably when the machine exposes exact capabilities, executes transactionally and returns measured evidence instead of human-oriented computer folklore.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/joe-armstrong-the-man-who-put-failure-to-work/</id>
+    <title>Joe Armstrong: The Man Who Put Failure to Work</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/joe-armstrong-the-man-who-put-failure-to-work/" />
+    <published>2026-10-04T12:00:00.000Z</published>
+    <updated>2026-10-04T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="ESSAY" />
+    <summary>Joe Armstrong helped create Erlang, but his curiosity kept moving: from physics and satellite software to fault tolerance, live music, hypertext and forgotten ideas in computer science. This essay follows the questions he carried between them.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-bat-needs-a-collar/</id>
+    <title>The Bat Needs a Collar</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-bat-needs-a-collar/" />
+    <published>2026-10-03T12:00:00.000Z</published>
+    <updated>2026-10-03T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="ESSAY" />
+    <summary>An encounter with an automated safety warning raises a bigger architectural question: as AI testing tools grow autonomous and adversarial, how should each run carry the scope of its authority—and prove the bounds were enforced?</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/gitdesktop/</id>
+    <title>GitDesktop wants the repository to be the whole workbench.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/gitdesktop/" />
+    <published>2026-10-03T12:00:00.000Z</published>
+    <updated>2026-10-03T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Development workflow" />
+    <summary>A broad Git client brings forge activity and optional agent tools into one desktop. The claims are interesting; Toolglass has not tested them. Evidence: DISCOVERED.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/please-stop-making-ai-sound-so-uncool/</id>
+    <title>Please Stop Making AI Sound So Fucking Uncool</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/please-stop-making-ai-sound-so-uncool/" />
+    <published>2026-09-23T12:00:00.000Z</published>
+    <updated>2026-09-23T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="COLUMN" />
+    <summary>Artificial intelligence may be the strangest technology in public life. Its vocabulary increasingly sounds like it was approved by a committee at an airport hotel. Vibe coding, agentic AI, digital coworkers and the rest are not harmless cringe: bad language flattens useful distinctions and makes new ideas harder to think about.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/patternflow/</id>
+    <title>A screen that behaves more like an instrument than a television</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/patternflow/" />
+    <published>2026-09-22T18:11:00.000Z</published>
+    <updated>2026-09-22T18:11:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Patternflow is an open-source 8,192-pixel LED synthesizer whose four knobs alter code-generated images in real time. The clever bit is not the LEDs; it is treating visual algorithms as playable, shareable patches. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/public-browser/</id>
+    <title>Browser agents may be paying a round-trip tax nobody bothered to count</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/public-browser/" />
+    <published>2026-09-22T18:11:00.000Z</published>
+    <updated>2026-09-22T18:11:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Public Browser drives a real Chrome profile directly over CDP, but its more interesting claim is architectural: fewer agent-tool round trips can matter more than shaving bytes from each browser snapshot. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/s1-rs/</id>
+    <title>What if an AI answer had to fit through Rust&apos;s type system first?</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/s1-rs/" />
+    <published>2026-09-22T18:11:00.000Z</published>
+    <updated>2026-09-22T18:11:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>s1-rs is a tiny, very new experiment in turning model decisions into typed Rust values with confidence gates. It is barely born, but the design points toward a useful boundary between probabilistic judgement and deterministic software. Radar status: SPOTTED.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-prize-is-the-cheapest-part-of-a-hackathon/</id>
+    <title>The Prize Is the Cheapest Part of a Hackathon</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-prize-is-the-cheapest-part-of-a-hackathon/" />
+    <published>2026-09-21T12:00:00.000Z</published>
+    <updated>2026-09-21T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="FEATURE" />
+    <summary>Hackathons do more than produce winners. They produce a field of experiments, ideas, pain points and prototypes. AI makes that field cheaper to analyse, while some competition rules explicitly permit internal research, AI training or commercial reuse. That does not prove theft. It does mean entrants should know exactly what they are giving away.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tuffy/</id>
+    <title>An LLM wrote an optimizing compiler. Then its author stopped the experiment.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tuffy/" />
+    <published>2026-09-19T18:37:00.000Z</published>
+    <updated>2026-09-19T18:37:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Tuffy paired an AI-written compiler with declarative optimisations and Lean-checked proofs, reached the point of compiling Rust standard-library tests, then paused when model behaviour, design compromise and cost became part of the result. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/hash-shell/</id>
+    <title>The AI command is becoming punctuation.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/hash-shell/" />
+    <published>2026-09-19T18:36:00.000Z</published>
+    <updated>2026-09-19T18:36:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Hash is a POSIX shell that puts agent invocation into the grammar itself: type ?? and hand work to Claude Code, Cursor CLI, Gemini CLI or Ollama over ACP, without changing terminal emulators. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/vera/</id>
+    <title>What if the programming language were designed for the machine writing it?</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/vera/" />
+    <published>2026-09-19T18:35:00.000Z</published>
+    <updated>2026-09-19T18:35:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Vera reverses a familiar assumption: instead of teaching coding agents to cope with languages made for humans, it is experimenting with a language whose contracts, effects and verification model are meant to make machine-written code easier to check. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/excise/</id>
+    <title>A disk-space map that checks the floorboards again before cutting them out.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/excise/" />
+    <published>2026-09-16T18:13:00.000Z</published>
+    <updated>2026-09-16T18:13:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Excise is a young Diskonaut successor built around honest storage accounting, bounded scans and unusually explicit safeguards around permanent deletion. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/rdmatop/</id>
+    <title>htop, but for the network fabric between expensive GPUs.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/rdmatop/" />
+    <published>2026-09-16T18:12:00.000Z</published>
+    <updated>2026-09-16T18:12:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>rdmatop is a small Rust TUI that turns Linux RDMA counters, queue pairs and process information into live throughput views and Perfetto traces. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/emeraldian/</id>
+    <title>Obsidian escaped into the terminal, graph and all.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/emeraldian/" />
+    <published>2026-09-16T18:11:00.000Z</published>
+    <updated>2026-09-16T18:11:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>A Rust TUI reads an ordinary Obsidian vault directly, renders live Markdown, backlinks, images and graphs, then lets an optional agent work through the same visible commands as the user. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/copperhead/</id>
+    <title>Coding agents have escaped the codebase. Copperhead is editing real circuit boards and asking KiCad to mark the homework.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/copperhead/" />
+    <published>2026-09-13T18:18:00.000Z</published>
+    <updated>2026-09-13T18:18:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Copperhead is an open-source hardware agent for existing KiCad repositories, making surgical schematic and PCB changes, carrying decisions through design documents and using KiCad&apos;s ERC/DRC as deterministic gates. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/gpty/</id>
+    <title>Someone built an agent-aware terminal multiplexer with Godot. The odd choice is starting to look deliberate.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/gpty/" />
+    <published>2026-09-13T18:18:00.000Z</published>
+    <updated>2026-09-13T18:18:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>gPTY combines a Rust PTY engine with a Godot interface, then exposes panes through JSON-RPC, a CLI and MCP so automation can read and drive terminals without scraping their rendered TUI. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/promptsign/</id>
+    <title>AI instruction files are executable trust. PromptSign wants them signed before your agent reads them.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/promptsign/" />
+    <published>2026-09-13T18:18:00.000Z</published>
+    <updated>2026-09-13T18:18:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>PromptSign applies Sigstore-style signing and offline verification to CLAUDE.md, AGENTS.md, skills, agent definitions and their script payloads, treating prompt supply chains rather more like software supply chains. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-thinking-surface/</id>
+    <title>The Thinking Surface</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-thinking-surface/" />
+    <published>2026-09-13T12:00:00.000Z</published>
+    <updated>2026-09-13T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="ESSAY" />
+    <summary>Generative AI proved that machines can produce. The more interesting problem now is how to build systems that remove dead cognitive labour without removing the human thinking, judgement and creative struggle that give work meaning.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/archprint/</id>
+    <title>Your codebase already has architecture rules. Archprint tries to catch them in the act.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/archprint/" />
+    <published>2026-09-10T18:25:00.000Z</published>
+    <updated>2026-09-10T18:25:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Archprint mines a TypeScript repository&apos;s import graph, keeps only patterns with statistical support, then emits enforceable rules for tools such as ESLint and dependency-cruiser. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/opentrailpaper/</id>
+    <title>A bike computer that looks more like a field instrument than a subscription with handlebars.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/opentrailpaper/" />
+    <published>2026-09-10T18:25:00.000Z</published>
+    <updated>2026-09-10T18:25:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>OpenTrailPaper turns an off-the-shelf ESP32-S3 e-paper board into a standalone cycling head unit with offline maps, GPX navigation, FIT recording and Bluetooth sensors. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/termy/</id>
+    <title>Natural-language shell commands, zero neural networks, and a refreshing refusal to summon a trillion parameters.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/termy/" />
+    <published>2026-09-10T18:25:00.000Z</published>
+    <updated>2026-09-10T18:25:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>TERMy maps ordinary-language terminal requests to commands using a compact dataset format and deterministic matching rather than embeddings, machine learning or an LLM. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/mmux/</id>
+    <title>A terminal multiplexer built around AI agents instead of pretending they are ordinary shells.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/mmux/" />
+    <published>2026-09-09T21:05:00.000Z</published>
+    <updated>2026-09-09T21:05:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>mmux wraps persistent tmux sessions in a project-aware TUI for agents, terminals, dev servers, worktrees and Git. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/rift/</id>
+    <title>A coding agent that treats local models as first-class citizens.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/rift/" />
+    <published>2026-09-09T21:05:00.000Z</published>
+    <updated>2026-09-09T21:05:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Rift is a Rust terminal coding agent built around small binaries, local inference, explicit context control and failure recovery. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/voltius/</id>
+    <title>An SSH client that has quietly grown into a local infrastructure cockpit.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/voltius/" />
+    <published>2026-09-09T21:05:00.000Z</published>
+    <updated>2026-09-09T21:05:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Voltius combines SSH, SFTP, serial, encrypted sync, containers, plugins and a local MCP server in a Rust/Tauri desktop app. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tracelet/</id>
+    <title>A small window into what an agent actually did.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tracelet/" />
+    <published>2026-09-07T09:00:00.000Z</published>
+    <updated>2026-09-07T09:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Tracelet turns an OpenTelemetry stream into a local view of prompts, tools, pauses and errors. Radar status: DESK REVIEW.</summary>
+  </entry>
   <entry>
     <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/spaghetti/</id>
     <title>Your coding agents remember everything. Good luck finding any of it.</title>
@@ -39,26 +309,6 @@
     <summary>TermAI promises a terminal-native assistant with local sessions, branching, Git helpers and several provider paths. We never reached any of that. On our Windows bench, the current source build stopped at the compiler. Evidence: INSPECTED / BUILD BLOCKED.</summary>
   </entry>
   <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/gitdesktop/</id>
-    <title>GitDesktop wants the repository to be the whole workbench.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/gitdesktop/" />
-    <published>2026-10-03T12:00:00.000Z</published>
-    <updated>2026-10-03T12:00:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Development workflow" />
-    <summary>A broad Git client brings forge activity and optional agent tools into one desktop. The claims are interesting; Toolglass has not tested them. Evidence: DISCOVERED.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/archprint/</id>
-    <title>Your codebase already has architecture rules. Archprint tries to catch them in the act.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/archprint/" />
-    <published>2026-09-10T18:25:00.000Z</published>
-    <updated>2026-09-10T18:25:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>Archprint mines a TypeScript repository&apos;s import graph, keeps only patterns with statistical support, then emits enforceable rules for tools such as ESLint and dependency-cruiser. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
     <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/chrondb/</id>
     <title>A database that starts with the question: what was true then?</title>
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/chrondb/" />
@@ -69,76 +319,6 @@
     <summary>ChronDB puts Git-style history at the centre of a key/value store. Compatibility is the harder half of the idea. Radar status: SPOTTED.</summary>
   </entry>
   <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/copperhead/</id>
-    <title>Coding agents have escaped the codebase. Copperhead is editing real circuit boards and asking KiCad to mark the homework.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/copperhead/" />
-    <published>2026-09-13T18:18:00.000Z</published>
-    <updated>2026-09-13T18:18:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>Copperhead is an open-source hardware agent for existing KiCad repositories, making surgical schematic and PCB changes, carrying decisions through design documents and using KiCad&apos;s ERC/DRC as deterministic gates. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/emeraldian/</id>
-    <title>Obsidian escaped into the terminal, graph and all.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/emeraldian/" />
-    <published>2026-09-16T18:11:00.000Z</published>
-    <updated>2026-09-16T18:11:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>A Rust TUI reads an ordinary Obsidian vault directly, renders live Markdown, backlinks, images and graphs, then lets an optional agent work through the same visible commands as the user. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/excise/</id>
-    <title>A disk-space map that checks the floorboards again before cutting them out.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/excise/" />
-    <published>2026-09-16T18:13:00.000Z</published>
-    <updated>2026-09-16T18:13:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>Excise is a young Diskonaut successor built around honest storage accounting, bounded scans and unusually explicit safeguards around permanent deletion. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/gpty/</id>
-    <title>Someone built an agent-aware terminal multiplexer with Godot. The odd choice is starting to look deliberate.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/gpty/" />
-    <published>2026-09-13T18:18:00.000Z</published>
-    <updated>2026-09-13T18:18:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>gPTY combines a Rust PTY engine with a Godot interface, then exposes panes through JSON-RPC, a CLI and MCP so automation can read and drive terminals without scraping their rendered TUI. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/hash-shell/</id>
-    <title>The AI command is becoming punctuation.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/hash-shell/" />
-    <published>2026-09-19T18:36:00.000Z</published>
-    <updated>2026-09-19T18:36:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>Hash is a POSIX shell that puts agent invocation into the grammar itself: type ?? and hand work to Claude Code, Cursor CLI, Gemini CLI or Ollama over ACP, without changing terminal emulators. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/mmux/</id>
-    <title>A terminal multiplexer built around AI agents instead of pretending they are ordinary shells.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/mmux/" />
-    <published>2026-09-09T21:05:00.000Z</published>
-    <updated>2026-09-09T21:05:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>mmux wraps persistent tmux sessions in a project-aware TUI for agents, terminals, dev servers, worktrees and Git. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/opentrailpaper/</id>
-    <title>A bike computer that looks more like a field instrument than a subscription with handlebars.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/opentrailpaper/" />
-    <published>2026-09-10T18:25:00.000Z</published>
-    <updated>2026-09-10T18:25:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>OpenTrailPaper turns an off-the-shelf ESP32-S3 e-paper board into a standalone cycling head unit with offline maps, GPX navigation, FIT recording and Bluetooth sensors. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
     <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/pad-local/</id>
     <title>A desk that refuses to be a window.</title>
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/pad-local/" />
@@ -147,115 +327,5 @@
     <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
     <category term="Radar" />
     <summary>Editors, terminals and browser panels share an infinite local canvas. The map may be the point, or the problem. Radar status: SPOTTED.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/patternflow/</id>
-    <title>A screen that behaves more like an instrument than a television</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/patternflow/" />
-    <published>2026-09-22T18:11:00.000Z</published>
-    <updated>2026-09-22T18:11:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>Patternflow is an open-source 8,192-pixel LED synthesizer whose four knobs alter code-generated images in real time. The clever bit is not the LEDs; it is treating visual algorithms as playable, shareable patches. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/promptsign/</id>
-    <title>AI instruction files are executable trust. PromptSign wants them signed before your agent reads them.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/promptsign/" />
-    <published>2026-09-13T18:18:00.000Z</published>
-    <updated>2026-09-13T18:18:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>PromptSign applies Sigstore-style signing and offline verification to CLAUDE.md, AGENTS.md, skills, agent definitions and their script payloads, treating prompt supply chains rather more like software supply chains. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/public-browser/</id>
-    <title>Browser agents may be paying a round-trip tax nobody bothered to count</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/public-browser/" />
-    <published>2026-09-22T18:11:00.000Z</published>
-    <updated>2026-09-22T18:11:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>Public Browser drives a real Chrome profile directly over CDP, but its more interesting claim is architectural: fewer agent-tool round trips can matter more than shaving bytes from each browser snapshot. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/rdmatop/</id>
-    <title>htop, but for the network fabric between expensive GPUs.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/rdmatop/" />
-    <published>2026-09-16T18:12:00.000Z</published>
-    <updated>2026-09-16T18:12:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>rdmatop is a small Rust TUI that turns Linux RDMA counters, queue pairs and process information into live throughput views and Perfetto traces. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/rift/</id>
-    <title>A coding agent that treats local models as first-class citizens.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/rift/" />
-    <published>2026-09-09T21:05:00.000Z</published>
-    <updated>2026-09-09T21:05:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>Rift is a Rust terminal coding agent built around small binaries, local inference, explicit context control and failure recovery. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/s1-rs/</id>
-    <title>What if an AI answer had to fit through Rust&apos;s type system first?</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/s1-rs/" />
-    <published>2026-09-22T18:11:00.000Z</published>
-    <updated>2026-09-22T18:11:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>s1-rs is a tiny, very new experiment in turning model decisions into typed Rust values with confidence gates. It is barely born, but the design points toward a useful boundary between probabilistic judgement and deterministic software. Radar status: SPOTTED.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/termy/</id>
-    <title>Natural-language shell commands, zero neural networks, and a refreshing refusal to summon a trillion parameters.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/termy/" />
-    <published>2026-09-10T18:25:00.000Z</published>
-    <updated>2026-09-10T18:25:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>TERMy maps ordinary-language terminal requests to commands using a compact dataset format and deterministic matching rather than embeddings, machine learning or an LLM. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tracelet/</id>
-    <title>A small window into what an agent actually did.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tracelet/" />
-    <published>2026-09-07T09:00:00.000Z</published>
-    <updated>2026-09-07T09:00:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>Tracelet turns an OpenTelemetry stream into a local view of prompts, tools, pauses and errors. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tuffy/</id>
-    <title>An LLM wrote an optimizing compiler. Then its author stopped the experiment.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tuffy/" />
-    <published>2026-09-19T18:37:00.000Z</published>
-    <updated>2026-09-19T18:37:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>Tuffy paired an AI-written compiler with declarative optimisations and Lean-checked proofs, reached the point of compiling Rust standard-library tests, then paused when model behaviour, design compromise and cost became part of the result. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/vera/</id>
-    <title>What if the programming language were designed for the machine writing it?</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/vera/" />
-    <published>2026-09-19T18:35:00.000Z</published>
-    <updated>2026-09-19T18:35:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>Vera reverses a familiar assumption: instead of teaching coding agents to cope with languages made for humans, it is experimenting with a language whose contracts, effects and verification model are meant to make machine-written code easier to check. Radar status: DESK REVIEW.</summary>
-  </entry>
-  <entry>
-    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/voltius/</id>
-    <title>An SSH client that has quietly grown into a local infrastructure cockpit.</title>
-    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/voltius/" />
-    <published>2026-09-09T21:05:00.000Z</published>
-    <updated>2026-09-09T21:05:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
-    <category term="Radar" />
-    <summary>Voltius combines SSH, SFTP, serial, encrypted sync, containers, plugins and a local MCP server in a Rust/Tauri desktop app. Radar status: DESK REVIEW.</summary>
   </entry>
 </feed>

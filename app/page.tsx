@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <>
       <div className="issue-line">
-        <span>ISSUE 001 / SEPTEMBER 2026</span>
+        <span>INDEPENDENT SOFTWARE MAGAZINE</span>
         <span>Independent eyes. Evidence in view.</span>
       </div>
       <section className="lead">
@@ -75,7 +75,7 @@ export default function Home() {
       <section className="home-folklore" aria-labelledby="folklore-heading">
         <div className="section-title">
           <h2 id="folklore-heading">
-            Machine Folklore <i>/ issue 001</i>
+            Machine Folklore <i>/ COMPUTING HISTORY</i>
           </h2>
           <span className="small">EDITORIAL ART / NOT EVIDENCE</span>
         </div>

@@ -34,6 +34,7 @@ export async function generateMetadata({
   if (!article) return { title: 'Not found' };
 
   const canonical = `${publicSiteUrl}/articles/${article.slug}/`;
+  const previewImage = sitePath(article.heroImage?.src ?? '/og/' + article.slug + '.svg');
 
   return {
     title: article.title,
@@ -48,12 +49,13 @@ export async function generateMetadata({
         `${article.publishedDate} 12:00:00 GMT`,
       ).toISOString(),
       authors: [article.byline],
-      ...(article.heroImage ? { images: [sitePath(article.heroImage.src)] } : {}),
+      images: [previewImage],
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title: article.title,
       description: article.summary,
+      images: [previewImage],
     },
   };
 }

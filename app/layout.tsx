@@ -24,7 +24,15 @@ export const metadata: Metadata = {
       'An independent publication about new, overlooked and interesting software. Careful questions. Visible evidence.',
     type: 'website',
     url: `${publicSiteUrl}/`,
+    images: [{ url: sitePath('/og/toolglass.svg'), width: 1200, height: 630, alt: 'Toolglass — independent software publication' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TOOLGLASS — Software worth finding.',
+    description: 'An independent publication about new, overlooked and interesting software. Careful questions. Visible evidence.',
+    images: [sitePath('/og/toolglass.svg')],
+  },
+  icons: { icon: `${publicSiteUrl}/favicon.svg` },
 };
 export default function RootLayout({
   children,
