@@ -48,7 +48,7 @@ if (process.env.BUTTONDOWN_API_KEY) {
   else {
     const body = `Toolglass, occasionally.\n\nNew reviews, strange software and useful things that deserved more attention.\n\n${manifest.articles.map((article) => `- [${article.title}](${canonicalUrl(article.slug)}) — ${article.evidenceStatus}`).join('\n')}\n\nSoftware worth finding.`;
     try {
-      const data = await postJson('https://api.buttondown.com/v1/emails', { Authorization: `Token ${process.env.BUTTONDOWN_API_KEY}` }, { subject: 'Toolglass Issue 001: three different kinds of evidence', body, status: 'draft' });
+      const data = await postJson('https://api.buttondown.com/v1/emails', { Authorization: `Token ${process.env.BUTTONDOWN_API_KEY}` }, { subject: 'Toolglass: three different kinds of evidence', body, status: 'draft' });
       record('buttondown', key, 'success', { externalId: String(data.id ?? ''), publicUrl: data.absolute_url ?? null, contentHash: hashContent(body), timestamp: new Date().toISOString() });
     } catch (error) { record('buttondown', key, 'failed', { error: error.message }); }
   }

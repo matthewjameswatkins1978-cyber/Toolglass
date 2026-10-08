@@ -1032,6 +1032,14 @@ export const articles: Article[] = [
     "byline": "Matthew Watkins, with Lucy (ChatGPT)",
     "publishedDate": "4 October 2026",
     "readingTime": "10 min read",
+    "heroImage": {
+      "src": "/art/joe-armstrong-portrait.webp",
+      "alt": "An engraved editorial portrait of Joe Armstrong with his glasses and moustache, set among Erlang process diagrams and a northern-lights landscape.",
+      "caption": "Joe Armstrong, remembered through the ideas he kept connecting.",
+      "kind": "EDITORIAL PORTRAIT / TOOLGLASS",
+      "width": 1536,
+      "height": 1024
+    },
     "thesis": "Armstrong designed systems around failure, then kept carrying the same questions into music, hypertext and computing’s forgotten ideas. His life matters as much as the language he helped create.",
     "intro": [
       "There is an easy way to remember Joe Armstrong, and it is probably the wrong one.",

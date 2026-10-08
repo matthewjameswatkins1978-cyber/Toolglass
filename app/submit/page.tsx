@@ -97,7 +97,7 @@ export default function SubmitSoftware() {
             </div>
           </dl>
           <a className="read-link" href={sitePath('/reviews')}>
-            See the current issue ↗
+            Explore the reviews ↗
           </a>
         </aside>
       </section>

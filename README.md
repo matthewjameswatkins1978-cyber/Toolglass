@@ -1,6 +1,6 @@
 # TOOLGLASS
 
-A compact, content-driven software publication. Issue 001 contains three evidence-backed pieces: Spaghetti was tested, Atlas was inspected with focused harness tests, and TermAI was build-blocked before launch. Eight further entries remain clearly labelled scouting notes.
+A compact, content-driven software publication. Toolglass publishes when a piece is ready. Its catalogue includes three evidence-backed reviews: Spaghetti was tested, Atlas was inspected with focused harness tests, and TermAI was build-blocked before launch. Other entries remain clearly labelled scouting notes.
 
 ## Toolglass Radar
 
@@ -70,6 +70,6 @@ magazine/site remains a separate content-driven surface.
 
 ## Validation notes
 
-Production static export succeeds for the homepage, index, methodology, all eleven articles and a 404 page. The first issue contains three evidence-backed articles and eight scouting notes. Authored `app` and `content` files pass TypeScript; the unmodified starter component catalogue still has repository-wide Oxlint errors. Responsive CSS is implemented; browser visual and interaction checks are part of the release verification workflow.
+Production static export succeeds for the homepage, index, methodology, all eleven articles and a 404 page. The review catalogue includes three evidence-backed reviews and eight scouting notes. Authored `app` and `content` files pass TypeScript; the unmodified starter component catalogue still has repository-wide Oxlint errors. Responsive CSS is implemented; browser visual and interaction checks are part of the release verification workflow.
 
 The unmodified starter component catalogue has repository-wide lint warnings/errors. The starter dependency audit also reports vulnerabilities (including server/build dependencies). No component from that catalogue is used in this publication. GitHub Pages packages only the prepared `dist/pages` static artifact, excluding the Worker and build tools. Review/update dependency warnings before introducing a server runtime or exposing a development server.

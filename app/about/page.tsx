@@ -123,7 +123,7 @@ export default function About() {
           <p className="eyebrow">LAB STATUS / SEPTEMBER 2026</p>
           <dl className="facts">
             <div>
-              <dt>Projects in the issue</dt>
+              <dt>Projects covered</dt>
               <dd>11</dd>
             </div>
             <div>

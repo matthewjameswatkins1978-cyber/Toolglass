@@ -1260,6 +1260,10 @@ footer > a:not(.footer-brand) {
   font-size: 18px;
   line-height: 1.78;
 }
+.magazine-article pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
 .magazine-intro p:first-child {
   font-size: 21px;
   line-height: 1.55;
@@ -1422,7 +1426,7 @@ footer > a:not(.footer-brand) {
 }
 @media (max-width: 680px) {
   .magazine-article-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 35px;
   }
   .magazine-article-grid aside {
