@@ -112,6 +112,12 @@ export const glassaryEntries: GlassaryEntry[] = [
     see: ["Inference Bonfire","CI Pilgrimage","Context Debt"],
   },
   {
+    term: "Dogfooding",
+    mark: "common",
+    definition: "Using software you build for genuine work, rather than relying entirely on demonstrations and tests.",
+    detail: ["It is difficult to ignore a clumsy workflow when you have to live inside it every morning.","Dogfooding is useful evidence, not a substitute for testing with people who did not build the product."],
+  },
+  {
     term: "Evidence Laundering",
     mark: "toolglass",
     definition: "The process by which weak, uncertain or unsupported information acquires apparent credibility through repetition or repackaging.",
@@ -123,6 +129,12 @@ export const glassaryEntries: GlassaryEntry[] = [
     mark: "toolglass",
     definition: "A mechanism that prevents work from being treated as complete until the required evidence actually exists.",
     detail: ["The latch may require passing tests, independent review, an artifact, a reproducible result or some other explicit acceptance condition.","It turns \"probably done\" into a state the system cannot accidentally confuse with \"done.\""],
+  },
+  {
+    term: "Footgun",
+    mark: "common",
+    definition: "A feature or interface that makes it surprisingly easy for a user to cause their own problem.",
+    detail: ["The machine may be behaving precisely as designed. Unfortunately, its design has thoughtfully placed the trigger beside the handle.","A good interface reduces opportunities for accidental harm instead of blaming the person who found one."],
   },
   {
     term: "Fresh-Agent Test",
@@ -157,6 +169,12 @@ export const glassaryEntries: GlassaryEntry[] = [
     mark: "toolglass",
     definition: "Information lost, distorted or weakened every time work passes between agents, models, sessions or humans.",
     detail: ["A project may begin with a precise architectural decision and, five handoffs later, retain only the folklore that \"Lucy said something about boundaries.\"","Good systems minimise this decay."],
+  },
+  {
+    term: "Happy Path",
+    mark: "common",
+    definition: "The straightforward route through a workflow where inputs are expected, conditions cooperate and the intended result occurs.",
+    detail: ["The happy path is the first road worth paving, not the only road people will travel.","Real software also needs to handle failures, interruptions, bad inputs and users who arrive from a different direction."],
   },
   {
     term: "Harness",
@@ -199,6 +217,13 @@ export const glassaryEntries: GlassaryEntry[] = [
     mark: "toolglass",
     definition: "A surviving decision whose original rationale has disappeared.",
     detail: ["Everyone knows what was decided.","Nobody remembers why.","Orphan decisions are dangerous because future agents cannot distinguish a fundamental invariant from something somebody chose temporarily six months ago."],
+  },
+  {
+    term: "Pit of Success",
+    mark: "common",
+    definition: "An interface designed so the easiest, most natural way to use it is also the correct way.",
+    detail: ["Instead of requiring everybody to remember seventeen warnings, the system makes good behaviour the path of least resistance.","A fine ambition for an API, a tool and, frankly, most of civilisation."],
+    see: ["Self-Teaching Tool","Footgun"],
   },
   {
     term: "Procedure Wallpaper",
@@ -244,6 +269,12 @@ export const glassaryEntries: GlassaryEntry[] = [
     definition: "When an AI discovers a way to maximise a score, reward or apparent success condition without accomplishing the intended objective.",
     detail: ["A coding agent that makes a failing test pass by weakening the test rather than fixing the software has found the scoreboard rather than the goal."],
     see: ["Specification Gaming","Green-Light Hallucination"],
+  },
+  {
+    term: "Rubber Duck Debugging",
+    mark: "common",
+    definition: "Explaining a problem or program step by step, often to an inanimate listener, until an overlooked assumption becomes obvious.",
+    detail: ["The duck does not fix the bug. Making your reasoning explicit sometimes does.","The ideal listener is patient, attentive and unlikely to suggest rewriting the entire project in Rust."],
   },
   {
     term: "Rule Fog",
@@ -340,6 +371,13 @@ export const glassaryEntries: GlassaryEntry[] = [
     mark: "toolglass",
     definition: "Checks performed because they create the appearance of rigor rather than because they meaningfully reduce uncertainty.",
     detail: ["A hundred irrelevant tests can provide less evidence than one well-chosen experiment.","Verification should answer a question.","Otherwise it is scenery."],
+  },
+  {
+    term: "Yak Shaving",
+    mark: "common",
+    definition: "A chain of prerequisite side tasks that expands between you and the apparently simple thing you originally meant to do.",
+    detail: ["You wanted to repair a button. First you needed a dependency, then a compiler, then a newer terminal, then a yak.","Sometimes the dependencies really are necessary. The trick is remembering what the original job was."],
+    see: ["Context Debt","Harness Tax"],
   },
 ];
 
