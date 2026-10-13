@@ -5,10 +5,19 @@
     <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/</link>
     <description>Software worth finding. Independent reviews with visible evidence.</description>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 12 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/feed.xml" rel="self" type="application/rss+xml" />
     <atom:link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/atom.xml" rel="alternate" type="application/atom+xml" />
     <managingEditor>Matthew Watkins (https://github.com/matthewjameswatkins1978-cyber)</managingEditor>
+    <item>
+      <title>When the Tool Becomes the Teacher</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-the-tool-becomes-the-teacher/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-the-tool-becomes-the-teacher/</guid>
+      <pubDate>Tue, 13 Oct 2026 12:00:00 GMT</pubDate>
+      <description>Two Pi agents were told only to use Threadmoth for edits. Their different approaches—and a few awkward detours—suggest that software can teach its capabilities at the point an agent needs them. This feature connects that idea to embedded help, compiler diagnostics and recent tool-use research, while treating its own observations as anecdotal.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>FEATURE</category>
+    </item>
     <item>
       <title>The Agent Needs a Room With a Lock</title>
       <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-agent-needs-a-room-with-a-lock/</link>

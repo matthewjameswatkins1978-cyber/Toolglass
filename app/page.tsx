@@ -27,6 +27,10 @@ const batNeedsCollar = articles.find(
   (article) => article.slug === 'the-bat-needs-a-collar',
 )!;
 
+const teacherArticle = articles.find(
+  (article) => article.slug === 'when-the-tool-becomes-the-teacher',
+)!;
+
 export default function Home() {
   return (
     <>
@@ -70,6 +74,28 @@ export default function Home() {
           <div className="eyebrow">
             CODEX SLICE / SQLITE / SEARCH <span>01—03</span>
           </div>
+        </div>
+      </section>
+      <section className="notebook-feature">
+        <div>
+          <p className="eyebrow">FEATURE / TOOL DESIGN &amp; AI AGENTS</p>
+          <h2>{teacherArticle.title}</h2>
+          <p>{teacherArticle.summary}</p>
+          <a
+            className="read-link"
+            href={sitePath('/articles/when-the-tool-becomes-the-teacher')}
+          >
+            Read how tools can teach agents ↗
+          </a>
+        </div>
+        <div
+          className="notebook-receipt"
+          aria-label="When the Tool Becomes the Teacher feature summary"
+        >
+          <span>USE THREADMOTH</span>
+          <strong>PREVIEW → MUTATE → VERIFY</strong>
+          <span>TOOLS CAN EXPLAIN</span>
+          <span>AGENT CHOOSES</span>
         </div>
       </section>
       <section className="home-folklore" aria-labelledby="folklore-heading">
