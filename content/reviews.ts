@@ -1,3 +1,5 @@
+import { weeklyScouts } from './weekly-scouts';
+
 export type Review = {
   slug: string;
   name: string;
@@ -32,6 +34,7 @@ export type Review = {
   };
 };
 export const reviews: Review[] = [
+  ...weeklyScouts,
   {
     "slug": "spaghetti",
     "name": "Spaghetti",

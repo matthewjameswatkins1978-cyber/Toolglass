@@ -1,4 +1,5 @@
 import { resolve01Article } from './resolve01';
+import { weeklyArticles } from './weekly-2026-10-12';
 import { articles as legacyArticles } from './articles';
 import type { Article, ArticleSection } from './articles';
 
@@ -218,6 +219,7 @@ export const anvilArticle: MagazineArticle = {
 };
 
 export const articles: MagazineArticle[] = [
+  ...weeklyArticles,
   resolve01Article,
   anvilArticle,
   ...(legacyArticles as MagazineArticle[]),

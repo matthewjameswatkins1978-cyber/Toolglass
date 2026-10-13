@@ -256,7 +256,7 @@ export default async function ReviewPage({
               ['Platforms', r.platforms],
               ['Licence', r.licence],
               ['Latest version', r.version],
-              ['Metadata checked', checkedDate],
+              ['Metadata checked', r.reviewedDate ?? checkedDate],
               ['Known catches', r.catch],
             ].map(([k, v]) => (
               <div key={k}>

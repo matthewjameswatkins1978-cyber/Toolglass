@@ -5,10 +5,28 @@
     <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/</link>
     <description>Software worth finding. Independent reviews with visible evidence.</description>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 04 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/feed.xml" rel="self" type="application/rss+xml" />
     <atom:link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/atom.xml" rel="alternate" type="application/atom+xml" />
     <managingEditor>Matthew Watkins (https://github.com/matthewjameswatkins1978-cyber)</managingEditor>
+    <item>
+      <title>The Agent Needs a Room With a Lock</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-agent-needs-a-room-with-a-lock/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-agent-needs-a-room-with-a-lock/</guid>
+      <pubDate>Mon, 12 Oct 2026 12:00:00 GMT</pubDate>
+      <description>Microsoft Execution Containers puts policy outside an AI workload. The idea belongs to a much older history of least privilege, capabilities and operating-system sandboxes—and it still needs testing on each real backend.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>FEATURE</category>
+    </item>
+    <item>
+      <title>Cynthia Solomon and the Computer That Wasn&apos;t the Lesson</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/cynthia-solomon-and-the-computer-that-wasnt-the-lesson/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/cynthia-solomon-and-the-computer-that-wasnt-the-lesson/</guid>
+      <pubDate>Mon, 12 Oct 2026 12:00:00 GMT</pubDate>
+      <description>Cynthia Solomon helped create Logo, then kept asking what kind of worlds, tools and culture would let people use computers to become makers. Her 1984 assessment of educational computing is still strikingly unsentimental.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>PROFILE</category>
+    </item>
     <item>
       <title>When AI Work Needs a Place to Live</title>
       <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-ai-work-needs-a-place-to-live/</link>
