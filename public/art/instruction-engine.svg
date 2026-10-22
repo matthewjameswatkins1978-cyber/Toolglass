@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="title desc">
+<title id="title">The instruction engine</title>
+<desc id="desc">A strange teaching machine: a tape-fed tool projects a map of its own mechanisms to a small terminal, while a blue feedback cable returns through an inspection lens. Conceptual editorial illustration, not a screenshot.</desc>
+<defs>
+ <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#151715" stroke-opacity=".055"/></pattern>
+ <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M-2 2L2-2M0 8L8 0M6 10L10 6" stroke="#151715" stroke-width=".7" opacity=".2"/></pattern>
+ <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#244de8" stroke-width="1.3"/></marker>
+ <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="0" flood-color="#151715" flood-opacity=".09"/></filter>
+</defs>
+<rect width="1440" height="720" fill="#f0f0e7"/><rect x="30" y="30" width="1380" height="660" fill="url(#grid)" stroke="#151715" stroke-width="1"/>
+<g fill="none" stroke="#151715" stroke-width="1" opacity=".45">
+ <path d="M60 80h90M60 80v90M1380 80h-90M1380 80v90M60 640h90M60 640v-90M1380 640h-90M1380 640v-90"/>
+ <path d="M130 598H1310M130 590v16M1310 590v16" stroke-dasharray="3 5"/>
+</g>
+<!-- The tool: a cutaway cabinet with a visible capability mechanism. -->
+<g stroke="#151715" stroke-width="3" stroke-linejoin="round" filter="url(#shadow)">
+ <path d="M225 256l64-46h359l-64 46z" fill="#e0e1d5"/>
+ <path d="M584 256l64-46v312l-64 48z" fill="url(#hatch)"/>
+ <rect x="225" y="256" width="359" height="314" fill="#f7f7f2"/>
+ <rect x="248" y="282" width="313" height="193" fill="#e3e5d9"/>
+ <rect x="267" y="299" width="275" height="158" fill="url(#hatch)" stroke-width="1"/>
+ <path d="M281 378h57m86 0h99M383 322v112" fill="none" stroke-width="5"/>
+ <circle cx="382" cy="378" r="47" fill="#f7f7f2"/>
+ <circle cx="382" cy="378" r="22" fill="#244de8"/>
+ <path d="M382 316v15m0 94v15m-62-62h15m94 0h15m-106-44 11 11m66 66 11 11m0-88-11 11m-66 66-11 11" stroke-width="7"/>
+ <rect x="256" y="499" width="155" height="43" fill="#151715"/>
+ <path d="M270 520h27m13 0h14m13 0h27m13 0h20" stroke="#f7f7f2" stroke-width="2"/>
+ <circle cx="450" cy="520" r="10" fill="#244de8"/><circle cx="490" cy="520" r="10" fill="none"/><circle cx="530" cy="520" r="10" fill="none"/>
+ <path d="M244 570v19m320-19v19" stroke-width="9"/>
+</g>
+<!-- An instruction reel, physically connected to the cabinet. -->
+<g stroke="#151715" stroke-width="3">
+ <path d="M285 256v-54m189 54v-54" fill="none"/>
+ <circle cx="291" cy="166" r="63" fill="#f7f7f2"/><circle cx="291" cy="166" r="45" fill="url(#hatch)"/>
+ <circle cx="291" cy="166" r="12" fill="#151715"/>
+ <circle cx="473" cy="166" r="63" fill="#f7f7f2"/><circle cx="473" cy="166" r="45" fill="url(#hatch)"/>
+ <circle cx="473" cy="166" r="12" fill="#151715"/>
+ <path d="M291 103h182M291 229h182" fill="none"/>
+ <path d="M291 125v22m0 38v22m-41-41h22m38 0h22M473 125v22m0 38v22m-41-41h22m38 0h22" stroke-width="6"/>
+</g>
+<!-- The machine projects a diagram of its own structure. -->
+<path d="M648 330L964 212v277L648 425z" fill="#244de8" opacity=".055"/>
+<g stroke="#244de8" fill="none" stroke-width="2">
+ <path d="M658 330L936 224M658 425L936 484" stroke-dasharray="6 7"/>
+ <rect x="737" y="263" width="156" height="161" fill="#f7f7f2"/>
+ <circle cx="815" cy="306" r="18"/><path d="M815 324v32m-48 0h96m-96 0v29m48-29v29m48-29v29"/>
+ <rect x="755" y="385" width="24" height="22"/><rect x="803" y="385" width="24" height="22"/><rect x="851" y="385" width="24" height="22"/>
+ <path d="M681 377h34M902 353h34" marker-end="url(#arrow)"/>
+</g>
+<!-- The agent: a terminal receiving capabilities, rather than a wall of prose. -->
+<g stroke="#151715" stroke-width="3" stroke-linejoin="round" filter="url(#shadow)">
+ <path d="M969 249l43-35h230l-43 35z" fill="#e0e1d5"/>
+ <path d="M1199 249l43-35v213l-43 36z" fill="url(#hatch)"/>
+ <rect x="969" y="249" width="230" height="214" rx="8" fill="#f7f7f2"/>
+ <rect x="989" y="272" width="189" height="143" fill="#151715"/>
+ <path d="M1010 300l17 12-17 12m30 1h31" stroke="#f7f7f2" fill="none"/>
+ <path d="M1010 350h145m-145 16h101m-101 16h126" stroke="#8a9ddd" stroke-width="2"/>
+ <circle cx="1180" cy="439" r="5" fill="#244de8"/>
+ <path d="M1070 463v35h-60m60 0h67" fill="none"/>
+ <path d="M991 501h204l49 58H947z" fill="#e0e1d5"/>
+ <path d="M985 519h211m-225 17h238m-200-22-13 31m42-31-7 31m37-31v31m31-31 8 31m20-31 15 31" stroke-width="1.5"/>
+</g>
+<!-- Return path: inspection is part of learning, with a deliberate refusal branch. -->
+<path d="M1243 372c95 0 95 240-22 240H717c-71 0-71-91-14-91" fill="none" stroke="#244de8" stroke-width="4" marker-end="url(#arrow)"/>
+<g stroke="#151715" fill="#f7f7f2" stroke-width="3">
+ <circle cx="783" cy="552" r="35"/><circle cx="783" cy="552" r="22" fill="#e3e5d9"/>
+ <path d="M807 578l29 29" stroke-width="9"/>
+ <path d="M774 551l7 8 14-19" stroke="#244de8" fill="none"/>
+</g>
+<path d="M715 521h-32v-46" fill="none" stroke="#244de8" stroke-width="3"/>
+<path d="M668 460l15-15 15 15-15 15z" fill="#f7f7f2" stroke="#151715" stroke-width="2"/>
+<path d="M676 453l14 14m0-14-14 14" stroke="#151715" stroke-width="2"/>
+<g fill="#244de8"><circle cx="155" cy="324" r="4"/><circle cx="1332" cy="182" r="4"/><circle cx="648" cy="650" r="4"/></g>
+<g stroke="#151715" stroke-width="1" opacity=".45"><path d="M155 328v90h53M1332 186v65h-76M648 646v-44h-48" fill="none"/></g>
+</svg>

@@ -9,6 +9,14 @@ export const teacherArticle: Article = {
   "byline": "Matthew Watkins, with Lucy (ChatGPT)",
   "publishedDate": "13 October 2026",
   "readingTime": "15 min read",
+  heroImage: {
+    src: '/art/instruction-engine.svg',
+    alt: 'A tape-fed tool projects a map of its own mechanisms to a terminal, with a blue feedback cable returning through an inspection lens.',
+    caption: 'The instruction engine: a tool exposes its workings, an agent chooses a route, and an inspection loop checks the result.',
+    kind: 'MACHINE FOLKLORE / CONCEPTUAL ILLUSTRATION',
+    width: 1440,
+    height: 720,
+  },
   "thesis": "If tools expose their capabilities, constraints and useful next steps as an agent works, people need to repeat less instruction and agents can spend more attention on judgement. Whether that improves tool choices still needs to be tested.",
   "notes": [
     [

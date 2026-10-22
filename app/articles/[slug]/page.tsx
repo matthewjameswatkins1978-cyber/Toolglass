@@ -115,7 +115,7 @@ export default async function ArticlePage({
       </div>
 
       {article.heroImage ? (
-        <section className="home-folklore" aria-label="Article illustration">
+        <section className="article-art" aria-label="Article illustration">
           <EditorialArt
             src={article.heroImage.src}
             alt={article.heroImage.alt}
@@ -206,7 +206,7 @@ export default async function ArticlePage({
 
           {article.relatedReading?.length ? (
             <section className="related-reading" aria-labelledby="related-reading-title">
-              <p className="eyebrow">AFTER THE ANVIL</p>
+              <p className="eyebrow">FROM THE TOOLGLASS DESK</p>
               <h2 id="related-reading-title">Read more</h2>
               <ul>
                 {article.relatedReading.map((item) => (
