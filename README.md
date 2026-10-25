@@ -6,7 +6,7 @@
 
 Toolglass is an independent, evidence-led magazine about software tools, developer workflows and the odd inventions at the edge of technology. A hands-on review should show what was actually tried. A scouting note should say plainly that it wasn't. The distinction is the editorial principle, not a small-print disclaimer.
 
-It's a compact, content-driven publication. Toolglass publishes when a piece is ready. Its catalogue includes three evidence-backed reviews: Spaghetti was tested, Atlas was inspected with focused harness tests, and TermAI was build-blocked before launch. Other entries remain clearly labelled scouting notes.
+Toolglass publishes when a piece is ready. Its catalogue includes three evidence-backed reviews: Spaghetti was tested, Atlas was inspected with focused harness tests, and TermAI was build-blocked before launch. Other entries remain clearly labelled scouting notes.
 
 ## Run the site locally
 
