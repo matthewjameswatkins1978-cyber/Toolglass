@@ -1,6 +1,21 @@
-# TOOLGLASS
+# Toolglass
 
-A compact, content-driven software publication. Toolglass publishes when a piece is ready. Its catalogue includes three evidence-backed reviews: Spaghetti was tested, Atlas was inspected with focused harness tests, and TermAI was build-blocked before launch. Other entries remain clearly labelled scouting notes.
+**Useful software, inspected rather than merely applauded.**
+
+[Read Toolglass](https://matthewjameswatkins1978-cyber.github.io/Toolglass) · [How the magazine works](https://matthewjameswatkins1978-cyber.github.io/Toolglass/about)
+
+Toolglass is an independent, evidence-led magazine about software tools, developer workflows and the odd inventions at the edge of technology. A hands-on review should show what was actually tried. A scouting note should say plainly that it wasn't. The distinction is the editorial principle, not a small-print disclaimer.
+
+Toolglass publishes when a piece is ready. Its catalogue includes three evidence-backed reviews: Spaghetti was tested, Atlas was inspected with focused harness tests, and TermAI was build-blocked before launch. Other entries remain clearly labelled scouting notes.
+
+## Run the site locally
+
+```sh
+npm ci
+npm run dev
+```
+
+Use the local URL printed by the development server. For verification, run `npm run lint`, `npx tsc --noEmit` and `npm run build`.
 
 ## Toolglass Radar
 
