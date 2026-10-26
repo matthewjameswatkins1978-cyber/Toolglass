@@ -30,6 +30,12 @@ const batNeedsCollar = articles.find(
 const teacherArticle = articles.find(
   (article) => article.slug === 'when-the-tool-becomes-the-teacher',
 )!;
+const memoryCellFeature = articles.find(
+  (article) => article.slug === 'the-smaller-square-that-wasnt',
+)!;
+const malloyProfile = articles.find(
+  (article) => article.slug === 'judy-malloy-and-the-novel-with-no-front-door',
+)!;
 
 export default function Home() {
   return (
@@ -74,6 +80,38 @@ export default function Home() {
           <div className="eyebrow">
             CODEX SLICE / SQLITE / SEARCH <span>01—03</span>
           </div>
+        </div>
+      </section>
+      <section className="notebook-feature">
+        <div>
+          <p className="eyebrow">FEATURE / MEMORY ARCHITECTURE</p>
+          <h2>{memoryCellFeature.title}</h2>
+          <p>{memoryCellFeature.summary}</p>
+          <a className="read-link" href={sitePath('/articles/the-smaller-square-that-wasnt')}>
+            Read the feature ↗
+          </a>
+        </div>
+        <div className="notebook-receipt" aria-label="Memory architecture feature summary">
+          <span>4F² / 6F²</span>
+          <strong>AREA IS NOT THE WHOLE CELL</strong>
+          <span>CAPACITOR PITCH</span>
+          <span>COMPLEXITY / COST / YIELD</span>
+        </div>
+      </section>
+      <section className="notebook-feature">
+        <div>
+          <p className="eyebrow">PROFILE / SOFTWARE &amp; LITERATURE</p>
+          <h2>{malloyProfile.title}</h2>
+          <p>{malloyProfile.summary}</p>
+          <a className="read-link" href={sitePath('/articles/judy-malloy-and-the-novel-with-no-front-door')}>
+            Read the profile ↗
+          </a>
+        </div>
+        <div className="notebook-receipt" aria-label="Judy Malloy profile summary">
+          <span>UNCLE ROGER</span>
+          <strong>STORY AS RETRIEVAL SYSTEM</strong>
+          <span>KEYWORDS / DATABASE / READER</span>
+          <span>SOFTWARE AS AUTHORSHIP</span>
         </div>
       </section>
       <section className="notebook-feature">

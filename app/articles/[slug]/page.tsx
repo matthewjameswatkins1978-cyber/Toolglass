@@ -81,16 +81,22 @@ export default async function ArticlePage({
     datePublished: publishedIso,
     dateModified: publishedIso,
     mainEntityOfPage: `${publicSiteUrl}/articles/${article.slug}/`,
-    author: {
-      '@type': 'Person',
-      name: 'Matthew Watkins',
-      url: 'https://github.com/matthewjameswatkins1978-cyber',
-    },
-    contributor: {
-      '@type': 'SoftwareApplication',
-      name: 'ChatGPT',
-      applicationCategory: 'AI assistant',
-    },
+    author: article.byline.startsWith('Toolglass')
+      ? { '@type': 'Organization', name: article.byline }
+      : {
+          '@type': 'Person',
+          name: 'Matthew Watkins',
+          url: 'https://github.com/matthewjameswatkins1978-cyber',
+        },
+    ...(article.byline.startsWith('Toolglass')
+      ? {}
+      : {
+          contributor: {
+            '@type': 'SoftwareApplication',
+            name: 'ChatGPT',
+            applicationCategory: 'AI assistant',
+          },
+        }),
     publisher: {
       '@type': 'Organization',
       name: 'Toolglass',
@@ -154,6 +160,15 @@ export default async function ArticlePage({
                 section.blocks.map((block, index) => {
                   if (block.type === 'quote') {
                     return <blockquote key={`${section.heading}-${index}`}>{block.text}</blockquote>;
+                  }
+                  if (block.type === 'pullquote') {
+                    return (
+                      <MagazinePullQuote
+                        key={`${section.heading}-${index}`}
+                        quote={block.text}
+                        attribution={block.attribution}
+                      />
+                    );
                   }
                   if (block.type === 'code') {
                     return (
@@ -253,7 +268,7 @@ export default async function ArticlePage({
           </dl>
           {article.toolbox ? (
             <section className="toolbox-notes" aria-label="Joe's toolbox, translated">
-              <h2>Joe&apos;s toolbox, translated</h2>
+              <h2>{article.toolboxHeading ?? 'Joe’s toolbox, translated'}</h2>
               <dl>
                 {article.toolbox.map((item) => (
                   <div key={item.term}>

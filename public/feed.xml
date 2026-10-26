@@ -5,17 +5,62 @@
     <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/</link>
     <description>Software worth finding. Independent reviews with visible evidence.</description>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 13 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/feed.xml" rel="self" type="application/rss+xml" />
     <atom:link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/atom.xml" rel="alternate" type="application/atom+xml" />
     <managingEditor>Matthew Watkins (https://github.com/matthewjameswatkins1978-cyber)</managingEditor>
+    <item>
+      <title>The Smaller Square That Wasn&apos;t</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-smaller-square-that-wasnt/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-smaller-square-that-wasnt/</guid>
+      <pubDate>Mon, 26 Oct 2026 12:00:00 GMT</pubDate>
+      <description>Micron has decided not to pursue 4F² DRAM, arguing that capacitor pitch, complexity and cost matter more than nominal transistor-cell area. The decision is a useful lesson in the distance between an elegant geometry and a manufacturable memory device.</description>
+      <dc:creator>Toolglass Editorial Desk</dc:creator>
+      <category>FEATURE</category>
+    </item>
+    <item>
+      <title>Judy Malloy and the Novel With No Front Door</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/judy-malloy-and-the-novel-with-no-front-door/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/judy-malloy-and-the-novel-with-no-front-door/</guid>
+      <pubDate>Mon, 26 Oct 2026 12:00:00 GMT</pubDate>
+      <description>Judy Malloy brought library catalogues, database programming, artists’ books and networked writing together in Uncle Roger. Its shifting forms show how software can be an instrument of authorship, not just a container for text.</description>
+      <dc:creator>Toolglass Editorial Desk</dc:creator>
+      <category>PROFILE</category>
+    </item>
+    <item>
+      <title>A map of mathematical claims that refuses to call them knowledge</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/openai-math-atlas/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/openai-math-atlas/</guid>
+      <pubDate>Mon, 26 Oct 2026 12:00:00 GMT</pubDate>
+      <description>An independent interface links OpenAI’s mathematics manuscripts to source records, formalisation references and open questions—while the live catalogue remains partly unavailable until imported. Radar status: DESK REVIEW.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>Radar</category>
+    </item>
+    <item>
+      <title>The coding environment that wants to own its whole stack</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/orangu/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/orangu/</guid>
+      <pubDate>Mon, 26 Oct 2026 12:00:00 GMT</pubDate>
+      <description>A Rust coding environment links a coordinator, local inference server and model-training toolchain. The newest release adds image generation and a raft of workflow and performance changes. Radar status: DESK REVIEW.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>Radar</category>
+    </item>
+    <item>
+      <title>Four languages. One musical clock.</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/sova/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/sova/</guid>
+      <pubDate>Mon, 26 Oct 2026 12:00:00 GMT</pubDate>
+      <description>A Rust live-coding sequencer puts several programming languages on one shared musical timeline. The idea is intriguing; the project still calls itself alpha. Radar status: DESK REVIEW.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>Radar</category>
+    </item>
     <item>
       <title>When the Tool Becomes the Teacher</title>
       <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-the-tool-becomes-the-teacher/</link>
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-the-tool-becomes-the-teacher/</guid>
       <pubDate>Tue, 13 Oct 2026 12:00:00 GMT</pubDate>
       <description>Two Pi agents were told only to use Threadmoth for edits. Their different approaches—and a few awkward detours—suggest that software can teach its capabilities at the point an agent needs them. This feature connects that idea to embedded help, compiler diagnostics and recent tool-use research, while treating its own observations as anecdotal.</description>
-      <dc:creator>Matthew Watkins</dc:creator>
+      <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
       <category>FEATURE</category>
     </item>
     <item>
@@ -24,7 +69,7 @@
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-agent-needs-a-room-with-a-lock/</guid>
       <pubDate>Mon, 12 Oct 2026 12:00:00 GMT</pubDate>
       <description>Microsoft Execution Containers puts policy outside an AI workload. The idea belongs to a much older history of least privilege, capabilities and operating-system sandboxes—and it still needs testing on each real backend.</description>
-      <dc:creator>Matthew Watkins</dc:creator>
+      <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
       <category>FEATURE</category>
     </item>
     <item>
@@ -33,7 +78,7 @@
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/cynthia-solomon-and-the-computer-that-wasnt-the-lesson/</guid>
       <pubDate>Mon, 12 Oct 2026 12:00:00 GMT</pubDate>
       <description>Cynthia Solomon helped create Logo, then kept asking what kind of worlds, tools and culture would let people use computers to become makers. Her 1984 assessment of educational computing is still strikingly unsentimental.</description>
-      <dc:creator>Matthew Watkins</dc:creator>
+      <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
       <category>PROFILE</category>
     </item>
     <item>
@@ -42,7 +87,7 @@
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-ai-work-needs-a-place-to-live/</guid>
       <pubDate>Sun, 04 Oct 2026 12:00:00 GMT</pubDate>
       <description>An agent can make a plan in seconds. The harder question is what happens to that promise when a worker stalls, a lease expires, or the outside world gives an uncertain answer. Resolve01 is building the durable coordination layer for that middle ground.</description>
-      <dc:creator>Matthew Watkins</dc:creator>
+      <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
       <category>ESSAY</category>
     </item>
     <item>
@@ -51,7 +96,7 @@
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-anvil-ai-native-computer/</guid>
       <pubDate>Sun, 04 Oct 2026 12:00:00 GMT</pubDate>
       <description>Anvil is a one-kilobyte experimental machine with no shell, files or escape hatch. The aim is to discover whether an AI can work more reliably when the machine exposes exact capabilities, executes transactionally and returns measured evidence instead of human-oriented computer folklore.</description>
-      <dc:creator>Matthew Watkins</dc:creator>
+      <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
       <category>FEATURE</category>
     </item>
     <item>
@@ -60,7 +105,7 @@
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/joe-armstrong-the-man-who-put-failure-to-work/</guid>
       <pubDate>Sun, 04 Oct 2026 12:00:00 GMT</pubDate>
       <description>Joe Armstrong helped create Erlang, but his curiosity kept moving: from physics and satellite software to fault tolerance, live music, hypertext and forgotten ideas in computer science. This essay follows the questions he carried between them.</description>
-      <dc:creator>Matthew Watkins</dc:creator>
+      <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
       <category>ESSAY</category>
     </item>
     <item>
@@ -69,7 +114,7 @@
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-bat-needs-a-collar/</guid>
       <pubDate>Sat, 03 Oct 2026 12:00:00 GMT</pubDate>
       <description>An encounter with an automated safety warning raises a bigger architectural question: as AI testing tools grow autonomous and adversarial, how should each run carry the scope of its authority—and prove the bounds were enforced?</description>
-      <dc:creator>Matthew Watkins</dc:creator>
+      <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
       <category>ESSAY</category>
     </item>
     <item>
@@ -87,7 +132,7 @@
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/please-stop-making-ai-sound-so-uncool/</guid>
       <pubDate>Wed, 23 Sep 2026 12:00:00 GMT</pubDate>
       <description>Artificial intelligence may be the strangest technology in public life. Its vocabulary increasingly sounds like it was approved by a committee at an airport hotel. Vibe coding, agentic AI, digital coworkers and the rest are not harmless cringe: bad language flattens useful distinctions and makes new ideas harder to think about.</description>
-      <dc:creator>Matthew Watkins</dc:creator>
+      <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
       <category>COLUMN</category>
     </item>
     <item>
@@ -123,7 +168,7 @@
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-prize-is-the-cheapest-part-of-a-hackathon/</guid>
       <pubDate>Mon, 21 Sep 2026 12:00:00 GMT</pubDate>
       <description>Hackathons do more than produce winners. They produce a field of experiments, ideas, pain points and prototypes. AI makes that field cheaper to analyse, while some competition rules explicitly permit internal research, AI training or commercial reuse. That does not prove theft. It does mean entrants should know exactly what they are giving away.</description>
-      <dc:creator>Matthew Watkins</dc:creator>
+      <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
       <category>FEATURE</category>
     </item>
     <item>
@@ -213,7 +258,7 @@
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-thinking-surface/</guid>
       <pubDate>Sun, 13 Sep 2026 12:00:00 GMT</pubDate>
       <description>Generative AI proved that machines can produce. The more interesting problem now is how to build systems that remove dead cognitive labour without removing the human thinking, judgement and creative struggle that give work meaning.</description>
-      <dc:creator>Matthew Watkins</dc:creator>
+      <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
       <category>ESSAY</category>
     </item>
     <item>
