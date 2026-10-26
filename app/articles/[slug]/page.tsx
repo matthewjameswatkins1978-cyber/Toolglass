@@ -267,7 +267,7 @@ export default async function ArticlePage({
             ))}
           </dl>
           {article.toolbox ? (
-            <section className="toolbox-notes" aria-label="Joe's toolbox, translated">
+            <section className="toolbox-notes" aria-label={article.toolboxHeading ?? 'Toolbox'}>
               <h2>{article.toolboxHeading ?? 'Joe’s toolbox, translated'}</h2>
               <dl>
                 {article.toolbox.map((item) => (
