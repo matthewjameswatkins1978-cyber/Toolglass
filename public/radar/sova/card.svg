@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">SOVA / LIVE-CODING SEQUENCER</title><desc id="desc">A CONCEPT CARD / NOT A SCREENSHOT</desc>
+<rect width="1200" height="630" fill="#eee9dc"/>
+<g fill="none" stroke="#202522" stroke-width="2">
+<path d="M58 86H1142M58 550H1142"/>
+<path d="M858 168V476M900 168V476M942 168V476M984 168V476" stroke="#6683b7" stroke-dasharray="2 12"/>
+</g>
+<text x="72" y="62" font-family="monospace" font-size="17" letter-spacing="3" fill="#1748a0">TOOLGLASS / RADAR / SOVA / LIVE-CODING SEQUENCER</text>
+<text x="72" y="190" font-family="Georgia,serif" font-size="58" fill="#202522">FOUR LANGUAGES</text>
+<text x="74" y="238" font-family="monospace" font-size="19" letter-spacing="2" fill="#1748a0">ONE MUSICAL CLOCK</text>
+<rect x="86" y="286" width="230" height="38" fill="none" stroke="#202522"/>
+<text x="102" y="312" font-family="monospace" font-size="15" fill="#1748a0">BOB</text>
+<path d="M316 305C470 305 520 412 658 412" fill="none" stroke="#1748a0" stroke-width="2"/>
+<circle cx="658" cy="412" r="6" fill="#c4ef32" stroke="#202522"/>
+<rect x="86" y="340" width="230" height="38" fill="none" stroke="#202522"/>
+<text x="102" y="366" font-family="monospace" font-size="15" fill="#1748a0">BALI</text>
+<path d="M316 359C470 359 520 412 658 412" fill="none" stroke="#1748a0" stroke-width="2"/>
+<circle cx="658" cy="412" r="6" fill="#c4ef32" stroke="#202522"/>
+<rect x="86" y="394" width="230" height="38" fill="none" stroke="#202522"/>
+<text x="102" y="420" font-family="monospace" font-size="15" fill="#1748a0">BOINX</text>
+<path d="M316 413C470 413 520 412 658 412" fill="none" stroke="#1748a0" stroke-width="2"/>
+<circle cx="658" cy="412" r="6" fill="#c4ef32" stroke="#202522"/>
+<rect x="86" y="448" width="230" height="38" fill="none" stroke="#202522"/>
+<text x="102" y="474" font-family="monospace" font-size="15" fill="#1748a0">CAGIRE</text>
+<path d="M316 467C470 467 520 412 658 412" fill="none" stroke="#1748a0" stroke-width="2"/>
+<circle cx="658" cy="412" r="6" fill="#c4ef32" stroke="#202522"/>
+<rect x="700" y="330" width="350" height="150" fill="none" stroke="#202522"/>
+<path d="M730 400h290M754 374v52m48-76v100m48-70v40m48-54v68m48-32v16" stroke="#1748a0" stroke-width="4"/>
+<circle cx="802" cy="348" r="7" fill="#c4ef32"/>
+<text x="74" y="590" font-family="monospace" font-size="15" letter-spacing="2" fill="#202522">A CONCEPT CARD / NOT A SCREENSHOT</text>
+<text x="1080" y="590" font-family="monospace" font-size="15" fill="#6683b7">26 / X / 2026</text>
+</svg>

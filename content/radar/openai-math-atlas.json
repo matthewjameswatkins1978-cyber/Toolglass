@@ -1,0 +1,72 @@
+{
+  "slug": "openai-math-atlas",
+  "name": "Mathematics Research & Evidence Atlas",
+  "headline": "A map of mathematical claims that refuses to call them knowledge",
+  "standfirst": "An independent interface links OpenAI’s mathematics manuscripts to source records, formalisation references and open questions—while the live catalogue remains partly unavailable until imported.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-10-26T12:00:00.000Z",
+  "discoveredAt": "2026-10-26T12:00:00.000Z",
+  "category": "Research navigation & evidence design",
+  "tags": [
+    "mathematics",
+    "research",
+    "evidence",
+    "visualisation"
+  ],
+  "homepage": "https://chrisdhayes.github.io/openai-math-atlas/",
+  "repo": "https://github.com/ChrisDHayes/openai-math-atlas",
+  "version": "Live site v4 observed; repository describes v5",
+  "licence": "Not confirmed from a licence file in the inspected repository",
+  "platforms": [
+    "Web browser"
+  ],
+  "tested": false,
+  "evidence": "DESK REVIEW / LIVE SITE AND SOURCE REPOSITORIES INSPECTED; NO LOCAL CODE EXECUTION OR PROOF CHECKING.",
+  "body": [
+    {
+      "heading": "719 papers are not 719 accepted results",
+      "paragraphs": [
+        "OpenAI announced a collection of mathematics manuscripts produced by an internal frontier model on 6 October. Its current repository lists 719 manuscripts in 372 research families. The dated history records that three manuscripts were withdrawn on 7 October after a sign error and that other papers were revised. These are source-reported counts, not an independent correctness audit."
+      ]
+    },
+    {
+      "heading": "Evidence as an interface",
+      "paragraphs": [
+        "Christopher Hayes’s atlas separates source claims, manuscript records, links to Lean formalisation files, independent scrutiny and wider mathematical understanding. Those states are not interchangeable. A Lean source link does not, by itself, establish that a formal statement captures the intended prose claim, that the result is novel, or that mathematicians have accepted it."
+      ]
+    },
+    {
+      "heading": "Two versions, one live limitation",
+      "paragraphs": [
+        "The live site identified itself as version 4 when inspected on 26 October. The repository describes version 5, with variable family branch lengths and more explicit controls. The live page also displayed a warning because it had not loaded OpenAI’s full `CONTENTS.md` catalogue. Its fallback view preserved the broad taxonomy and explained how to import the source; it did not fabricate manuscript descriptions."
+      ]
+    },
+    {
+      "heading": "The catch",
+      "paragraphs": [
+        "The site depends on dynamically loading upstream catalogue files for its full manuscript-level view. We have not run the code locally, validated every mapping or reviewed any mathematical proof. The code repository did not expose a licence file in the inspected root, so reuse rights remain unconfirmed. The atlas is independent and is not an OpenAI or Boston University endorsement."
+      ]
+    },
+    {
+      "heading": "A useful first test",
+      "paragraphs": [
+        "Import a pinned copy of the upstream catalogue and formalisation index. Select ten random manuscripts, follow each to its PDF, compare its claim and status with the source, then deliberately remove the catalogue and observe how the interface degrades. That would test provenance and interface behaviour, not prove the mathematics."
+      ]
+    }
+  ],
+  "verdict": "A thoughtful evidence interface whose best feature is the distinction between publication, formal artefacts and accepted knowledge. Its full catalogue did not load in the live inspection, and Toolglass has not validated the code or proofs.",
+  "nextStep": "Import a pinned catalogue, sample manuscript records and check the displayed provenance against the source PDFs.",
+  "sourceUrls": [
+    "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+    "https://github.com/openai/math",
+    "https://github.com/openai/math/blob/main/history.md",
+    "https://chrisdhayes.github.io/openai-math-atlas/",
+    "https://github.com/ChrisDHayes/openai-math-atlas"
+  ],
+  "image": {
+    "src": "/radar/openai-math-atlas/card.svg",
+    "alt": "A radial map links fields, research families, manuscripts and separate evidence marks.",
+    "caption": "A map of records and evidence links, not a map of truth. Concept card; not the atlas interface.",
+    "kind": "TOOLGLASS CONCEPT CARD"
+  }
+}

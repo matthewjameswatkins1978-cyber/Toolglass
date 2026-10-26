@@ -1,7 +1,8 @@
 export type ArticleBlock = {
-  type: 'paragraph' | 'quote' | 'code';
+  type: 'paragraph' | 'quote' | 'code' | 'pullquote';
   text: string;
   language?: string;
+  attribution?: string;
 };
 
 export type ArticleSection = {
@@ -34,6 +35,7 @@ export type Article = {
   };
   notes?: [string, string][];
   toolbox?: { term: string; description: string }[];
+  toolboxHeading?: string;
   sourcesHeading?: string;
   sourcesIntro?: string;
   sources: { label: string; href: string }[];

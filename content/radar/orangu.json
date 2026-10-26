@@ -1,0 +1,73 @@
+{
+  "slug": "orangu",
+  "name": "orangu",
+  "headline": "The coding environment that wants to own its whole stack",
+  "standfirst": "A Rust coding environment links a coordinator, local inference server and model-training toolchain. The newest release adds image generation and a raft of workflow and performance changes.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-10-26T12:00:00.000Z",
+  "discoveredAt": "2026-10-26T12:00:00.000Z",
+  "category": "Local AI & coding environments",
+  "tags": [
+    "AI",
+    "Rust",
+    "local inference",
+    "model tooling"
+  ],
+  "homepage": "https://www.mnemosyne-systems.ai/products/orangu/",
+  "repo": "https://github.com/mnemosyne-systems/orangu",
+  "version": "1.4.0 (29 September 2026)",
+  "licence": "GPL-3.0",
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows (maintainer release information; not tested here)"
+  ],
+  "tested": false,
+  "evidence": "DESK REVIEW / NOT TESTED. Toolglass checked the project repository and current 1.4.0 release notes; no binary, build, model run, network audit or benchmark was conducted.",
+  "body": [
+    {
+      "heading": "A whole local stack",
+      "paragraphs": [
+        "The project describes a terminal coding environment, a coordinator that starts and stops local models, and a native GGUF inference server, written in Rust. Its maintainers position the parts as one self-contained stack. That is a product claim; Toolglass has not audited privacy, telemetry or network behaviour."
+      ]
+    },
+    {
+      "heading": "From model training to image generation",
+      "paragraphs": [
+        "Version 1.3.0 introduced `orangu-gguf`, which the release notes describe as a tool for assembling a corpus, training a tokenizer, pretraining a small transformer and writing a GGUF model file. The same notes claim deterministic output from a fixed seed and manifest across different CPU-core counts; that is an excellent reproducibility test, not a verified Toolglass result.",
+        "The current release, 1.4.0, was announced on 29 September 2026. Its maintainer notes add image generation and editing, broad performance work, repository and revert commands, Prometheus metrics, Windows fixes and support for a new model family. The project’s surface area is growing quickly."
+      ]
+    },
+    {
+      "heading": "The distinction that matters",
+      "paragraphs": [
+        "A successful small training run would show that tokenisation, training, file output and inference connect. It would not show that the result is a useful coding model. A native stack may reduce some integration boundaries, but it also makes the project responsible for a great deal of difficult machinery."
+      ]
+    },
+    {
+      "heading": "The catch",
+      "paragraphs": [
+        "No local installation, build, benchmark, security review, privacy check or model-quality comparison was performed. The repository is GPL-3.0. The maintainers’ claims about supported backends, offline operation and deterministic training remain unverified here."
+      ]
+    },
+    {
+      "heading": "A useful first test",
+      "paragraphs": [
+        "Build from a pinned revision. Run the smallest documented training manifest twice with the same seed and compare hashes. Load the result, record memory use and elapsed time, inspect network access during an offline session, then compare output with a known reference engine. Passing would demonstrate a coherent toolchain, not model-quality parity."
+      ]
+    }
+  ],
+  "verdict": "Ambitious and unusually integrated. Its 1.4.0 release is current as of 26 October; all performance, privacy and training claims remain maintainer-reported. DESK REVIEW only.",
+  "nextStep": "Run a pinned, repeatable training smoke test and inspect network behaviour before evaluating model quality.",
+  "sourceUrls": [
+    "https://github.com/mnemosyne-systems/orangu",
+    "https://www.mnemosyne-systems.ai/news/2026-09-29-orangu-1.4.0/",
+    "https://www.mnemosyne-systems.ai/news/2026-09-09-orangu-1.3.0/"
+  ],
+  "image": {
+    "src": "/radar/orangu/card.svg",
+    "alt": "A compact stack diagram connects a terminal, model server and training tool.",
+    "caption": "A proposal for one local AI toolchain. Concept card; not a product screenshot.",
+    "kind": "TOOLGLASS CONCEPT CARD"
+  }
+}

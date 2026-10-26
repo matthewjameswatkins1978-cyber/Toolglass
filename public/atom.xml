@@ -5,16 +5,66 @@
   <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/" />
   <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/feed.xml" rel="alternate" type="application/rss+xml" />
-  <updated>2026-10-13T12:00:00.000Z</updated>
+  <updated>2026-10-26T12:00:00.000Z</updated>
   <subtitle>Software worth finding. Independent reviews with visible evidence.</subtitle>
   <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-smaller-square-that-wasnt/</id>
+    <title>The Smaller Square That Wasn&apos;t</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-smaller-square-that-wasnt/" />
+    <published>2026-10-26T12:00:00.000Z</published>
+    <updated>2026-10-26T12:00:00.000Z</updated>
+    <author><name>Toolglass Editorial Desk</name></author>
+    <category term="FEATURE" />
+    <summary>Micron has decided not to pursue 4F² DRAM, arguing that capacitor pitch, complexity and cost matter more than nominal transistor-cell area. The decision is a useful lesson in the distance between an elegant geometry and a manufacturable memory device.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/judy-malloy-and-the-novel-with-no-front-door/</id>
+    <title>Judy Malloy and the Novel With No Front Door</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/judy-malloy-and-the-novel-with-no-front-door/" />
+    <published>2026-10-26T12:00:00.000Z</published>
+    <updated>2026-10-26T12:00:00.000Z</updated>
+    <author><name>Toolglass Editorial Desk</name></author>
+    <category term="PROFILE" />
+    <summary>Judy Malloy brought library catalogues, database programming, artists’ books and networked writing together in Uncle Roger. Its shifting forms show how software can be an instrument of authorship, not just a container for text.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/openai-math-atlas/</id>
+    <title>A map of mathematical claims that refuses to call them knowledge</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/openai-math-atlas/" />
+    <published>2026-10-26T12:00:00.000Z</published>
+    <updated>2026-10-26T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>An independent interface links OpenAI’s mathematics manuscripts to source records, formalisation references and open questions—while the live catalogue remains partly unavailable until imported. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/orangu/</id>
+    <title>The coding environment that wants to own its whole stack</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/orangu/" />
+    <published>2026-10-26T12:00:00.000Z</published>
+    <updated>2026-10-26T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>A Rust coding environment links a coordinator, local inference server and model-training toolchain. The newest release adds image generation and a raft of workflow and performance changes. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/sova/</id>
+    <title>Four languages. One musical clock.</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/sova/" />
+    <published>2026-10-26T12:00:00.000Z</published>
+    <updated>2026-10-26T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>A Rust live-coding sequencer puts several programming languages on one shared musical timeline. The idea is intriguing; the project still calls itself alpha. Radar status: DESK REVIEW.</summary>
+  </entry>
   <entry>
     <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-the-tool-becomes-the-teacher/</id>
     <title>When the Tool Becomes the Teacher</title>
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-the-tool-becomes-the-teacher/" />
     <published>2026-10-13T12:00:00.000Z</published>
     <updated>2026-10-13T12:00:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <author><name>Matthew Watkins, with Lucy (ChatGPT)</name></author>
     <category term="FEATURE" />
     <summary>Two Pi agents were told only to use Threadmoth for edits. Their different approaches—and a few awkward detours—suggest that software can teach its capabilities at the point an agent needs them. This feature connects that idea to embedded help, compiler diagnostics and recent tool-use research, while treating its own observations as anecdotal.</summary>
   </entry>
@@ -24,7 +74,7 @@
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-agent-needs-a-room-with-a-lock/" />
     <published>2026-10-12T12:00:00.000Z</published>
     <updated>2026-10-12T12:00:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <author><name>Matthew Watkins, with Lucy (ChatGPT)</name></author>
     <category term="FEATURE" />
     <summary>Microsoft Execution Containers puts policy outside an AI workload. The idea belongs to a much older history of least privilege, capabilities and operating-system sandboxes—and it still needs testing on each real backend.</summary>
   </entry>
@@ -34,7 +84,7 @@
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/cynthia-solomon-and-the-computer-that-wasnt-the-lesson/" />
     <published>2026-10-12T12:00:00.000Z</published>
     <updated>2026-10-12T12:00:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <author><name>Matthew Watkins, with Lucy (ChatGPT)</name></author>
     <category term="PROFILE" />
     <summary>Cynthia Solomon helped create Logo, then kept asking what kind of worlds, tools and culture would let people use computers to become makers. Her 1984 assessment of educational computing is still strikingly unsentimental.</summary>
   </entry>
@@ -44,7 +94,7 @@
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-ai-work-needs-a-place-to-live/" />
     <published>2026-10-04T12:00:00.000Z</published>
     <updated>2026-10-04T12:00:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <author><name>Matthew Watkins, with Lucy (ChatGPT)</name></author>
     <category term="ESSAY" />
     <summary>An agent can make a plan in seconds. The harder question is what happens to that promise when a worker stalls, a lease expires, or the outside world gives an uncertain answer. Resolve01 is building the durable coordination layer for that middle ground.</summary>
   </entry>
@@ -54,7 +104,7 @@
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-anvil-ai-native-computer/" />
     <published>2026-10-04T12:00:00.000Z</published>
     <updated>2026-10-04T12:00:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <author><name>Matthew Watkins, with Lucy (ChatGPT)</name></author>
     <category term="FEATURE" />
     <summary>Anvil is a one-kilobyte experimental machine with no shell, files or escape hatch. The aim is to discover whether an AI can work more reliably when the machine exposes exact capabilities, executes transactionally and returns measured evidence instead of human-oriented computer folklore.</summary>
   </entry>
@@ -64,7 +114,7 @@
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/joe-armstrong-the-man-who-put-failure-to-work/" />
     <published>2026-10-04T12:00:00.000Z</published>
     <updated>2026-10-04T12:00:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <author><name>Matthew Watkins, with Lucy (ChatGPT)</name></author>
     <category term="ESSAY" />
     <summary>Joe Armstrong helped create Erlang, but his curiosity kept moving: from physics and satellite software to fault tolerance, live music, hypertext and forgotten ideas in computer science. This essay follows the questions he carried between them.</summary>
   </entry>
@@ -74,7 +124,7 @@
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-bat-needs-a-collar/" />
     <published>2026-10-03T12:00:00.000Z</published>
     <updated>2026-10-03T12:00:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <author><name>Matthew Watkins, with Lucy (ChatGPT)</name></author>
     <category term="ESSAY" />
     <summary>An encounter with an automated safety warning raises a bigger architectural question: as AI testing tools grow autonomous and adversarial, how should each run carry the scope of its authority—and prove the bounds were enforced?</summary>
   </entry>
@@ -94,7 +144,7 @@
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/please-stop-making-ai-sound-so-uncool/" />
     <published>2026-09-23T12:00:00.000Z</published>
     <updated>2026-09-23T12:00:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <author><name>Matthew Watkins, with Lucy (ChatGPT)</name></author>
     <category term="COLUMN" />
     <summary>Artificial intelligence may be the strangest technology in public life. Its vocabulary increasingly sounds like it was approved by a committee at an airport hotel. Vibe coding, agentic AI, digital coworkers and the rest are not harmless cringe: bad language flattens useful distinctions and makes new ideas harder to think about.</summary>
   </entry>
@@ -134,7 +184,7 @@
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-prize-is-the-cheapest-part-of-a-hackathon/" />
     <published>2026-09-21T12:00:00.000Z</published>
     <updated>2026-09-21T12:00:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <author><name>Matthew Watkins, with Lucy (ChatGPT)</name></author>
     <category term="FEATURE" />
     <summary>Hackathons do more than produce winners. They produce a field of experiments, ideas, pain points and prototypes. AI makes that field cheaper to analyse, while some competition rules explicitly permit internal research, AI training or commercial reuse. That does not prove theft. It does mean entrants should know exactly what they are giving away.</summary>
   </entry>
@@ -234,7 +284,7 @@
     <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-thinking-surface/" />
     <published>2026-09-13T12:00:00.000Z</published>
     <updated>2026-09-13T12:00:00.000Z</updated>
-    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <author><name>Matthew Watkins, with Lucy (ChatGPT)</name></author>
     <category term="ESSAY" />
     <summary>Generative AI proved that machines can produce. The more interesting problem now is how to build systems that remove dead cognitive labour without removing the human thinking, judgement and creative struggle that give work meaning.</summary>
   </entry>

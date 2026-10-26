@@ -1,0 +1,66 @@
+{
+  "slug": "sova",
+  "name": "Sova",
+  "headline": "Four languages. One musical clock.",
+  "standfirst": "A Rust live-coding sequencer puts several programming languages on one shared musical timeline. The idea is intriguing; the project still calls itself alpha.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-10-26T12:00:00.000Z",
+  "discoveredAt": "2026-10-26T12:00:00.000Z",
+  "category": "Live coding & music systems",
+  "tags": [
+    "music",
+    "live coding",
+    "Rust",
+    "sequencer"
+  ],
+  "homepage": "https://sova.livecoding.fr/",
+  "repo": "https://github.com/sova-org/Sova",
+  "version": "Active alpha (README checked 26 October 2026)",
+  "licence": "AGPL-3.0",
+  "platforms": [
+    "Linux",
+    "macOS",
+    "Windows (maintainer project/build information; not tested here)"
+  ],
+  "tested": false,
+  "evidence": "DESK REVIEW / NOT TESTED. Toolglass read the project README and site; no installation, audio run or performance test was conducted.",
+  "body": [
+    {
+      "heading": "One engine, several ways to think",
+      "paragraphs": [
+        "Sova is a Rust sequencer and musical programming environment designed around a virtual machine for real-time improvisation. Its project README describes four languages—Bob, BaLi, Boinx and Cagire—sharing one VM and I/O layer. The design asks whether musical time can stay stable while a composer moves between different ways of expressing a pattern."
+      ]
+    },
+    {
+      "heading": "A timing system with a large surface area",
+      "paragraphs": [
+        "The maintainers describe a scheduler that looks ahead by roughly 30 milliseconds and a real-time-priority dispatch thread. The project also lists Ableton Link, MIDI, OSC, the Doux audio engine, shader editing and collaborative sessions. These are upstream descriptions, not measurements by Toolglass.",
+        "That combination could make Sova feel less like a language with an audio engine attached and more like one instrument with several programming surfaces. The same breadth also creates a substantial engineering and usability challenge."
+      ]
+    },
+    {
+      "heading": "The catch",
+      "paragraphs": [
+        "Sova labels itself active alpha. Toolglass has not checked stability, audio-device support, timing jitter, collaboration recovery or whether the four languages are useful in practice. A musician should treat the feature list as a set of claims to explore, not a guarantee of a finished instrument."
+      ]
+    },
+    {
+      "heading": "A useful first test",
+      "paragraphs": [
+        "Build the desktop client from a pinned revision. Compose the same short eight-bar idea in two languages, confirm both address the same transport, measure MIDI timing under CPU load, then disconnect a second client and observe recovery. That would test the instrument people actually use, not just its README."
+      ]
+    }
+  ],
+  "verdict": "An unusual and potentially fruitful design for live-coded music: several languages share a single sequencer and VM. DESK REVIEW only; Toolglass has not tested it.",
+  "nextStep": "Try the desktop client and compare one short arrangement across two languages.",
+  "sourceUrls": [
+    "https://github.com/sova-org/Sova",
+    "https://sova.livecoding.fr/"
+  ],
+  "image": {
+    "src": "/radar/sova/card.svg",
+    "alt": "A restrained schematic shows four language marks feeding one shared musical timeline.",
+    "caption": "Several expression systems, one shared clock. Concept card; not a screenshot of Sova.",
+    "kind": "TOOLGLASS CONCEPT CARD"
+  }
+}

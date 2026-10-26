@@ -83,6 +83,7 @@ const feedEntries = [
     publishedAt: articlePublishedAt(article),
     summary: article.summary,
     category: article.kicker.split('/')[0].trim(),
+    author: article.byline,
   })),
   ...reviews
     .filter((review) => review.evidenceStatus !== 'SCOUTED')
@@ -92,6 +93,7 @@ const feedEntries = [
       publishedAt: review.publishedAt,
       summary: `${review.summary} Evidence: ${review.evidenceStatus}.`,
       category: review.category,
+      author: AUTHOR_NAME,
     })),
   ...radarEntries.map((entry) => ({
     title: entry.headline,
@@ -99,6 +101,7 @@ const feedEntries = [
     publishedAt: entry.publishedAt,
     summary: `${entry.standfirst} Radar status: ${entry.status}.`,
     category: 'Radar',
+    author: AUTHOR_NAME,
   })),
 ];
 feedEntries.sort((left, right) => Date.parse(right.publishedAt) - Date.parse(left.publishedAt));
@@ -108,7 +111,7 @@ const feedItems = feedEntries.map((entry) => `    <item>
       <guid isPermaLink="true">${escapeXml(entry.url)}</guid>
       <pubDate>${new Date(entry.publishedAt).toUTCString()}</pubDate>
       <description>${escapeXml(entry.summary)}</description>
-      <dc:creator>${escapeXml(AUTHOR_NAME)}</dc:creator>
+      <dc:creator>${escapeXml(entry.author)}</dc:creator>
       <category>${escapeXml(entry.category)}</category>
     </item>`).join('\n');
 fs.writeFileSync(
@@ -136,7 +139,7 @@ const atomEntries = feedEntries.map((entry) => `  <entry>
     <link href="${escapeXml(entry.url)}" />
     <published>${new Date(entry.publishedAt).toISOString()}</published>
     <updated>${new Date(entry.publishedAt).toISOString()}</updated>
-    <author><name>${escapeXml(AUTHOR_NAME)}</name><uri>${escapeXml(AUTHOR_URL)}</uri></author>
+    <author><name>${escapeXml(entry.author)}</name>${entry.author === AUTHOR_NAME ? `<uri>${escapeXml(AUTHOR_URL)}</uri>` : ''}</author>
     <category term="${escapeXml(entry.category)}" />
     <summary>${escapeXml(entry.summary)}</summary>
   </entry>`).join('\n');
