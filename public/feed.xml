@@ -3,21 +3,12 @@
   <channel>
     <title>Toolglass</title>
     <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/</link>
-    <description>Software worth finding. Independent reviews with visible evidence.</description>
+    <description>Software worth finding. Features, profiles, reviews and fresh signals from Radar.</description>
     <language>en-gb</language>
     <lastBuildDate>Mon, 23 Nov 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/feed.xml" rel="self" type="application/rss+xml" />
     <atom:link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/atom.xml" rel="alternate" type="application/atom+xml" />
     <managingEditor>Matthew Watkins (https://github.com/matthewjameswatkins1978-cyber)</managingEditor>
-    <item>
-      <title>The Program Has Two Faces</title>
-      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-program-has-two-faces/</link>
-      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-program-has-two-faces/</guid>
-      <pubDate>Mon, 23 Nov 2026 12:00:00 GMT</pubDate>
-      <description>Tacit gives AI authors and human reviewers different views of one program. The experiment revives a much older question about what we gain when source text becomes one of several views.</description>
-      <dc:creator>Toolglass Editorial Desk</dc:creator>
-      <category>FEATURE</category>
-    </item>
     <item>
       <title>Susan Graham and the Tools That Look Back</title>
       <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/susan-graham-and-the-tools-that-look-back/</link>
@@ -26,6 +17,15 @@
       <description>From gprof and Berkeley Pascal to voice-driven editing and parallel computing, Susan Graham helped build tools that reveal how programs work.</description>
       <dc:creator>Toolglass Editorial Desk</dc:creator>
       <category>PROFILE</category>
+    </item>
+    <item>
+      <title>The Program Has Two Faces</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-program-has-two-faces/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-program-has-two-faces/</guid>
+      <pubDate>Mon, 23 Nov 2026 12:00:00 GMT</pubDate>
+      <description>Tacit gives AI authors and human reviewers different views of one program. The experiment revives a much older question about what we gain when source text becomes one of several views.</description>
+      <dc:creator>Toolglass Editorial Desk</dc:creator>
+      <category>FEATURE</category>
     </item>
     <item>
       <title>A program that draws its own map</title>
@@ -55,15 +55,6 @@
       <category>Radar</category>
     </item>
     <item>
-      <title>The Smaller Square That Wasn&apos;t</title>
-      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-smaller-square-that-wasnt/</link>
-      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-smaller-square-that-wasnt/</guid>
-      <pubDate>Mon, 26 Oct 2026 12:00:00 GMT</pubDate>
-      <description>Micron has decided not to pursue 4F² DRAM, arguing that capacitor pitch, complexity and cost matter more than nominal transistor-cell area. The decision is a useful lesson in the distance between an elegant geometry and a manufacturable memory device.</description>
-      <dc:creator>Toolglass Editorial Desk</dc:creator>
-      <category>FEATURE</category>
-    </item>
-    <item>
       <title>Judy Malloy and the Novel With No Front Door</title>
       <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/judy-malloy-and-the-novel-with-no-front-door/</link>
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/judy-malloy-and-the-novel-with-no-front-door/</guid>
@@ -71,6 +62,15 @@
       <description>Judy Malloy brought library catalogues, database programming, artists’ books and networked writing together in Uncle Roger. Its shifting forms show how software can be an instrument of authorship, not just a container for text.</description>
       <dc:creator>Toolglass Editorial Desk</dc:creator>
       <category>PROFILE</category>
+    </item>
+    <item>
+      <title>The Smaller Square That Wasn&apos;t</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-smaller-square-that-wasnt/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-smaller-square-that-wasnt/</guid>
+      <pubDate>Mon, 26 Oct 2026 12:00:00 GMT</pubDate>
+      <description>Micron has decided not to pursue 4F² DRAM, arguing that capacitor pitch, complexity and cost matter more than nominal transistor-cell area. The decision is a useful lesson in the distance between an elegant geometry and a manufacturable memory device.</description>
+      <dc:creator>Toolglass Editorial Desk</dc:creator>
+      <category>FEATURE</category>
     </item>
     <item>
       <title>A map of mathematical claims that refuses to call them knowledge</title>
@@ -109,15 +109,6 @@
       <category>FEATURE</category>
     </item>
     <item>
-      <title>The Agent Needs a Room With a Lock</title>
-      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-agent-needs-a-room-with-a-lock/</link>
-      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-agent-needs-a-room-with-a-lock/</guid>
-      <pubDate>Mon, 12 Oct 2026 12:00:00 GMT</pubDate>
-      <description>Microsoft Execution Containers puts policy outside an AI workload. The idea belongs to a much older history of least privilege, capabilities and operating-system sandboxes—and it still needs testing on each real backend.</description>
-      <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
-      <category>FEATURE</category>
-    </item>
-    <item>
       <title>Cynthia Solomon and the Computer That Wasn&apos;t the Lesson</title>
       <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/cynthia-solomon-and-the-computer-that-wasnt-the-lesson/</link>
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/cynthia-solomon-and-the-computer-that-wasnt-the-lesson/</guid>
@@ -127,11 +118,20 @@
       <category>PROFILE</category>
     </item>
     <item>
-      <title>When AI Work Needs a Place to Live</title>
-      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-ai-work-needs-a-place-to-live/</link>
-      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-ai-work-needs-a-place-to-live/</guid>
+      <title>The Agent Needs a Room With a Lock</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-agent-needs-a-room-with-a-lock/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-agent-needs-a-room-with-a-lock/</guid>
+      <pubDate>Mon, 12 Oct 2026 12:00:00 GMT</pubDate>
+      <description>Microsoft Execution Containers puts policy outside an AI workload. The idea belongs to a much older history of least privilege, capabilities and operating-system sandboxes—and it still needs testing on each real backend.</description>
+      <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
+      <category>FEATURE</category>
+    </item>
+    <item>
+      <title>Joe Armstrong: The Man Who Put Failure to Work</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/joe-armstrong-the-man-who-put-failure-to-work/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/joe-armstrong-the-man-who-put-failure-to-work/</guid>
       <pubDate>Sun, 04 Oct 2026 12:00:00 GMT</pubDate>
-      <description>An agent can make a plan in seconds. The harder question is what happens to that promise when a worker stalls, a lease expires, or the outside world gives an uncertain answer. Resolve01 is building the durable coordination layer for that middle ground.</description>
+      <description>Joe Armstrong helped create Erlang, but his curiosity kept moving: from physics and satellite software to fault tolerance, live music, hypertext and forgotten ideas in computer science. This essay follows the questions he carried between them.</description>
       <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
       <category>ESSAY</category>
     </item>
@@ -145,11 +145,11 @@
       <category>FEATURE</category>
     </item>
     <item>
-      <title>Joe Armstrong: The Man Who Put Failure to Work</title>
-      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/joe-armstrong-the-man-who-put-failure-to-work/</link>
-      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/joe-armstrong-the-man-who-put-failure-to-work/</guid>
+      <title>When AI Work Needs a Place to Live</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-ai-work-needs-a-place-to-live/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/when-ai-work-needs-a-place-to-live/</guid>
       <pubDate>Sun, 04 Oct 2026 12:00:00 GMT</pubDate>
-      <description>Joe Armstrong helped create Erlang, but his curiosity kept moving: from physics and satellite software to fault tolerance, live music, hypertext and forgotten ideas in computer science. This essay follows the questions he carried between them.</description>
+      <description>An agent can make a plan in seconds. The harder question is what happens to that promise when a worker stalls, a lease expires, or the outside world gives an uncertain answer. Resolve01 is building the durable coordination layer for that middle ground.</description>
       <dc:creator>Matthew Watkins, with Lucy (ChatGPT)</dc:creator>
       <category>ESSAY</category>
     </item>
@@ -370,15 +370,6 @@
       <category>Radar</category>
     </item>
     <item>
-      <title>Your coding agents remember everything. Good luck finding any of it.</title>
-      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/spaghetti/</link>
-      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/spaghetti/</guid>
-      <pubDate>Sun, 06 Sep 2026 12:00:00 GMT</pubDate>
-      <description>Spaghetti builds a local search index from coding-agent history. We fed it three bounded real Codex sessions and discovered both a much better way to browse the past and a good reason not to uninstall `rg` just yet. Evidence: TESTED.</description>
-      <dc:creator>Matthew Watkins</dc:creator>
-      <category>History &amp; retrieval</category>
-    </item>
-    <item>
       <title>What if “done” were something an AI agent had to prove?</title>
       <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/atlas/</link>
       <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/atlas/</guid>
@@ -386,6 +377,15 @@
       <description>Atlas is trying to turn “please don&apos;t quietly move the goalposts” from an instruction into software. Its Goal Contracts and evidence gates are only partly wired today, but the idea is interesting enough to deserve attention before the product is finished. Evidence: INSPECTED + FOCUSED TESTS.</description>
       <dc:creator>Matthew Watkins</dc:creator>
       <category>Agent reliability</category>
+    </item>
+    <item>
+      <title>Your coding agents remember everything. Good luck finding any of it.</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/spaghetti/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/reviews/spaghetti/</guid>
+      <pubDate>Sun, 06 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Spaghetti builds a local search index from coding-agent history. We fed it three bounded real Codex sessions and discovered both a much better way to browse the past and a good reason not to uninstall `rg` just yet. Evidence: TESTED.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>History &amp; retrieval</category>
     </item>
     <item>
       <title>TermAI looked interesting. Windows disagreed.</title>

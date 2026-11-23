@@ -13,6 +13,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function RadarEntryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params; const entry = radarBySlug(slug); if (!entry) notFound();
+  const related = radarEntries
+    .filter((candidate) => candidate.slug !== entry.slug)
+    .map((candidate) => ({
+      candidate,
+      shared: candidate.tags.filter((tag) => entry.tags.includes(tag)).length,
+    }))
+    .filter(({ shared }) => shared > 0)
+    .sort((a, b) => b.shared - a.shared
+      || b.candidate.publishedAt.localeCompare(a.candidate.publishedAt)
+      || a.candidate.slug.localeCompare(b.candidate.slug, 'en'))
+    .slice(0, 3);
   const structuredData = { '@context': 'https://schema.org', '@type': 'Article', headline: entry.headline, description: entry.standfirst, datePublished: entry.publishedAt, mainEntityOfPage: `${publicSiteUrl}/radar/${entry.slug}/`, author: { '@type': 'Person', name: 'Matthew Watkins' } };
   return <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
@@ -23,6 +34,18 @@ export default async function RadarEntryPage({ params }: { params: Promise<{ slu
         {entry.body.map((section) => <section key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}
         <h2>Radar verdict</h2><p>{entry.verdict}</p>{entry.nextStep && <><h2>Next step</h2><p>{entry.nextStep}</p></>}
         <h2>Sources</h2><p>{entry.sourceUrls.map((url) => <span key={url}><a href={url}>{url.replace(/^https?:\/\//, '')} ↗</a><br /></span>)}</p>
+        {related.length > 0 && (
+          <section aria-labelledby="related-radar">
+            <h2 id="related-radar">Related Radar reading</h2>
+            <ul>
+              {related.map(({ candidate }) => (
+                <li key={candidate.slug}>
+                  <a href={sitePath(`/radar/${candidate.slug}/`)}>{candidate.headline}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
         <div className="article-nav"><a href={sitePath('/radar')}>← Back to Radar</a></div>
       </article>
       <aside><p className="eyebrow">RADAR RECEIPT / {entry.name}</p><dl className="facts"><div><dt>Evidence</dt><dd>{entry.status}</dd></div><div><dt>Version</dt><dd>{entry.version ?? 'Unknown'}</dd></div><div><dt>Platforms</dt><dd>{entry.platforms?.join(' / ') ?? 'Unknown'}</dd></div><div><dt>Licence</dt><dd>{entry.licence ?? 'Unknown'}</dd></div><div><dt>Tags</dt><dd>{entry.tags.join(' · ')}</dd></div></dl>{entry.repo && <a className="read-link" href={entry.repo}>Visit the project ↗</a>}</aside>
