@@ -46,7 +46,6 @@ export default function RootLayout({
         <header className="site-header">
           <div className="topline">
             <span>AN INDEPENDENT SOFTWARE PUBLICATION</span>
-            <span>VOL. 01 — THE FIRST FINDS</span>
           </div>
           <a className="masthead" href={sitePath('/')} aria-label="Toolglass home">
             TOOLGLASS<span className="brand-dot">↗</span>
@@ -56,7 +55,8 @@ export default function RootLayout({
             <nav aria-label="Main navigation">
               <a href={sitePath('/')}>Front page</a>
               <a href={sitePath('/reviews')}>Reviews</a>
-              <a href={sitePath('/articles')}>Articles</a>
+              <a href={sitePath('/articles/')}>Articles</a>
+              <a href={sitePath('/issues/')}>Issues</a>
               <a href={sitePath('/glassary')}>Glassary</a>
               <a href={sitePath('/radar')}>Radar</a>
               <a href={sitePath('/about')}>About / Methodology</a>

@@ -10,6 +10,8 @@
     "prebuild": "node scripts/broadcast/generate-discovery.mjs",
     "build": "vinext build",
     "prepare:pages": "node scripts/prepare-pages.mjs",
+    "magazine:test": "node --test tests/magazine.test.mjs",
+    "magazine:validate": "node scripts/validate-magazine.mjs",
     "broadcast:build": "node scripts/broadcast/build-campaign.mjs",
     "broadcast:verify": "node scripts/broadcast/verify-campaign.mjs",
     "broadcast:run": "node scripts/broadcast/broadcast.mjs",

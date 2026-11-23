@@ -1,0 +1,157 @@
+.magazine {
+  --cover-accent: #c4ef32;
+  padding-bottom: clamp(40px, 6vw, 88px);
+}
+.magazine h1,
+.magazine h2,
+.magazine h3 {
+  font-family: var(--serif);
+  line-height: 1;
+  text-wrap: balance;
+}
+.magazine a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+.magazine .eyebrow {
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+}
+.magazine-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.65rem 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.magazine-nav a {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.magazine-nav time {
+  font: 0.8rem var(--mono);
+  background: var(--cover-accent);
+  padding: 0.3rem 0.55rem;
+}
+.magazine-lead,
+.magazine-middle,
+.magazine-back {
+  display: grid;
+  gap: clamp(24px, 4vw, 64px);
+  padding: clamp(26px, 4vw, 64px) 0;
+  border-bottom: 1px solid var(--ink);
+}
+.magazine-lead {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  align-items: center;
+}
+.magazine-lead > :only-child {
+  grid-column: 1 / -1;
+}
+.magazine-lead h1,
+.issue-archive h1 {
+  font-size: clamp(55px, 7vw, 106px);
+  max-width: 15ch;
+  letter-spacing: -0.04em;
+}
+.magazine-lead .magazine-deck {
+  margin: 1.1rem 0;
+  max-width: 42ch;
+  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+}
+.magazine-middle {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+}
+.magazine-middle > :only-child,
+.magazine-back > :only-child {
+  grid-column: 1 / -1;
+}
+.magazine-profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: 1rem;
+}
+.magazine-profile h2,
+.magazine-desk h2 {
+  font-size: clamp(36px, 4vw, 58px);
+}
+.magazine-profile p:not(.eyebrow) {
+  max-width: 49ch;
+  margin-top: 0.75rem;
+}
+.magazine-profile figure {
+  max-width: 34rem;
+}
+.magazine-desk {
+  border-left: 1px solid var(--line);
+  padding-left: clamp(18px, 3vw, 42px);
+}
+.magazine-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+.magazine-list li {
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+}
+.magazine-list li > a {
+  display: inline-block;
+  font: clamp(24px, 2.35vw, 34px)/1.12 var(--serif);
+}
+.magazine-list .eyebrow {
+  margin-bottom: 0.25rem;
+}
+.magazine-list li > a + p {
+  margin-top: 0.35rem;
+  max-width: 58ch;
+}
+.magazine-back {
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+}
+.magazine-back h2,
+.magazine-folklore h2,
+.issue-archive h2 {
+  font-size: clamp(32px, 4vw, 50px);
+}
+.magazine-folklore {
+  margin-top: clamp(24px, 4vw, 56px);
+}
+.magazine-folklore h2 {
+  margin-bottom: 0.75rem;
+}
+.magazine .editorial-art img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+.issue-archive h1 {
+  margin: 1.5rem 0;
+}
+.issue-archive section {
+  border-top: 1px solid var(--ink);
+  padding: 1.25rem 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 1rem;
+}
+.issue-archive .magazine-list {
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .magazine-lead, .magazine-middle, .magazine-back, .issue-archive section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .magazine-desk {
+    padding: 1.5rem 0 0;
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}

@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import { createRequire } from 'node:module';
 import ts from 'typescript';
 import path from 'node:path';
+import { publicationDate } from '../../content/magazine-selection.mjs';
 import {
   ROOT,
   SITE_URL,
@@ -21,18 +22,14 @@ require.extensions['.ts'] = (module, filename) => {
     ts.transpile(source, {
       module: ts.ModuleKind.CommonJS,
       target: ts.ScriptTarget.ES2022,
+      esModuleInterop: true,
     }),
     filename,
   );
 };
 const { articles } = require('../../content/articles-all.ts');
-const articlePublishedAt = (article) => {
-  const publishedAt = new Date(article.publishedDate + ' 12:00:00 GMT');
-  if (Number.isNaN(publishedAt.getTime())) {
-    throw new Error('Invalid published date for article ' + article.slug + ': ' + article.publishedDate);
-  }
-  return publishedAt.toISOString();
-};
+const { magazine } = require('../../content/magazine.ts');
+const articlePublishedAt = (article) => publicationDate(article.publishedDate);
 const radarDirectory = path.join(ROOT, 'content', 'radar');
 const radarEntries = fs.readdirSync(radarDirectory).filter((file) => file.endsWith('.json')).map((file) => JSON.parse(fs.readFileSync(path.join(radarDirectory, file), 'utf8')));
 const publicDir = path.join(ROOT, 'public');
@@ -40,7 +37,8 @@ const cardsDir = path.join(publicDir, 'og');
 fs.mkdirSync(cardsDir, { recursive: true });
 
 const pages = [
-  { url: `${SITE_URL}/`, lastmod: '2026-09-06' },
+  { url: `${SITE_URL}/`, lastmod: magazine.issue?.date ?? '2026-09-06' },
+  { url: `${SITE_URL}/issues/`, lastmod: magazine.issue?.date ?? '2026-09-06' },
   { url: `${SITE_URL}/reviews/`, lastmod: '2026-09-06' },
   { url: `${SITE_URL}/about/`, lastmod: '2026-09-06' },
   { url: `${SITE_URL}/submit/`, lastmod: '2026-09-06' },
@@ -104,7 +102,9 @@ const feedEntries = [
     author: AUTHOR_NAME,
   })),
 ];
-feedEntries.sort((left, right) => Date.parse(right.publishedAt) - Date.parse(left.publishedAt));
+feedEntries.sort((left, right) =>
+  Date.parse(right.publishedAt) - Date.parse(left.publishedAt) || left.url.localeCompare(right.url, 'en'),
+);
 const feedItems = feedEntries.map((entry) => `    <item>
       <title>${escapeXml(entry.title)}</title>
       <link>${escapeXml(entry.url)}</link>
@@ -121,7 +121,7 @@ fs.writeFileSync(
   <channel>
     <title>${SITE_NAME}</title>
     <link>${SITE_URL}/</link>
-    <description>Software worth finding. Independent reviews with visible evidence.</description>
+    <description>Software worth finding. Features, profiles, reviews and fresh signals from Radar.</description>
     <language>en-gb</language>
     <lastBuildDate>${new Date(Math.max(...feedEntries.map((entry) => new Date(entry.publishedAt).getTime()))).toUTCString()}</lastBuildDate>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml" />
@@ -153,7 +153,7 @@ fs.writeFileSync(
   <link href="${SITE_URL}/atom.xml" rel="self" type="application/atom+xml" />
   <link href="${SITE_URL}/feed.xml" rel="alternate" type="application/rss+xml" />
   <updated>${atomUpdated}</updated>
-  <subtitle>Software worth finding. Independent reviews with visible evidence.</subtitle>
+  <subtitle>Software worth finding. Features, profiles, reviews and fresh signals from Radar.</subtitle>
   <author><name>${escapeXml(AUTHOR_NAME)}</name><uri>${escapeXml(AUTHOR_URL)}</uri></author>
 ${atomEntries}
 </feed>

@@ -29,7 +29,7 @@ The workflow also accepts an HTTPS `specific_url` for a one-project dry-run repo
 
 `content/reviews.ts` owns the typed editorial records. `app/reviews/[slug]/page.tsx` is the shared article template. Each record includes replacement boundaries, facts, sources and a proposed test. Change evidence status only with matching recorded evidence; inspected and tested records include their bounded evidence notes and receipts.
 
-`app/page.tsx` holds the curated front page. `app/about/page.tsx` explains methodology. Shared typography, responsive layouts and navigation live in `app/globals.css` and `app/layout.tsx`.
+Read the [Toolglass House Book](editorial/house-style/HOUSE-BOOK.md) for voice, art and publication. The front page and [dated issue archive](https://matthewjameswatkins1978-cyber.github.io/Toolglass/issues/) are composed from the published collections in `content/magazine.ts`. `app/about/page.tsx` explains methodology. Shared typography, responsive layouts and navigation live in `app/globals.css` and `app/layout.tsx`.
 
 ## Editorial workflow
 
@@ -37,7 +37,7 @@ The public canonical repository is [matthewjameswatkins1978-cyber/Toolglass](htt
 
 `editorial/inbox/` contains Work drafts; Chat Lucy edits them and marks approved copy in `editorial/approved/`; Work integrates approved prose into `content/reviews.ts`, builds, visually checks, and publishes. `editorial/EDITORIAL-QUEUE.md` is the small shared status board. Reusable structures live in `editorial/templates/`, while voice and evidence rules live in `editorial/house-style/`.
 
-`distribution/` contains the lightweight Toolglass Broadcast layer. The site build generates `sitemap.xml`, `robots.txt`, `feed.xml` and article-specific share cards from the typed review records. `npm run broadcast:build` prepares a campaign manifest and manual outreach drafts; `npm run broadcast:verify` checks evidence labels, canonical URLs and channel-length limits; `npm run broadcast:run -- --mode dry-run` prints the campaign without contacting an external service. The GitHub Actions workflow is manual-dispatch only and defaults to dry-run. Publishing lanes are gated by named repository secrets and write non-secret receipts for idempotency.
+`distribution/` contains the lightweight Toolglass Broadcast layer. The site build generates the sitemap, robots file, RSS and Atom feeds, and share cards from the published collections. `npm run broadcast:build` prepares a campaign manifest and manual outreach drafts; `npm run broadcast:verify` checks evidence labels, canonical URLs and channel-length limits; `npm run broadcast:run -- --mode dry-run` prints the campaign without contacting an external service. The GitHub Actions workflow is manual-dispatch only and defaults to dry-run. Publishing lanes are gated by named repository secrets and write non-secret receipts for idempotency.
 
 The editorial files and website content are separate on purpose. Do not migrate the whole site to Markdown or build a CMS just to connect them. Evidence labels remain claims about work actually done: AI may expand evidence, but it may not invent it.
 

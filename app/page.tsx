@@ -1,479 +1,92 @@
-import { reviews } from '@/content/reviews';
-import { articles } from '@/content/articles-all';
-import { weeklyArticles as november23Articles } from '@/content/weekly-2026-11-23';
-import { sitePath } from '@/lib/utils';
 import EditorialArt from '@/components/EditorialArt';
-import MachineGlyph from '@/components/MachineGlyph';
-import { radarEntries } from '@/content/radar';
+import { issueDateLabel, magazine } from '@/content/magazine';
+import type { Story } from '@/content/magazine-selection.mjs';
+import { sitePath } from '@/lib/utils';
+import './magazine.css';
 
-const spaghetti = reviews.find((review) => review.slug === 'spaghetti')!;
-const atlas = reviews.find((review) => review.slug === 'atlas')!;
-const termai = reviews.find((review) => review.slug === 'termai')!;
-const thinkingSurface = articles.find(
-  (article) => article.slug === 'the-thinking-surface',
-)!;
-const hackathonPrize = articles.find(
-  (article) => article.slug === 'the-prize-is-the-cheapest-part-of-a-hackathon',
-)!;
-const aiVocabulary = articles.find(
-  (article) => article.slug === 'please-stop-making-ai-sound-so-uncool',
-)!;
-const resolve01 = articles.find(
-  (article) => article.slug === 'when-ai-work-needs-a-place-to-live',
-)!;
-const anvil = articles.find(
-  (article) => article.slug === 'the-anvil-ai-native-computer',
-)!;
-const batNeedsCollar = articles.find(
-  (article) => article.slug === 'the-bat-needs-a-collar',
-)!;
-
-const teacherArticle = articles.find(
-  (article) => article.slug === 'when-the-tool-becomes-the-teacher',
-)!;
-const memoryCellFeature = articles.find(
-  (article) => article.slug === 'the-smaller-square-that-wasnt',
-)!;
-const malloyProfile = articles.find(
-  (article) => article.slug === 'judy-malloy-and-the-novel-with-no-front-door',
-)!;
+function StoryList({ stories }: { stories: Story[] }) {
+  return (
+    <ul className="magazine-list">
+      {stories.map((story) => (
+        <li key={story.href}>
+          <p className="eyebrow">{story.label}</p>
+          <a href={sitePath(story.href)}>{story.title}</a>
+          <p>{story.summary}</p>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 export default function Home() {
+  const { issue, lead, profile, discoveries, radar, reviews } = magazine;
   return (
-    <>
-      <div className="issue-line">
-        <span>INDEPENDENT SOFTWARE MAGAZINE</span>
-        <span>Independent eyes. Evidence in view.</span>
+    <div className="magazine">
+      <div className="magazine-nav">
+        {issue && <time dateTime={issue.date}>{issueDateLabel(issue.date)}</time>}
+        <a href={sitePath(issue ? `/issues/#${issue.date}` : '/issues/')}>Issue contents ↗</a>
       </div>
-      <section className="lead">
-        <div>
-          <p className="eyebrow">
-            THE LEAD / HISTORY &amp; RETRIEVAL{' '}
-            <span className="badge">TESTED</span>
-          </p>
-          <h1>
-            Your coding agents
-            <br />
-            remember everything.
-            <br />
-            <em>Good luck finding any of it.</em>
-          </h1>
-          <p className="dek">{spaghetti.summary}</p>
-          <a className="read-link" href={sitePath('/reviews/spaghetti')}>
-            Read the full hands-on review ↗
-          </a>
-          <p className="small">
-            We actually used it against a controlled fixture and a bounded copy
-            of real Codex history. The private contents stay private.
-          </p>
-        </div>
-        <div className="lead-art">
-          <div className="eyebrow">FIG. 01 / THE MEMORY PROBLEM</div>
-          <div className="diagram-title">find_it_</div>
-          <div className="diagram-core">AGENT HISTORY → LOCAL INDEX</div>
-          <div className="engines">
-            3 PROJECTS <span>3 SESSIONS</span>
-            <br />
-            1,007 SEGMENTS <span>988 INDEXED</span>
-            <br />
-            STARTUP <span>94 ms</span>
-          </div>
-          <div className="eyebrow">
-            CODEX SLICE / SQLITE / SEARCH <span>01—03</span>
-          </div>
-        </div>
-      </section>
-      {november23Articles.map((article) => (
-        <section className="notebook-feature" key={article.slug}>
+      {lead ? (
+        <section className="magazine-lead" aria-labelledby="cover-lead">
           <div>
-            <p className="eyebrow">{article.kicker}</p>
-            <h2>{article.title}</h2>
-            <p>{article.summary}</p>
-            <a className="read-link" href={sitePath(`/articles/${article.slug}`)}>
-              Read the {article.kicker.startsWith('PROFILE') ? 'profile' : 'feature'} ↗
-            </a>
+            <p className="eyebrow">{lead.label}</p>
+            <h1 id="cover-lead"><a href={sitePath(lead.href)}>{lead.title}</a></h1>
+            <p className="magazine-deck">{lead.summary}</p>
+            {lead.readingTime && <p className="small">{lead.readingTime}</p>}
           </div>
-          {article.heroImage && (
-            <EditorialArt {...article.heroImage} />
-          )}
+          {lead.art && <EditorialArt {...lead.art} priority />}
         </section>
-      ))}
-      <section className="notebook-feature">
-        <div>
-          <p className="eyebrow">FEATURE / MEMORY ARCHITECTURE</p>
-          <h2>{memoryCellFeature.title}</h2>
-          <p>{memoryCellFeature.summary}</p>
-          <a className="read-link" href={sitePath('/articles/the-smaller-square-that-wasnt')}>
-            Read the feature ↗
-          </a>
+      ) : <h1>Toolglass</h1>}
+
+      {(profile || discoveries.length > 0) && (
+        <div className="magazine-middle">
+          {profile && (
+            <section className="magazine-profile" aria-labelledby="cover-profile">
+              <div>
+                <p className="eyebrow">{profile.label}</p>
+                <h2 id="cover-profile"><a href={sitePath(profile.href)}>{profile.title}</a></h2>
+                <p>{profile.summary}</p>
+              </div>
+              {profile.art && <EditorialArt {...profile.art} />}
+            </section>
+          )}
+          {discoveries.length > 0 && (
+            <section className="magazine-desk" aria-labelledby="cover-discoveries">
+              <h2 id="cover-discoveries">Discoveries</h2>
+              <StoryList stories={discoveries} />
+            </section>
+          )}
         </div>
-        <div className="notebook-receipt" aria-label="Memory architecture feature summary">
-          <span>4F² / 6F²</span>
-          <strong>AREA IS NOT THE WHOLE CELL</strong>
-          <span>CAPACITOR PITCH</span>
-          <span>COMPLEXITY / COST / YIELD</span>
+      )}
+
+      {(radar.length > 0 || reviews.length > 0) && (
+        <div className="magazine-back">
+          {radar.length > 0 && (
+            <section aria-labelledby="cover-radar">
+              <h2 id="cover-radar"><a href={sitePath('/radar/')}>Radar</a></h2>
+              <StoryList stories={radar} />
+            </section>
+          )}
+          {reviews.length > 0 && (
+            <section className="magazine-desk" aria-labelledby="cover-reviews">
+              <h2 id="cover-reviews"><a href={sitePath('/reviews/')}>Reviews & scouting notes</a></h2>
+              <StoryList stories={reviews} />
+            </section>
+          )}
         </div>
-      </section>
-      <section className="notebook-feature">
-        <div>
-          <p className="eyebrow">PROFILE / SOFTWARE &amp; LITERATURE</p>
-          <h2>{malloyProfile.title}</h2>
-          <p>{malloyProfile.summary}</p>
-          <a className="read-link" href={sitePath('/articles/judy-malloy-and-the-novel-with-no-front-door')}>
-            Read the profile ↗
-          </a>
-        </div>
-        <div className="notebook-receipt" aria-label="Judy Malloy profile summary">
-          <span>UNCLE ROGER</span>
-          <strong>STORY AS RETRIEVAL SYSTEM</strong>
-          <span>KEYWORDS / DATABASE / READER</span>
-          <span>SOFTWARE AS AUTHORSHIP</span>
-        </div>
-      </section>
-      <section className="notebook-feature">
-        <div>
-          <p className="eyebrow">FEATURE / TOOL DESIGN &amp; AI AGENTS</p>
-          <h2>{teacherArticle.title}</h2>
-          <p>{teacherArticle.summary}</p>
-          <a
-            className="read-link"
-            href={sitePath('/articles/when-the-tool-becomes-the-teacher')}
-          >
-            Read how tools can teach agents ↗
-          </a>
-        </div>
-        <div
-          className="notebook-receipt"
-          aria-label="When the Tool Becomes the Teacher feature summary"
-        >
-          <span>USE THREADMOTH</span>
-          <strong>PREVIEW → MUTATE → VERIFY</strong>
-          <span>TOOLS CAN EXPLAIN</span>
-          <span>AGENT CHOOSES</span>
-        </div>
-      </section>
-      <section className="home-folklore" aria-labelledby="folklore-heading">
-        <div className="section-title">
-          <h2 id="folklore-heading">
-            Machine Folklore <i>/ COMPUTING HISTORY</i>
-          </h2>
-          <span className="small">EDITORIAL ART / NOT EVIDENCE</span>
-        </div>
+      )}
+
+      <section className="magazine-folklore" aria-labelledby="cover-folklore">
+        <h2 id="cover-folklore">Machine Folklore</h2>
         <EditorialArt
           src="/art/toolglass-folklore-001.webp"
-          alt="A punched card, tape reel, CRT terminal, database cylinder and floppy disk interact in one strange technical museum apparatus linked by cables and plotted lines."
+          alt="A punched card, tape reel, CRT terminal, database cylinder and floppy disk linked by cables and plotted lines."
           caption="A short history of computers, drawn as one machine with too much memory."
           kind="CONCEPT PLATE / TOOLGLASS"
-          priority
           width={2172}
           height={724}
         />
       </section>
-      <section className="notebook-feature">
-        <div>
-          <p className="eyebrow">FEATURE / AI-NATIVE COMPUTING</p>
-          <h2>{anvil.title}</h2>
-          <p>{anvil.summary}</p>
-          <a
-            className="read-link"
-            href={sitePath('/articles/the-anvil-ai-native-computer')}
-          >
-            Enter the one-kilobyte universe ↗
-          </a>
-        </div>
-        <div
-          className="notebook-receipt"
-          aria-label="The Anvil feature summary"
-        >
-          <span>1,024 BYTES</span>
-          <strong>NO SHELL · NO FOLKLORE</strong>
-          <span>PROPOSE → VERIFY → COMMIT</span>
-          <span>BRING BATS</span>
-        </div>
-      </section>
-      <section className="notebook-feature">
-        <div>
-          <p className="eyebrow">FEATURE / COORDINATION &amp; AI SYSTEMS</p>
-          <h2>{resolve01.title}</h2>
-          <p>{resolve01.summary}</p>
-          <a
-            className="read-link"
-            href={sitePath('/articles/when-ai-work-needs-a-place-to-live')}
-          >
-            Read how Resolve keeps commitments ↗
-          </a>
-        </div>
-        <div
-          className="notebook-receipt"
-          aria-label="Resolve01 coordination summary"
-        >
-          <span>HUMAN / AI INTENT</span>
-          <strong>RESOLVE / COMMITMENT</strong>
-          <span>TETHERS / AUTHORITY</span>
-          <span>LANTERN / EVIDENCE</span>
-        </div>
-      </section>
-      <section className="notebook-feature">
-        <div>
-          <p className="eyebrow">COLUMN / LANGUAGE &amp; AI</p>
-          <h2>{aiVocabulary.title}</h2>
-          <p>{aiVocabulary.summary}</p>
-          <a
-            className="read-link"
-            href={sitePath('/articles/please-stop-making-ai-sound-so-uncool')}
-          >
-            Read the linguistic autopsy ↗
-          </a>
-        </div>
-        <div
-          className="notebook-receipt"
-          aria-label="AI vocabulary column summary"
-        >
-          <span>VIBE CODING</span>
-          <strong>AGENTIC WORKFORCE</strong>
-          <span>DIGITAL COLLEAGUE</span>
-          <span>SLOP SURVIVES</span>
-        </div>
-      </section>
-      <section className="notebook-feature">
-        <div>
-          <p className="eyebrow">FEATURE / AI &amp; OPEN INNOVATION</p>
-          <h2>{hackathonPrize.title}</h2>
-          <p>{hackathonPrize.summary}</p>
-          <a
-            className="read-link"
-            href={sitePath('/articles/the-prize-is-the-cheapest-part-of-a-hackathon')}
-          >
-            Read the investigation ↗
-          </a>
-        </div>
-        <div
-          className="notebook-receipt"
-          aria-label="Hackathon rights feature summary"
-        >
-          <span>THE LOSING PILE</span>
-          <strong>AI MAKES IT SEARCHABLE</strong>
-          <span>OWNERSHIP ≠ NARROW LICENCE</span>
-          <span>THE FIX: UNBUNDLE THE RIGHTS</span>
-        </div>
-      </section>
-      <section className="notebook-feature">
-        <div>
-          <p className="eyebrow">ESSAY / HUMAN–AI COLLABORATION</p>
-          <h2>{thinkingSurface.title}</h2>
-          <p>{thinkingSurface.summary}</p>
-          <a
-            className="read-link"
-            href={sitePath('/articles/the-thinking-surface')}
-          >
-            Read the manifesto ↗
-          </a>
-        </div>
-        <div
-          className="notebook-receipt"
-          aria-label="The Thinking Surface essay summary"
-        >
-          <span>THE THINKING SURFACE</span>
-          <strong>INTENT &gt; BLACK BOX</strong>
-          <span>HUMAN JUDGEMENT STAYS VISIBLE</span>
-          <span>AI INSIDE THE HUMAN&apos;S LOOP</span>
-        </div>
-      </section>
-      <section className="notebook-feature">
-        <div>
-          <p className="eyebrow">ESSAY / AI TESTING &amp; AUTHORITY</p>
-          <h2>{batNeedsCollar.title}</h2>
-          <p>{batNeedsCollar.summary}</p>
-          <a
-            className="read-link"
-            href={sitePath('/articles/the-bat-needs-a-collar')}
-          >
-            Read the essay ↗
-          </a>
-        </div>
-        <div
-          className="notebook-receipt"
-          aria-label="AI testing authority essay summary"
-        >
-          <span>CAPABILITY ≠ PERMISSION</span>
-          <strong>AUTHORITY RIDES WITH THE RUN</strong>
-          <span>TETHERS DECIDES</span>
-          <span>EVIDENCE PRESERVES THE BOUNDS</span>
-        </div>
-      </section>
-      <section className="section">
-        <div className="section-title">
-          <h2>
-            Recent reviews <i>&amp; scouting notes</i>
-          </h2>
-          <a href={sitePath('/reviews')}>The full index ↗</a>
-        </div>
-        <div className="recent-grid">
-          {[
-            [
-              'tracelet',
-              '01',
-              'Watch the agent. Not the spinner.',
-              'A local view into the calls, prompts and pauses behind an AI run.',
-            ],
-            [
-              'outl',
-              '02',
-              'Your notes. Still your files.',
-              'An outliner that puts plain Markdown at the centre of the bargain.',
-            ],
-            [
-              'chrondb',
-              '03',
-              'What if your database could rewind?',
-              'Git-style history is a compelling idea. Compatibility is the harder question.',
-            ],
-            ].map(([slug, n, title, desc]) => (
-            <a className="story" href={sitePath('/reviews/' + slug)} key={slug}>
-              <MachineGlyph name={slug === 'tracelet' ? 'prompt' : slug === 'outl' ? 'folder' : 'branch'} size={30} className="story-glyph" />
-              <p className="eyebrow">
-                {n} / {slug} <span className="badge">SCOUTED</span>
-              </p>
-              <h3>{title}</h3>
-              <p>{desc}</p>
-              <span className="story-arrow">↗</span>
-            </a>
-          ))}
-        </div>
-      </section>
-      <section className="radar-pulse" aria-labelledby="radar-pulse-heading">
-        <div className="section-title"><h2 id="radar-pulse-heading">Latest from Radar <i>/ fresh signals</i></h2><a href={sitePath('/radar')}>Open the observatory ↗</a></div>
-        <div className="radar-pulse-grid">{radarEntries.slice(0, 3).map((entry) => <a href={sitePath(`/radar/${entry.slug}`)} key={entry.slug}><span className="eyebrow">{entry.status} / {entry.category}</span><h3>{entry.headline}</h3><p>{entry.standfirst}</p><span className="story-arrow">↗</span></a>)}</div>
-      </section>
-      <section className="frontier">
-        <div className="frontier-stamp" aria-hidden="true">
-          <span>FRESH SIGNALS</span>
-          <strong>01</strong>
-        </div>
-        <div>
-          <p className="eyebrow">FRESH SIGNALS / FRONTIER SOFTWARE</p>
-          <h2>What if “done” had to be proved?</h2>
-          <p className="frontier-dek">{atlas.summary}</p>
-          <div className="signal-grid">
-            <a className="signal" href={sitePath('/reviews/atlas')}>
-              <span className="eyebrow">
-                ATLAS / AGENT RELIABILITY{' '}
-                <span className="badge">INSPECTED</span>
-              </span>
-              <h3>Task completion becomes a state that software can check.</h3>
-              <span className="signal-arrow">Read the Fresh Signal ↗</span>
-            </a>
-            <div className="signal signal-note">
-              <span className="eyebrow">THE DISTINCTION</span>
-              <h3>
-                29 focused tests passed. The live agent loop remains unfinished.
-              </h3>
-              <span className="signal-arrow">
-                Present gates ≠ complete product
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="notebook-feature">
-        <div>
-          <p className="eyebrow">NOTEBOOK / SCOUT NOTE READY</p>
-          <h2>{termai.headline}</h2>
-          <p>{termai.summary}</p>
-          <a className="read-link" href={sitePath('/reviews/termai')}>
-            Read the build-blocked note ↗
-          </a>
-        </div>
-        <div className="notebook-receipt" aria-label="TermAI evidence summary">
-          <span>TERMAI / WINDOWS BENCH</span>
-          <strong>BUILD BLOCKED</strong>
-          <span>BEFORE FIRST LAUNCH</span>
-          <span>NO CREDENTIALS · NO RUNTIME</span>
-        </div>
-      </section>
-      <section className="discovery">
-        <div>
-          <p className="eyebrow">THE OVERLOOKED</p>
-          <h2>
-            Why isn’t
-            <br />
-            this <em>famous?</em>
-          </h2>
-          <p>Good software doesn’t always have a marketing department.</p>
-          <a className="read-link" href={sitePath('/reviews/mcp')}>
-            mcp: a protocol meets the command line ↗
-          </a>
-        </div>
-        <div className="under">
-          <p className="eyebrow">SMALL FOLLOWING. OPEN QUESTIONS.</p>
-          <h2>
-            Under 500<span className="star">★</span>
-          </h2>
-          <p>
-            From our first scouting list. Star counts are discovery snapshots,
-            not quality scores or live totals.
-          </p>
-          {[
-            ['pad-local', 'pad.local', '10'],
-            ['gitdesktop', 'GitDesktop', '175'],
-            ['jbundle', 'jbundle', '179'],
-          ].map(([slug, name, stars]) => (
-            <a className="index-row" key={slug} href={sitePath('/reviews/' + slug)}>
-              <span>{name}</span>
-              <span>{stars}★ at discovery ↗</span>
-            </a>
-          ))}
-        </div>
-      </section>
-      <section className="oddware-grid">
-        <div className="oddware">
-          <p className="eyebrow">ODDWARE / FIELD NOTE 001</p>
-          <div className="oddware-mark" aria-hidden="true">
-            <span>∞</span>
-            <span>⌁</span>
-          </div>
-          <h2>A desk that refuses to be a window.</h2>
-          <p>
-            pad.local turns the desktop into an infinite canvas for editors,
-            terminals and browsers. It may be a brilliant working surface, or
-            one more map to maintain. That is exactly the sort of experiment we
-            like finding.
-          </p>
-          <a className="read-link" href={sitePath('/reviews/pad-local')}>
-            Inspect the oddball ↗
-          </a>
-        </div>
-        <aside className="house-ad">
-          <p className="ad-label">ADVERTISEMENT / EXAMPLE SPACE</p>
-          <div className="ad-kicker">A NOTE FROM THE EDITORIAL DESK</div>
-          <h3>Make room for the tools you actually use.</h3>
-          <p>
-            A reserved page in a technical magazine for software, hardware and
-            books that a Toolglass reader might plausibly want.
-          </p>
-          <span className="ad-foot">
-            RELEVANT. RESTRAINED. CLEARLY LABELLED.
-          </span>
-        </aside>
-      </section>
-      <section className="lab">
-        <p className="eyebrow">TOOLGLASS LAB / NOTEBOOK 001</p>
-        <h2>
-          A claim is where we start.
-          <br />
-          Evidence is where we’re going.
-        </h2>
-        <div>
-          <p>
-            Three pieces now carry distinct evidence: one tested, one inspected
-            with focused harness results, and one blocked before launch. Eight
-            seeded projects remain clearly labelled scouting notes.
-          </p>
-          <a className="read-link" href={sitePath('/about#evidence')}>
-            How we review software ↗
-          </a>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }
