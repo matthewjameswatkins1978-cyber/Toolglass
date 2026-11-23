@@ -1,0 +1,55 @@
+{
+  "slug": "clavicula-turing",
+  "name": "Clavicula Turing",
+  "headline": "A program that draws its own map",
+  "standfirst": "Clavicula Turing draws deterministic SVG sigils from program structure and can correlate the diagrams with traces.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-11-23T12:00:00.000Z",
+  "discoveredAt": "2026-11-23T12:00:00.000Z",
+  "category": "Programming languages & visualisation",
+  "tags": [
+    "compilers",
+    "visualisation",
+    "tracing"
+  ],
+  "repo": "https://github.com/eabusato/cct",
+  "tested": false,
+  "evidence": "Toolglass reviewed the public project documentation. Maintainer claims were not independently reproduced.",
+  "body": [
+    {
+      "heading": "What it is",
+      "paragraphs": [
+        "Clavicula Turing (CCT) is a compiled, ritual-themed programming language that generates deterministic SVG sigils from program structure, dependencies and calls."
+      ]
+    },
+    {
+      "heading": "What is genuinely odd",
+      "paragraphs": [
+        "Ignore the occult vocabulary for a moment. The interesting mechanism is a structural picture that is generated from the program and can be correlated with execution traces. Nodes expose source and statement information; timed spans can appear on the same visual topology. This is somewhere between a dependency graph, a profiler and a piece of generative typography. The picture is not merely a logo if it can lead you back to evidence."
+      ]
+    },
+    {
+      "heading": "Why now",
+      "paragraphs": [
+        "Software made by many agents needs navigation aids that do not depend on remembering which human wrote which file. A deterministic, inspectable visual index could be useful even if the particular sigil metaphor proves too ornate."
+      ]
+    },
+    {
+      "heading": "Maturity and limits",
+      "paragraphs": [
+        "The project reports a FASE 40 baseline, but that is its own milestone vocabulary, not an external maturity certification. Readability at scale, collision avoidance, accessibility and stability across harmless edits are unanswered questions. The claims require a real run."
+      ]
+    }
+  ],
+  "verdict": "An unusual navigation idea whose usefulness at scale still needs a real run.",
+  "nextStep": "Compare diagrams for one semantic change, one whitespace change and a large module rename; measure visual stability and click-through usefulness.",
+  "sourceUrls": [
+    "https://github.com/eabusato/cct"
+  ],
+  "image": {
+    "src": "/radar/clavicula-turing/card.svg",
+    "alt": "A blue network with lime nodes is arranged around a central ring.",
+    "caption": "A visual map derived from program structure.",
+    "kind": "TOOLGLASS CONCEPT CARD"
+  }
+}

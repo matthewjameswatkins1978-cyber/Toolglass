@@ -1,0 +1,55 @@
+{
+  "slug": "toka",
+  "name": "Toka",
+  "headline": "A systems language that wants its promises machine-readable",
+  "standfirst": "Toka puts explicit resource transfer and machine-readable semantic protocols near the centre of its systems-language design.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-11-23T12:00:00.000Z",
+  "discoveredAt": "2026-11-23T12:00:00.000Z",
+  "category": "Systems programming & compiler tooling",
+  "tags": [
+    "ownership",
+    "compilers",
+    "systems programming"
+  ],
+  "repo": "https://github.com/tokalang/toka",
+  "tested": false,
+  "evidence": "Toolglass reviewed the public project documentation. Maintainer claims were not independently reproduced.",
+  "body": [
+    {
+      "heading": "What it is",
+      "paragraphs": [
+        "Toka is an experimental no-GC systems language with deterministic cleanup, explicit resource transfer and versioned JSON semantic protocols. The repository identifies 0.20.1 as its 26 October 2026 release."
+      ]
+    },
+    {
+      "heading": "The novel seam",
+      "paragraphs": [
+        "Most language tools expose syntax trees and diagnostics. Toka's project places machine-verifiable semantic interfaces near the centre of the design. That could let an external tool ask what ownership or transfer rules a program obeys without relying on prose and guesswork. Its cede transfer and PAL checks are particularly worth examining as contracts, not merely new keywords."
+      ]
+    },
+    {
+      "heading": "Why now",
+      "paragraphs": [
+        "Agents increasingly need to inspect and modify low-level programs. A versioned semantic protocol is a plausible bridge between language implementation and automated review, provided the protocol accurately reflects compiler behaviour."
+      ]
+    },
+    {
+      "heading": "Maturity and limits",
+      "paragraphs": [
+        "Early release series; external host tools remain part of linking and orchestration. Cross-platform qualification is described in the repository but not independently reproduced here. Claims of safety and performance should be tested on pinned versions."
+      ]
+    }
+  ],
+  "verdict": "An early compiler interface worth testing against the actual diagnostics.",
+  "nextStep": "Generate an ownership-transfer error, compare CLI diagnostic with JSON semantic output, then repeat after a clean rebuild.",
+  "sourceUrls": [
+    "https://github.com/tokalang/toka"
+  ],
+  "image": {
+    "src": "/radar/toka/card.svg",
+    "alt": "A blue arrow carries a lime resource between two labelled boxes.",
+    "caption": "An explicit resource transfer.",
+    "kind": "TOOLGLASS CONCEPT CARD"
+  }
+}

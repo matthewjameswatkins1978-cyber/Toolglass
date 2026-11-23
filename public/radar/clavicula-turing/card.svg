@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" width="880" height="480">
+  <rect width="880" height="480" fill="#eee9dc"/>
+  <rect x="55" y="103" width="770" height="285" fill="none" stroke="#202522"/>
+  <text x="55" y="69" font-family="monospace" font-size="22" fill="#1748a0">TOOLGLASS / RADAR / CLAVICULA TURING</text>
+  <g fill="#c4ef32" stroke="#1748a0" stroke-width="3" font-family="monospace" font-size="16" style="paint-order:stroke"><circle cx="440" cy="248" r="104" fill="none"/><path d="M440 130 552 280 375 340 440 130 505 340 328 280Z"/><circle cx="440" cy="130" r="16"/><circle cx="552" cy="280" r="16"/><circle cx="375" cy="340" r="16"/><circle cx="505" cy="340" r="16"/><circle cx="328" cy="280" r="16"/></g>
+  <text x="55" y="433" font-family="monospace" font-size="15" fill="#202522">CONCEPT CARD / 23.XI.2026</text>
+</svg>
