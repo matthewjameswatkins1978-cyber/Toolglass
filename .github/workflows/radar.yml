@@ -17,8 +17,6 @@ on:
         description: Optional single public project URL for a future scout run
         required: false
         type: string
-  schedule:
-    - cron: '17 9 * * *'
 
 permissions:
   contents: read
