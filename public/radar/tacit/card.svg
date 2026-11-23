@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" width="880" height="480">
+  <rect width="880" height="480" fill="#eee9dc"/>
+  <rect x="55" y="103" width="770" height="285" fill="none" stroke="#202522"/>
+  <text x="55" y="69" font-family="monospace" font-size="22" fill="#1748a0">TOOLGLASS / RADAR / TACIT</text>
+  <g fill="#c4ef32" stroke="#1748a0" stroke-width="3" font-family="monospace" font-size="16" style="paint-order:stroke"><path d="M440 180 355 310m85-130 85 130"/><circle cx="440" cy="180" r="22"/><circle cx="355" cy="310" r="22"/><circle cx="525" cy="310" r="22"/><path d="M145 205h115m-115 32h85m-85 32h115m360-64h115m-115 32h85m-85 32h115"/></g>
+  <text x="55" y="433" font-family="monospace" font-size="15" fill="#202522">CONCEPT CARD / 23.XI.2026</text>
+</svg>

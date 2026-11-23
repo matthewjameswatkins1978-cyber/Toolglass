@@ -5,10 +5,55 @@
     <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/</link>
     <description>Software worth finding. Independent reviews with visible evidence.</description>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 26 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/feed.xml" rel="self" type="application/rss+xml" />
     <atom:link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/atom.xml" rel="alternate" type="application/atom+xml" />
     <managingEditor>Matthew Watkins (https://github.com/matthewjameswatkins1978-cyber)</managingEditor>
+    <item>
+      <title>The Program Has Two Faces</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-program-has-two-faces/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-program-has-two-faces/</guid>
+      <pubDate>Mon, 23 Nov 2026 12:00:00 GMT</pubDate>
+      <description>Tacit gives AI authors and human reviewers different views of one program. The experiment revives a much older question about what we gain when source text becomes one of several views.</description>
+      <dc:creator>Toolglass Editorial Desk</dc:creator>
+      <category>FEATURE</category>
+    </item>
+    <item>
+      <title>Susan Graham and the Tools That Look Back</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/susan-graham-and-the-tools-that-look-back/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/susan-graham-and-the-tools-that-look-back/</guid>
+      <pubDate>Mon, 23 Nov 2026 12:00:00 GMT</pubDate>
+      <description>From gprof and Berkeley Pascal to voice-driven editing and parallel computing, Susan Graham helped build tools that reveal how programs work.</description>
+      <dc:creator>Toolglass Editorial Desk</dc:creator>
+      <category>PROFILE</category>
+    </item>
+    <item>
+      <title>A program that draws its own map</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/clavicula-turing/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/clavicula-turing/</guid>
+      <pubDate>Mon, 23 Nov 2026 12:00:00 GMT</pubDate>
+      <description>Clavicula Turing draws deterministic SVG sigils from program structure and can correlate the diagrams with traces. Radar status: DESK REVIEW.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>Radar</category>
+    </item>
+    <item>
+      <title>Two faces of one program</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tacit/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tacit/</guid>
+      <pubDate>Mon, 23 Nov 2026 12:00:00 GMT</pubDate>
+      <description>An experimental language gives AI authors a compact notation and human reviewers an expanded view of the same program. Radar status: DESK REVIEW.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>Radar</category>
+    </item>
+    <item>
+      <title>A systems language that wants its promises machine-readable</title>
+      <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/toka/</link>
+      <guid isPermaLink="true">https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/toka/</guid>
+      <pubDate>Mon, 23 Nov 2026 12:00:00 GMT</pubDate>
+      <description>Toka puts explicit resource transfer and machine-readable semantic protocols near the centre of its systems-language design. Radar status: DESK REVIEW.</description>
+      <dc:creator>Matthew Watkins</dc:creator>
+      <category>Radar</category>
+    </item>
     <item>
       <title>The Smaller Square That Wasn&apos;t</title>
       <link>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-smaller-square-that-wasnt/</link>

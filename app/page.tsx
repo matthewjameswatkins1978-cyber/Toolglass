@@ -1,5 +1,6 @@
 import { reviews } from '@/content/reviews';
 import { articles } from '@/content/articles-all';
+import { weeklyArticles as november23Articles } from '@/content/weekly-2026-11-23';
 import { sitePath } from '@/lib/utils';
 import EditorialArt from '@/components/EditorialArt';
 import MachineGlyph from '@/components/MachineGlyph';
@@ -82,6 +83,21 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {november23Articles.map((article) => (
+        <section className="notebook-feature" key={article.slug}>
+          <div>
+            <p className="eyebrow">{article.kicker}</p>
+            <h2>{article.title}</h2>
+            <p>{article.summary}</p>
+            <a className="read-link" href={sitePath(`/articles/${article.slug}`)}>
+              Read the {article.kicker.startsWith('PROFILE') ? 'profile' : 'feature'} ↗
+            </a>
+          </div>
+          {article.heroImage && (
+            <EditorialArt {...article.heroImage} />
+          )}
+        </section>
+      ))}
       <section className="notebook-feature">
         <div>
           <p className="eyebrow">FEATURE / MEMORY ARCHITECTURE</p>

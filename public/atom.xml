@@ -5,9 +5,59 @@
   <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/" />
   <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/atom.xml" rel="self" type="application/atom+xml" />
   <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/feed.xml" rel="alternate" type="application/rss+xml" />
-  <updated>2026-10-26T12:00:00.000Z</updated>
+  <updated>2026-11-23T12:00:00.000Z</updated>
   <subtitle>Software worth finding. Independent reviews with visible evidence.</subtitle>
   <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-program-has-two-faces/</id>
+    <title>The Program Has Two Faces</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-program-has-two-faces/" />
+    <published>2026-11-23T12:00:00.000Z</published>
+    <updated>2026-11-23T12:00:00.000Z</updated>
+    <author><name>Toolglass Editorial Desk</name></author>
+    <category term="FEATURE" />
+    <summary>Tacit gives AI authors and human reviewers different views of one program. The experiment revives a much older question about what we gain when source text becomes one of several views.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/susan-graham-and-the-tools-that-look-back/</id>
+    <title>Susan Graham and the Tools That Look Back</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/susan-graham-and-the-tools-that-look-back/" />
+    <published>2026-11-23T12:00:00.000Z</published>
+    <updated>2026-11-23T12:00:00.000Z</updated>
+    <author><name>Toolglass Editorial Desk</name></author>
+    <category term="PROFILE" />
+    <summary>From gprof and Berkeley Pascal to voice-driven editing and parallel computing, Susan Graham helped build tools that reveal how programs work.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/clavicula-turing/</id>
+    <title>A program that draws its own map</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/clavicula-turing/" />
+    <published>2026-11-23T12:00:00.000Z</published>
+    <updated>2026-11-23T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Clavicula Turing draws deterministic SVG sigils from program structure and can correlate the diagrams with traces. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tacit/</id>
+    <title>Two faces of one program</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/tacit/" />
+    <published>2026-11-23T12:00:00.000Z</published>
+    <updated>2026-11-23T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>An experimental language gives AI authors a compact notation and human reviewers an expanded view of the same program. Radar status: DESK REVIEW.</summary>
+  </entry>
+  <entry>
+    <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/toka/</id>
+    <title>A systems language that wants its promises machine-readable</title>
+    <link href="https://matthewjameswatkins1978-cyber.github.io/Toolglass/radar/toka/" />
+    <published>2026-11-23T12:00:00.000Z</published>
+    <updated>2026-11-23T12:00:00.000Z</updated>
+    <author><name>Matthew Watkins</name><uri>https://github.com/matthewjameswatkins1978-cyber</uri></author>
+    <category term="Radar" />
+    <summary>Toka puts explicit resource transfer and machine-readable semantic protocols near the centre of its systems-language design. Radar status: DESK REVIEW.</summary>
+  </entry>
   <entry>
     <id>https://matthewjameswatkins1978-cyber.github.io/Toolglass/articles/the-smaller-square-that-wasnt/</id>
     <title>The Smaller Square That Wasn&apos;t</title>

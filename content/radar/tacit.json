@@ -1,0 +1,55 @@
+{
+  "slug": "tacit",
+  "name": "Tacit",
+  "headline": "Two faces of one program",
+  "standfirst": "An experimental language gives AI authors a compact notation and human reviewers an expanded view of the same program.",
+  "status": "DESK REVIEW",
+  "publishedAt": "2026-11-23T12:00:00.000Z",
+  "discoveredAt": "2026-11-23T12:00:00.000Z",
+  "category": "Programming languages & AI",
+  "tags": [
+    "compilers",
+    "AI",
+    "structured editing"
+  ],
+  "repo": "https://github.com/weetster/tacit",
+  "tested": false,
+  "evidence": "Toolglass reviewed the public project documentation. Maintainer claims were not independently reproduced.",
+  "body": [
+    {
+      "heading": "What it is",
+      "paragraphs": [
+        "Tacit is an experimental AI-first programming language with an LLVM compilation route. Its author treats the abstract syntax tree, rather than a human-readable text file, as the authoritative program."
+      ]
+    },
+    {
+      "heading": "The idea worth stealing",
+      "paragraphs": [
+        "The project describes two lossless presentations: a dense view for model generation and a more expansive view for human inspection. It is a serious design question hiding inside an easy-to-dismiss slogan. If software is increasingly authored by a machine but owned by a human, why must both parties read the same surface syntax? The essential word is lossless. A pretty human explanation that cannot reconstruct the exact machine program is a commentary, not an alternate representation."
+      ]
+    },
+    {
+      "heading": "Why now",
+      "paragraphs": [
+        "AI-generated changes have made provenance, inspectability and exact edit boundaries urgent. This is not proof that a model-oriented language produces better code; it is an architectural hypothesis about how to separate writing from review."
+      ]
+    },
+    {
+      "heading": "Maturity and limits",
+      "paragraphs": [
+        "The repository claims a Phase 6 Tacit-Lite toolchain that parses, typechecks, inspects, compiles and executes a frozen subset. The claims are maintainer-reported. Its ecosystem, toolchain trust, actual token efficiency and long-term language stability need independent tests. The idea predates Tacit in projectional editing, structured editors and intentional programming; its interest lies in the new AI audience."
+      ]
+    }
+  ],
+  "verdict": "A testable experiment in separating authoring from review.",
+  "nextStep": "Round-trip 20 programs through dense and inspection views, including malformed code and refactors; compare AST hashes and diagnostic precision.",
+  "sourceUrls": [
+    "https://github.com/weetster/tacit"
+  ],
+  "image": {
+    "src": "/radar/tacit/card.svg",
+    "alt": "Two blue columns flank a shared tree of lime nodes.",
+    "caption": "Authoring and inspection around one structure.",
+    "kind": "TOOLGLASS CONCEPT CARD"
+  }
+}

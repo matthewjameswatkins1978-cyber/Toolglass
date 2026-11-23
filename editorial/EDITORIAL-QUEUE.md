@@ -15,6 +15,11 @@
 | Sova | sova | Scout Note | DESK REVIEW / NOT TESTED | yes | Lucy | PUBLISHED | /radar/sova/ | 26 October 2026 |
 | orangu | orangu | Scout Note | DESK REVIEW / NOT TESTED | yes | Lucy | PUBLISHED | /radar/orangu/ | 26 October 2026 |
 | Mathematics Research & Evidence Atlas | openai-math-atlas | Scout Note | DESK REVIEW / LIVE SITE INSPECTED; NO LOCAL EXECUTION OR PROOF CHECKING | yes | Lucy | PUBLISHED | /radar/openai-math-atlas/ | 26 October 2026 |
+| The Program Has Two Faces | the-program-has-two-faces | Feature | DESK-RESEARCHED / NO BENCHMARK | yes | Lucy | PUBLISHED | /articles/the-program-has-two-faces/ | 23 November 2026 |
+| Susan Graham and the Tools That Look Back | susan-graham-and-the-tools-that-look-back | Person Profile | SOURCE-CHECKED / NO INTERVIEW | yes | Lucy | PUBLISHED | /articles/susan-graham-and-the-tools-that-look-back/ | 23 November 2026 |
+| Tacit | tacit | Scout Note | DESK REVIEW / NOT TESTED | yes | Lucy | PUBLISHED | /radar/tacit/ | 23 November 2026 |
+| Toka | toka | Scout Note | DESK REVIEW / NOT TESTED | yes | Lucy | PUBLISHED | /radar/toka/ | 23 November 2026 |
+| Clavicula Turing | clavicula-turing | Scout Note | DESK REVIEW / NOT TESTED | yes | Lucy | PUBLISHED | /radar/clavicula-turing/ | 23 November 2026 |
 
 Statuses are deliberately small: `DRAFT`, `NEEDS EDIT`, `EDITING`, `APPROVED`, `INTEGRATED`, `PUBLISHED`, and `PARKED`.
 
